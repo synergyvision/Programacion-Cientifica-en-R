@@ -7,7 +7,7 @@ Synergy Vision
 title: "Programación Científica en R"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-02-19"
+date: "2018-02-20"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -20,7 +20,7 @@ fontsize: 12pt
 monofontoptions: "Scale=0.8"
 keep_md: yes
 site: bookdown::bookdown_site
-description: "Introducción a Probabilidad y Estadística Matemática en R con aplicaciones en Finanzas."
+description: ""
 url: 'http\://synergy.vision/Programacion-Cientifica-en-R/'
 github-repo: synergyvision/Programacion-Cientifica-en-R/
 cover-image: images/cover.png
