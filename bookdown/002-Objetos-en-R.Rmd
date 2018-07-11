@@ -314,6 +314,32 @@ y <- 5-8
 abs(y)
 ```
 
+```{r tut=TRUE, ex="abs", type="sample-code"}
+# Calcular el valor absoluto de 4-20
+
+#Calcular el valor absoluto de 6
+
+# Calcular el valor absoluto de -100
+
+```
+
+```{r tut=TRUE, ex="abs", type="solution"}
+# Calcular el valor absoluto de 4-20
+abs(4-20)
+#Calcular el valor absoluto de 6
+abs(6)
+# Calcular el valor absoluto de -100
+abs(-100)
+```
+
+```{r tut=TRUE, ex="abs", type="sct"}
+test_function("abs")
+test_output_contains("abs(4-20)", incorrect_msg = "Usar la función abs() y colocar 4-20")
+test_output_contains("abs(6)", incorrect_msg = "Usar la función abs() y colocar 6")
+test_output_contains("abs(-100)", incorrect_msg = "Usar la función abs() y colocar -100")
+success_msg("Excelente!")
+```
+
 - `round()` -> redondea un número a los decimales que se le indiquen.
 
 ```{r}

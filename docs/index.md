@@ -512,6 +512,12 @@ abs(y)
 ## [1] 3
 ```
 
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDQtMjBcblxuI0NhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDZcblxuIyBDYWxjdWxhciBlbCB2YWxvciBhYnNvbHV0byBkZSAtMTAwIiwic29sdXRpb24iOiIjIENhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDQtMjBcbmFicyg0LTIwKVxuI0NhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDZcbmFicyg2KVxuIyBDYWxjdWxhciBlbCB2YWxvciBhYnNvbHV0byBkZSAtMTAwXG5hYnMoLTEwMCkiLCJzY3QiOiJ0ZXN0X2Z1bmN0aW9uKFwiYWJzXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImFicyg0LTIwKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiBhYnMoKSB5IGNvbG9jYXIgNC0yMFwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJhYnMoNilcIiwgaW5jb3JyZWN0X21zZyA9IFwiVXNhciBsYSBmdW5jaVx1MDBmM24gYWJzKCkgeSBjb2xvY2FyIDZcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiYWJzKC0xMDApXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGFicygpIHkgY29sb2NhciAtMTAwXCIpXG5zdWNjZXNzX21zZyhcIkV4Y2VsZW50ZSFcIikifQ==</div>
+
+
+
+
+
 - `round()` -> redondea un número a los decimales que se le indiquen.
 
 
@@ -691,7 +697,7 @@ IQR(x)
 boxplot(x, col = "orange", horizontal = TRUE)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-41-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-44-1.svg)<!-- -->
 
 - `sd()` -> la desviación estandar es una medida del grado de dispersión de los datos con respecto al valor promedio. Se define como la raíz cuadrada de la varianza de la variable. 
 
@@ -2454,7 +2460,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 21:15:31 GMT"
+## [1] "2018-07-11 21:25:17 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2561,7 +2567,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-118-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-121-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2583,7 +2589,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-119-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-122-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2596,7 +2602,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-120-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-123-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2618,7 +2624,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-121-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-124-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2650,7 +2656,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-122-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-125-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2663,7 +2669,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-123-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-126-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2684,7 +2690,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-124-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-127-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2698,7 +2704,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-125-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-128-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2706,7 +2712,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-125-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-128-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2721,7 +2727,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-126-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-129-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2733,7 +2739,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-127-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-130-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2751,7 +2757,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-128-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-131-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2764,7 +2770,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-129-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-132-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -2849,7 +2855,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 6
+## [1] 4
 ```
 
 ```r
@@ -2857,7 +2863,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 4
+## [1] 2
 ```
 
 ## Condicionales
