@@ -1,0 +1,105 @@
+# Fechas y Tiempo
+
+El lenguaje de programación __R__ dispone de dos paquetes en la base para manejar tipos de datos como las fechas. Uno es `Date` el cual solo maneja fechas y el otro paquete es `POSIXt` este último paquete tiene dos subclases de formas para almacenar las fechas `POSIXct` y `POSIXlt` los cuales se diferencian en la forma como almacenan las fechas y el tiempo.
+
+`Date` almacena las fechas como el número de días transcurridos desde el 1 de enero de 1870.
+
+Las siglas "POSIX" se refieren a _Portable Operating System Interface_ (Es una familia de especificaciones estándar por la sociedad de computación IEEE, para mantener la compatibilidad de los sistemas operativos). Las clases de `POSIX` almacenan una fecha y hora como el número de segundos transcurridos desde el 1 de enero de 1970, cualquier fecha anterior a ésta se almacena como un número negativo.
+
+  `POSIXct` : Almacena la fecha como un número entero.
+  
+  `POSIXlt` : Descompone el número como una lista (segundos, minutos, horas, día, mes y año)
+  
+  
+## Fechas con formato `Date`
+
+Con la función `as.Date()` construimos una fecha, al cual se le debe pasar la fecha y el formato que tendrá dicha fecha, este formato se pasa con el parámetro `format` el cual debe ser de la forma como se introduzca la fecha, por ejemplo si la fecha es `2018-09-07` entonces `format='%Y-%m-%d'`, `2018/09/07` entonces `format='%Y/%m/%d'`, `22JUN01` entonces `format='%d%b%y'`.
+
+```{r}
+fecha_1 <- as.Date('2018-09-07', format='%Y-%m-%d')
+fecha_1 
+fecha_2 <- as.Date('2018/09/12', format='%Y/%m/%d')
+fecha_2
+fecha_3 <- as.Date('24JUN01',format='%d%b%y')
+fecha_3
+```
+
+Para saber el día de semana de una fecha se usa la función `weekdays()`
+
+```{r}
+weekdays(fecha_1)
+weekdays(fecha_2)
+weekdays(fecha_3)
+```
+
+Podemos hacer operaciones con fechas, como por ejemplo sumar o restar días a una fecha específica, esto lo hacemos simplemente sumandole o restandole el número de días; otra función muy util puede ser calcular la cantidad de días entre dos fechas particulares, para esto usamos la función `diff.Date()` donde se le debe pasar un vector con las fechas donde se quiere calcular la cantidad de días entre ellos.
+
+```{r}
+fecha_1
+fecha_1 - 2
+fecha_1 + 2
+fecha_1 + 0:6
+diff.Date(c(fecha_1,fecha_2))
+abs(difftime(fecha_1,fecha_2, units = "day"))
+```
+
+Para generar una secuencia de fechas se puede utilizar la función `seq()`, en este caso tanto al parámetro `from` como al parámetro `to` se le debe pasar un objeto tipo fecha, al parámetro `by` se le especifica si quiere la secuencia por días `'day'`, meses `'month'`, semanas `'week'` o años `'year'`; si se quiere generar un número determinado de fechas entre dos fechas específicas usamos el parámetro `length`.
+
+```{r}
+fecha_4 <- as.Date('2013-12-15', format='%Y-%m-%d')
+fecha_5 <- as.Date('2014-02-05', format='%Y-%m-%d')
+seq(from=fecha_4, to=fecha_5, by='day') #días entre las fechas_4 y fecha_5
+seq(from=fecha_4, to=fecha_5, by='week') #semanas entre las fechas_4 y fecha_5
+seq(from=fecha_4, to=fecha_5, by='month') #meses entre las fechas_4 y fecha_5
+seq(from=fecha_4, to=fecha_5, by='year') #años entre las fechas_4 y fecha_5
+seq(from=fecha_4, to=fecha_5, length=10) #10 fechas entre las fechas_4 y fecha_5
+```
+
+La función `Sys.Date()` nos da un objeto tipo dato que contine la fecha actual de nuestro computador.
+
+```{r}
+Sys.Date()
+```
+
+## Fechas con el formato `POSIXct` o `POSIXlt`
+
+Ahora si se quieren las fechas en formatos `POSIXct` o `POSIXlt` usamos los comando `as.POSIXct()` o `as.POSIXlt()`, respectivamente.
+
+```{r}
+fecha_6 <- as.POSIXct("01/10/1983 22:10:00",format="%d/%m/%Y %H:%M:%S", tz="UTC")
+fecha_6 
+```
+
+Notemos que este tipo de hora tiene agregado el tiempo, lo cual se especifica en el formato `H` (Hora), `M` (Minutos) y `S` (Segundos); adicionalmente el parámetro `tz` corresponde al huso horario (es cada una de las veinticuatro áreas en que se divide la Tierra) del que se quiera la hora, la función `OlsonNames()` nos lista todas las zonas.
+
+Para ver como almacena __R__ este tipo de objetos usamos el comando `unclass()`.
+
+```{r}
+unclass(fecha_6)
+```
+
+Para ver la fecha actual de nuestro computador en el formato `POSIXct` usamos la función `Sys.time()`
+
+```{r}
+Sys.time()
+```
+
+Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
+
+```{r}
+fecha_7 <- as.POSIXlt("2013-03-10 08:32:07")
+fecha_7
+unclass(fecha_7)
+```
+
+La ventaja de este formato es que se puede extraer componentes de dicha fecha de una manera muy practica, usando el simbolo `$`, por ejemplo extraermos los segundos
+
+```{r}
+fecha_7$sec
+```
+
+
+
+
+
+

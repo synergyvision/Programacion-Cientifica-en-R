@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Programación Científica en R</title>
+  <meta name="description" content="Programación Científica en R">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
+  <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
+  
+  <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Programación Científica en R" />
+  
+  
+  <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
+
+<meta name="author" content="Synergy Vision">
+
+
+<meta name="date" content="2018-07-11">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="vectores.html">
+<link rel="next" href="data-frame.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduccion.html"><a href="introduccion.html#caracteristicas-principales-del-lenguaje-r"><i class="fa fa-check"></i><b>1.1</b> Características principales del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.2" data-path="introduccion.html"><a href="introduccion.html#desventajas-del-lenguaje-r"><i class="fa fa-check"></i><b>1.2</b> Desventajas del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="introduccion.html"><a href="introduccion.html#el-diseno-del-lenguaje-r"><i class="fa fa-check"></i><b>1.3</b> El diseño del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.4" data-path="introduccion.html"><a href="introduccion.html#instalacion-de-r-y-de-paquetes-de-r"><i class="fa fa-check"></i><b>1.4</b> Instalación de <strong>R</strong> y de paquetes de <strong>R</strong></a></li>
+<li class="chapter" data-level="1.5" data-path="introduccion.html"><a href="introduccion.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.5</b> Ayuda en <strong>R</strong></a></li>
+<li class="chapter" data-level="1.6" data-path="introduccion.html"><a href="introduccion.html#rstudio"><i class="fa fa-check"></i><b>1.6</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="objetos-en-r.html"><a href="objetos-en-r.html"><i class="fa fa-check"></i><b>2</b> Objetos en <strong>R</strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.1</b> Tipos de objetos en <strong>R</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#manejo-de-objetos"><i class="fa fa-check"></i><b>2.2</b> Manejo de Objetos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#atributos-de-un-objeto"><i class="fa fa-check"></i><b>2.2.1</b> Atributos de un Objeto</a></li>
+<li class="chapter" data-level="2.2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#nombres-validos-para-un-objeto"><i class="fa fa-check"></i><b>2.2.2</b> Nombres válidos para un objeto</a></li>
+<li class="chapter" data-level="2.2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operador-de-asignacion-e-igualdad"><i class="fa fa-check"></i><b>2.2.3</b> Operador de asignación e igualdad</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#principales-funciones-para-trabajar-en-la-consola"><i class="fa fa-check"></i><b>2.3</b> Principales funciones para trabajar en la consola</a></li>
+<li class="chapter" data-level="2.4" data-path="objetos-en-r.html"><a href="objetos-en-r.html#r-como-calculadora"><i class="fa fa-check"></i><b>2.4</b> <strong>R</strong> como calculadora</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operaciones-aritmeticas"><i class="fa fa-check"></i><b>2.4.1</b> Operaciones Aritméticas</a></li>
+<li class="chapter" data-level="2.4.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-comparativos"><i class="fa fa-check"></i><b>2.4.2</b> Operadores Comparativos</a></li>
+<li class="chapter" data-level="2.4.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-logicos"><i class="fa fa-check"></i><b>2.4.3</b> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html#definicion"><i class="fa fa-check"></i><b>3.1</b> Definición</a></li>
+<li class="chapter" data-level="3.2" data-path="vectores.html"><a href="vectores.html#creacion-de-vectores"><i class="fa fa-check"></i><b>3.2</b> Creación de Vectores</a></li>
+<li class="chapter" data-level="3.3" data-path="vectores.html"><a href="vectores.html#secuencias"><i class="fa fa-check"></i><b>3.3</b> Secuencias</a></li>
+<li class="chapter" data-level="3.4" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.4</b> Selección de elementos de un vector</a></li>
+<li class="chapter" data-level="3.5" data-path="vectores.html"><a href="vectores.html#suma-de-vectores"><i class="fa fa-check"></i><b>3.5</b> Suma de Vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>4</b> Matrices</a><ul>
+<li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#definicion-1"><i class="fa fa-check"></i><b>4.1</b> Definición</a></li>
+<li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#creacion-de-matrices"><i class="fa fa-check"></i><b>4.2</b> Creación de Matrices</a></li>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.3</b> Selección de los elementos de una matriz</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones con Matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>5</b> Data.frame</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-frame.html"><a href="data-frame.html#generacion-de-un-data.frame"><i class="fa fa-check"></i><b>5.1</b> Generación de un Data.frame</a></li>
+<li class="chapter" data-level="5.2" data-path="data-frame.html"><a href="data-frame.html#acceder-a-datos-en-un-data.frame"><i class="fa fa-check"></i><b>5.2</b> Acceder a Datos en un Data.frame</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a></li>
+<li class="chapter" data-level="7" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>7</b> Factores</a></li>
+<li class="chapter" data-level="8" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html"><i class="fa fa-check"></i><b>8</b> Fechas y Tiempo</a><ul>
+<li class="chapter" data-level="8.1" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-formato-date"><i class="fa fa-check"></i><b>8.1</b> Fechas con formato <code>Date</code></a></li>
+<li class="chapter" data-level="8.2" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-el-formato-posixct-o-posixlt"><i class="fa fa-check"></i><b>8.2</b> Fechas con el formato <code>POSIXct</code> o <code>POSIXlt</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>9</b> Datos</a><ul>
+<li class="chapter" data-level="9.1" data-path="datos.html"><a href="datos.html#importar-datos"><i class="fa fa-check"></i><b>9.1</b> Importar Datos</a></li>
+<li class="chapter" data-level="9.2" data-path="datos.html"><a href="datos.html#datos-de-r"><i class="fa fa-check"></i><b>9.2</b> Datos de <strong>R</strong></a></li>
+<li class="chapter" data-level="9.3" data-path="datos.html"><a href="datos.html#guardar-datos"><i class="fa fa-check"></i><b>9.3</b> Guardar Datos</a></li>
+<li class="chapter" data-level="9.4" data-path="datos.html"><a href="datos.html#exportar-datos"><i class="fa fa-check"></i><b>9.4</b> Exportar Datos</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="graficos.html"><a href="graficos.html"><i class="fa fa-check"></i><b>10</b> Gráficos</a><ul>
+<li class="chapter" data-level="10.1" data-path="graficos.html"><a href="graficos.html#grafico-de-puntos"><i class="fa fa-check"></i><b>10.1</b> Gráfico de Puntos</a></li>
+<li class="chapter" data-level="10.2" data-path="graficos.html"><a href="graficos.html#grafico-de-lineas"><i class="fa fa-check"></i><b>10.2</b> Gráfico de líneas</a></li>
+<li class="chapter" data-level="10.3" data-path="graficos.html"><a href="graficos.html#grafico-de-tortas"><i class="fa fa-check"></i><b>10.3</b> Gráfico de Tortas</a></li>
+<li class="chapter" data-level="10.4" data-path="graficos.html"><a href="graficos.html#barplot"><i class="fa fa-check"></i><b>10.4</b> Barplot</a></li>
+<li class="chapter" data-level="10.5" data-path="graficos.html"><a href="graficos.html#boxplot"><i class="fa fa-check"></i><b>10.5</b> Boxplot</a></li>
+<li class="chapter" data-level="10.6" data-path="graficos.html"><a href="graficos.html#histogramas"><i class="fa fa-check"></i><b>10.6</b> Histogramas</a></li>
+<li class="chapter" data-level="10.7" data-path="graficos.html"><a href="graficos.html#multiple-graficos-por-ventanas"><i class="fa fa-check"></i><b>10.7</b> Multiple gráficos por ventanas</a></li>
+<li class="chapter" data-level="10.8" data-path="graficos.html"><a href="graficos.html#guardar-graficos"><i class="fa fa-check"></i><b>10.8</b> Guardar gráficos</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>11</b> Funciones</a><ul>
+<li class="chapter" data-level="11.1" data-path="funciones.html"><a href="funciones.html#creacion-de-funciones"><i class="fa fa-check"></i><b>11.1</b> Creación de Funciones</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones.html"><a href="funciones.html#condicionales"><i class="fa fa-check"></i><b>11.2</b> Condicionales</a></li>
+<li class="chapter" data-level="11.3" data-path="funciones.html"><a href="funciones.html#loop-o-bucles"><i class="fa fa-check"></i><b>11.3</b> Loop o Bucles</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndice</b></span></li>
+<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
+<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
+<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programación Científica en R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="matrices" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Matrices</h1>
+<div id="definicion-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Definición</h2>
+<p>Un array es una colección de datos del mismo tipo con varias dimensiones.</p>
+<p>Una matriz en un array con dos dimensiones.</p>
+<p><span class="math display">\[X=\left[ 
+\begin{matrix}
+x_{11}&amp; x_{12}&amp; ...&amp;x_{1m}\\
+x_{21}&amp; x_{22}&amp; ...&amp;x_{2m}\\
+\vdots &amp; \vdots &amp;  &amp; \vdots\\
+x_{n1}&amp; x_{n2}&amp; ...&amp;x_{nm}
+\end{matrix}
+\right]\]</span></p>
+<p>Esta suele ser la representación de una matriz con <span class="math inline">\(n\)</span> filas y <span class="math inline">\(m\)</span> columnas, los valores <span class="math inline">\(x_{ij}\)</span> son los elementos de la matriz.</p>
+</div>
+<div id="creacion-de-matrices" class="section level2">
+<h2><span class="header-section-number">4.2</span> Creación de Matrices</h2>
+<p>Para crear matrices en <strong>R</strong> se usa el comando <code>matrix()</code> que tiene como principales argumentos los siguientes:</p>
+<ul>
+<li><p><code>data</code>: Vector que contiene los elementos que tendrá la matriz.</p></li>
+<li><p><code>nrow</code>: Número de filas que tendrá.</p></li>
+<li><p><code>ncol</code> : Número de columnas que tendrá.</p></li>
+<li><p><code>byrow</code> : Es un parámetro lógico, si éste es verdadero (<code>TRUE</code>) la matriz se llenara por filas, en caso de ser falso (<code>FALSE</code>) se llenará por columnas.</p></li>
+</ul>
+<p>Veamos algunos ejemplos:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">12</span>,<span class="dv">3</span>)
+<span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">7</span>,<span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    2    4
+## [2,]    5    6
+## [3,]    7    5
+## [4,]    3    7
+## [5,]    9    1
+## [6,]    2    0
+## [7,]   12    3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">7</span>,<span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    2    7
+## [2,]    4    9
+## [3,]    5    1
+## [4,]    6    2
+## [5,]    7    0
+## [6,]    5   12
+## [7,]    3    3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]    2    4    5    6    7    5    3
+## [2,]    7    9    1    2    0   12    3</code></pre>
+<p>En caso de que los elementos del vector que se le introducen para crear el vector sea menor que la cantidad de elementos que debe tener la matriz <strong>R</strong> recicla los elementos del vector hasta completar la matriz.</p>
+<p>Si queremos colocarle nombre a las columnas y filas de la matriz podemos usar las funciones <code>colnames()</code> y <code>rownames()</code> respectivamente, que reciben como parámetro de entrada la matriz y luego con el operador asignación se creará un vector de caracteres con la función <code>c()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X&lt;-<span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)
+<span class="kw">rownames</span>(X) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)
+<span class="kw">colnames</span>(X) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;z_1&quot;</span>,<span class="st">&quot;z_2&quot;</span>,<span class="st">&quot;z_3&quot;</span>,<span class="st">&quot;z_4&quot;</span>,<span class="st">&quot;z_5&quot;</span>,<span class="st">&quot;z_6&quot;</span>,<span class="st">&quot;z_7&quot;</span>)
+X</code></pre></div>
+<pre><code>##   z_1 z_2 z_3 z_4 z_5 z_6 z_7
+## x   2   4   5   6   7   5   3
+## y   7   9   1   2   0  12   3</code></pre>
+<p>Otra función muy util a la hora de trabajar con matrices es <code>dim()</code>, ésta nos dice las dimensiones que tiene dicha matriz, es decir el número de filas y columnas que tiene la matriz; para esto también pueden usarse las funciones <code>nrow()</code> y <code>ncol()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(X)</code></pre></div>
+<pre><code>## [1] 2 7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(X)</code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(X)</code></pre></div>
+<pre><code>## [1] 7</code></pre>
+</div>
+<div id="seleccion-de-los-elementos-de-una-matriz" class="section level2">
+<h2><span class="header-section-number">4.3</span> Selección de los elementos de una matriz</h2>
+<ul>
+<li><strong>Selección de un elemento de la Matriz</strong> : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes <code>[]</code>, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">2</span>]</code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">2</span>,<span class="dv">5</span>]</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z_3&quot;</span>]</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<ul>
+<li><strong>Selección de una fila</strong> : Para seleccionar una fila se debe colocar dentro de los corchetes el número o nombre de la fila seguido de una coma <code>[Número,]</code>.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">2</span>,]</code></pre></div>
+<pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
+##   7   9   1   2   0  12   3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="st">&quot;x&quot;</span>,]</code></pre></div>
+<pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
+##   2   4   5   6   7   5   3</code></pre>
+<ul>
+<li><strong>Selección de una Columna</strong> : Para seleccionar una columna se debe colocar dentro de los corchetes una coma seguido del número o nombre de la columna respectiva <code>[,Número]</code>.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[,<span class="dv">1</span>]</code></pre></div>
+<pre><code>## x y 
+## 2 7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[,<span class="st">&quot;z_1&quot;</span>]</code></pre></div>
+<pre><code>## x y 
+## 2 7</code></pre>
+<ul>
+<li><strong>Selección de submatrices</strong> : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o posiciones los elementos que se deseen.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</code></pre></div>
+<pre><code>##   z_2 z_3 z_4 z_5
+## x   4   5   6   7
+## y   9   1   2   0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">PES &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow=</span> <span class="ot">TRUE</span>)
+X[PES]</code></pre></div>
+<pre><code>## [1] 2 6 1</code></pre>
+<ul>
+<li><strong>Eliminar filas o columnas</strong>: Si se quieren eliminar filas y columnas se deben de colocar dento de los corchetes el número correspondiente a las filas o columnas con el signo menos.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,]</code></pre></div>
+<pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
+##   7   9   1   2   0  12   3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[,<span class="op">-</span><span class="dv">2</span>]</code></pre></div>
+<pre><code>##   z_1 z_3 z_4 z_5 z_6 z_7
+## x   2   5   6   7   5   3
+## y   7   1   2   0  12   3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">2</span>]</code></pre></div>
+<pre><code>## z_1 z_3 z_4 z_5 z_6 z_7 
+##   7   1   2   0  12   3</code></pre>
+<ul>
+<li><strong>Modificación de elementos</strong> : Para modificar, cambiar un elemento de la matriz debemos seleccionar el elemento y asignarle el nuevo valor con el operador asignación.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">1</span>]&lt;-<span class="dv">100</span>
+X</code></pre></div>
+<pre><code>##   z_1 z_2 z_3 z_4 z_5 z_6 z_7
+## x 100   4   5   6   7   5   3
+## y   7   9   1   2   0  12   3</code></pre>
+</div>
+<div id="operaciones-con-matrices" class="section level2">
+<h2><span class="header-section-number">4.4</span> Operaciones con Matrices</h2>
+<ul>
+<li><strong>Suma elemento a elemento</strong> : Para que se realice la suma de dos matrices, es decir sumar elemento de ambas matrices en la misma posición, ambas matrices deben tener las mismas dimensiones, y esto se hace con el operador <code>+</code>.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">25</span>,<span class="dv">3</span>)
+X1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(z, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)
+X1</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]   10   13   16
+## [3,]   19   22   25</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">6</span>,<span class="dv">10</span>,<span class="dv">2</span>)
+X2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(w, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
+X2</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    6    6    6
+## [2,]    8    8    8
+## [3,]   10   10   10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">+</span>X2</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    7   10   13
+## [2,]   18   21   24
+## [3,]   29   32   35</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2<span class="op">+</span><span class="dv">2</span> <span class="co">#Sumar un escalar a una matriz.</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    8    8    8
+## [2,]   10   10   10
+## [3,]   12   12   12</code></pre>
+<ul>
+<li><strong>Multiplicación de elemento a elemento</strong> : Al igual que en la suma de elemento a elemento, se puede realizar el producto de elemento a elemento entre matrices, utilizando el operado <code>*</code>.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">*</span>X2</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    6   24   42
+## [2,]   80  104  128
+## [3,]  190  220  250</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2<span class="op">*</span><span class="dv">2</span> <span class="co">#Multiplicación de un escalar por una matriz.</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   12   12   12
+## [2,]   16   16   16
+## [3,]   20   20   20</code></pre>
+<ul>
+<li><strong>Multiplicación de matrices</strong> : Para realizar el producto entre matrices se utiliza el operador <code>%*%</code>, para que este se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">%*%</span>X2</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]  108  108  108
+## [2,]  324  324  324
+## [3,]  540  540  540</code></pre>
+<ul>
+<li><strong>Suma de filas y columnas</strong> : Existen dos funciones para sumar las filas y las columnas de una matriz, estas son <code>rowSums()</code> y <code>colSums()</code> respectivamente.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    6    6    6
+## [2,]    8    8    8
+## [3,]   10   10   10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowSums</span>(X2)</code></pre></div>
+<pre><code>## [1] 18 24 30</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colSums</span>(X2)</code></pre></div>
+<pre><code>## [1] 24 24 24</code></pre>
+<p>También se puede conocer el promedio de cada fila y columna con las funciones <code>rowMeans()</code> y <code>colMeans()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2</code></pre></div>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    6    6    6
+## [2,]    8    8    8
+## [3,]   10   10   10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowMeans</span>(X2)</code></pre></div>
+<pre><code>## [1]  6  8 10</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colMeans</span>(X2)</code></pre></div>
+<pre><code>## [1] 8 8 8</code></pre>
+<ul>
+<li><strong>Concatenar matrices</strong> : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos <code>cbind()</code> y <code>rbind()</code>, respectivamente. Los parámetros de entrada pueden ver vectores, matrices que tengan el mismo tamaño.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">43</span>,<span class="dv">3</span>)
+M &lt;-<span class="st"> </span><span class="kw">matrix</span>(z, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)
+Promedio_columna &lt;-<span class="st"> </span><span class="kw">colMeans</span>(M)
+Promedio_fila &lt;-<span class="st"> </span><span class="kw">rowMeans</span>(M)
+<span class="kw">rbind</span>(M, Promedio_columna)</code></pre></div>
+<pre><code>##                  [,1] [,2] [,3] [,4] [,5]
+##                     1    4    7   10   13
+##                    16   19   22   25   28
+##                    31   34   37   40   43
+## Promedio_columna   16   19   22   25   28</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cbind</span>(M,Promedio_fila)</code></pre></div>
+<pre><code>##                     Promedio_fila
+## [1,]  1  4  7 10 13             7
+## [2,] 16 19 22 25 28            22
+## [3,] 31 34 37 40 43            37</code></pre>
+
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vectores.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-frame.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/004-Matrices.Rmd",
+"text": "Edit"
+},
+"download": ["Programacion-Cientifica-en-R.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

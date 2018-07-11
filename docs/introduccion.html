@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Programación Científica en R</title>
   <meta name="description" content="Programación Científica en R">
-  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="Programación Científica en R" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-02-20">
+<meta name="date" content="2018-07-11">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="acerca-del-autor.html">
-<link rel="next" href="software-tools.html">
+<link rel="next" href="objetos-en-r.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -113,7 +113,70 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
 <li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduccion.html"><a href="introduccion.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.1" data-path="introduccion.html"><a href="introduccion.html#caracteristicas-principales-del-lenguaje-r"><i class="fa fa-check"></i><b>1.1</b> Características principales del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.2" data-path="introduccion.html"><a href="introduccion.html#desventajas-del-lenguaje-r"><i class="fa fa-check"></i><b>1.2</b> Desventajas del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="introduccion.html"><a href="introduccion.html#el-diseno-del-lenguaje-r"><i class="fa fa-check"></i><b>1.3</b> El diseño del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.4" data-path="introduccion.html"><a href="introduccion.html#instalacion-de-r-y-de-paquetes-de-r"><i class="fa fa-check"></i><b>1.4</b> Instalación de <strong>R</strong> y de paquetes de <strong>R</strong></a></li>
+<li class="chapter" data-level="1.5" data-path="introduccion.html"><a href="introduccion.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.5</b> Ayuda en <strong>R</strong></a></li>
+<li class="chapter" data-level="1.6" data-path="introduccion.html"><a href="introduccion.html#rstudio"><i class="fa fa-check"></i><b>1.6</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="objetos-en-r.html"><a href="objetos-en-r.html"><i class="fa fa-check"></i><b>2</b> Objetos en <strong>R</strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.1</b> Tipos de objetos en <strong>R</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#manejo-de-objetos"><i class="fa fa-check"></i><b>2.2</b> Manejo de Objetos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#atributos-de-un-objeto"><i class="fa fa-check"></i><b>2.2.1</b> Atributos de un Objeto</a></li>
+<li class="chapter" data-level="2.2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#nombres-validos-para-un-objeto"><i class="fa fa-check"></i><b>2.2.2</b> Nombres válidos para un objeto</a></li>
+<li class="chapter" data-level="2.2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operador-de-asignacion-e-igualdad"><i class="fa fa-check"></i><b>2.2.3</b> Operador de asignación e igualdad</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#principales-funciones-para-trabajar-en-la-consola"><i class="fa fa-check"></i><b>2.3</b> Principales funciones para trabajar en la consola</a></li>
+<li class="chapter" data-level="2.4" data-path="objetos-en-r.html"><a href="objetos-en-r.html#r-como-calculadora"><i class="fa fa-check"></i><b>2.4</b> <strong>R</strong> como calculadora</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operaciones-aritmeticas"><i class="fa fa-check"></i><b>2.4.1</b> Operaciones Aritméticas</a></li>
+<li class="chapter" data-level="2.4.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-comparativos"><i class="fa fa-check"></i><b>2.4.2</b> Operadores Comparativos</a></li>
+<li class="chapter" data-level="2.4.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-logicos"><i class="fa fa-check"></i><b>2.4.3</b> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html#definicion"><i class="fa fa-check"></i><b>3.1</b> Definición</a></li>
+<li class="chapter" data-level="3.2" data-path="vectores.html"><a href="vectores.html#creacion-de-vectores"><i class="fa fa-check"></i><b>3.2</b> Creación de Vectores</a></li>
+<li class="chapter" data-level="3.3" data-path="vectores.html"><a href="vectores.html#secuencias"><i class="fa fa-check"></i><b>3.3</b> Secuencias</a></li>
+<li class="chapter" data-level="3.4" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.4</b> Selección de elementos de un vector</a></li>
+<li class="chapter" data-level="3.5" data-path="vectores.html"><a href="vectores.html#suma-de-vectores"><i class="fa fa-check"></i><b>3.5</b> Suma de Vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>4</b> Matrices</a><ul>
+<li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#definicion-1"><i class="fa fa-check"></i><b>4.1</b> Definición</a></li>
+<li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#creacion-de-matrices"><i class="fa fa-check"></i><b>4.2</b> Creación de Matrices</a></li>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.3</b> Selección de los elementos de una matriz</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones con Matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>5</b> Data.frame</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-frame.html"><a href="data-frame.html#generacion-de-un-data.frame"><i class="fa fa-check"></i><b>5.1</b> Generación de un Data.frame</a></li>
+<li class="chapter" data-level="5.2" data-path="data-frame.html"><a href="data-frame.html#acceder-a-datos-en-un-data.frame"><i class="fa fa-check"></i><b>5.2</b> Acceder a Datos en un Data.frame</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a></li>
+<li class="chapter" data-level="7" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>7</b> Factores</a></li>
+<li class="chapter" data-level="8" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html"><i class="fa fa-check"></i><b>8</b> Fechas y Tiempo</a><ul>
+<li class="chapter" data-level="8.1" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-formato-date"><i class="fa fa-check"></i><b>8.1</b> Fechas con formato <code>Date</code></a></li>
+<li class="chapter" data-level="8.2" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-el-formato-posixct-o-posixlt"><i class="fa fa-check"></i><b>8.2</b> Fechas con el formato <code>POSIXct</code> o <code>POSIXlt</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>9</b> Datos</a><ul>
+<li class="chapter" data-level="9.1" data-path="datos.html"><a href="datos.html#importar-datos"><i class="fa fa-check"></i><b>9.1</b> Importar Datos</a></li>
+<li class="chapter" data-level="9.2" data-path="datos.html"><a href="datos.html#datos-de-r"><i class="fa fa-check"></i><b>9.2</b> Datos de <strong>R</strong></a></li>
+<li class="chapter" data-level="9.3" data-path="datos.html"><a href="datos.html#guardar-datos"><i class="fa fa-check"></i><b>9.3</b> Guardar Datos</a></li>
+<li class="chapter" data-level="9.4" data-path="datos.html"><a href="datos.html#exportar-datos"><i class="fa fa-check"></i><b>9.4</b> Exportar Datos</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="graficos.html"><a href="graficos.html"><i class="fa fa-check"></i><b>10</b> Gráficos</a><ul>
+<li class="chapter" data-level="10.1" data-path="graficos.html"><a href="graficos.html#grafico-de-puntos"><i class="fa fa-check"></i><b>10.1</b> Gráfico de Puntos</a></li>
+<li class="chapter" data-level="10.2" data-path="graficos.html"><a href="graficos.html#grafico-de-lineas"><i class="fa fa-check"></i><b>10.2</b> Gráfico de líneas</a></li>
+<li class="chapter" data-level="10.3" data-path="graficos.html"><a href="graficos.html#grafico-de-tortas"><i class="fa fa-check"></i><b>10.3</b> Gráfico de Tortas</a></li>
+<li class="chapter" data-level="10.4" data-path="graficos.html"><a href="graficos.html#barplot"><i class="fa fa-check"></i><b>10.4</b> Barplot</a></li>
+<li class="chapter" data-level="10.5" data-path="graficos.html"><a href="graficos.html#boxplot"><i class="fa fa-check"></i><b>10.5</b> Boxplot</a></li>
+<li class="chapter" data-level="10.6" data-path="graficos.html"><a href="graficos.html#histogramas"><i class="fa fa-check"></i><b>10.6</b> Histogramas</a></li>
+<li class="chapter" data-level="10.7" data-path="graficos.html"><a href="graficos.html#multiple-graficos-por-ventanas"><i class="fa fa-check"></i><b>10.7</b> Multiple gráficos por ventanas</a></li>
+<li class="chapter" data-level="10.8" data-path="graficos.html"><a href="graficos.html#guardar-graficos"><i class="fa fa-check"></i><b>10.8</b> Guardar gráficos</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>11</b> Funciones</a><ul>
+<li class="chapter" data-level="11.1" data-path="funciones.html"><a href="funciones.html#creacion-de-funciones"><i class="fa fa-check"></i><b>11.1</b> Creación de Funciones</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones.html"><a href="funciones.html#condicionales"><i class="fa fa-check"></i><b>11.2</b> Condicionales</a></li>
+<li class="chapter" data-level="11.3" data-path="funciones.html"><a href="funciones.html#loop-o-bucles"><i class="fa fa-check"></i><b>11.3</b> Loop o Bucles</a></li>
 </ul></li>
 <li class="appendix"><span><b>Apéndice</b></span></li>
 <li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
@@ -144,35 +207,128 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="introduccion" class="section level1">
 <h1><span class="header-section-number">Capítulo 1</span> Introducción</h1>
-<p>Conocer en qué se invierte es un problema fundamental en la gestión del capital propio o de terceros, es el problema primario en la gestión de inversiones. La gestión de inversiones es un campo con muchos avances que, hoy en día, demanda métodos basados en las ciencias. En particular las matemáticas, probabilidades y la computación.</p>
-<p>Un primer avance en la solución de este problema es ofrecido por Harry Markowitz en 1952 e inaugura una nueva era en la aplicación de los métodos matemáticos para obtener carteras de inversión con características especiales, para conocer la relación entre el riesgo y el rendimiento. Este avance es reconocido con el precio Nobel en Economía en 1990 e inaugura la era de las Finanzas Cuantitativas, las Finanzas Computaciones, las Matemáticas Financieras, la Ingenería Financiera, entre otras prácticas.</p>
-<p>Markowitz desarrolla un modelo que considera los retornos de cada instrumento como una variable aleatoria y combina estas variables aleatorias para obtener el riesgo y el rendimiento de dicha combinación. Esta combinación de intrumentos es lo que denominamos portafolios y el objeto de Markowitz es encontrar los portafolios óptimos. Los portafolios óptimos son combinaciones de activos financieros que generan el mayor rendimiento posible con el menor riesgo. La combinación de activos nos lleva a la idea de la diversificación y su efecto en la gestión del riesgo, ya que ahora también es importante la relación que existe entre los instrumentos como un factor determinante del riesgo de la cartera.</p>
-<p>Si los instrumentos tienen una correlación positiva, el riesgo no disminuye, sin embargo si la correlación es negativa es posible, mediante la diversificación, disminuir el riesgo de la cartera.</p>
-<p>En la práctica es muy complejo obtener instrumentos no correlacionados, ya que los mercados tienen a seguir ciclos alcistas o bajistas y los instrumentos tienen a moverse de forma acompasada. Es decir, que la diversificación no necesariamente logra el objetivo de disminuir el riesgo de la cartera.</p>
-<p>Con estos avances ahora el rendimiento no se discute de forma aislada, el rendimiento siempre viene acompañado del riesgo y ahora la selección del inversionista debe considerar ambas variables para tomar su decisión. Este terreno es un campo con muchos avances ya que se aplican diversos métodos de optimización, de simulación o de medición del riesgo para conseguir las carteras que cumplen con la mejor relación para el inversionista.</p>
-<p>Este trabajo pretende abordar el campo de la distribución del capital en activos financieros que cumplen con ciertas condiciones partiendo de los datos disponibles. En este trabajo partiremos de la historia de los instrumentos para obtener sus características y conformar portafolios óptimos de acuerdo a la metodología de Markowitz. Adicionalmente se desarrollarán herramientas para facilitar el procesamiento de los datos y obtener dichos portafolios.</p>
-<div id="motivation" class="section level2">
-<h2><span class="header-section-number">1.1</span> Motivation</h2>
-<p>La historia reciente de los mercados, se caracteriza por la presencia de varias burbujas o grandes choques en los mercados. En el mercado americano, iniciemos desde 1999-2000 con la burbuja de las empresas tecnológicas que surgen con el auge de Internet y tienen como objetivo el desarrollo de la nueva economía virtual, hoy día es evidente que Amazon y Google son las grandes empresas que capitalizaron gran parte del potencial, el gran impacto generado por la caida de las Torres Gemelas en Septiembre del 2001 y luego la gran crisis inmobiliaria durante el 2007-2008 de la cual se ha recuperado apenas en 2015-2016. Hoy de nuevo, en el año 2017, estamos en presencia de un mercado alcista que alcanza nuevo territorio, ha alcanzado nuevos altos históricos y es inevitable la pregunta: ¿Estamos en presencia de una nueva burbuja?. Esta pregunta no tiene el objetivo de predecir que el mercado va a caer en algún momento, de hecho lo normal es que lo haga, el mercado cumple ciclos contínuamente y no tiene nada de innovador señalar que va a caer cuando hace altos históricos. El mercado se mueve en ondas. Lo que nos interesa de esta dinámica es cómo construir carteras de inversión que puedan sobrevivir estos choques, estos mercados bajistas y al mismo tiempo aprovechar al máximo los mercados alcistas.</p>
-<p>Desde 1952 y más notablemente desde 1990 que recibe el premio Nobel de Economía, Harry Markowitz es señalado como el padre de la Teoría Moderna de Portafolio. Su objetivo es definir una metodología que partiendo de un grupo de activos, se generan las carteras eficientes. Mucho ha ocurrido desde que la Economía reconoce como un área de desarrollo la aplicación de los modelos Matemáticos para ofrecer luz sobre la dedicación óptima del capital.</p>
-<p>Este reconocimiento al aporte de la ciencia en la Economía genera dos grandes líneas de trabajo que intenta responder dos preguntas fundamentales: ¿Dónde coloco el capital y en qué cantidad? y ¿Cuál es el precio de un activo financiero?. Este trabajo elabora sobre la primera pregunta. La segunda pregunta tiene que ver con el trabajo de Black, Scholes y Merton sobre la Valoración de opciones y derivados financieros, que también reciben el premio Nobel de Economía en 1997, apenas hace 20 años. Esta línea de trabajo donde se conjugan varias disciplinas como las Finanzas, Matemáticas, Estadística y más recientemente la Computación, genera un nuevo sector de Analistas Financieros Multidisciplinados que denominaremos Científicos de Datos Financieros.</p>
-<p>La demanda principal a estos analistas consiste en partir de los datos y generar inferencias sobre los mismos aplicando la ciencia y la tecnología. Gran parte del trabajo de Markowitz ha sido la aplicación de métodos de optimización de portafolios con el uso de las computadoras y asistido por sistemas.</p>
-<p>Las grandes burbujas y choques al mercado generan una gran preocupación sobre la gestión apropiada del riesgo y al mismo tiempo un entendimiento de la relación entre el riesgo que se asume y los beneficios posibles. El rendimiento es el resultado de una inversión después de un período de tiempo específico, podemos ganar o perder cuando realizamos una inversión, entonces el rendimiento es la variación (porcentual) del valor de un activo financiero en un período de tiempo. La variación del valor en términos absolutos es la ganancia o pérdida en valor monetario. Por otra parte el riesgo, en este caso, se puede definir como el grado de variabilidad de dicho rendimiento, esta es la medida propuesta por Markowitz y más recientemente han surgido nuevas medidas como el Valor en Riesgo (VaR) o el VaR Condicional (CVaR).</p>
-<p>Usualmente para rendimientos iguales, en teoría, y de acuerdo a la teoría de decisiones racionales bajo incertidumbre, un inversionista debería preferir la inversión con menor riesgo y por otra parte para riesgos iguales, en general, deberíamos preferir la inversión de mayor rendimiento.</p>
-<p>En este trabajo vamos a concentrarnos en la primera pregunta y nos basaremos en las aspiraciones del inversionista para conocer cuales instrumentos pueden formar parte de la cartera y en qué cantidad son requeridos para alcanzar un objetivo de inversión que combina la medida de rentabilidad y la medida de riesgo.</p>
-<p>Los gerentes e inversionistas se enfrentan a situaciones donde deben escoger entre distintas alternativas de inversión basándose en estas dos variables principales, a saber, el rendimiento y el riesgo. Las preguntas son diversas y típicas como por ejemplo:</p>
-
-<p>El problema fundamental es encontrar el balance adecuado entre un grupo de activos para alcanzar el máximo rendimiento con el mínimo riesgo.</p>
-<p>Debido a los ciclos y choques que reciben los mercados, el mundo de hoy está retado a trabajar en un ambiente donde la incertidumbre sobre el desempeño de las inversiones es un hecho palpable y sin embargo desde el punto de vista de los inversionistas o accionistas es necesario ofrecer proyecciones de desempeño que si no se cumplen generan un cuestionamiento sobre el profesionalismo de los gerentes del portafolio o de productos.</p>
-<p>Esto nos lleva a la valoración del riesgo debido a la incertidumbre inherente a los instrumentos de inversión, inclusive a nivel regulatorio la evaluación del riesgo con métodos más rigurosos ya empieza a ser necesario.</p>
-<p>El trabajo de tesis consiste en la investigación documental del estado del arte en la conformación de portafolios de inversión y la aplicación de sus métodos, partiendo del trabajo de Harry Markowitz como base, con el objetivo de entender el desempeño de estas carteras en cada burbuja o choque que han recibido los mercado y además comparar algunas combinaciones de medidas de riesgo y rendimiento. Adicionalmente vamos a continuar la construcción de una aplicación Web interactiva para aplicar los métodos y valernos lo más posible de las diversas librerías construidas en R para este fin.</p>
-
+<p>En su definición más amplia, <strong>R</strong> es un lenguaje de programación que permite al usuario programar y utilizar todas las librerías y algoritmos que han sido programadas por otros. Con R se pueden escribir funciones, hacer cálculos, aplicar técnicas estadísticas, crear gráficos sencillos o complejos, e incluso compartir tus propias funciones en una librería. Un amplio grupo de usuarios lo utiliza en todo el mundo, incluso muchos institutos de investigación, empresas y universidades están utilizando el lenguaje y entorno R. En los últimos cinco años, muchos libros se han publicado sobre R, una de las razones fundamentales es que R está disponible de forma gratuita.</p>
+<p>Fue inicialmente diseñado por <em>Robert Gentleman</em> y <em>Ross Ihaka</em>, miembros de la universidad de Auckland, en Nueva Zelanda. <em>Robert Gentleman</em> es un estadístico Canadiense y bioinformático, actualmente es vicepresidente de Biología computacional en <em>23andMe</em>. <em>Ross Ihaka</em> estadístico graduado en la universidad de California Berkeley en 1985, actualmente es profesor asociado de la universidad de Auckland.</p>
+<p><strong>R</strong> se considera como la versión libre de otro programa llamado <strong>S</strong> o <strong>S-Plus</strong> (GNU S, software libre de S) desarrollado en los laboratorios Bell (Bell Labs es una compañia estado unidense encargada en la investigación y desarrollo cientifico, perteneciente a la empresa filandesa <em>NOKIA</em>, su sede se encuentra en New Jersey, entre sus patentes más importantes tenemos: La libreta de un solo uso, el transitor, el láser, la fibra óptica, la tecnología DSL, la telefonía móvil, los satélites de comunicación, el sistema operativo UNIX, el lenguaje de programación C y C++.). <strong>S</strong> es un sistema desarrollado para el análisis de datos desarrollado por <em>John Chambers</em>, <em>Rick Beckler</em> y diferentes colaboradores desde finales de 1970, en esa época los análisis estadísticos se desarrollaban mediante subrutinas en <strong>Fortran</strong> (Lenguaje de programación de alto nivel, modular, y usado principalmente en aplicaciones científicas y matemáticas), por lo tanto éstos desarrollaron un conjunto de bibliotecas de macros Fortran, permitiendo la automatización de tareas repetitivas pudiendo hacer mediante una sola llamada u orden de ejecución una serie de intrucciones.</p>
+<p>Entonces ¿Por qué no todo el mundo lo está utilizando? Esta es una pregunta fácil de responder: <strong>R</strong> amerita una curva de aprendizaje, su uso requiere de conocimientos programación, y, aunque existen varias interfaces gráficas para los usuarios, ninguna es lo suficientemente amplia como para evitar por completo la programación. Sin embargo, una vez que se domina el uso básicos de <strong>R</strong>, es poco probable que utilice cualquier otro paquete de software con funcionalidades similares.</p>
+<p>La programación en <strong>R</strong> es homogénea, en el sentido de que la forma de trabajar con distintas librerías es similar, se siguen patrones de trabajo que facilitan el uso de todas sus funcionalidades. Por lo tanto, una vez que se aprende a aplicar un método como la regresión lineal, modificar el código para generalizar un modelo lineal, solo requiere la modificación de algunas opciones y pequeños cambios en el modelo y las fórmulas. Además, <strong>R</strong> cuenta con excelentes paquetes estadísticos. Gran parte de los métodos estadísticos más populares y también algunos más nuevos, ya están programados y disponibles (ya sea como parte del paquete principal o como un paquete aportado por la comunidad de usuarios).</p>
+<div id="caracteristicas-principales-del-lenguaje-r" class="section level2">
+<h2><span class="header-section-number">1.1</span> Características principales del lenguaje <strong>R</strong></h2>
+<ul>
+<li><p>Sintaxis similar a <strong>S</strong>.</p></li>
+<li><p>Semántica similar a <strong>S</strong>.</p></li>
+<li><p>Corre en cualquier sistema operativo (Windows, MAC OS, Linux y Unix), adicionalmente tiene constantemente cambios de versiones.</p></li>
+<li><p>Tamaño muy pequeño. Las funcionalidades se le agregan utilizando paquetes.</p></li>
+<li><p>Es un lenguaje orientado a objetos.</p></li>
+<li><p>Buena capacidad para la generación de gráficos.</p></li>
+<li><p>Se puede usar de modo iterativo para probar modelos, es también usado para realizar nuevas herramientas.</p></li>
+<li><p>Existe una comunidad activa y que estimula constantemente paquetes y funciones. Generalmente está orientado a la Ciencia de los Datos, facilitando el procesamiento y análisis de datos. Más de 8.000 paquetes desarrollados y disponibles en CRAN: <a href="http://cran.r-project.org/" class="uri">http://cran.r-project.org/</a></p></li>
+<li><p>Es totalmente gratis.</p></li>
+<li><p>Es un software libre (<strong>GNU S</strong>, sofware libre de <strong>S</strong>). Con esto los usuarios tienen la libertad de ejecutar, copiar, distribuir, modificar y mejorar el software.</p></li>
+</ul>
+</div>
+<div id="desventajas-del-lenguaje-r" class="section level2">
+<h2><span class="header-section-number">1.2</span> Desventajas del lenguaje <strong>R</strong></h2>
+<ul>
+<li><p>Tiene un sistema integrado de gráficos 3D, el cual no esta completamente integrado en el sistema.</p></li>
+<li><p>El procesamiento es con datos en memoria RAM (los datos deben estar en la memoria RAM para ser procesados). Para grandes volúmenes de datos es necesario contar con un computador con suficiente memoria RAM, en el caso de tener un computador con poca memoria RAM se podrían tener problemas.</p></li>
+<li><p>Las funciones que se usan estan basadas en los usuarios, si se quiere un nuevo análisis, como la implementación de un nuevo modelo o simplemente querer probar nuevas tecnologías, se debe esperar a que la comunidad las implemente o se tendría que desarrollar para lo que generalmente se necesite un manejo superior en programación.</p></li>
+<li><p>No es ideal para usarlo con todo, aun es un nicho muy pequeño.</p></li>
+</ul>
+</div>
+<div id="el-diseno-del-lenguaje-r" class="section level2">
+<h2><span class="header-section-number">1.3</span> El diseño del lenguaje <strong>R</strong></h2>
+<p>Este lenguaje de programación está constituido por un sistema base y de paquetes adicionales que extienden su funcionalidad.</p>
+<p>El diseño fundamental de este lenguaje se basa en los tres pilares siguientes:</p>
+<ul>
+<li><p><strong>R Base Core</strong>: Contiene las funcionalidades del lenguaje, los paquetes bases que nos ayudan a manipular datos con algunos métodos básicos. Entre los paquetes bases tenemos <em>utils, stats, datasets, compiler, parallel, tools, methods, splines, tcltk, graphics, grDevices, grid, splines, statS4</em>.</p></li>
+<li><p><strong>Paquetes Recomendados</strong>: Estos paquetes son los más utilizados para realizar cualquier cálculo estadístico. Entre estos paquetes encontramos <em>boot, class, cluster, codetools, foreign, KernSmooth, lattice, mgcv, name, rpart, survival, MASS, nnet, Matrix</em>.</p></li>
+<li><p><strong>Paquetes del CRAN</strong>: El CRAN (Comprehensive R Archive Network) es una red de sitios web, en todo el mundo, que actuan como distribuidores de los archivos de R, extensión de paquetes y documentación. En el CRAN podemos encontrar más de 8000 paquetes contribuidos y subidos por los usuarios. El sitio web es el siguiente <a href="https://cran.r-project.org/mirrors.html" class="uri">https://cran.r-project.org/mirrors.html</a></p></li>
+</ul>
+</div>
+<div id="instalacion-de-r-y-de-paquetes-de-r" class="section level2">
+<h2><span class="header-section-number">1.4</span> Instalación de <strong>R</strong> y de paquetes de <strong>R</strong></h2>
+<p>Para descargar <strong>R</strong>, el primer paso es dirigirse a la página oficial <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a>, luego dirigirse a la sección “download R” o “CRAN”, ver figura .</p>
+<div class="figure">
+<img src="images/install-R-001.png" alt="Página oficial de R" />
+<p class="caption">Página oficial de R</p>
+</div>
+<p>Una vez allí, se le solicitará que elija un “CRAN mirror”, las palabras “CRAN mirrors” se debe a que estos enlaces actuan como espejos de los archivos localizados en servidores por todo el mundo, lo cual facilita la descarga de la información, se recomienda utilizar la “0-Cloud”, o nube original, desde la que se envía la información a los otros servidores, a continuación la lista de espejos que se mostrará. Ver figura .</p>
+<div class="figure">
+<img src="images/install-R-002.png" alt="CRAN mirrors " />
+<p class="caption">CRAN mirrors </p>
+</div>
+<p>Luego de seleccionar la Nube original o “0-Cloud” se tendrá la pantalla de dicho CRAN, donde se tendrá el material disponible sobre R, en la parte izquierda se tendrá ayudas, manuales, e información general sobre el software, en la parte superior los link para la descarga del lenguaje dependiendo el sistema operativo y en la parte inferior el código fuente para todas las plataformas. Ver figura .</p>
+<div class="figure">
+<img src="images/install-R-003.png" alt="CRAN 0-Cloud" />
+<p class="caption">CRAN 0-Cloud</p>
+</div>
+<p>Para instalar <strong>R</strong> se debe hacer clic en el enlace según el sistema operativo en que se esté trabajando, supongamos que se tiene Windows. Ver figura .</p>
+<div class="figure">
+<img src="images/install-R-004.png" alt="Instalar R para Windows " />
+<p class="caption">Instalar R para Windows </p>
+</div>
+<p>En los subdirectorios se tendrá la opción de instalar <strong>R</strong> por primera vez (install <strong>R</strong> for the first time), daremos clic en dicho enlace, en la pantalla que se mostrará se debe seleccionar en la parte superior del link que contiene la última versión de <strong>R</strong> al momento de consulta, de igual manera en la parte inferior se dispone de un link para acceder a versiones previas “Previous releases”. Ver Figura </p>
+<div class="figure">
+<img src="images/install-R-005.png" alt="Descargar la versión de R disponible" />
+<p class="caption">Descargar la versión de R disponible</p>
+</div>
+<p>En la sección “Previous releases” se tendrá la lista completa de las versiones de <strong>R</strong> y sus fechas de salida, es importante resaltar lo frecuente con que se publican las actualizaciones, ya que muchos elementos utilizados para el funcionamiento correcto de <strong>R</strong> depende de la versión que se esté utilizando, y en algunos casos se recomienda no trabajar con la última versión del software.</p>
+<p>Cuando ya se tenga descargado el software se abre el instalador y se ejecuta seleccionando el lenguaje con el que se quiera trabajar.</p>
+<p>Para la instalación de paquetes se usa el comando <code>install.packages()</code>, donde el nombre del paquete va dentro de comillas como argumento, luego que el paquete esté instalado se debe cargar dicho paquete para poder hacer uso de las funciones que el mismo contiene, esto se hace con el comando <code>library()</code>. En la figura (fig:img006) se muestra la instalación del paquete llamado “DT”.</p>
+<div class="figure">
+<img src="images/install-package.png" alt="Instalación del paquete DT" />
+<p class="caption">Instalación del paquete “DT”</p>
+</div>
+</div>
+<div id="ayuda-en-r" class="section level2">
+<h2><span class="header-section-number">1.5</span> Ayuda en <strong>R</strong></h2>
+<p>La primera función que utilizaremos para la opción de ayuda es <code>help.start()</code>, cuando la colocamos en la consola se nos despliega una ayuda en la cual se muestra información general de <strong>R</strong>, como manuales relacionados al lenguaje, la importación y exportación de datos, la instalación y administración de <strong>R</strong>, enlaces hacia los paquetes, información sobre <strong>R</strong> como su licencia GNU, sobre los autores, entre otros.</p>
+<p>Ahora si estamos interesados en otros comando, o buscando un comando que realice cierto trabajo en particular, utilizamos la función <code>help()</code> o su equivalente que es <code>?</code>.</p>
+<p>La figura  muestra la ventana que se nos desplega cuando colocamos el comando <code>help(lm)</code>, <code>lm</code> son las iniciales que se usan para los modelos de regresión lineal.</p>
+<div class="figure">
+<img src="images/help-lm.png" alt="Ayuda para el comando help(lm)" />
+<p class="caption">Ayuda para el comando help(lm)</p>
+</div>
+<p>En la primera línea se observa el comando que buscamos y dentro de <code>{ }</code> el paquete al cual pertenece dicha función o operador. Luego tenemos el título, que corresponde a la función principal que tiene el comando, seguido de esto se tiene información específica sobre la misma, algunas de estas pueden ser las siguientes:</p>
+<ul>
+<li><p><strong>Description</strong>: Se tiene una breve descripción de lo que cálcula la función o lo que realiza el operador.</p></li>
+<li><p><strong>Usage</strong>: En el caso de tener una función, nos da el nombre con todos los argumentos que usa, mostrando los valores por defecto que estos toman; en el caso de un operador describe su uso típico.</p></li>
+<li><p><strong>Arguments</strong>: Cuando se tiene una función en esta sección se describe de manera detallada cada uno de sus argumentos, o parámetros de entrada; en el caso de un operador se explican los tipos de objetos que se usan para usar dicho operador.</p></li>
+<li><p><strong>Details</strong>: En esta sección se muestra una descripción detallada de la función u operador.</p></li>
+<li><p><strong>Value</strong>: Se explica los valores que retorna la función o el resultado que se tendrá si se aplica el operador.</p></li>
+<li><p><strong>See Also</strong>: Generalmente se muestran enlaces a otras páginas de ayuda con funciones u operadores similares.</p></li>
+<li><p><strong>Examples</strong>: Algunos ejemplos usando la función o el operador.</p></li>
+</ul>
+<p>Si se desea buscar una función que realice un cálculo específico podemos usar palabras claves sobre dicho cálculo usando el comando <code>help.search()</code>, este mostrará todas las funciones, con el paquete al que pertenecen, que tienen en su título las palabras colocadas como argumentos en dicho comando. Por ejemplo si se quiere conseguir una instrucción para realizar una regresión lineal, la palabra clave podría ser “lineal”.</p>
+<p>Otros comandos relacionados con la ayuda serían los siguientes:</p>
+<p><code>apropos(&quot;mean&quot;)</code>: Lista los objetos cuyos nombres coincidan con “mean”.</p>
+<p><code>example(&quot;mean&quot;)</code>: muestra un ejemplo encontrado en la página de ayuda para la función “mean”.</p>
+<p>Otras opciones que suelen ser muy utiles a la hora de solicitar ayuda es consultar a alguien con más experiencia. La comunidad que conforma <strong>R</strong> tiene una lista de correos para solicitar ayuda sobre <strong>R</strong> en español y se entiende como un complemento social a la documentación, libros, etc. En el siguiente enlace se encuentra una descripción detallada de como hacer uso de esto <a href="https://stat.ethz.ch/mailman/listinfo/r-help-es" class="uri">https://stat.ethz.ch/mailman/listinfo/r-help-es</a>.</p>
+</div>
+<div id="rstudio" class="section level2">
+<h2><span class="header-section-number">1.6</span> RStudio</h2>
+<p>Antes de explicar que es RStudio, vamos hablar de que es un ambiente de desarrollo integrado o entorno de desarrollo interactivo, IDE por sus siglas en ingles (integrated development environment), estos son aplicaciones que facilitan a los desarrolladores o programadores el desarrollo de sofware. Normalmente consiste de un editor de código fuente, construcciones automaticas de herramientas y un depurador.</p>
+<p>El límite entre un IDE y otras partes del entorno de desarrollo de software más amplio no está bien definido. Muchas veces, a los efectos de simplificar la construcción de la interfaz gráfica de usuario (GUI, por sus siglas en inglés) se integran un sistema controlador de versión y varias herramientas. Muchos IDE modernos también cuentan con un navegador de clases, un buscador de objetos y un diagrama de jerarquía de clases, para su uso con el desarrollo de software orientado a objetos.</p>
+<p>El proyecto <strong>RStudio</strong> ofrece actualmente la mayor parte de las características deseadas para un IDE de una manera novedosa, haciendo más fácil y más productivo utilizar <strong>R</strong>. Algunos puntos destacados son:</p>
+<ul>
+<li><p>Los principales componentes de un IDE están muy bien integrados en un diseño de cuatro paneles que incluye una consola para sesiones interactivas <strong>R</strong>, una con pestañas para organizar los archivos de un proyecto, y los paneles para organizar los diferentes elementos menos centrales.</p></li>
+<li><p>La consola y editor de código fuente están estrechamente vinculados al sistema de ayuda interna de <strong>R</strong> a través de la implementación del tabulador y el componente visor de páginas de ayuda.</p></li>
+<li><p>La creación de diferentes proyectos es muy fácil, y cambiar entre ellos es aún más fácil.</p></li>
+<li><p><strong>RStudio</strong> ofrece muchas herramientas administrativas convenientes y fáciles de usar para la gestión de paquetes, el espacio de trabajo, archivos y más.</p></li>
+<li><p>El IDE está disponible para los tres sistemas operativos principales y se puede ejecutar a través de un navegador web para el acceso remoto.</p></li>
+<li><p><strong>RStudio</strong> es mucho más fácil de aprender que Emacs / ESS, más fácil de configurar e instalar que Eclipse / Statet, tiene un mejor editor que JGR, es mejor organizado que Sciviews, y a diferencia de Notepad ++ y Rgui, está disponible en más plataformas que sólo la de Windows, es decir entre las diversas alternativas de IDE para <strong>R</strong> es la más versátil.</p></li>
+</ul>
+<p><strong>RStudio</strong> es un proyecto construido sobre muchos otros proyectos de código abierto. Su objetivo declarado -que ya se está cumpliendo- es desarrollar una herramienta gratuita de gran alcance que apoya las prácticas y técnicas requeridas para la realización de análisis estadístico de alta calidad.</p>
+<p>En resumen <strong>RStudio</strong> es un entorno de desarrollo integrado para <strong>R</strong>. Con él se proporciona un lugar centralizado y bien organizado para hacer casi cualquier cosa que usted quiera hacer con <strong>R</strong>.</p>
+<p>Al igual que <strong>R</strong>, <strong>RStudio</strong> es sencillo de instalar, para ello el paso inicial es acceder a la página oficial <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a> y luego hacer clic en “Download Rstudio”, luego en la parte inferior hacer clic en “Download Rstudio Desktop” y escoger la aplicación según el sistema operativo con el que trabaje su equipo. Ver la Figura </p>
+<div class="figure">
+<img src="images/install-RStudio.png" alt="Página principal de RStudio" />
+<p class="caption">Página principal de RStudio</p>
+</div>
 
 </div>
 </div>
-
-
-
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
@@ -185,7 +341,7 @@ ga('send', 'pageview');
         </div>
       </div>
 <a href="acerca-del-autor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="software-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="objetos-en-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -203,10 +359,11 @@ gitbook.start({
 "facebook": false,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -214,7 +371,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/010-introduction.Rmd",
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/001-Introduccion.Rmd",
 "text": "Edit"
 },
 "download": ["Programacion-Cientifica-en-R.pdf"],
@@ -225,6 +382,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

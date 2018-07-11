@@ -1,0 +1,168 @@
+# Matrices
+
+## Definición
+
+Un array es una colección de datos del mismo tipo con varias dimensiones.
+
+Una matriz en un array con dos dimensiones.
+
+$$X=\left[ 
+\begin{matrix}
+x_{11}& x_{12}& ...&x_{1m}\\
+x_{21}& x_{22}& ...&x_{2m}\\
+\vdots & \vdots &  & \vdots\\
+x_{n1}& x_{n2}& ...&x_{nm}
+\end{matrix}
+\right]$$
+
+Esta suele ser la representación de una matriz con $n$ filas y $m$ columnas, los valores $x_{ij}$ son los elementos de la matriz.
+
+## Creación de Matrices
+
+Para crear matrices en __R__ se usa el comando `matrix()` que tiene como principales argumentos los siguientes:
+
+- `data`: Vector que contiene los elementos que tendrá la matriz.
+
+- `nrow`: Número de filas que tendrá.
+
+- `ncol` : Número de columnas que tendrá.
+
+- `byrow` : Es un parámetro lógico, si éste es verdadero (`TRUE`) la matriz se llenara por filas, en caso de ser falso (`FALSE`) se llenará por columnas.
+
+Veamos algunos ejemplos:
+
+```{r}
+x <- c(2,4,5,6,7,5,3,7,9,1,2,0,12,3)
+matrix(data=x,nrow=7,ncol=2, byrow=TRUE)
+matrix(data=x,nrow=7,ncol=2, byrow=FALSE)
+matrix(data=x,nrow=2,ncol=7, byrow=TRUE)
+```
+
+En caso de que los elementos del vector que se le introducen para crear el vector sea menor que la cantidad de elementos que debe tener la matriz __R__ recicla los elementos del vector hasta completar la matriz.
+
+Si queremos colocarle nombre a las columnas y filas de la matriz podemos usar las funciones `colnames()` y `rownames()` respectivamente, que reciben como parámetro de entrada la matriz y luego con el operador asignación se creará un vector de caracteres con la función `c()`.
+
+```{r}
+X<-matrix(data=x,nrow=2,ncol=7, byrow=TRUE)
+rownames(X) <- c("x","y")
+colnames(X) <- c("z_1","z_2","z_3","z_4","z_5","z_6","z_7")
+X
+```
+
+Otra función muy util a la hora de trabajar con matrices es `dim()`, ésta nos dice las dimensiones que tiene dicha matriz, es decir el número de filas y columnas que tiene la matriz; para esto también pueden usarse las funciones `nrow()` y `ncol()`.
+
+```{r}
+dim(X)
+nrow(X)
+ncol(X)
+```
+
+## Selección de los elementos de una matriz
+
+- __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.
+
+```{r}
+X[1,2]
+X[2,5]
+X["x", "z_3"]
+```
+
+- __Selección de una fila__ : Para seleccionar una fila se debe colocar dentro de los corchetes el número o nombre de la fila seguido de una coma `[Número,]`.
+
+```{r}
+X[2,]
+X["x",]
+```
+
+- __Selección de una Columna__ : Para seleccionar una columna se debe colocar dentro de los corchetes una coma seguido del número o nombre de la columna respectiva `[,Número]`.
+
+```{r}
+X[,1]
+X[,"z_1"]
+```
+
+- __Selección de submatrices__ : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o posiciones los elementos que se deseen. 
+
+```{r}
+X[1:2,2:5]
+PES <- matrix(c(1, 1, 1, 4, 2, 3), ncol = 2, byrow= TRUE)
+X[PES]
+```
+
+- __Eliminar filas o columnas__: Si se quieren eliminar filas y columnas se deben de colocar dento de los corchetes el número correspondiente a las filas o columnas con el signo menos.
+
+
+```{r}
+X[-1,]
+X[,-2]
+X[-1,-2]
+```
+
+- __Modificación de elementos__ : Para modificar, cambiar un elemento de la matriz debemos seleccionar el elemento y asignarle el nuevo valor con el operador asignación.
+
+```{r}
+X[1,1]<-100
+X
+```
+
+## Operaciones con Matrices
+
+- __Suma elemento a elemento__ : Para que se realice la suma de dos matrices, es decir sumar elemento de ambas matrices en la misma posición, ambas matrices deben tener las mismas dimensiones, y esto se hace con el operador `+`.
+
+```{r}
+z <- seq(1,25,3)
+X1 <- matrix(z, nrow = 3, ncol = 3, byrow = TRUE)
+X1
+w <- seq(6,10,2)
+X2 <- matrix(w, nrow = 3, ncol = 3)
+X2
+
+X1+X2
+
+X2+2 #Sumar un escalar a una matriz.
+```
+
+- __Multiplicación de elemento a elemento__ : Al igual que en la suma de elemento a elemento, se puede realizar el producto de elemento a elemento entre matrices, utilizando el operado `*`.
+
+```{r}
+X1*X2
+
+X2*2 #Multiplicación de un escalar por una matriz.
+```
+
+- __Multiplicación de matrices__ : Para realizar el producto entre matrices se utiliza el operador `%*%`, para que este se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.
+
+```{r}
+X1%*%X2
+```
+
+- __Suma de filas y columnas__ : Existen dos funciones para sumar las filas y las columnas de una matriz, estas son `rowSums()` y `colSums()` respectivamente. 
+
+```{r}
+X2
+rowSums(X2)
+colSums(X2)
+```
+
+También se puede conocer el promedio de cada fila y columna con las funciones `rowMeans()` y `colMeans()`
+
+```{r}
+X2
+rowMeans(X2)
+colMeans(X2)
+```
+
+- __Concatenar matrices__ : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos `cbind()` y `rbind()`, respectivamente. Los parámetros de entrada pueden ver vectores, matrices que tengan el mismo tamaño.
+
+```{r}
+z <- seq(1,43,3)
+M <- matrix(z, nrow = 3, ncol = 5, byrow = TRUE)
+Promedio_columna <- colMeans(M)
+Promedio_fila <- rowMeans(M)
+rbind(M, Promedio_columna)
+cbind(M,Promedio_fila)
+```
+
+
+
+

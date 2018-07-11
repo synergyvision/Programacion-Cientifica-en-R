@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Programación Científica en R</title>
+  <meta name="description" content="Programación Científica en R">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
+  <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
+  
+  <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Programación Científica en R" />
+  
+  
+  <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
+
+<meta name="author" content="Synergy Vision">
+
+
+<meta name="date" content="2018-07-11">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="datos.html">
+<link rel="next" href="funciones.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduccion.html"><a href="introduccion.html#caracteristicas-principales-del-lenguaje-r"><i class="fa fa-check"></i><b>1.1</b> Características principales del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.2" data-path="introduccion.html"><a href="introduccion.html#desventajas-del-lenguaje-r"><i class="fa fa-check"></i><b>1.2</b> Desventajas del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="introduccion.html"><a href="introduccion.html#el-diseno-del-lenguaje-r"><i class="fa fa-check"></i><b>1.3</b> El diseño del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.4" data-path="introduccion.html"><a href="introduccion.html#instalacion-de-r-y-de-paquetes-de-r"><i class="fa fa-check"></i><b>1.4</b> Instalación de <strong>R</strong> y de paquetes de <strong>R</strong></a></li>
+<li class="chapter" data-level="1.5" data-path="introduccion.html"><a href="introduccion.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.5</b> Ayuda en <strong>R</strong></a></li>
+<li class="chapter" data-level="1.6" data-path="introduccion.html"><a href="introduccion.html#rstudio"><i class="fa fa-check"></i><b>1.6</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="objetos-en-r.html"><a href="objetos-en-r.html"><i class="fa fa-check"></i><b>2</b> Objetos en <strong>R</strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.1</b> Tipos de objetos en <strong>R</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#manejo-de-objetos"><i class="fa fa-check"></i><b>2.2</b> Manejo de Objetos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#atributos-de-un-objeto"><i class="fa fa-check"></i><b>2.2.1</b> Atributos de un Objeto</a></li>
+<li class="chapter" data-level="2.2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#nombres-validos-para-un-objeto"><i class="fa fa-check"></i><b>2.2.2</b> Nombres válidos para un objeto</a></li>
+<li class="chapter" data-level="2.2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operador-de-asignacion-e-igualdad"><i class="fa fa-check"></i><b>2.2.3</b> Operador de asignación e igualdad</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#principales-funciones-para-trabajar-en-la-consola"><i class="fa fa-check"></i><b>2.3</b> Principales funciones para trabajar en la consola</a></li>
+<li class="chapter" data-level="2.4" data-path="objetos-en-r.html"><a href="objetos-en-r.html#r-como-calculadora"><i class="fa fa-check"></i><b>2.4</b> <strong>R</strong> como calculadora</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operaciones-aritmeticas"><i class="fa fa-check"></i><b>2.4.1</b> Operaciones Aritméticas</a></li>
+<li class="chapter" data-level="2.4.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-comparativos"><i class="fa fa-check"></i><b>2.4.2</b> Operadores Comparativos</a></li>
+<li class="chapter" data-level="2.4.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-logicos"><i class="fa fa-check"></i><b>2.4.3</b> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html#definicion"><i class="fa fa-check"></i><b>3.1</b> Definición</a></li>
+<li class="chapter" data-level="3.2" data-path="vectores.html"><a href="vectores.html#creacion-de-vectores"><i class="fa fa-check"></i><b>3.2</b> Creación de Vectores</a></li>
+<li class="chapter" data-level="3.3" data-path="vectores.html"><a href="vectores.html#secuencias"><i class="fa fa-check"></i><b>3.3</b> Secuencias</a></li>
+<li class="chapter" data-level="3.4" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.4</b> Selección de elementos de un vector</a></li>
+<li class="chapter" data-level="3.5" data-path="vectores.html"><a href="vectores.html#suma-de-vectores"><i class="fa fa-check"></i><b>3.5</b> Suma de Vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>4</b> Matrices</a><ul>
+<li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#definicion-1"><i class="fa fa-check"></i><b>4.1</b> Definición</a></li>
+<li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#creacion-de-matrices"><i class="fa fa-check"></i><b>4.2</b> Creación de Matrices</a></li>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.3</b> Selección de los elementos de una matriz</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones con Matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>5</b> Data.frame</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-frame.html"><a href="data-frame.html#generacion-de-un-data.frame"><i class="fa fa-check"></i><b>5.1</b> Generación de un Data.frame</a></li>
+<li class="chapter" data-level="5.2" data-path="data-frame.html"><a href="data-frame.html#acceder-a-datos-en-un-data.frame"><i class="fa fa-check"></i><b>5.2</b> Acceder a Datos en un Data.frame</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a></li>
+<li class="chapter" data-level="7" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>7</b> Factores</a></li>
+<li class="chapter" data-level="8" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html"><i class="fa fa-check"></i><b>8</b> Fechas y Tiempo</a><ul>
+<li class="chapter" data-level="8.1" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-formato-date"><i class="fa fa-check"></i><b>8.1</b> Fechas con formato <code>Date</code></a></li>
+<li class="chapter" data-level="8.2" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-el-formato-posixct-o-posixlt"><i class="fa fa-check"></i><b>8.2</b> Fechas con el formato <code>POSIXct</code> o <code>POSIXlt</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>9</b> Datos</a><ul>
+<li class="chapter" data-level="9.1" data-path="datos.html"><a href="datos.html#importar-datos"><i class="fa fa-check"></i><b>9.1</b> Importar Datos</a></li>
+<li class="chapter" data-level="9.2" data-path="datos.html"><a href="datos.html#datos-de-r"><i class="fa fa-check"></i><b>9.2</b> Datos de <strong>R</strong></a></li>
+<li class="chapter" data-level="9.3" data-path="datos.html"><a href="datos.html#guardar-datos"><i class="fa fa-check"></i><b>9.3</b> Guardar Datos</a></li>
+<li class="chapter" data-level="9.4" data-path="datos.html"><a href="datos.html#exportar-datos"><i class="fa fa-check"></i><b>9.4</b> Exportar Datos</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="graficos.html"><a href="graficos.html"><i class="fa fa-check"></i><b>10</b> Gráficos</a><ul>
+<li class="chapter" data-level="10.1" data-path="graficos.html"><a href="graficos.html#grafico-de-puntos"><i class="fa fa-check"></i><b>10.1</b> Gráfico de Puntos</a></li>
+<li class="chapter" data-level="10.2" data-path="graficos.html"><a href="graficos.html#grafico-de-lineas"><i class="fa fa-check"></i><b>10.2</b> Gráfico de líneas</a></li>
+<li class="chapter" data-level="10.3" data-path="graficos.html"><a href="graficos.html#grafico-de-tortas"><i class="fa fa-check"></i><b>10.3</b> Gráfico de Tortas</a></li>
+<li class="chapter" data-level="10.4" data-path="graficos.html"><a href="graficos.html#barplot"><i class="fa fa-check"></i><b>10.4</b> Barplot</a></li>
+<li class="chapter" data-level="10.5" data-path="graficos.html"><a href="graficos.html#boxplot"><i class="fa fa-check"></i><b>10.5</b> Boxplot</a></li>
+<li class="chapter" data-level="10.6" data-path="graficos.html"><a href="graficos.html#histogramas"><i class="fa fa-check"></i><b>10.6</b> Histogramas</a></li>
+<li class="chapter" data-level="10.7" data-path="graficos.html"><a href="graficos.html#multiple-graficos-por-ventanas"><i class="fa fa-check"></i><b>10.7</b> Multiple gráficos por ventanas</a></li>
+<li class="chapter" data-level="10.8" data-path="graficos.html"><a href="graficos.html#guardar-graficos"><i class="fa fa-check"></i><b>10.8</b> Guardar gráficos</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>11</b> Funciones</a><ul>
+<li class="chapter" data-level="11.1" data-path="funciones.html"><a href="funciones.html#creacion-de-funciones"><i class="fa fa-check"></i><b>11.1</b> Creación de Funciones</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones.html"><a href="funciones.html#condicionales"><i class="fa fa-check"></i><b>11.2</b> Condicionales</a></li>
+<li class="chapter" data-level="11.3" data-path="funciones.html"><a href="funciones.html#loop-o-bucles"><i class="fa fa-check"></i><b>11.3</b> Loop o Bucles</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndice</b></span></li>
+<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
+<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
+<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programación Científica en R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="graficos" class="section level1">
+<h1><span class="header-section-number">Capítulo 10</span> Gráficos</h1>
+<p>Las funciones de gráficos que conforman el sistema de gráficos tradicional del lenguaje de programación <strong>R</strong> están en el paquete llamado <code>graphics</code>, el cual es un paquete que se encuentra en la base del programa. En esta sección presentaremos algunas funciones que trae dicho paquete para realizar los gráficos elementales.</p>
+<p>Existen otros paquete más vanzados para realizar gráficos entre ellos tenemos <code>lattice</code> y <code>ggplot2</code>, estos están basados en el sistema de cuadrícula.</p>
+<div id="grafico-de-puntos" class="section level2">
+<h2><span class="header-section-number">10.1</span> Gráfico de Puntos</h2>
+<p>La función más utilizada para realizar gráficos es <code>plot()</code>, el gráfico que da por defecto está función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de <span class="math inline">\(y\)</span> frente a <span class="math inline">\(x\)</span>.</p>
+<p>La mayoria de sus argumentos de entrada son compartidos con el resto de las funciones para realizar gráficos. Para un uso simple de dicha función basta con pasar dos vectores del mismo tamaño con las coordenadas o valores correspondientes para los ejes <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">valores_x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.2</span>,<span class="fl">3.4</span>,<span class="fl">1.3</span>,<span class="op">-</span><span class="fl">2.1</span>,<span class="fl">5.6</span>,<span class="fl">2.3</span>,<span class="fl">3.2</span>,<span class="fl">2.4</span>,<span class="fl">2.1</span>,<span class="fl">1.8</span>,<span class="fl">1.7</span>,<span class="fl">2.2</span>)
+valores_y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">2.4</span>,<span class="fl">5.7</span>,<span class="fl">2.0</span>,<span class="op">-</span><span class="dv">3</span>,<span class="dv">13</span>,<span class="dv">5</span>,<span class="fl">6.2</span>,<span class="fl">4.8</span>,<span class="fl">4.2</span>,<span class="fl">3.5</span>,<span class="fl">3.7</span>,<span class="fl">5.2</span>)
+<span class="kw">plot</span>(<span class="dt">x=</span>valores_x,<span class="dt">y=</span>valores_y)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-115-1.svg" /><!-- --></p>
+<p>Entre sus parámetros de entrada tenemos:</p>
+<ul>
+<li><p><code>x</code> e <code>y</code> : Vectores con los valores correspondientes a cada par ordenado de puntos.</p></li>
+<li><p><code>pch</code> : Este argumento cambia la forma de los puntos para realizar la nube de puntos, en la figura  podemos ver algunos ejemplos de estas formas.</p></li>
+</ul>
+<div class="figure">
+<img src="images/pch.png" alt="Algunas formas disponibles para los puntos en los Gráficos" />
+<p class="caption">Algunas formas disponibles para los puntos en los Gráficos</p>
+</div>
+<ul>
+<li><p><code>col</code> : Carácter que específica el color que van a tener los puntos (o cualquier forma seleccionada) en el gráfico. La manera más usual para colocarlo es con el nombre respectivo en ingles.</p></li>
+<li><p><code>xlab</code> , <code>ylab</code> : Reciben una cadena de caracteres con los nombres respectivos para etiquetar los ejes del gráfico.</p></li>
+<li><p><code>main</code> : Recibe una cadena de caracteres con el título del gráfico.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span>valores_x, <span class="dt">y=</span>valores_y, <span class="dt">pch=</span><span class="dv">8</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
+      <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-116-1.svg" /><!-- --></p>
+<p>En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función <code>points()</code>, esta función recibe los mismos parámetros de entrada que la función <code>plot()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">0.2</span>,<span class="fl">0.4</span>)
+y_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)
+<span class="kw">plot</span>( <span class="dt">x=</span>valores_x, <span class="dt">y=</span>valores_y, <span class="dt">pch=</span><span class="dv">8</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
+      <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)
+<span class="kw">points</span>( <span class="dt">x=</span>x_<span class="dv">1</span>, <span class="dt">y=</span>y_<span class="dv">1</span>, <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-117-1.svg" /><!-- --></p>
+<p>Para agregar una leyenda usamos la función <code>legend()</code>, ésta tiene como parámetros de entrada los siguientes:</p>
+<ul>
+<li><p><code>x</code> e <code>y</code>: las coordenadas donde se quiere que aparezca la leyenda.</p></li>
+<li><p><code>legend</code> : Un vector de caracteres con las leyendas respectivas.</p></li>
+<li><p><code>type</code> : El tipo o forma que tiene gráfico, puede ser un gráfico de puntos <code>p</code>, de línea <code>l</code> o de ambos <code>o</code>.</p></li>
+<li><p><code>bty</code> : Para colocar la leyenda dentro de una caja, toma dos valores <code>o</code> para que aparezca dentro de una caja y <code>n</code> para que no.</p></li>
+<li><p>También se le puede específicar el color <code>col</code> la forma de los puntos <code>pch</code>.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span>valores_x, <span class="dt">y=</span>valores_y, <span class="dt">pch=</span><span class="dv">8</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
+      <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)
+<span class="kw">points</span>( <span class="dt">x=</span>x_<span class="dv">1</span>, <span class="dt">y=</span>y_<span class="dv">1</span>, <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)
+<span class="kw">legend</span>(<span class="dt">x=</span><span class="dv">4</span>, <span class="dt">y=</span><span class="dv">0</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>,<span class="st">&#39;red&#39;</span>), <span class="dt">pch=</span><span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">16</span>),<span class="dt">legend =</span> <span class="kw">c</span>(<span class="st">&#39;Puntos azules&#39;</span>, <span class="st">&#39;Puntos rojos&#39;</span>),<span class="dt">bty =</span> <span class="st">&#39;n&#39;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-118-1.svg" /><!-- --></p>
+</div>
+<div id="grafico-de-lineas" class="section level2">
+<h2><span class="header-section-number">10.2</span> Gráfico de líneas</h2>
+<p>Los gráficos de líneas son un caso particular de la función <code>plot()</code>, esta función tiene argumento de entrada llamado <code>type</code>, éste parámetro de entrada puede ser:</p>
+<ul>
+<li><p><code>p</code> para puntos, el cual es el valor que toma por defecto.</p></li>
+<li><p><code>l</code> para lineas.</p></li>
+<li><p><code>b</code> para ambos lineas y puntos.</p></li>
+<li><p><code>c</code> para las lineas entre cada punto.</p></li>
+<li><p><code>o</code> para ambos ‘overplotted’.</p></li>
+<li><p><code>h</code> para un histograma.</p></li>
+<li><p><code>s</code> para gráfico de saltos.</p></li>
+<li><p><code>S</code> Para otro tipo de gráfico de escaleras.</p></li>
+<li><p><code>n</code> para no dibujarlos.</p></li>
+</ul>
+<p>Entonces simplemente colocamos los valores respectivos de las coordenadas de los ejes en la función <code>plot()</code> y en el argumento <code>type</code> lo colocamos igual a <code>l</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span><span class="kw">sort</span>(valores_x), <span class="dt">y=</span>valores_y, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
+      <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Gráfico de Línea&quot;</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-119-1.svg" /><!-- --></p>
+<p>Si se quiere agregar otra línea al gráfico ya construido se usa la función <code>lines()</code>, está función recibe los mismos argumentos que la función <code>plot()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span><span class="kw">sort</span>(valores_x), <span class="dt">y=</span>valores_y, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
+      <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Gráfico de Línea&quot;</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
+x_<span class="dv">1</span>&lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">0</span>,<span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="fl">5.6</span>)
+y_<span class="dv">1</span>&lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">9</span>)
+<span class="kw">lines</span>(<span class="dt">x=</span>x_<span class="dv">1</span>, <span class="dt">y=</span>y_<span class="dv">1</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-120-1.svg" /><!-- --></p>
+</div>
+<div id="grafico-de-tortas" class="section level2">
+<h2><span class="header-section-number">10.3</span> Gráfico de Tortas</h2>
+<p>Los gráficos de tortas se usan para representar las frecuencias de las diferentes clases dentro de un conjunto de datos, la función que se usa para realizar este tipo de gráfico es <code>pie()</code>, entre los argumentos de entrada encontramos:</p>
+<ul>
+<li><p><code>x</code> : Se le asignará un vector que contenga las frecuencias respectivas a cada clase.</p></li>
+<li><p><code>labels</code> : Un vector de caracteres con los nombres correspondientes a cada clase, es decir, con las etiquetas.</p></li>
+<li><p><code>col</code> : Un vector de caracteres con los colores que se quieran para cada clase.</p></li>
+<li><p>Muchos de los parámetros gráficos que usa la función <code>plot()</code>.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">slices &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">12</span>,<span class="dv">4</span>, <span class="dv">16</span>, <span class="dv">8</span>)
+lbls &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;US&quot;</span>, <span class="st">&quot;UK&quot;</span>, <span class="st">&quot;Australia&quot;</span>, <span class="st">&quot;Germany&quot;</span>, <span class="st">&quot;France&quot;</span>)
+<span class="kw">pie</span>(<span class="dt">x=</span>slices, <span class="dt">labels =</span> lbls, <span class="dt">main=</span><span class="st">&quot;Gráfico de Torta de las Ciudades&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-121-1.svg" /><!-- --></p>
+</div>
+<div id="barplot" class="section level2">
+<h2><span class="header-section-number">10.4</span> Barplot</h2>
+<p>Comunmente llamados gráficos de barra, estos suelen ser muy utiles para visualizar las frecuencias de clases cuando se tienen pocas, los representa en barras rectangulares de longitudes proporcionales a los valores representados. La función que se utiliza para la construcción de estos es <code>barplot()</code>, ésta comparte la mayoria de los parámetros de entrada de las funciones anteriores, en el parámetro <code>height</code> se deben pasar los valores que tomarán cada barra, este puede ser un vector con los valores correspondientes para cada barra, o una matriz; con el parámetro <code>horiz</code> (toma los valores <code>TRUE</code> o <code>FALSE</code>) indicamos si las barras se muestran en sentido horizontal o vertical; para colocarle etiquetas a las barras se debe usar el parámetro <code>names.arg</code>, donde se le debe asignar un vector con las etiquetas, o se puede usar la función <code>names()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">large.islands &lt;-<span class="st"> </span><span class="kw">head</span>(<span class="kw">sort</span>(islands, <span class="dt">decreasing=</span><span class="ot">TRUE</span>), <span class="dv">10</span>)
+<span class="kw">barplot</span>( <span class="dt">height=</span>large.islands, <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">names.arg =</span> <span class="kw">c</span>(<span class="st">&#39;As&#39;</span>,<span class="st">&#39;A&#39;</span>,<span class="st">&#39;NA&#39;</span>,<span class="st">&#39;SA&#39;</span>,<span class="st">&#39;An&#39;</span>,<span class="st">&#39;E&#39;</span>,<span class="st">&#39;Au&#39;</span>,<span class="st">&#39;G&#39;</span>,<span class="st">&#39;NG&#39;</span>,<span class="st">&#39;B&#39;</span>),
+         <span class="dt">main =</span> <span class="st">&quot;Superficie terrestre de los continentes e islas&quot;</span>,
+         <span class="dt">ylab =</span> <span class="st">&quot;Superficie en millas cuadradas&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-122-1.svg" /><!-- --></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>( <span class="dt">height=</span>large.islands, <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">horiz =</span> <span class="ot">TRUE</span>,  
+         <span class="dt">main =</span> <span class="st">&quot;Superficie terrestre de los continentes e islas&quot;</span>, 
+         <span class="dt">ylab =</span> <span class="st">&quot;Superficie en millas cuadradas&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-122-2.svg" /><!-- --></p>
+</div>
+<div id="boxplot" class="section level2">
+<h2><span class="header-section-number">10.5</span> Boxplot</h2>
+<p>Este es un gráfico muy usado cuando se realizan estudios estadísticos, debido a que muestra características muy representativas de los datos, estos valores son el mínimo, el máximo, el primer cuartil, la mediana y el tercer cuartil; este gráfico también muestra valores que distan considerablemente del resto de los datos, llamados datos outliers, que pueden ser errores de medición y suelen eliminarse para evitar distorsión en las conclusiones. La función que usaremos para realizar estos gráficos es <code>boxplot()</code>, este comparte los parámetros de la función <code>plot()</code>.</p>
+<p>Como ejemplo usaremos los datos guardades en <code>airquality</code>, el cual es un data.frame con seis variables, estos datos contienen las mediciones diarias de la calidad del aire en Nueva York entre los meses de Mayo a Septiembre de 1973.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>( <span class="dt">x =</span> airquality<span class="op">$</span>Ozone,<span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">border =</span> <span class="st">&quot;blue&quot;</span>,
+         <span class="dt">main =</span> <span class="st">&quot;Media del Ozono en partes por millon en Roosevelt Island&quot;</span>,
+         <span class="dt">xlab =</span> <span class="st">&quot;Partes por millon&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Ozone&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-123-1.svg" /><!-- --></p>
+<p>Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de <code>airquality</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>( airquality<span class="op">$</span>Ozone, airquality<span class="op">$</span>Solar.R,
+         <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>,<span class="st">&#39;orange&#39;</span>), <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;ozone&quot;</span>, <span class="st">&quot;Solar&quot;</span>),
+         <span class="dt">main =</span> <span class="st">&quot;Media del Ozono en partes por millon en Roosevelt Island&quot;</span>,
+         <span class="dt">xlab =</span> <span class="st">&quot;Partes por millon&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Ozone&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-124-1.svg" /><!-- --></p>
+</div>
+<div id="histogramas" class="section level2">
+<h2><span class="header-section-number">10.6</span> Histogramas</h2>
+<p>Los histogramas son la representación gráfica de las frecuencias (absolutas o relativas) de los valores de un vector, ésta representación se muestra en barras cuyo tamaño es proporcional a la cantidad de datos de la muestra que hay en cada clase o ventana; la función que usamos para construir los histogramas es <code>hist()</code> y este comparte la mayoria de los argumentos de la función <code>plot()</code>, entre los argumentos que se destacan para dicha función son:</p>
+<ul>
+<li><p><code>breaks</code> : Número de ventanas o celdas que tendrá el histograma.</p></li>
+<li><p><code>freq</code> : Es un valor lógico, en caso de ser verdadero muestra en cada barra la frecuencia adsoluta, es decir, la cantidad de datos de la muestra que caen en la misma, si es falsa muestra la frecuencia relativa, es la división de la cantidad de datos que caen en dicha celda dividido por la cantidad total de datos.</p></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>( <span class="dt">x =</span> airquality<span class="op">$</span>Ozone, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">border =</span> <span class="st">&quot;blue&quot;</span>,
+      <span class="dt">freq =</span> <span class="ot">FALSE</span>,
+      <span class="dt">main =</span> <span class="st">&quot;Histograma de la Media del Ozono&quot;</span>, 
+      <span class="dt">xlab =</span> <span class="st">&quot;Partes por millon&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Ozone&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-125-1.svg" /><!-- --></p>
+</div>
+<div id="multiple-graficos-por-ventanas" class="section level2">
+<h2><span class="header-section-number">10.7</span> Multiple gráficos por ventanas</h2>
+<p>Supongamos que queremos mostrar más de un gráfico en una ventana, esto lo hacemos con la función <code>par()</code> específicando el argumento <code>mfrom</code> al cual se le debe asignar un vector con dos elementos, esta orden construira una ventana y hará la división de la ventana tomando el primer elemento del vector para el número de filas y el segundo para el número de columnas, y en cada cuadrícula ira colocando los gráficos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))
+<span class="kw">hist</span>(airquality<span class="op">$</span>Ozone, <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">main =</span> <span class="st">&quot;Histograma datos de Ozono&quot;</span>)
+<span class="kw">hist</span>(airquality<span class="op">$</span>Solar.R, <span class="dt">col=</span><span class="st">&#39;orange&#39;</span>, <span class="dt">main =</span> <span class="st">&quot;Histograma datos de Solar&quot;</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-126-1.svg" /><!-- --></p>
+</div>
+<div id="guardar-graficos" class="section level2">
+<h2><span class="header-section-number">10.8</span> Guardar gráficos</h2>
+<p>Muchas veces se desean guardar los gráficos que generamos con el lenguaje de programación <strong>R</strong>, la manera de hacerlo es usando el comando <code>jpeg()</code>, en el cual le específicamos la ruta donde guardaremos dicha imagen con su respectivo nombre (argumento <code>file</code>), dentro de los argumentos de entrada de esta función podemos especificar la altura y el ancho de la imagen en pixels con <code>height</code> y <code>width</code>, respectivamente, también se le puede específicar la calidad de compresión en el argumento <code>quality</code> el cual toma un valor entre 0 y 100. Seguido de dicha instrucción debe colocarse el gráfico que se quiere guardar y para cerrar dicho gráfico se usa el comando <code>dev.off()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">jpeg</span>(<span class="dt">file=</span><span class="st">&quot;imagen.jpg&quot;</span>, <span class="dt">quality =</span> <span class="dv">60</span>)
+<span class="kw">plot</span>(<span class="dt">x=</span><span class="dv">1</span><span class="op">:</span><span class="dv">20</span>,<span class="dt">y=</span><span class="dv">21</span><span class="op">:</span><span class="dv">40</span>)
+<span class="kw">dev.off</span>()</code></pre></div>
+<pre><code>## pdf 
+##   2</code></pre>
+
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="funciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/009-Graficos.Rmd",
+"text": "Edit"
+},
+"download": ["Programacion-Cientifica-en-R.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

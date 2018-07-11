@@ -1,0 +1,73 @@
+# Listas
+
+Las listas son vectores que pueden contener elementos de diferentes clases y los tamaños de estos objetos pueden ser de distinto, caso contrario a los Data.frame. Podemos tener cualquier clase de objetos dentro de una lista.
+
+La función que se utiliza en __R__ para crear una lista es `list()`, donde cada objeto debe pasarse separado por comas.
+
+La manera de acceder a los objetos de la lista es utilizando doble corchete `[[ ]]`, dentro de estos se colocara la posición o número del objeto, y si se quiere acceder a un elemento particular de un objeto se hace colocando corchetes seguidos de los doble corchetes `[[]][]`. Otra manera de acceder a los objetos que conforman la lista es con el simbolo `$`, esta es util cuando dichos objetos se les coloca nombre.
+
+```{r}
+lista <- list( nombres = c('Manuel','Lis','Alexander','Danny','Yannic'),
+               1:20,
+               matrix(data=c(2,4,5,6),nrow=2,ncol=2, byrow=TRUE))
+lista
+lista[[1]]
+lista[[1]][2]
+lista$nombres
+```
+
+Para eliminar un objeto de la lista debemos llamar la posición del objeto con dobles corchetes y asignarle `NULL`.
+
+```{r}
+lista[[2]] <- NULL
+lista
+```
+
+# Factores
+
+Los factores son variable categórica, estas tienen un número finito de valores o niveles. Generalmente se utilizan para clasificar datos, es decir, establecen o clasifican los datos en niveles. 
+
+La función que se usa para crear un factor es `factor()`, a esta función se le debe pasar como parámetros de entradas
+
+Para entender mejor que son los objetos factores, veamos el siguiente ejemplo:
+
+Supongamos que tenemos una variable son las especificaciones de hombre `H` o mujer `M` guardados en el siguiente vector llamado `sexo` de un conjunto de individuos.
+
+```{r}
+sexo <- c("M", "H", "M", "M", "M", "H", "M", "M", "H", "H")
+sexo
+```
+
+Si pasamos este vector por la función `factor()` veamos lo que obtenemos:
+
+```{r}
+factor(sexo)
+```
+
+Podemos notar que hay dos niveles, uno para `H` y otro para `M`, entre los parámetros de entrada podemos pasarle quienes son los niveles `levels` y cambiarle los nombres a dichos niveles con el parámetro `labels`.
+
+```{r}
+sexo<-factor(sexo, levels = c('H','M'), labels = c('Hombre', 'Mujer'))
+sexo
+```
+
+Podemos extraer los niveles de un objeto factor con la función `levels()`.
+
+```{r}
+levels(sexo)
+```
+
+Si queremos saber cuantos elementos hay en cada nivel usamos la función `table()`.
+
+```{r}
+table(sexo)
+```
+
+
+
+
+
+
+
+
+

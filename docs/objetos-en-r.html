@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Programación Científica en R</title>
+  <meta name="description" content="Programación Científica en R">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
+  <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
+  
+  <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Programación Científica en R" />
+  
+  
+  <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
+
+<meta name="author" content="Synergy Vision">
+
+
+<meta name="date" content="2018-07-11">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="introduccion.html">
+<link rel="next" href="vectores.html">
+<script src="libs/jquery/jquery.min.js"></script>
+<link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><img src="images/logovision-black.png" width="160"></img></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#por-que-leer-este-libro"><i class="fa fa-check"></i>¿Por qué leer este libro?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#estructura-del-libro"><i class="fa fa-check"></i>Estructura del libro</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#informacion-sobre-los-programas-y-convenciones"><i class="fa fa-check"></i>Información sobre los programas y convenciones</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#practicas-interactivas-con-r"><i class="fa fa-check"></i>Prácticas interactivas con R</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acerca-del-autor.html"><a href="acerca-del-autor.html"><i class="fa fa-check"></i>Acerca del Autor</a></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduccion.html"><a href="introduccion.html#caracteristicas-principales-del-lenguaje-r"><i class="fa fa-check"></i><b>1.1</b> Características principales del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.2" data-path="introduccion.html"><a href="introduccion.html#desventajas-del-lenguaje-r"><i class="fa fa-check"></i><b>1.2</b> Desventajas del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.3" data-path="introduccion.html"><a href="introduccion.html#el-diseno-del-lenguaje-r"><i class="fa fa-check"></i><b>1.3</b> El diseño del lenguaje <strong>R</strong></a></li>
+<li class="chapter" data-level="1.4" data-path="introduccion.html"><a href="introduccion.html#instalacion-de-r-y-de-paquetes-de-r"><i class="fa fa-check"></i><b>1.4</b> Instalación de <strong>R</strong> y de paquetes de <strong>R</strong></a></li>
+<li class="chapter" data-level="1.5" data-path="introduccion.html"><a href="introduccion.html#ayuda-en-r"><i class="fa fa-check"></i><b>1.5</b> Ayuda en <strong>R</strong></a></li>
+<li class="chapter" data-level="1.6" data-path="introduccion.html"><a href="introduccion.html#rstudio"><i class="fa fa-check"></i><b>1.6</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="objetos-en-r.html"><a href="objetos-en-r.html"><i class="fa fa-check"></i><b>2</b> Objetos en <strong>R</strong></a><ul>
+<li class="chapter" data-level="2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.1</b> Tipos de objetos en <strong>R</strong></a></li>
+<li class="chapter" data-level="2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#manejo-de-objetos"><i class="fa fa-check"></i><b>2.2</b> Manejo de Objetos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#atributos-de-un-objeto"><i class="fa fa-check"></i><b>2.2.1</b> Atributos de un Objeto</a></li>
+<li class="chapter" data-level="2.2.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#nombres-validos-para-un-objeto"><i class="fa fa-check"></i><b>2.2.2</b> Nombres válidos para un objeto</a></li>
+<li class="chapter" data-level="2.2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operador-de-asignacion-e-igualdad"><i class="fa fa-check"></i><b>2.2.3</b> Operador de asignación e igualdad</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#principales-funciones-para-trabajar-en-la-consola"><i class="fa fa-check"></i><b>2.3</b> Principales funciones para trabajar en la consola</a></li>
+<li class="chapter" data-level="2.4" data-path="objetos-en-r.html"><a href="objetos-en-r.html#r-como-calculadora"><i class="fa fa-check"></i><b>2.4</b> <strong>R</strong> como calculadora</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operaciones-aritmeticas"><i class="fa fa-check"></i><b>2.4.1</b> Operaciones Aritméticas</a></li>
+<li class="chapter" data-level="2.4.2" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-comparativos"><i class="fa fa-check"></i><b>2.4.2</b> Operadores Comparativos</a></li>
+<li class="chapter" data-level="2.4.3" data-path="objetos-en-r.html"><a href="objetos-en-r.html#operadores-logicos"><i class="fa fa-check"></i><b>2.4.3</b> Operadores Lógicos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html#definicion"><i class="fa fa-check"></i><b>3.1</b> Definición</a></li>
+<li class="chapter" data-level="3.2" data-path="vectores.html"><a href="vectores.html#creacion-de-vectores"><i class="fa fa-check"></i><b>3.2</b> Creación de Vectores</a></li>
+<li class="chapter" data-level="3.3" data-path="vectores.html"><a href="vectores.html#secuencias"><i class="fa fa-check"></i><b>3.3</b> Secuencias</a></li>
+<li class="chapter" data-level="3.4" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-de-un-vector"><i class="fa fa-check"></i><b>3.4</b> Selección de elementos de un vector</a></li>
+<li class="chapter" data-level="3.5" data-path="vectores.html"><a href="vectores.html#suma-de-vectores"><i class="fa fa-check"></i><b>3.5</b> Suma de Vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>4</b> Matrices</a><ul>
+<li class="chapter" data-level="4.1" data-path="matrices.html"><a href="matrices.html#definicion-1"><i class="fa fa-check"></i><b>4.1</b> Definición</a></li>
+<li class="chapter" data-level="4.2" data-path="matrices.html"><a href="matrices.html#creacion-de-matrices"><i class="fa fa-check"></i><b>4.2</b> Creación de Matrices</a></li>
+<li class="chapter" data-level="4.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-los-elementos-de-una-matriz"><i class="fa fa-check"></i><b>4.3</b> Selección de los elementos de una matriz</a></li>
+<li class="chapter" data-level="4.4" data-path="matrices.html"><a href="matrices.html#operaciones-con-matrices"><i class="fa fa-check"></i><b>4.4</b> Operaciones con Matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>5</b> Data.frame</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-frame.html"><a href="data-frame.html#generacion-de-un-data.frame"><i class="fa fa-check"></i><b>5.1</b> Generación de un Data.frame</a></li>
+<li class="chapter" data-level="5.2" data-path="data-frame.html"><a href="data-frame.html#acceder-a-datos-en-un-data.frame"><i class="fa fa-check"></i><b>5.2</b> Acceder a Datos en un Data.frame</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>6</b> Listas</a></li>
+<li class="chapter" data-level="7" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>7</b> Factores</a></li>
+<li class="chapter" data-level="8" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html"><i class="fa fa-check"></i><b>8</b> Fechas y Tiempo</a><ul>
+<li class="chapter" data-level="8.1" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-formato-date"><i class="fa fa-check"></i><b>8.1</b> Fechas con formato <code>Date</code></a></li>
+<li class="chapter" data-level="8.2" data-path="fechas-y-tiempo.html"><a href="fechas-y-tiempo.html#fechas-con-el-formato-posixct-o-posixlt"><i class="fa fa-check"></i><b>8.2</b> Fechas con el formato <code>POSIXct</code> o <code>POSIXlt</code></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>9</b> Datos</a><ul>
+<li class="chapter" data-level="9.1" data-path="datos.html"><a href="datos.html#importar-datos"><i class="fa fa-check"></i><b>9.1</b> Importar Datos</a></li>
+<li class="chapter" data-level="9.2" data-path="datos.html"><a href="datos.html#datos-de-r"><i class="fa fa-check"></i><b>9.2</b> Datos de <strong>R</strong></a></li>
+<li class="chapter" data-level="9.3" data-path="datos.html"><a href="datos.html#guardar-datos"><i class="fa fa-check"></i><b>9.3</b> Guardar Datos</a></li>
+<li class="chapter" data-level="9.4" data-path="datos.html"><a href="datos.html#exportar-datos"><i class="fa fa-check"></i><b>9.4</b> Exportar Datos</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="graficos.html"><a href="graficos.html"><i class="fa fa-check"></i><b>10</b> Gráficos</a><ul>
+<li class="chapter" data-level="10.1" data-path="graficos.html"><a href="graficos.html#grafico-de-puntos"><i class="fa fa-check"></i><b>10.1</b> Gráfico de Puntos</a></li>
+<li class="chapter" data-level="10.2" data-path="graficos.html"><a href="graficos.html#grafico-de-lineas"><i class="fa fa-check"></i><b>10.2</b> Gráfico de líneas</a></li>
+<li class="chapter" data-level="10.3" data-path="graficos.html"><a href="graficos.html#grafico-de-tortas"><i class="fa fa-check"></i><b>10.3</b> Gráfico de Tortas</a></li>
+<li class="chapter" data-level="10.4" data-path="graficos.html"><a href="graficos.html#barplot"><i class="fa fa-check"></i><b>10.4</b> Barplot</a></li>
+<li class="chapter" data-level="10.5" data-path="graficos.html"><a href="graficos.html#boxplot"><i class="fa fa-check"></i><b>10.5</b> Boxplot</a></li>
+<li class="chapter" data-level="10.6" data-path="graficos.html"><a href="graficos.html#histogramas"><i class="fa fa-check"></i><b>10.6</b> Histogramas</a></li>
+<li class="chapter" data-level="10.7" data-path="graficos.html"><a href="graficos.html#multiple-graficos-por-ventanas"><i class="fa fa-check"></i><b>10.7</b> Multiple gráficos por ventanas</a></li>
+<li class="chapter" data-level="10.8" data-path="graficos.html"><a href="graficos.html#guardar-graficos"><i class="fa fa-check"></i><b>10.8</b> Guardar gráficos</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>11</b> Funciones</a><ul>
+<li class="chapter" data-level="11.1" data-path="funciones.html"><a href="funciones.html#creacion-de-funciones"><i class="fa fa-check"></i><b>11.1</b> Creación de Funciones</a></li>
+<li class="chapter" data-level="11.2" data-path="funciones.html"><a href="funciones.html#condicionales"><i class="fa fa-check"></i><b>11.2</b> Condicionales</a></li>
+<li class="chapter" data-level="11.3" data-path="funciones.html"><a href="funciones.html#loop-o-bucles"><i class="fa fa-check"></i><b>11.3</b> Loop o Bucles</a></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndice</b></span></li>
+<li class="chapter" data-level="A" data-path="software-tools.html"><a href="software-tools.html"><i class="fa fa-check"></i><b>A</b> Software Tools</a><ul>
+<li class="chapter" data-level="A.1" data-path="software-tools.html"><a href="software-tools.html#r-and-r-packages"><i class="fa fa-check"></i><b>A.1</b> R and R packages</a></li>
+<li class="chapter" data-level="A.2" data-path="software-tools.html"><a href="software-tools.html#pandoc"><i class="fa fa-check"></i><b>A.2</b> Pandoc</a></li>
+<li class="chapter" data-level="A.3" data-path="software-tools.html"><a href="software-tools.html#latex"><i class="fa fa-check"></i><b>A.3</b> LaTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Programación Científica en R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="objetos-en-r" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Objetos en <strong>R</strong></h1>
+<p>Cuando nos referimos a objetos estamos hablando de entidades que combinan estado (atributo), comportamiento (método) e identidad; esto quiere decir, un objeto estará compuesto por datos también llamados atributos que tendrán valores concretos, con estos objetos se realizarán algunos procedimiento o método, esto corresponde al comportamiento que pueda tener dicho objeto, además todos los objetos se pueden identificar o diferenciar entre todos los demás a esto es lo que llamados identidad del mismo. Cuando los lenguajes de programación se basan en este paradigma es muy util a la hora de reutilizar códigos o métodos, logrando mejorar o simplemente flexibilizar, ajustar dicho código a situaciones particulares.</p>
+<p>Los principales objetos con los que se trabajan con este lenguaje de programación son:</p>
+<ul>
+<li><p>Vector.</p></li>
+<li><p>Factor.</p></li>
+<li><p>Arreglo.</p></li>
+<li><p>Matriz.</p></li>
+<li><p>Data frame.</p></li>
+<li><p>Series de tiempo.</p></li>
+<li><p>Listas.</p></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Objeto</strong></th>
+<th align="center"><strong>Tipos</strong></th>
+<th align="center"><strong>¿Varios tipos posibles?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Vector</td>
+<td align="center">N, C, Comp o Log</td>
+<td align="center">No</td>
+</tr>
+<tr class="even">
+<td align="center">Factor</td>
+<td align="center">N o C</td>
+<td align="center">No</td>
+</tr>
+<tr class="odd">
+<td align="center">Arreglo</td>
+<td align="center">N, C, Comp o Log</td>
+<td align="center">No</td>
+</tr>
+<tr class="even">
+<td align="center">Matriz</td>
+<td align="center">N, C, Comp o Log</td>
+<td align="center">No</td>
+</tr>
+<tr class="odd">
+<td align="center">Data.frame</td>
+<td align="center">N, C, Comp o Log</td>
+<td align="center">Si</td>
+</tr>
+<tr class="even">
+<td align="center">S.T</td>
+<td align="center">N, C, Comp o Log</td>
+<td align="center">Si</td>
+</tr>
+<tr class="odd">
+<td align="center">Lista</td>
+<td align="center">N, C, Comp,Log, Fun, Expr.</td>
+<td align="center">Si</td>
+</tr>
+</tbody>
+</table>
+<p>N = numérico<br />
+C = caracter<br />
+Comp = complejo<br />
+Log = lógico<br />
+Fun = función<br />
+Expr = expresión</p>
+<div id="tipos-de-objetos-en-r" class="section level2">
+<h2><span class="header-section-number">2.1</span> Tipos de objetos en <strong>R</strong></h2>
+<p>Entre los principales objetos tenemos:</p>
+<ul>
+<li><strong>Datos Numéricos</strong>:</li>
+</ul>
+<p>Dentro de los datos numéricos tenemos datos “numeric”, enteros “integer”, complejo “complex”. La mayor parte del tiempo los números son “numeric”.</p>
+<p>Cualquier número real se puede expresar mediante notación científica, esto es diviendo o multiplicando por 10 tantas veces como sea necesario para que todos los dígitos aparezcan a la derecha del punto decimal y de modo que el primer dígito después del punto no sea cero, por ejemplo <span class="math inline">\(7325.689=7.325689\times 10^4\)</span>. Con el lenguaje de programación <strong>R</strong> la notación científica se imprime con una <code>e</code> para indicar el exponente, para continuar con el ejemplo anterior la notación en <strong>R</strong> sería <span class="math inline">\(7.325689e+4\)</span>. Esta notación se utiliza para almacenar los datos numéricos, lo que comumente se llama almacenamiento de punto flotante, el cual consta de tres partes: un signo (+1 ó -1), un exponente (un enteno <span class="math inline">\(n\)</span>) y una precisión (<span class="math inline">\(p\)</span>) <span class="math inline">\(\pm 1\times p\times 10^n\)</span>.</p>
+<p>Una de las maneras de trabajar con un dato entero es colocarle como sufijo la letra <code>L</code>, por ejemplo el entero uno se puede escribir como <code>1L</code>, también podemos tranformar valores numéricos a enteros con el comando <code>as.integer()</code>.</p>
+<p>Es importante acotar que la representación de punto flotante no puede almacenar todos los números con exactitud, por ejemplo, la raíz cuadrada de 2 es irracional y la representación en la computadora (de punto flotante) es una aproximación</p>
+<ul>
+<li><strong>Datos Categóricos</strong>:</li>
+</ul>
+<p><strong>R</strong> tiene dos clases distintas para trabajar con datos categóricos: Factor y carácter.</p>
+<p>Los datos de tipo <strong>Factor</strong> se utiliza cuando se tienen variables que se pueden registrar simplemente por medio de categorías, utilizadas para agrupar los datos, un ejemplo de este tipo de datos podría ser el historial de los distintos navegadores usados por los usuarios para acceder a un sitio web, así los datos se podrían agrupar dependendiendo del servidor que usaron los usuarios.</p>
+<p>Los datos de tipo <strong>carácter</strong> son los que representan palabras o códigos únicos que identifican, como por ejemplo una dirección de un ordenador, también llamados <em>string</em> por su traducción en ingles; este tipo de datos en <strong>R</strong> se colocan utilizando comillas dobles <code>&quot;</code> o simples <code>'</code> para delimitar un string.</p>
+<ul>
+<li><strong>Datos Lógico</strong>:</li>
+</ul>
+<p>Estos datos también son llamados datos Booleanos, se caracterizan por tomar dos valores verdadero ó falso (TRUE o FALSE), generalmente se obtienen como el resultado de alguna función, por ejemplo podemos usar la función <code>is.numeric()</code> para saber si una variable o cualquier objeto que se introduzca cumple con las características de ser un valor numérico, en caso de ser cierto la función retornará <code>TRUE</code> y en caso contrario retornará <code>FALSE</code>.</p>
+<ul>
+<li><strong>Datos de Fecha y Hora</strong>:</li>
+</ul>
+<p>En la base del lenguaje de programación de <strong>R</strong> se encuentran dos paquetes que trabajan los datos de tipo fecha y hora: <code>Date</code> (fechas) y <code>POSIXt</code> (fecha, hora y huso horario), las siglas POSIX se refieren a <em>Portable Operating System Interface</em>; esta última clase contiene dos subclases, <code>POSIXct</code> y <code>POSIXlt</code> que se diferencian simplemente en la forma en que almacenan internamente la fecha y la hora. Adicional a estos paquetes se encuentra el paquete <code>lubridate</code> el cual suele ser muy util para la extracción de componentes de un objeto fecha y hora de clase <code>POSIXct</code>.</p>
+<ul>
+<li><strong>Valores pérdidos, NA</strong>:</li>
+</ul>
+<p>Generalmente cuando se realizan encuestas o se toman datos se puede presentar la situación de que para ciertos individuos o categorias no se consigan datos, a este tipo de datos se les llama datos faltantes, o valores pérdidos; son valores que no están presentes. El lenguaje de programación <strong>R</strong> los trata como <code>NA</code>, debido a las siglas en ingles de <em>not available</em>, cabe destacar que no es un string sino un tipo de objeto, estos valores pueden alterar los resultados que nos den algunas funciones.</p>
+<ul>
+<li><strong>Inf</strong>:</li>
+</ul>
+<p>Muchos cálculos nos pueden llevar a respuestas con valor infinito positivo o infinito negativo, en <strong>R</strong> estos objetos se presentan por <code>Inf</code> y <code>-Inf</code>. Estos resultados se pueden tener cuando se realizan operaciones como 1/0</p>
+<ul>
+<li><strong>NaN</strong>:</li>
+</ul>
+<p>El nombre <code>NaN</code> se debe a su significado en ingles “not a number”, es decir, no es un número. Este tipo de objeto se da cuando se realiza una operación que no da un valor numérico, por ejemplo una función indeterminada (como la división 0/0) o el resultado de una función evaluada en valores que no pertenecen a su dominio.</p>
+<p>Un valor <code>NaN</code> es al mismo tiempo un valor <code>NA</code>, pero no al contrario. Tanto <code>NaN</code> como <code>NA</code> son ambos datos faltantes, la única diferencia es que <code>NaN</code> se produce de una operación matemática.</p>
+<ul>
+<li><strong>NULL</strong>:</li>
+</ul>
+<p>Generalmente indica que alguna acción no se puede ejecutar por no estar definida o disponible. Representa los objetos nulos. Indica la ausencia del dato. Se utiliza para colocar una variable sin valor, como por ejemplo, para inicializar un vector que se va a utilizar como vector incremental.</p>
+<p>Más adelante trabajaremos por separado otros objetos muy usados a la hora de programar en <strong>R</strong>.</p>
+</div>
+<div id="manejo-de-objetos" class="section level2">
+<h2><span class="header-section-number">2.2</span> Manejo de Objetos</h2>
+<div id="atributos-de-un-objeto" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Atributos de un Objeto</h3>
+<p>Los atributos de un objeto es la información específica sobre dicho objeto. Entre los principales encontramos:</p>
+<ul>
+<li><p>Nombres (<code>names</code>) : Este muestra las etiquetas de los elementos individuales de un vector o una lista.</p></li>
+<li><p>Dimensiones (<code>dimensions</code>): Dimensiones de los arrays (alguna puede ser cero).</p></li>
+<li><p>Dimnames (<code>dimnames</code>): Nombre correspondiente a las dimensiones de los arrays.</p></li>
+<li><p>Modo (<code>mode</code>): Tipo básico en un vector o array (lógico, entero, real, carácter, entre otros).</p></li>
+<li><p>Tipo (<code>typeof</code>): Tipo de los vectores o arrays (lógico, entero, double, complejo, carácter, entre otros).</p></li>
+<li><p>Clase (<code>class</code>): Vector alfanumérico con la lista de las clases del objeto.</p></li>
+<li><p>Otros: Otros atributos definidos por el usuario.</p></li>
+</ul>
+<p>Todo objeto tiene dos atributos intrínsecos como tal; tipo y longitud.</p>
+<ul>
+<li><p><strong>Tipo</strong>: Numérico, caracter, complejo y lógico (Verdadero o Falso).</p></li>
+<li><p><strong>Longitud</strong>: Número de elementos en el objeto.</p></li>
+</ul>
+<p>Para ver el tipo y la longitud de un objeto utilizamos las funciones <code>mode()</code> y <code>length()</code>.</p>
+<p>Mediante la función <code>attributes()</code> podemos obtener una lista de los atributos no intrínsecos y con <code>attr()</code> podemos usar un atributo seleccionado.</p>
+</div>
+<div id="nombres-validos-para-un-objeto" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Nombres válidos para un objeto</h3>
+<p>Los nombres válidos para los objetos pueden ser el resultado de combinaciones entre letras números y el punto.</p>
+<p>Estos son sensibles a las mayúsculas y minúsculas (<code>a</code> es diferente de <code>A</code>).</p>
+<p>Se recomienda usar nombres distintos a los usados ya en funciones creadas en los paquetes cargados, en especial a las de los paquetes base (por ejemplo <code>function</code>, <code>if</code>, <code>c</code>).</p>
+</div>
+<div id="operador-de-asignacion-e-igualdad" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Operador de asignación e igualdad</h3>
+<p>Las asignaciones de nombres a objetos se hace mediante el operador <code>&lt;-</code> o equivalente <code>-&gt;</code>, hay que tomar en cuenta que estos símbolos no llevan espacio entre ellos. Por otra parte, se recomienda usar el símbolo <code>=</code> unicamente para los argumentos de las funciones.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">4</span>
+x</code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span> -&gt;<span class="st"> </span>x
+x</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImIgPC0gNSIsInNhbXBsZSI6IiMgQ3JlYSB1bmEgdmFyaWFibGUgYSwgaWd1YWwgYSA1XG5cbiMgQ3JlYSB1bmEgdmFyaWFibGUgbiwgaWd1YWwgYSAyNVxuXG4jIE11ZXN0cmEgZWwgdmFsb3IgZGUgYSB5IGRlIG5cblxuXG4jIE11ZXN0cmUgZWwgdmFsb3IgZGUgYiIsInNvbHV0aW9uIjoiIyBDcmVhIHVuYSB2YXJpYWJsZSBhLCBpZ3VhbCBhIDVcbmE8LTVcbiMgQ3JlYSB1bmEgdmFyaWFibGUgbiwgaWd1YWwgYSAyNVxubjwtMjVcbiMgTXVlc3RyYSBlbCB2YWxvciBkZSBhIHkgZGUgblxuYVxublxuIyBNdWVzdHJlIGVsIHZhbG9yIGRlIGJcbmIiLCJzY3QiOiJ0ZXN0X29iamVjdChcImFcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiYVwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgbW9zdHJhciBlbCB2YWxvciBkZSBgYWAuXCIpXG50ZXN0X29iamVjdChcIm5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiblwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgbW9zdHJhciBlbCB2YWxvciBkZSBgbmAuXCIpXG5zdWNjZXNzX21zZyhcIkV4Y2VsZW50ZSFcIikifQ==
+</div>
+</div>
+</div>
+<div id="principales-funciones-para-trabajar-en-la-consola" class="section level2">
+<h2><span class="header-section-number">2.3</span> Principales funciones para trabajar en la consola</h2>
+<p>Entre las funciones más comunes y utilizadas tenemos:</p>
+<ul>
+<li><code>ls()</code> -&gt; Lista los elementos objetos creados en la consola. sólo muestra los nombres de los mismos.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">name &lt;-<span class="st"> &quot;Carmen&quot;</span>
+n1 &lt;-<span class="st"> </span><span class="dv">10</span>
+n2 &lt;-<span class="st"> </span><span class="dv">100</span>
+m &lt;-<span class="st"> </span><span class="fl">0.5</span>
+<span class="kw">ls</span>()</code></pre></div>
+<pre><code>## [1] &quot;m&quot;    &quot;n1&quot;   &quot;n2&quot;   &quot;name&quot; &quot;x&quot;</code></pre>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJuYW1lIDwtIFwiQ2FybWVuXCJcbm4xIDwtIDEwXG5uMiA8LSAxMDBcbm0gPC0gMC41XG5cbmxzKCkiLCJzY3QiOiJ0ZXN0X2Vycm9yKClcbnN1Y2Nlc3NfbXNnKFwiTXV5IGJpZW5cIikifQ==
+</div>
+<ul>
+<li><code>ls.str()</code> -&gt; Muestra algunos detalles de los objetos en memoria.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ls.str</span>()</code></pre></div>
+<pre><code>## m :  num 0.5
+## n1 :  num 10
+## n2 :  num 100
+## name :  chr &quot;Carmen&quot;
+## x :  num 5</code></pre>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImE8LTVcbmI8LTVcbm48LTI1XG5uYW1lIDwtIFwiQ2FybWVuXCJcbm4xIDwtIDEwXG5uMiA8LSAxMDBcbm0gPC0gMC41Iiwic2FtcGxlIjoibHMuc3RyKCkiLCJzY3QiOiJ0ZXN0X2Vycm9yKClcbnN1Y2Nlc3NfbXNnKFwiQnVlbiB0cmFiYWpvXCIpIn0=
+</div>
+<ul>
+<li><code>rm()</code> -&gt; Para borrar objetos en memoria.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(n1) <span class="co">#Eliminar el objeto n1</span>
+<span class="kw">ls</span>()</code></pre></div>
+<pre><code>## [1] &quot;m&quot;    &quot;n2&quot;   &quot;name&quot; &quot;x&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list=</span><span class="kw">ls</span>()) <span class="co">#Eliminar todos los objetos creados</span>
+<span class="kw">ls</span>()</code></pre></div>
+<pre><code>## character(0)</code></pre>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEgPC0gMTBcbm4yIDwtIDEwMFxubSA8LSAwLjUiLCJzYW1wbGUiOiJscygpXG5cbiMgQm9ycmFyIGRlIG1lbW9yaWEgZWwgb2JqZXRvIG4xXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYSIsInNvbHV0aW9uIjoibHMoKVxuXG4jIEJvcnJhciBkZSBtZW1vcmlhIGVsIG9iamV0byBuMVxucm0objEpXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYVxubHMoKSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwicm0objEpXCIsIGluY29ycmVjdF9tc2cgPSBcIkFzZWd1cmF0ZSBkZSBib3JyYXIgZWwgb2JqZXRvIGNvcnJlY3RvLlwiKVxudGVzdF9mdW5jdGlvbihcInJtXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImxzKClcIiwgaW5jb3JyZWN0X21zZyA9IFwiQXNlZ3VyZXNlIGRlIGxsYW1hciBhIGxhIGZ1bmNpXHUwMGYzbiBscygpIGNvcnJlY3RhbWVudGVcIilcbnRlc3RfZnVuY3Rpb24oXCJsc1wiKVxudGVzdF9lcnJvcigpXG5zdWNjZXNzX21zZyhcIkJpZW4hXCIpIn0=
+</div>
+<ul>
+<li><code>paste()</code> -&gt; Esta función une todos los vectores de caracteres que se le suministran y construye una sola cadena de caracteres.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;Aprendiendo&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;programar&quot;</span>,<span class="st">&quot;con&quot;</span>,<span class="st">&quot;R&quot;</span>) </code></pre></div>
+<pre><code>## [1] &quot;Aprendiendo a programar con R&quot;</code></pre>
+<ul>
+<li><code>abs()</code> -&gt; calcula el valor absoluto de un valor.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">-</span><span class="dv">8</span>
+<span class="kw">abs</span>(y)</code></pre></div>
+<pre><code>## [1] 3</code></pre>
+<ul>
+<li><code>round()</code> -&gt; redondea un número a los decimales que se le indiquen.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">round</span>(<span class="fl">0.1475945131</span>, <span class="dv">3</span>)</code></pre></div>
+<pre><code>## [1] 0.148</code></pre>
+<ul>
+<li><code>sort()</code> -&gt; ordena un vector que se le indique.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(<span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>))</code></pre></div>
+<pre><code>## [1] 2 2 4 4 6 6 8 8</code></pre>
+<ul>
+<li><code>is.algo()</code> -&gt; indica el tipo de estructura de datos y regresa un valor lógico.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.list</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<ul>
+<li><code>mean()</code> -&gt; se utiliza para calcular el promedio aritmético de los elementos evaluados.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre></div>
+<pre><code>## [1] 17.29</code></pre>
+<p>La forma general de usar la función <code>mean</code> es <code>mean(x, ...)</code>, donde <code>(...)</code> es llamado elipsis, y es la manera en que <strong>R</strong> pasa a través de los argumentos de una función sin tener que nombrarlos ni especificarlos.</p>
+<p>Sin embargo el método por default <code>S3</code> es <code>mean(x, trim = 0, na.rm = FALSE, ...)</code>, donde <code>trim</code> y <code>na.rm</code> tienen valores por defecto, lo cual los hace argumentos opcionales. Sin embargo cada uno tiene su función específica.</p>
+<p>Por ejemplo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">linkedin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">17</span>, <span class="dv">14</span>)
+facebook &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">17</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">16</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">14</span>)
+<span class="co"># Promedio simple de la suma</span>
+avg_sum &lt;-<span class="st"> </span><span class="kw">mean</span>(linkedin <span class="op">+</span><span class="st"> </span>facebook)
+
+<span class="co"># Promedio truncado de la suma </span>
+avg_sum_trimmed &lt;-<span class="st"> </span><span class="kw">mean</span>((linkedin <span class="op">+</span><span class="st"> </span>facebook), <span class="dt">trim =</span> <span class="fl">0.2</span>)
+
+<span class="co"># Evaluando ambos promedios</span>
+<span class="kw">print</span>(avg_sum)</code></pre></div>
+<pre><code>## [1] 22.29</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(avg_sum_trimmed)</code></pre></div>
+<pre><code>## [1] 22.6</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">linkedin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">5</span>, <span class="ot">NA</span>, <span class="dv">17</span>, <span class="dv">14</span>)
+facebook &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">17</span>, <span class="ot">NA</span>, <span class="dv">5</span>, <span class="dv">16</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">14</span>)
+
+<span class="co"># Promedio simple de linkedin con argumentos por defecto</span>
+<span class="kw">mean</span>(linkedin)</code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Promedio simple de linkedin con na.rm = TRUE</span>
+<span class="kw">mean</span>(linkedin, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## [1] 12.33</code></pre>
+<ul>
+<li><code>median()</code> -&gt; devuelve el valor de la mediana de los elementos evaluados.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre></div>
+<pre><code>## [1] 8.5</code></pre>
+<ul>
+<li><code>Moda</code> -&gt; No hay una función que realice este cálculo directamento por lo tanto tenemos que recurrir a otras dos funciones. La moda nos representa el valor que tiene mayor frecuencia absoluta en una distribución de datos. Para realizar su cálculo utilizamos las funciones <code>sort()</code> para ordenar los datos y <code>table()</code> para ver el número de repeticiones de cada elemento.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
+<span class="kw">sort</span>(x)</code></pre></div>
+<pre><code>##  [1]  5  5  5  8  8  8  8  9  9 15 17 17 64 64</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(x)</code></pre></div>
+<pre><code>## x
+##  5  8  9 15 17 64 
+##  3  4  2  1  2  2</code></pre>
+<ul>
+<li><code>range()</code> -&gt; es el intervalo entre el valor máximo y el valor mínimo. Permite obtener una idea de la dispersión de los datos, cuanto mayor es el rango, más dispersos están los datos de un conjunto.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
+<span class="kw">range</span>(x)</code></pre></div>
+<pre><code>## [1]  5 64</code></pre>
+<ul>
+<li><code>quantile()</code> -&gt; son los tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(x)</code></pre></div>
+<pre><code>##   0%  25%  50%  75% 100% 
+##  5.0  8.0  8.5 16.5 64.0</code></pre>
+<ul>
+<li><code>IQR()</code> -&gt; la diferencia entre el tercer y el primer cuartil de una distribución. Es una medida de la dispersión estadística.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(x)</code></pre></div>
+<pre><code>## [1] 8.5</code></pre>
+<ul>
+<li><code>boxplot()</code> -&gt; proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos.</li>
+</ul>
+<p>– Son útiles para ver la presencia de valores atípicos también llamados outliers.</p>
+<p>– <span class="math inline">\(Q_1 - 1.5 * IQR\)</span></p>
+<p>– <span class="math inline">\(Q_3 + 1.5 * IQR\)</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(x, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">horizontal =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-38-1.svg" /><!-- --></p>
+<ul>
+<li><code>sd()</code> -&gt; la desviación estandar es una medida del grado de dispersión de los datos con respecto al valor promedio. Se define como la raíz cuadrada de la varianza de la variable.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(x)</code></pre></div>
+<pre><code>## [1] 20.2</code></pre>
+<ul>
+<li><code>var()</code> -&gt; es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
+<span class="kw">var</span>(x)</code></pre></div>
+<pre><code>## [1] 408.1</code></pre>
+<ul>
+<li><code>summary()</code> -&gt; permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(x)</code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     5.0     8.0     8.5    17.3    16.5    64.0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(cars)</code></pre></div>
+<pre><code>##      speed           dist    
+##  Min.   : 4.0   Min.   :  2  
+##  1st Qu.:12.0   1st Qu.: 26  
+##  Median :15.0   Median : 36  
+##  Mean   :15.4   Mean   : 43  
+##  3rd Qu.:19.0   3rd Qu.: 56  
+##  Max.   :25.0   Max.   :120</code></pre>
+<ul>
+<li><code>apply()</code> -&gt; permite realizar la misma operación en todas las filas y columnas de un arreglo simultáneamente. Sólo hay que indicarle la operación a realizar y el índice/índices sobre los cuales ha de realizarla.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">matriz &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">nrow =</span> <span class="dv">2</span>,<span class="dt">ncol =</span> <span class="dv">2</span>)
+matriz</code></pre></div>
+<pre><code>##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apply</span>(matriz,<span class="dv">1</span>,sum)</code></pre></div>
+<pre><code>## [1] 4 6</code></pre>
+<ul>
+<li><code>lapply()</code> -&gt; funciona igual que la función <code>apply()</code>, con la diferencia de que puede ser utilizada en listas, dataframes o vectores y el retorna una lista.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(matriz,<span class="cf">function</span> (x) x<span class="op">^</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 4
+## 
+## [[3]]
+## [1] 9
+## 
+## [[4]]
+## [1] 16</code></pre>
+<ul>
+<li><code>sapply()</code> -&gt; funciona igual que la función <code>apply()</code>, con la diferencia de que puede ser utilizada en listas, dataframes o vectores y el retorna una vector.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(matriz,<span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">2</span>)</code></pre></div>
+<pre><code>## [1]  1  4  9 16</code></pre>
+</div>
+<div id="r-como-calculadora" class="section level2">
+<h2><span class="header-section-number">2.4</span> <strong>R</strong> como calculadora</h2>
+<div id="operaciones-aritmeticas" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Operaciones Aritméticas</h3>
+<p>Estos pueden ser usado con variables de tipo numérico o complejo, pero también lógico; en el caso de lógicos son forzados a valores numéricos, como por ejemplo 0 y 1.</p>
+<ul>
+<li>Suma (<code>+</code>):</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span><span class="op">+</span><span class="dv">4</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<ul>
+<li>Resta (<code>-</code>):</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">-</span><span class="dv">6</span></code></pre></div>
+<pre><code>## [1] -5</code></pre>
+<ul>
+<li>Multiplicación (<code>*</code>):</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">*</span><span class="dv">8</span></code></pre></div>
+<pre><code>## [1] 40</code></pre>
+<ul>
+<li>División (<code>/</code>):</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">/</span><span class="dv">3</span></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<ul>
+<li>Raíz cuadrada:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">25</span>)</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<ul>
+<li>Potencia:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">^</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<ul>
+<li>División Entera:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">%/%</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<ul>
+<li>Módulo o resto de la división entera:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">%%</span><span class="dv">2</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<ul>
+<li>Logaritmos:</li>
+</ul>
+<p><code>log()</code> (Logaritmo nepereano), <code>logb()</code> (Logaritmo en base a b), <code>log10()</code> (Logaritmo en base a 10), <code>log2()</code> (Logaritmo en base a 2).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] -Inf</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">1</span>)</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<ul>
+<li>Exponencial:</li>
+</ul>
+<p>La función que trae <strong>R</strong> para calcular la función exponencial es <code>exp()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">exp</span>(<span class="dv">1</span>)</code></pre></div>
+<pre><code>## [1] 2.718</code></pre>
+<ul>
+<li>Funciones Trigonométricas</li>
+</ul>
+<p>Seno <code>sin()</code>, coseno <code>cos()</code>, tangente <code>tan()</code>, arco-seno <code>asin()</code>, arco-coseno <code>acos()</code>, arcotangente <code>atan()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(<span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(<span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tan</span>(<span class="dv">0</span>)</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+</div>
+<div id="operadores-comparativos" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Operadores Comparativos</h3>
+<p>Actuan sobre cualquier tipo de objeto, y retornan uno o varios valores lógicos, dependiendo del objeto. Estos usan todos los elementos de los dos objetos que se están comparando (reciclando los valores de los más pequeños si es necesario), devolviendo un objeto del mismo tamaño.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Símbolo</th>
+<th align="center">Operador</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">&lt;</td>
+<td align="center">Menor que</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;</td>
+<td align="center">Mayor que</td>
+</tr>
+<tr class="odd">
+<td align="center">&lt;=</td>
+<td align="center">Menor o igual que</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;=</td>
+<td align="center">Mayor o igual que</td>
+</tr>
+<tr class="odd">
+<td align="center">==</td>
+<td align="center">Igual que</td>
+</tr>
+<tr class="even">
+<td align="center">!=</td>
+<td align="center">Diferente de</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="operadores-logicos" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Operadores Lógicos</h3>
+<ul>
+<li><strong>Y o en ingles AND</strong>: <code>&amp;</code>, <code>&amp;&amp;</code>.</li>
+</ul>
+<p>Supongamos que tenemos dos operaciones lógicas a las que llamaremos <code>condición_1</code>,<code>condición_2</code> respectivamente, y queremos saber si estas se cumplen al mismo tiempo, en <strong>R</strong> usamos <code>condición_1 &amp; condición_2</code> o su equivalente <code>condición_1 &amp;&amp; condición_2</code> y en este caso se estará evaluando si simultaneamente se cumplen las dos condiciones. En caso de que se cumplan la función retornará verdadero (<code>TRUE</code>).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">20</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>
+condicion_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">/</span><span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span>
+condicion_<span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> <span class="op">&amp;&amp;</span><span class="st"> </span>condicion_<span class="dv">2</span> </code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Es importante acotar que cuando se tengan vectores logical de más de un elemento se debe usar <code>&amp;</code> para realizar la operación elemento a elemento. Si se estan comparando dos vectores, la comparación se hace elemento a elemento y si ambos no tienen el mismo tamaño se recurre al reciclaje de elemento para completar la comparación en el vector de menor tamaño, si en cambio colocamos <code>&amp;&amp;</code> simplemente realizará la comparación para los primeros elementos e ignorará el resto.</p>
+<p>Los símbolos <code>&amp;&amp;</code> generalmente debe usarse con el uso de condicionales como <code>if</code> o <code>while</code>.</p>
+<ul>
+<li><strong>O ó en ingles OR</strong>: <code>|</code>, <code>||</code></li>
+</ul>
+<p>Al igual que el caso anterior supongamos que tenemos dos operaciones lógicas y queremos saber si se cumple una de las dos, entonces podemos plantearnos una expresión de este tipo, la manera de hacerlo en <strong>R</strong> es la diguiente <code>condición_1 || condición_2</code>, si una de las dos se cumple ésta retornará verdadero (<code>TRUE</code>), también lo hará si ambas se cumple.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span> 
+condicion_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">4</span><span class="op">/</span><span class="dv">5</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">7</span><span class="op">/</span><span class="dv">8</span>
+
+condicion_<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> <span class="op">||</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Cuando usamos vectores para hacer este tipo de comparaciones se sigue con <code>|</code> y <code>||</code> el mismo criterio que con <code>&amp;</code> y <code>&amp;&amp;</code>.</p>
+
+</div>
+</div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-78759535-1', 'auto');
+ga('send', 'pageview');  
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduccion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vectores.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook/js/app.min.js"></script>
+<script src="libs/gitbook/js/lunr.js"></script>
+<script src="libs/gitbook/js/plugin-search.js"></script>
+<script src="libs/gitbook/js/plugin-sharing.js"></script>
+<script src="libs/gitbook/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/002-Objetos-en-R.Rmd",
+"text": "Edit"
+},
+"download": ["Programacion-Cientifica-en-R.pdf"],
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

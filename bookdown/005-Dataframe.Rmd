@@ -1,0 +1,91 @@
+# Data.frame
+
+## Generación de un Data.frame
+
+Los Data.frame, también llamados marcos de datos, son muy parecidos a las matrices con la diferencia de que puede contener columnas de diferentes tipos, sin embargo los elementos dentro de cada columna si deben ser del mismo tipo y todas las columnas deben tener el mismo tamaño.
+
+Para crear un Data.frame se utiliza la función `data.frame()`, donde los parámetros de entrada son las columnas o variables, a estas se les puede colocar su nombre respectivo.
+
+```{r}
+empleados <- c("John Doe","Peter Gynn", "Jolie Hope")
+salario<- c(21000, 23400, 26800)
+inicio <- as.Date(c("2010-11-1","2008-3-25","2007-3-14"))
+data_empleados <- data.frame( empleados, salario, inicio)
+data_empleados
+```
+
+Podemos notar que la columna correspondiente a los nombres de los empleados es de tipo "factor", aunque inicialmente era un vector de caracteres, __R__ lo transforma en este tipo de datos, pero si se quiere mantener la variables como caracteres se debe colocar como parámetro de entrada `stringsAsFactors=FALSE`.
+
+```{r}
+data_empleados <- data.frame( empleados, salario, inicio, stringsAsFactors=FALSE)
+data_empleados
+```
+
+Al igual que se hizo con las matrices podemos colocarle nombres a las filas y las columnas con las funciones `rownames()` y `colnames()`, respectivamente. 
+
+```{r}
+colnames(data_empleados) <- c("Empleados", "Salarios", "Día de Inicio")
+rownames(data_empleados) <- c("Puesto 1", "Puesto 2", "Puesto 3")
+data_empleados
+```
+
+## Acceder a Datos en un Data.frame
+
+- La manera de acceder a un datos particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes `[]` la posición del elemento que queremos o los nombres correspondientes a la posición.
+
+```{r}
+data_empleados[1,1]
+data_empleados["Puesto 1","Empleados"]
+```
+
+- Si se quiere acceder a una fila se debe colocar entre corchetes la fila correspondiente (el número o el nombre respectivo) seguido de una coma.
+
+```{r}
+data_empleados[1,]
+data_empleados["Puesto 1",]
+```
+
+Si se quieren más de una fila, se deben pasar dentro de los corchetes un vector con las posiciones de las filas que se quieran.
+
+```{r}
+data_empleados[c(1,2),]
+data_empleados[c("Puesto 1", "Puesto 2"),]
+```
+
+- Para acceder a una variable se puede usar los corchetes con una coma seguido del número o nombre de la columna correspondiente. Otra manera de extraer las columnas, generalmente llamadas variables, es usando el signo `$`, para el empleo de este se debe colocar el nombre del Data.frame seguido del signo y el nombre de la variable que se quiere extraer.
+
+```{r}
+data_empleados[,1]
+data_empleados[,"Empleados"]
+data_empleados$Empleados
+```
+
+En el caso que se quieran extraer más de dos variables se deben pasar dentro de los corchetes el vector con las variables correspondientes.
+
+```{r}
+data_empleados[,c(1,2)]
+data_empleados[,c("Empleados","Salarios")]
+```
+
+- Para concatenar filas o columnas igualmente utilizamos las funciones `rbind()` y `cbind()`, estas nos permiten agregar múltiples variables u observaciones. Si se quiere agregar una variable adicional también puede usarse el signo `$`.
+
+```{r}
+data_empleados$Edad <- c(24,25,24)
+data_empleados
+```
+
+- Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son `head()` y `tail()`, estas por defecto extraen las primeras 6, o las últimas 6, filas del Data.frame, respectivamente. La cantidad de observaciones que extrae puede cambiarse con el parámetro `n`.
+
+```{r}
+head(data_empleados,n=1)
+tail(data_empleados,n=1)
+```
+
+- Otros datos que pueden ser muy importantes a la hora de trabajar con un Data.frame es querer saber el número de variables y de observaciones que tenga, estos se pueden obtener con los comandos `nrow()` y `ncol()`.
+
+```{r}
+nrow(data_empleados)
+ncol(data_empleados)
+```
+
+

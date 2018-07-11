@@ -1,0 +1,151 @@
+# Vectores
+
+## Definición
+
+Es un arreglo de una dimensión, se le suele decir que es una concatenación de datos, puede tener valores de tipo numérico, lógico, complejos o carácter. 
+
+Suele representarse de la siguiente manera
+
+$$x=(x_1,x_2,...,x_n)$$
+
+Éste es un vector de tamaño $n$, donde $x_i$ son los elementos de dicho vector.
+
+Las características principales de los vector son:
+
+- Los elementos del vector deben ser todos del mismo tipo de datos (numérico, lógico, carácter, complejo). Si los elementos son de distinto tipo __R__ realiza una transformación automática, llamada coerción, es decir se transforman todos los elementos a un solo tipo.
+
+- Cada elemento del vector recibe un índice según el orden en el que se colocó. El primer elemento recibe el número 1. Estos nos ayuda a acceder a cualquier elemento del vector utilizando los índice.
+
+## Creación de Vectores
+
+La manera más simple de crear un vector en __R__ es usar el operador asignación `<-` con la función `c()` donde sus parámetros de entrada serán los elementos del vector, separados con `,`.
+
+```{r}
+x <- c(2,1,3,-1,10,0,0,1)
+x
+# Crear un vector llamado alumno con el nombre y apodo de "Juan" y "Juancho"
+alumno <- c("Juan","Juancho")
+alumno
+# Establecer las etiquetas de Nombre y Apodo al vector
+names(alumno) <- c("Nombre", "Apodo")
+alumno
+```
+
+La función `names()` que acabamos de usar asigna nombres a elementos del vector.
+
+## Secuencias
+
+- Sucesiones de números `:`: Para generar una secuencia de número entreros podemos hacerlo de la siguiente manera,colocar el número de inicio de la secuencia a generar y el número final de la secuencia, separados por dos puntos (1:10)
+
+```{r}
+1:10
+
+22:11
+
+1:5-1
+
+1:(5-1)
+```
+
+- `seq()`: Los argumentos o parámetros de entrada que tiene esta función son: `from` es el número con el que iniciará la secuencia, `to` es el número que tomará el final de la secuencia, `by` es el incremento que se debe usar para generar la secuencia, `length.out` es el tamaño de la sucesión.
+
+```{r}
+seq(10)
+seq(6,10) 
+seq(from=6,to=10,by=2)
+```
+
+- `rep()`: Esta función se usa para generar sucesiones de datos repetidos. Entre sus argumentos de entrada tiene: `x` número o números que se quieran repetir, `times` el número de veces que se repetirá `x`, `each` si se tienen más de dos números que se quieran repetir aquí se podrá indicar cuantas veces se repetirá cada uno.
+
+```{r}
+rep(x=1, times = 3)
+
+rep(x=1:4,times=2) 
+
+rep(x=1:4,each=2)
+```
+
+- `sequence()`: Genera una secuencia que inicia en 1 y termina en el elemento que se le pasa como argumento `nvec`.
+
+```{r}
+sequence(3)
+sequence(c(3, 2))
+```
+
+- `gl()`: Para generar series regulares de factores, entre sus argumentos tenemos `k` número de niveles o clases, `n` el número de replicas para cada nivel, `label` vector para etiquetar los niveles.
+
+```{r}
+gl(n=3, k=5)
+
+gl(n=2, k=3, label=c("Macho", "Hembra"))
+```
+
+## Selección de elementos de un vector
+
+- __Selección de un elemento del vector__: Como se mencionó anteriormente los elementos de un vector tienen asociado un índice, este índice inicia en 1 y toman su valor dependiendo del orden en que fueron guardados. Para seleccionar un elemento particular se debe colocar el índice de dicho elemento entre corchetes `[]`.
+
+```{r}
+x
+x[1] #Primer elemento
+x[5] #Quinto elemento
+```
+
+- __Eliminar un elemento del vector__: Si queremos eliminar un elemento particular del vector debemos colocar el signo menos `-` seguido de la posición del elemento en el vector y esto dentro de los corchetes.
+
+```{r}
+x[-4] #Eliminar el Cuarto elemento
+```
+
+- __Seleccionar varias posiciones__: Si queremos seleccionar más de un elemento del vector, debemos colocar dentro de los corchetes un vector con las posiciones que queremos.
+
+```{r}
+x[c(1,3,5)]
+```
+
+- __Vectores lógicos__: Cuando nos referimos a vectores lógicos son los elementos que cumplen alguna condición lógica, por ejemplo si se quieren los elementos de un vector que sean mayores a cierto valor numérico primero se debe evaluar la condición y luego colocar entre corchetes la condición lógica y está retornará solo los elementos donde se da TRUE.
+
+```{r}
+v<-x>2
+v
+x[v]
+```
+
+- __Modificar los elementos__: Si en cambio queremos cambiar un elemento del vector se debe llamar el vector con la posición y asignarle el nuevo valor que tendrá.
+
+```{r}
+x[1] <- 12 #Cambiar el primer elemento
+x
+```
+
+## Suma de Vectores
+
+Con los vectores se pueden utilizar operaciones aritméticas o lógicas, estas se aplicarán elemento a elemento devolviendo un vector con el resultado obtenido, a continuación veamos algunos ejemplos.
+
+- __Suma de Vectores__ : se realiza con el operador `+` y este suma elemento a elemento entre los vectores que se sumen, en caso de que uno de los vectores sea de menor tamaño __R__ recicla los valores hasta hacerlo del mismo tamaño que el otro vector, o que el vector más grande si se suman más de dos vectores.
+
+```{r}
+x <- c(5,1,5)
+y <- c(2,1,3)
+z <- c(1,0)
+x+y
+x+z
+x+y+z
+```
+
+- __Suma de los elementos de un vector__ : Existe la función `sum()` que suma todos los elementos de un vector.
+
+```{r}
+sum(x)
+sum(z)
+```
+
+- __Otras Operaciones__ : Cualquier operación aritmética puede realizarse sobre los elementos de un vector como el producto `*`, la división `/`, la resta `-`, potencia `^`.
+
+```{r}
+x*y
+
+x^2
+```
+
+
+

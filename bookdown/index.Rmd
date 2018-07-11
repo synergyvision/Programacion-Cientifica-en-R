@@ -36,6 +36,7 @@ library(modeest)
 library(ggplot2)
 library(grid)
 library(gridExtra)
+library(tutorial)
 ```
 
 ```{r include=FALSE}
@@ -76,20 +77,18 @@ Este libro es posible gracias a una gran cantidad de desarrolladores que contrib
 
 Vamos a utilizar el paquete [Datacamp Tutorial](https://github.com/datacamp/tutorial) que utiliza la librería en JavaScript [Datacamp Light](https://github.com/datacamp/datacamp-light) para crear ejercicios y prácticas con `R`. De esta forma el libro es completamente interactivo y con prácticas incluidas. De esta forma estamos creando una experiencia única de aprendizaje en línea.
 
-```{r tut=TRUE,ex="create_a", type="pre-exercise-code"}
+```{r tut=TRUE,ex="create_a1", type="pre-exercise-code"}
 b <- 5
 ```
 
-```{r tut=TRUE,ex="create_a", type="sample-code"}
+```{r tut=TRUE,ex="create_a1", type="sample-code"}
 # Crea una variable a, igual a 5
-
 
 # Muestra el valor de a
 
-
 ```
 
-```{r tut=TRUE,ex="create_a", type="solution"}
+```{r tut=TRUE,ex="create_a1", type="solution"}
 # Crea una variable a, igual a 5
 a <- 5
 
@@ -97,9 +96,9 @@ a <- 5
 a
 ```
 
-```{r tut=TRUE,ex="create_a", type="sct"}
+```{r tut=TRUE,ex="create_a1", type="sct"}
 test_object("a")
-test_output_contains("a", incorrect_msg = "Aseg&uacute;rate de mostrar el valor de `a`.")
+test_output_contains("a", incorrect_msg = "Asegurate de mostrar el valor de `a`.")
 success_msg("Excelente!")
 ```
 
