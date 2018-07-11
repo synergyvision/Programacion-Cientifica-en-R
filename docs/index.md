@@ -561,7 +561,9 @@ is.list(c(1,2,3))
 ## [1] FALSE
 ```
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4PC1jKDgsNiw0LDIsOCw2LDQsMilcbnk8LWMoLTEwLjUsNi45LC0wLjAwMSwyLDEuNTcsNiwtNCwyNS44LDIpXG4jIFZlcmlmaWNhciBzaSB4IGVzIHVuIHZlY3RvciBjb24gbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpXG5cbiMgVmVyaWZpY2FyIHNpIHkgZXMgdW5hIGxpc3RhIGNvbiBsYSBmdW5jaVx1MDBmM24gaXMubGlzdCgpIiwic29sdXRpb24iOiJ4PC1jKDgsNiw0LDIsOCw2LDQsMilcbnk8LWMoLTEwLjUsNi45LC0wLjAwMSwyLDEuNTcsNiwtNCwyNS44LDIpXG4jIFZlcmlmaWNhciBzaSB4IGVzIHVuIHZlY3RvciBjb24gbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpXG5pcy52ZWN0b3IoeClcbiMgVmVyaWZpY2FyIHNpIHkgZXMgdW5hIGxpc3RhIGNvbiBsYSBmdW5jaVx1MDBmM24gaXMubGlzdCgpXG5pcy5saXN0KHkpIiwic2N0IjoidGVzdF9mdW5jdGlvbihcImlzLnZlY3RvclwiKVxudGVzdF9mdW5jdGlvbihcImlzLmxpc3RcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiaXMudmVjdG9yKHgpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpIHkgY29sb2NhciBlbCB2ZWN0b3IgeFwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJpcy5saXN0KHkpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGlzLmxpc3QoKSB5IGNvbG9jYXIgZWwgdmVjdG9yIHlcIilcbnN1Y2Nlc3NfbXNnKFwiRXhjZWxlbnRlIVwiKSJ9</div>
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Ing8LWMoOCw2LDQsMiw4LDYsNCwyKVxueTwtYygtMTAuNSw2LjksLTAuMDAxLDIsMS41Nyw2LC00LDI1LjgsMikiLCJzYW1wbGUiOiIjIFZlcmlmaWNhciBzaSB4IGVzIHVuIHZlY3RvciBjb24gbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpXG5cbiMgVmVyaWZpY2FyIHNpIHkgZXMgdW5hIGxpc3RhIGNvbiBsYSBmdW5jaVx1MDBmM24gaXMubGlzdCgpIiwic29sdXRpb24iOiIjIFZlcmlmaWNhciBzaSB4IGVzIHVuIHZlY3RvciBjb24gbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpXG5pcy52ZWN0b3IoeClcbiMgVmVyaWZpY2FyIHNpIHkgZXMgdW5hIGxpc3RhIGNvbiBsYSBmdW5jaVx1MDBmM24gaXMubGlzdCgpXG5pcy5saXN0KHkpIiwic2N0IjoidGVzdF9mdW5jdGlvbihcImlzLnZlY3RvclwiKVxudGVzdF9mdW5jdGlvbihcImlzLmxpc3RcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiaXMudmVjdG9yKHgpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpIHkgY29sb2NhciBlbCB2ZWN0b3IgeFwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJpcy5saXN0KHkpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGlzLmxpc3QoKSB5IGNvbG9jYXIgZWwgdmVjdG9yIHlcIilcbnN1Y2Nlc3NfbXNnKFwiRXhjZWxlbnRlIVwiKSJ9</div>
+
+
 
 
 
@@ -631,6 +633,14 @@ mean(linkedin, na.rm = TRUE)
 ```
 ## [1] 12.33
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgZWwgcHJvbWVkaW8gc2ltcGxlIGRlIGxpbmtlZGluIGNvbiBsYSBmdW5jaVx1MDBmM24gbWVhbigpXG4jIEd1YXJkYWxvIGVuIGxhIHZhcmlhYmxlIG1lYW5fbGlua2VkaW5cblxuIyBjYWxjdWxhciBlbCBwcm9tZWRpbyBzaW1wbGUgZGUgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiBtZWFuKClcbiMgR3VhcmRhbG8gZW4gbGEgdmFyaWFibGUgbWVhbl9mYWNlYm9va1xuXG4jIEltcHJpbWlyIGxvcyByZXN1bHRhZG9zIGRlIGxhcyBtZWRpYXMgeSBjYWxjdWxhciBsYSBzdW1hIGRlIGxvcyBkb3MgcHJvbWVkaW9zIiwic29sdXRpb24iOiIjIENhbGN1bGFyIGVsIHByb21lZGlvIHNpbXBsZSBkZSBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIG1lYW4oKVxuIyBHdWFyZGFsbyBlbiBsYSB2YXJpYWJsZSBtZWFuX2xpbmtlZGluXG5tZWFuX2xpbmtlZGluIDwtIG1lYW4obGlua2VkaW4pXG4jIGNhbGN1bGFyIGVsIHByb21lZGlvIHNpbXBsZSBkZSBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIG1lYW4oKVxuIyBHdWFyZGFsbyBlbiBsYSB2YXJpYWJsZSBtZWFuX2ZhY2Vib29rXG5tZWFuX2ZhY2Vib29rIDwtIG1lYW4oZmFjZWJvb2spXG4jIEltcHJpbWlyIGxvcyByZXN1bHRhZG9zIGRlIGxhcyBtZWRpYXMgeSBjYWxjdWxhciBsYSBzdW1hIGRlIGxvcyBkb3MgcHJvbWVkaW9zXG5tZWFuX2xpbmtlZGluXG5tZWFuX2ZhY2Vib29rXG5tZWFuX2xpbmtlZGluK21lYW5fZmFjZWJvb2siLCJzY3QiOiJ0ZXN0X2Z1bmN0aW9uKFwibWVhblwiKVxudGVzdF9vYmplY3QoXCJtZWFuX2xpbmtlZGluXCIpXG50ZXN0X29iamVjdChcIm1lYW5fZmFjZWJvb2tcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibWVhbihsaW5rZWRpbilcIiwgaW5jb3JyZWN0X21zZyA9IFwiVXNhciBsYSBmdW5jaVx1MDBmM24gbWVhbigpIHkgZWwgdmVjdG9yIGxpbmtlZGluXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm1lYW4oZmFjZWJvb2spXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIG1lYW4oKSB5IGVsIHZlY3RvciBmYWNlYm9va1wiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJtZWFuX2xpbmtlZGluXCIsIGluY29ycmVjdF9tc2cgPSBcIiBSZWN1ZXJkZSBndWFyZGFyIGxhIG1lZGlhIGRlIGxpbmtlZGluIGVuIG1lYW5fbGlua2VkaW5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibWVhbl9mYWNlYm9va1wiLCBpbmNvcnJlY3RfbXNnID0gXCIgUmVjdWVyZGUgZ3VhcmRhciBsYSBtZWRpYSBkZSBmYWNlYm9vayBlbiBtZWFuX2ZhY2Vib29rXCIpXG5zdWNjZXNzX21zZyhcIkV4Y2VsZW50ZSFcIikifQ==</div>
+
+
+
+
+
+
 
 - `median()` -> devuelve el valor de la mediana de los elementos evaluados.
 
@@ -713,7 +723,7 @@ IQR(x)
 boxplot(x, col = "orange", horizontal = TRUE)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-52-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-57-1.svg)<!-- -->
 
 - `sd()` -> la desviación estandar es una medida del grado de dispersión de los datos con respecto al valor promedio. Se define como la raíz cuadrada de la varianza de la variable. 
 
@@ -1339,8 +1349,8 @@ x+z
 ```
 
 ```
-## Warning in x + z: longitud de objeto mayor no es
-## múltiplo de la longitud de uno menor
+## Warning in x + z: longer object length is not a
+## multiple of shorter object length
 ```
 
 ```
@@ -1352,8 +1362,8 @@ x+y+z
 ```
 
 ```
-## Warning in x + y + z: longitud de objeto mayor no es
-## múltiplo de la longitud de uno menor
+## Warning in x + y + z: longer object length is not a
+## multiple of shorter object length
 ```
 
 ```
@@ -2280,7 +2290,7 @@ fecha_3
 ```
 
 ```
-## [1] "2001-06-24"
+## [1] NA
 ```
 
 Para saber el día de semana de una fecha se usa la función `weekdays()`
@@ -2307,7 +2317,7 @@ weekdays(fecha_3)
 ```
 
 ```
-## [1] "domingo"
+## [1] NA
 ```
 
 Podemos hacer operaciones con fechas, como por ejemplo sumar o restar días a una fecha específica, esto lo hacemos simplemente sumandole o restandole el número de días; otra función muy util puede ser calcular la cantidad de días entre dos fechas particulares, para esto usamos la función `diff.Date()` donde se le debe pasar un vector con las fechas donde se quiere calcular la cantidad de días entre ellos.
@@ -2476,7 +2486,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 21:55:55 GMT"
+## [1] "2018-07-11 19:42:19 -04"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2488,7 +2498,7 @@ fecha_7
 ```
 
 ```
-## [1] "2013-03-10 08:32:07 GMT"
+## [1] "2013-03-10 08:32:07 -0430"
 ```
 
 ```r
@@ -2524,7 +2534,7 @@ unclass(fecha_7)
 ## [1] 0
 ## 
 ## $zone
-## [1] "GMT"
+## [1] "-0430"
 ## 
 ## $gmtoff
 ## [1] NA
@@ -2583,7 +2593,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-129-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-134-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2605,7 +2615,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-130-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-135-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2618,7 +2628,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-131-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-136-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2640,7 +2650,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-132-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-137-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2672,7 +2682,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-133-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-138-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2685,7 +2695,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-134-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-139-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2706,7 +2716,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-135-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-140-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2720,7 +2730,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-136-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-141-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2728,7 +2738,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-136-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-141-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2743,7 +2753,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-137-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-142-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2755,7 +2765,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-138-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-143-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2773,7 +2783,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-139-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-144-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2786,7 +2796,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-140-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-145-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -2871,7 +2881,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 5
+## [1] 3
 ```
 
 ```r
@@ -2879,7 +2889,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 1
+## [1] 4
 ```
 
 ## Condicionales
@@ -3209,18 +3219,23 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
-## kpathsea version 6.2.3
-## Copyright 2017 Han The Thanh (pdfTeX) et al.
-## There is NO warranty.  Redistribution of this software is
-## covered by the terms of both the pdfTeX copyright and
-## the Lesser GNU General Public License.
-## For more information about these matters, see the file
-## named COPYING and the pdfTeX source.
-## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-## Compiled with libpng 1.6.29; using libpng 1.6.29
-## Compiled with zlib 1.2.11; using zlib 1.2.11
-## Compiled with xpdf version 3.04
+## MiKTeX-pdfTeX 2.9.6354 (1.40.18) (MiKTeX 2.9.6350)
+## 2.9.6354 (1.40.18)
+## TeX is a trademark of the American Mathematical Society.
+## using bzip2 version 1.0.6, 6-Sept-2010
+## compiled with curl version 7.54.0; using libcurl/7.54.0 WinSSL
+## compiled with expat version 2.2; using expat_2.2.0
+## compiled with jpeg version 9.2
+## compiled with liblzma version 50020032; using 50020032
+## compiled with libpng version 1.6.29; using 1.6.29
+## compiled with libressl version LibreSSL 2.5.3; using LibreSSL 2.5.3
+## compiled with MiKTeX Application Framework version 1.6334; using 1.6334
+## compiled with MiKTeX Core version 1.6344; using 1.6344
+## compiled with MiKTeX Archive Extractor version 1.6300; using 1.6300
+## compiled with MiKTeX Package Manager version 1.6353; using 1.6353
+## compiled with poppler version 0.55.0
+## compiled with uriparser version 0.8.4
+## compiled with zlib version 1.2.11; using 1.2.11
 ```
 
 <!--chapter:end:400-apendice.Rmd-->

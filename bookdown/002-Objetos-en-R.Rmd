@@ -401,9 +401,12 @@ success_msg("Excelente!")
 is.list(c(1,2,3))
 ```
 
-```{r tut=TRUE, ex="is", type="sample-code"}
+```{r tut=TRUE, ex="is", type="pre-exercise-code"}
 x<-c(8,6,4,2,8,6,4,2)
 y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
+```
+
+```{r tut=TRUE, ex="is", type="sample-code"}
 # Verificar si x es un vector con la función is.vector()
 
 # Verificar si y es una lista con la función is.list()
@@ -411,8 +414,6 @@ y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
 ```
 
 ```{r tut=TRUE, ex="is", type="solution"}
-x<-c(8,6,4,2,8,6,4,2)
-y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
 # Verificar si x es un vector con la función is.vector()
 is.vector(x)
 # Verificar si y es una lista con la función is.list()
@@ -462,6 +463,46 @@ mean(linkedin)
 
 # Promedio simple de linkedin con na.rm = TRUE
 mean(linkedin, na.rm = TRUE)
+```
+
+```{r tut=TRUE, ex="mean", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+```
+
+```{r tut=TRUE, ex="mean", type="sample-code"}
+# Calcular el promedio simple de linkedin con la función mean()
+# Guardalo en la variable mean_linkedin
+
+# calcular el promedio simple de facebook con la función mean()
+# Guardalo en la variable mean_facebook
+
+# Imprimir los resultados de las medias y calcular la suma de los dos promedios
+
+```
+
+```{r tut=TRUE, ex="mean", type="solution"}
+# Calcular el promedio simple de linkedin con la función mean()
+# Guardalo en la variable mean_linkedin
+mean_linkedin <- mean(linkedin)
+# calcular el promedio simple de facebook con la función mean()
+# Guardalo en la variable mean_facebook
+mean_facebook <- mean(facebook)
+# Imprimir los resultados de las medias y calcular la suma de los dos promedios
+mean_linkedin
+mean_facebook
+mean_linkedin+mean_facebook
+```
+
+```{r tut=TRUE, ex="mean", type="sct"}
+test_function("mean")
+test_object("mean_linkedin")
+test_object("mean_facebook")
+test_output_contains("mean(linkedin)", incorrect_msg = "Usar la función mean() y el vector linkedin")
+test_output_contains("mean(facebook)", incorrect_msg = "Usar la función mean() y el vector facebook")
+test_output_contains("mean_linkedin", incorrect_msg = " Recuerde guardar la media de linkedin en mean_linkedin")
+test_output_contains("mean_facebook", incorrect_msg = " Recuerde guardar la media de facebook en mean_facebook")
+success_msg("Excelente!")
 ```
 
 - `median()` -> devuelve el valor de la mediana de los elementos evaluados.
