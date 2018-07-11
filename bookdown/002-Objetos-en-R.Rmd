@@ -511,6 +511,41 @@ success_msg("Excelente!")
 median(c(5,8,9,15,17,64,9,5,8,8,8,17,64,5))
 ```
 
+```{r tut=TRUE, ex="median", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+```
+
+```{r tut=TRUE, ex="median", type="sample-code"}
+# Calcular la mediana del vector linkedin con la función median()
+
+# Calcular la mediana del vector facebook con la función median()
+
+
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+# Calcular la mediana de x
+
+```
+
+```{r tut=TRUE, ex="median", type="solution"}
+# Calcular la mediana del vector linkedin con la función median()
+median(linkedin)
+# Calcular la mediana del vector facebook con la función median()
+median(facebook)
+
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+# Calcular la mediana de x
+median(x)
+```
+
+```{r tut=TRUE, ex="median", type="sct"}
+test_function("median")
+test_output_contains("median(linkedin)", incorrect_msg = "Usar la función median() y el vector linkedin")
+test_output_contains("median(facebook)", incorrect_msg = "Usar la función median() y el vector facebook")
+test_output_contains("median(x)", incorrect_msg = "Usar la función median() y el vector x")
+success_msg("Excelente!")
+```
+
 - `Moda` -> No hay una función que realice este cálculo directamento por lo tanto tenemos que recurrir a otras dos funciones. La moda nos representa el valor que tiene mayor frecuencia absoluta en una distribución de datos. Para realizar su cálculo utilizamos las funciones `sort()` para ordenar los datos y `table()` para ver el número de repeticiones de cada elemento.
 
 ```{r}

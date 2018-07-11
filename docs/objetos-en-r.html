@@ -473,6 +473,9 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre></div>
 <pre><code>## [1] 8.5</code></pre>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgbWVkaWFuYSBkZWwgdmVjdG9yIGxpbmtlZGluIGNvbiBsYSBmdW5jaVx1MDBmM24gbWVkaWFuKClcblxuIyBDYWxjdWxhciBsYSBtZWRpYW5hIGRlbCB2ZWN0b3IgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiBtZWRpYW4oKVxuXG5cbnggPC0gYyg1LDgsOSwxNSwxNyw2NCw5LDUsOCw4LDgsMTcsNjQsNSlcbiMgQ2FsY3VsYXIgbGEgbWVkaWFuYSBkZSB4Iiwic29sdXRpb24iOiIjIENhbGN1bGFyIGxhIG1lZGlhbmEgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIG1lZGlhbigpXG5tZWRpYW4obGlua2VkaW4pXG4jIENhbGN1bGFyIGxhIG1lZGlhbmEgZGVsIHZlY3RvciBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIG1lZGlhbigpXG5tZWRpYW4oZmFjZWJvb2spXG5cbnggPC0gYyg1LDgsOSwxNSwxNyw2NCw5LDUsOCw4LDgsMTcsNjQsNSlcbiMgQ2FsY3VsYXIgbGEgbWVkaWFuYSBkZSB4XG5tZWRpYW4oeCkiLCJzY3QiOiJ0ZXN0X2Z1bmN0aW9uKFwibWVkaWFuXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm1lZGlhbihsaW5rZWRpbilcIiwgaW5jb3JyZWN0X21zZyA9IFwiVXNhciBsYSBmdW5jaVx1MDBmM24gbWVkaWFuKCkgeSBlbCB2ZWN0b3IgbGlua2VkaW5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibWVkaWFuKGZhY2Vib29rKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiBtZWRpYW4oKSB5IGVsIHZlY3RvciBmYWNlYm9va1wiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJtZWRpYW4oeClcIiwgaW5jb3JyZWN0X21zZyA9IFwiVXNhciBsYSBmdW5jaVx1MDBmM24gbWVkaWFuKCkgeSBlbCB2ZWN0b3IgeFwiKVxuc3VjY2Vzc19tc2coXCJFeGNlbGVudGUhXCIpIn0=
+</div>
 <ul>
 <li><code>Moda</code> -&gt; No hay una función que realice este cálculo directamento por lo tanto tenemos que recurrir a otras dos funciones. La moda nos representa el valor que tiene mayor frecuencia absoluta en una distribución de datos. Para realizar su cálculo utilizamos las funciones <code>sort()</code> para ordenar los datos y <code>table()</code> para ver el número de repeticiones de cada elemento.</li>
 </ul>
@@ -507,7 +510,7 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <p>– <span class="math inline">\(Q_1 - 1.5 * IQR\)</span></p>
 <p>– <span class="math inline">\(Q_3 + 1.5 * IQR\)</span></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(x, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">horizontal =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-57-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-61-1.svg" /><!-- --></p>
 <ul>
 <li><code>sd()</code> -&gt; la desviación estandar es una medida del grado de dispersión de los datos con respecto al valor promedio. Se define como la raíz cuadrada de la varianza de la variable.</li>
 </ul>
