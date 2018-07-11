@@ -358,9 +358,9 @@ round(x,digits =2)
 
 ```{r tut=TRUE, ex="round", type="sct"}
 test_function("round")
-test_output_contains("round(x, 3)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
-test_output_contains("round(x, 1)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
-test_output_contains("round(x, 2)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
+test_output_contains("round(x,digits =3)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
+test_output_contains("round(x,digits =1)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
+test_output_contains("round(x,digits =2)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
 success_msg("Excelente!")
 ```
 
