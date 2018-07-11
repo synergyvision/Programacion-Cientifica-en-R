@@ -401,6 +401,32 @@ success_msg("Excelente!")
 is.list(c(1,2,3))
 ```
 
+```{r tut=TRUE, ex="is", type="sample-code"}
+x<-c(8,6,4,2,8,6,4,2)
+y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
+# Verificar si x es un vector con la función is.vector()
+
+# Verificar si y es una lista con la función is.list()
+
+```
+
+```{r tut=TRUE, ex="is", type="solution"}
+x<-c(8,6,4,2,8,6,4,2)
+y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
+# Verificar si x es un vector con la función is.vector()
+is.vector(x)
+# Verificar si y es una lista con la función is.list()
+is.list(y)
+```
+
+```{r tut=TRUE, ex="is", type="sct"}
+test_function("is.vector")
+test_function("is.list")
+test_output_contains("is.vector(x)", incorrect_msg = "Usar la función is.vector() y colocar el vector x")
+test_output_contains("is.list(y)", incorrect_msg = "Usar la función is.list() y colocar el vector y")
+success_msg("Excelente!")
+```
+
 - `mean()` -> se utiliza para calcular el promedio aritmético de los elementos evaluados.
 
 ```{r}
