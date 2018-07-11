@@ -264,11 +264,8 @@ ls()
 ```{r tut=TRUE, ex="delete", type="sct"}
 test_function("rm")
 test_function("ls")
-test_object("n1")
-test_output_contains("rm()", incorrect_msg = "Asegurate de utilizar la función rm().")
-test_output_contains("n1", incorrect_msg = "Asegurate de llamar al objeto correcto")
+test_output_contains("rm(n1)", incorrect_msg = "Asegurate de utilizar la función rm() y el objeto correcto.")
 test_output_contains("ls()", incorrect_msg = "Asegurese de llamar a la función ls() correctamente")
-test_error()
 success_msg("Bien!")
 ```
 

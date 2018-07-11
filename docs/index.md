@@ -475,7 +475,7 @@ ls()
 ## character(0)
 ```
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEgPC0gMTBcbm4yIDwtIDEwMFxubSA8LSAwLjUiLCJzYW1wbGUiOiJscygpXG5cbiMgQm9ycmFyIGRlIG1lbW9yaWEgZWwgb2JqZXRvIG4xXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYSIsInNvbHV0aW9uIjoibHMoKVxuXG4jIEJvcnJhciBkZSBtZW1vcmlhIGVsIG9iamV0byBuMVxucm0objEpXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYVxubHMoKSIsInNjdCI6InRlc3RfZnVuY3Rpb24oXCJybVwiKVxudGVzdF9mdW5jdGlvbihcImxzXCIpXG50ZXN0X29iamVjdChcIm4xXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInJtKClcIiwgaW5jb3JyZWN0X21zZyA9IFwiQXNlZ3VyYXRlIGRlIHV0aWxpemFyIGxhIGZ1bmNpXHUwMGYzbiBybSgpLlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJuMVwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgbGxhbWFyIGFsIG9iamV0byBjb3JyZWN0b1wiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJscygpXCIsIGluY29ycmVjdF9tc2cgPSBcIkFzZWd1cmVzZSBkZSBsbGFtYXIgYSBsYSBmdW5jaVx1MDBmM24gbHMoKSBjb3JyZWN0YW1lbnRlXCIpXG50ZXN0X2Vycm9yKClcbnN1Y2Nlc3NfbXNnKFwiQmllbiFcIikifQ==</div>
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEgPC0gMTBcbm4yIDwtIDEwMFxubSA8LSAwLjUiLCJzYW1wbGUiOiJscygpXG5cbiMgQm9ycmFyIGRlIG1lbW9yaWEgZWwgb2JqZXRvIG4xXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYSIsInNvbHV0aW9uIjoibHMoKVxuXG4jIEJvcnJhciBkZSBtZW1vcmlhIGVsIG9iamV0byBuMVxucm0objEpXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYVxubHMoKSIsInNjdCI6InRlc3RfZnVuY3Rpb24oXCJybVwiKVxudGVzdF9mdW5jdGlvbihcImxzXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInJtKG4xKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgdXRpbGl6YXIgbGEgZnVuY2lcdTAwZjNuIHJtKCkgeSBlbCBvYmpldG8gY29ycmVjdG8uXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImxzKClcIiwgaW5jb3JyZWN0X21zZyA9IFwiQXNlZ3VyZXNlIGRlIGxsYW1hciBhIGxhIGZ1bmNpXHUwMGYzbiBscygpIGNvcnJlY3RhbWVudGVcIilcbnN1Y2Nlc3NfbXNnKFwiQmllbiFcIikifQ==</div>
 
 
 
@@ -2448,7 +2448,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 20:57:47 GMT"
+## [1] "2018-07-11 21:02:14 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2843,7 +2843,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 4
+## [1] 2
 ```
 
 ```r
@@ -2851,7 +2851,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 6
+## [1] 3
 ```
 
 ## Condicionales
