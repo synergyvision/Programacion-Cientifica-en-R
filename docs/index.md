@@ -475,7 +475,7 @@ ls()
 ## character(0)
 ```
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEgPC0gMTBcbm4yIDwtIDEwMFxubSA8LSAwLjUiLCJzYW1wbGUiOiJscygpXG5cbiMgQm9ycmFyIGRlIG1lbW9yaWEgZWwgb2JqZXRvIG4xXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYSIsInNvbHV0aW9uIjoibHMoKVxuXG4jIEJvcnJhciBkZSBtZW1vcmlhIGVsIG9iamV0byBuMVxucm0objEpXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYVxubHMoKSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwicm0objEpXCIsIGluY29ycmVjdF9tc2cgPSBcIkFzZWd1cmF0ZSBkZSBib3JyYXIgZWwgb2JqZXRvIGNvcnJlY3RvLlwiKVxudGVzdF9mdW5jdGlvbihcInJtXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImxzKClcIiwgaW5jb3JyZWN0X21zZyA9IFwiQXNlZ3VyZXNlIGRlIGxsYW1hciBhIGxhIGZ1bmNpXHUwMGYzbiBscygpIGNvcnJlY3RhbWVudGVcIilcbnRlc3RfZnVuY3Rpb24oXCJsc1wiKVxudGVzdF9lcnJvcigpXG5zdWNjZXNzX21zZyhcIkJpZW4hXCIpIn0=</div>
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEgPC0gMTBcbm4yIDwtIDEwMFxubSA8LSAwLjUiLCJzYW1wbGUiOiJscygpXG5cbiMgQm9ycmFyIGRlIG1lbW9yaWEgZWwgb2JqZXRvIG4xXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYSIsInNvbHV0aW9uIjoibHMoKVxuXG4jIEJvcnJhciBkZSBtZW1vcmlhIGVsIG9iamV0byBuMVxucm0objEpXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYVxubHMoKSIsInNjdCI6InRlc3RfZnVuY3Rpb24oXCJybVwiKVxudGVzdF9mdW5jdGlvbihcImxzXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInJtKG4xKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgYm9ycmFyIGVsIG9iamV0byBjb3JyZWN0by5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibHMoKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJlc2UgZGUgbGxhbWFyIGEgbGEgZnVuY2lcdTAwZjNuIGxzKCkgY29ycmVjdGFtZW50ZVwiKVxudGVzdF9lcnJvcigpXG5zdWNjZXNzX21zZyhcIkJpZW4hXCIpIn0=</div>
 
 
 
@@ -2448,7 +2448,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 20:21:01 GMT"
+## [1] "2018-07-11 20:49:33 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2843,7 +2843,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 4
+## [1] 1
 ```
 
 ```r
@@ -2851,7 +2851,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 3
+## [1] 1
 ```
 
 ## Condicionales
