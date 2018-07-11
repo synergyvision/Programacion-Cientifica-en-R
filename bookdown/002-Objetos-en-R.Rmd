@@ -370,6 +370,31 @@ success_msg("Excelente!")
 sort(c(8,6,4,2,8,6,4,2))
 ```
 
+```{r tut=TRUE, ex="sort", type="sample-code"}
+x<-c(8,6,4,2,8,6,4,2)
+y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
+# Ordenar el vector x con la función sort
+
+# Ordenar el vector y con la función sort
+
+```
+
+```{r tut=TRUE, ex="sort", type="solution"}
+x<-c(8,6,4,2,8,6,4,2)
+y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
+# Ordenar el vector x con la función sort
+sort(x)
+# Ordenar el vector y con la función sort
+sort(y)
+```
+
+```{r tut=TRUE, ex="sort", type="sct"}
+test_function("sort")
+test_output_contains("sort(x)", incorrect_msg = "Usar la función sort() y colocar el vector x")
+test_output_contains("sort(y)", incorrect_msg = "Usar la función sort() y colocar el vector y")
+success_msg("Excelente!")
+```
+
 - `is.algo()` -> indica el tipo de estructura de datos y regresa un valor lógico.
 
 ```{r}
