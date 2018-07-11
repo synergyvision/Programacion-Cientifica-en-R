@@ -206,7 +206,7 @@ success_msg("Muy bien")
 ls.str()
 ```
 
-```{r tut=TRUE, ex="play_around", type="pre-exercise-code"}
+```{r tut=TRUE, ex="ls_str", type="pre-exercise-code"}
 a<-5
 b<-5
 n<-25
@@ -216,11 +216,11 @@ n2 <- 100
 m <- 0.5
 ```
 
-```{r tut=TRUE, ex="play_around", type="sample-code"}
+```{r tut=TRUE, ex="ls_str", type="sample-code"}
 ls.str()
 ```
 
-```{r tut=TRUE, ex="play_around", type="sct"}
+```{r tut=TRUE, ex="ls_str", type="sct"}
 test_error()
 success_msg("Buen trabajo")
 ```
@@ -234,14 +234,14 @@ rm(list=ls()) #Eliminar todos los objetos creados
 ls()
 ```
 
-```{r tut=TRUE, ex="delete", type="pre-exercise-code"}
+```{r tut=TRUE, ex="rm", type="pre-exercise-code"}
 name <- "Carmen"
 n1 <- 10
 n2 <- 100
 m <- 0.5
 ```
 
-```{r tut=TRUE, ex="delete", type="sample-code"}
+```{r tut=TRUE, ex="rm", type="sample-code"}
 ls()
 
 # Borrar de memoria el objeto n1
@@ -250,7 +250,7 @@ ls()
 
 ```
 
-```{r tut=TRUE, ex="delete", type="solution"}
+```{r tut=TRUE, ex="rm", type="solution"}
 ls()
 
 # Borrar de memoria el objeto n1
@@ -261,7 +261,7 @@ ls()
 
 ```
 
-```{r tut=TRUE, ex="delete", type="sct"}
+```{r tut=TRUE, ex="rm", type="sct"}
 test_function("rm")
 test_function("ls")
 test_output_contains("rm(n1)", incorrect_msg = "Asegurate de utilizar la función rm() y el objeto correcto.")
@@ -273,6 +273,38 @@ success_msg("Bien!")
 
 ```{r}
 paste("Aprendiendo", "a", "programar","con","R") 
+```
+
+```{r tut=TRUE, ex="paste", type="sample-code"}
+cart_1 <- 'Mi'
+cart_2 <- 'primera'
+cart_3 <- 'Cadena de caracteres'
+# Guarde en c el carácter formado por cart_1, 
+# cart_2, cart_3 utilizando la función paste() 
+# utilice el argumento sep =" "
+
+# Imprima c
+
+```
+
+```{r tut=TRUE, ex="paste", type="solution"}
+cart_1 <- 'Mi'
+cart_2 <- 'primera'
+cart_3 <- 'Cadena de caracteres'
+# Guarde en c el carácter formado por cart_1, 
+# cart_2, cart_3 utilizando la función paste()
+# utilice el argumento sep =" "
+c<- paste(cart_1, cart_2, cart_3, sep = " ")
+# Imprima c
+c
+```
+
+```{r tut=TRUE, ex="paste", type="sct"}
+test_function("paste")
+test_output_contains("paste()", incorrect_msg = "Recuerda usar la función paste().")
+test_object("c")
+test_output_contains("c", incorrect_msg = "Recuerde llamar `c` a la variable")
+success_msg("Bien!")
 ```
 
 - `abs()` -> calcula el valor absoluto de un valor.

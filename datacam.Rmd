@@ -125,34 +125,34 @@ success_msg("Bien!")
 
 # Función paste()
 
-```{r tut=TRUE, ex="delete", type="sample-code"}
+```{r tut=TRUE, ex="paste", type="sample-code"}
 cart_1 <- 'Mi'
 cart_2 <- 'primera'
 cart_3 <- 'Cadena de caracteres'
-# Guarde en c el caracter formado por cart_1, 
+# Guarde en c el carácter formado por cart_1, 
 # cart_2, cart_3 utilizando la función paste() 
 # utilice el argumento sep =" "
 
 # Imprima c
+
 ```
 
-```{r tut=TRUE, ex="delete", type="solution"}
+```{r tut=TRUE, ex="paste", type="solution"}
 cart_1 <- 'Mi'
 cart_2 <- 'primera'
 cart_3 <- 'Cadena de caracteres'
-# Guarde en c el caracter formado por cart_1, 
+# Guarde en c el carácter formado por cart_1, 
 # cart_2, cart_3 utilizando la función paste()
 # utilice el argumento sep =" "
 c<- paste(cart_1, cart_2, cart_3, sep = " ")
 # Imprima c
-
+c
 ```
 
-```{r tut=TRUE, ex="delete", type="sct"}
-test_output_contains("rm(n1)", incorrect_msg = "Asegurate de borrar el objeto correcto.")
-test_function("rm")
-test_output_contains("ls()", incorrect_msg = "Asegurese de llamar a la función ls() correctamente")
-test_function("ls")
-test_error()
+```{r tut=TRUE, ex="paste", type="sct"}
+test_function("paste")
+test_output_contains("paste()", incorrect_msg = "Recuerda usar la función paste().")
+test_object("c")
+test_output_contains("c", incorrect_msg = "Recuerde llamar `c` a la variable")
 success_msg("Bien!")
 ```
