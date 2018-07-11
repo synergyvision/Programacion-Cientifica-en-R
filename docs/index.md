@@ -402,9 +402,7 @@ x
 ## [1] 5
 ```
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImIgPC0gNSIsInNhbXBsZSI6IiMgQ3JlYSB1bmEgdmFyaWFibGUgYSwgaWd1YWwgYSA1XG5cbiMgQ3JlYSB1bmEgdmFyaWFibGUgbiwgaWd1YWwgYSAyNVxuXG4jIE11ZXN0cmEgZWwgdmFsb3IgZGUgYSB5IGRlIG5cblxuXG4jIE11ZXN0cmUgZWwgdmFsb3IgZGUgYiIsInNvbHV0aW9uIjoiIyBDcmVhIHVuYSB2YXJpYWJsZSBhLCBpZ3VhbCBhIDVcbmE8LTVcbiMgQ3JlYSB1bmEgdmFyaWFibGUgbiwgaWd1YWwgYSAyNVxubjwtMjVcbiMgTXVlc3RyYSBlbCB2YWxvciBkZSBhIHkgZGUgblxuYVxublxuIyBNdWVzdHJlIGVsIHZhbG9yIGRlIGJcbmIiLCJzY3QiOiJ0ZXN0X29iamVjdChcImFcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiYVwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgbW9zdHJhciBlbCB2YWxvciBkZSBgYWAuXCIpXG50ZXN0X29iamVjdChcIm5cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiblwiLCBpbmNvcnJlY3RfbXNnID0gXCJBc2VndXJhdGUgZGUgbW9zdHJhciBlbCB2YWxvciBkZSBgbmAuXCIpXG5zdWNjZXNzX21zZyhcIkV4Y2VsZW50ZSFcIikifQ==</div>
-
-
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWEgdW5hIHZhcmlhYmxlIGEsIGlndWFsIGEgNVxuXG4jIENyZWEgdW5hIHZhcmlhYmxlIG4sIGlndWFsIGEgMjVcblxuIyBNdWVzdHJhIGVsIHZhbG9yIGRlIGEgeSBkZSBuIiwic29sdXRpb24iOiIjIENyZWEgdW5hIHZhcmlhYmxlIGEsIGlndWFsIGEgNVxuYTwtNVxuIyBDcmVhIHVuYSB2YXJpYWJsZSBuLCBpZ3VhbCBhIDI1XG5uPC0yNVxuIyBNdWVzdHJhIGVsIHZhbG9yIGRlIGEgeSBkZSBuXG5hXG5uIiwic2N0IjoidGVzdF9vYmplY3QoXCJhXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImFcIiwgaW5jb3JyZWN0X21zZyA9IFwiQXNlZ3VyYXRlIGRlIG1vc3RyYXIgZWwgdmFsb3IgZGUgYGFgLlwiKVxudGVzdF9vYmplY3QoXCJuXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIm5cIiwgaW5jb3JyZWN0X21zZyA9IFwiQXNlZ3VyYXRlIGRlIG1vc3RyYXIgZWwgdmFsb3IgZGUgYG5gLlwiKVxuc3VjY2Vzc19tc2coXCJFeGNlbGVudGUhXCIpIn0=</div>
 
 
 
@@ -448,7 +446,7 @@ ls.str()
 ## x :  num 5
 ```
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImE8LTVcbmI8LTVcbm48LTI1XG5uYW1lIDwtIFwiQ2FybWVuXCJcbm4xIDwtIDEwXG5uMiA8LSAxMDBcbm0gPC0gMC41Iiwic2FtcGxlIjoibHMuc3RyKCkiLCJzY3QiOiJ0ZXN0X2Vycm9yKClcbnN1Y2Nlc3NfbXNnKFwiQnVlbiB0cmFiYWpvXCIpIn0=</div>
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImE8LTVcbm48LTI1XG5uYW1lIDwtIFwiQ2FybWVuXCJcbm4xIDwtIDEwXG5uMiA8LSAxMDBcbm0gPC0gMC41Iiwic2FtcGxlIjoibHMuc3RyKCkiLCJzY3QiOiJ0ZXN0X2Vycm9yKClcbnN1Y2Nlc3NfbXNnKFwiQnVlbiB0cmFiYWpvXCIpIn0=</div>
 
 
 
@@ -522,12 +520,18 @@ abs(y)
 
 
 ```r
-round(0.1475945131, 3)
+round(0.1475945131,digits =5)
 ```
 
 ```
-## [1] 0.148
+## [1] 0.1476
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4PC0wLjE0NzU5NDUxMzFcbiMgUmVkb25kZWFyIGVsIG5cdTAwZmFtZXJvIHggY29uIHRyZXMgZFx1MDBlZGdpdG9zIGRlY2ltYWxlc1xuXG4jIFJlZG9uZGVhciBlbCBuXHUwMGZhbWVybyB4IGNvbiAxIGRcdTAwZWRnaXRvIGRlY2ltYWxcblxuIyBSZWRvbmRlYXIgZWwgblx1MDBmYW1lcm8geCBjb24gMiBkXHUwMGVkZ2l0b3MgZGVjaW1hbGVzIiwic29sdXRpb24iOiJ4PC0wLjE0NzU5NDUxMzFcbiMgUmVkb25kZWFyIGVsIG5cdTAwZmFtZXJvIHggY29uIHRyZXMgZFx1MDBlZGdpdG9zIGRlY2ltYWxlc1xucm91bmQoeCxkaWdpdHMgPSAzKVxuIyBSZWRvbmRlYXIgZWwgblx1MDBmYW1lcm8geCBjb24gMSBkXHUwMGVkZ2l0byBkZWNpbWFsXG5yb3VuZCh4LGRpZ2l0cyA9MSlcbiMgUmVkb25kZWFyIGVsIG5cdTAwZmFtZXJvIHggY29uIDIgZFx1MDBlZGdpdG9zIGRlY2ltYWxlc1xucm91bmQoeCxkaWdpdHMgPTIpIiwic2N0IjoidGVzdF9mdW5jdGlvbihcInJvdW5kXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInJvdW5kKHgsIDMpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIHJvdW5kKCkgeSBjb2xvY2FyIHggeSBsb3MgZFx1MDBlZGdpdG9zIGNvcnJlY3Rvc1wiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJyb3VuZCh4LCAxKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiByb3VuZCgpIHkgY29sb2NhciB4IHkgbG9zIGRcdTAwZWRnaXRvcyBjb3JyZWN0b3NcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwicm91bmQoeCwgMilcIiwgaW5jb3JyZWN0X21zZyA9IFwiVXNhciBsYSBmdW5jaVx1MDBmM24gcm91bmQoKSB5IGNvbG9jYXIgeCB5IGxvcyBkXHUwMGVkZ2l0b3MgY29ycmVjdG9zXCIpXG5zdWNjZXNzX21zZyhcIkV4Y2VsZW50ZSFcIikifQ==</div>
+
+
+
+
 
 - `sort()` -> ordena un vector que se le indique.
 
@@ -697,7 +701,7 @@ IQR(x)
 boxplot(x, col = "orange", horizontal = TRUE)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-44-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-46-1.svg)<!-- -->
 
 - `sd()` -> la desviación estandar es una medida del grado de dispersión de los datos con respecto al valor promedio. Se define como la raíz cuadrada de la varianza de la variable. 
 
@@ -2460,7 +2464,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 21:25:17 GMT"
+## [1] "2018-07-11 21:34:46 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2567,7 +2571,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-121-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-123-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2589,7 +2593,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-122-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-124-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2602,7 +2606,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-123-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-125-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2624,7 +2628,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-124-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-126-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2656,7 +2660,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-125-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-127-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2669,7 +2673,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-126-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-128-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2690,7 +2694,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-127-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-129-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2704,7 +2708,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-128-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-130-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2712,7 +2716,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-128-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-130-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2727,7 +2731,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-129-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-131-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2739,7 +2743,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-130-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-132-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2757,7 +2761,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-131-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-133-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2770,7 +2774,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-132-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-134-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -2855,7 +2859,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 4
+## [1] 5
 ```
 
 ```r
@@ -2863,7 +2867,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 2
+## [1] 5
 ```
 
 ## Condicionales

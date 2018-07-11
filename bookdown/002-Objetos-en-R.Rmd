@@ -136,19 +136,12 @@ x
 x
 ```
 
-```{r tut=TRUE,ex="create_a2", type="pre-exercise-code"}
-b <- 5
-```
-
 ```{r tut=TRUE,ex="create_a2", type="sample-code"}
 # Crea una variable a, igual a 5
 
 # Crea una variable n, igual a 25
 
 # Muestra el valor de a y de n
-
-
-# Muestre el valor de b
 
 ```
 
@@ -160,8 +153,6 @@ n<-25
 # Muestra el valor de a y de n
 a
 n
-# Muestre el valor de b
-b
 ```
 
 ```{r tut=TRUE,ex="create_a2", type="sct"}
@@ -208,7 +199,6 @@ ls.str()
 
 ```{r tut=TRUE, ex="ls_str", type="pre-exercise-code"}
 a<-5
-b<-5
 n<-25
 name <- "Carmen"
 n1 <- 10
@@ -343,7 +333,35 @@ success_msg("Excelente!")
 - `round()` -> redondea un número a los decimales que se le indiquen.
 
 ```{r}
-round(0.1475945131, 3)
+round(0.1475945131,digits =5)
+```
+
+```{r tut=TRUE, ex="round", type="sample-code"}
+x<-0.1475945131
+# Redondear el número x con tres dígitos decimales
+
+# Redondear el número x con 1 dígito decimal
+
+# Redondear el número x con 2 dígitos decimales
+
+```
+
+```{r tut=TRUE, ex="round", type="solution"}
+x<-0.1475945131
+# Redondear el número x con tres dígitos decimales
+round(x,digits = 3)
+# Redondear el número x con 1 dígito decimal
+round(x,digits =1)
+# Redondear el número x con 2 dígitos decimales
+round(x,digits =2)
+```
+
+```{r tut=TRUE, ex="round", type="sct"}
+test_function("round")
+test_output_contains("round(x, 3)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
+test_output_contains("round(x, 1)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
+test_output_contains("round(x, 2)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
+success_msg("Excelente!")
 ```
 
 - `sort()` -> ordena un vector que se le indique.
