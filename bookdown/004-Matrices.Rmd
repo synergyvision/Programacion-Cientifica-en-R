@@ -90,13 +90,6 @@ M
 dim(M)
 ```
 
-```{r tut=TRUE, ex="matrz", type="sct"}
-test_function("matrix", incorrect_msg = "Recuerde crear la matriz utilizando la función matrix()")
-test_function("rownames", incorrect_msg = "Usar la función rownames()")
-test_function("dim", incorrect_msg = "Usar la función dim()")
-success_msg("Excelente!")
-```
-
 ## Selección de los elementos de una matriz
 
 - __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.
@@ -249,15 +242,3 @@ cbind(M2,c(2,2,2,2,2))
 colSums(M1)
 ```
 
-```{r tut=TRUE, ex="matriz", type="sct"}
-test_output_contains("M1", incorrect_msg = "Recuerde que la matriz se llama M1")
-test_output_contains("M2", incorrect_msg = "Recuerde que la matriz se llama M1")
-test_output_contains("M1[1,2]", incorrect_msg = "Recuerde que la posición se coloca entre []")
-test_output_contains("M2[2,]", incorrect_msg = "Para la selección de filas es [fila,]")
-test_output_contains("M1[,4]", incorrect_msg = "Para la selección de columnas es [, columna]")
-test_output_contains("M1[2,3] <- 5", incorrect_msg = "Seleccionar elemento y luego asignar")
-test_output_contains("M2+2 ", incorrect_msg = "Usar el operador +")
-test_output_contains("cbind(M2,c(2,2,2,2,2))", incorrect_msg = "Usar la función cbind()")
-test_output_contains("colSums(M1)", incorrect_msg = "Usar la función colSums()")
-success_msg("Excelente!")
-```

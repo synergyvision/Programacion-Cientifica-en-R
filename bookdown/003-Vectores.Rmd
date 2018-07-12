@@ -145,13 +145,6 @@ seq(from=4, to= 5, by=0.01)
 seq(from=20,length.out = 15)
 ```
 
-```{r tut=TRUE, ex="seq", type="sct"}
-test_output_contains("seq(from=1, to= 8, by=1.5)", incorrect_msg = "Recuerde usar seq()")
-test_output_contains("seq(from=4, to= 5, by=0.01)", incorrect_msg = "Recuerde usar seq()")
-test_output_contains("seq(from=20,length.out = 15)", incorrect_msg = "Recuerde usar seq()")
-success_msg("Muy bien!")
-```
-
 - `rep()`: Esta función se usa para generar sucesiones de datos repetidos. Entre sus argumentos de entrada tiene: `x` número o números que se quieran repetir, `times` el número de veces que se repetirá `x`, `each` si se tienen más de dos números que se quieran repetir aquí se podrá indicar cuantas veces se repetirá cada uno.
 
 ```{r}
@@ -180,13 +173,6 @@ rep(x='inicio', times = 3)
 rep(x=1:3, times = 4)
 ```
 
-```{r tut=TRUE, ex="rep", type="sct"}
-test_output_contains("rep(x=2.15, times = 15)", incorrect_msg = "Recuerde usar rep()")
-test_output_contains("rep(x='inicio', times = 3)", incorrect_msg = "Recuerde usar rep()")
-test_output_contains("rep(x=1:3, times = 4)", incorrect_msg = "Recuerde usar rep()")
-success_msg("Muy bien!")
-```
-
 - `sequence()`: Genera una secuencia que inicia en 1 y termina en el elemento que se le pasa como argumento `nvec`.
 
 ```{r}
@@ -206,12 +192,6 @@ sequence(nvec=c(3, 2))
 sequence(nvec=15)
 # Generar hasta el 3 y otra hasta el 7 con un solo comando
 sequence(nvec=c(3,7))
-```
-
-```{r tut=TRUE, ex="seq1", type="sct"}
-test_output_contains("sequence(nvec=15)", incorrect_msg = "Recuerde usar sequence()")
-test_output_contains("sequence(nvec=c(3,7))", incorrect_msg = "Recuerde usar sequence()")
-success_msg("Muy bien!")
 ```
 
 - `gl()`: Para generar series regulares de factores, entre sus argumentos tenemos `k` número de niveles o clases, `n` el número de replicas para cada nivel, `label` vector para etiquetar los niveles.
@@ -237,12 +217,6 @@ gl(n=4, k=3)
 # Generar una serie con 2 niveles y 5 replicas, que tenga
 # como etiquetas "casa" y "edificio"
 gl(n=2, k=5, label=c('casa', 'edificio'))
-```
-
-```{r tut=TRUE, ex="gl", type="sct"}
-test_output_contains("gl(n=4, k=3)", incorrect_msg = "Recuerde usar gl()")
-test_output_contains("gl(n=2, k=5, label=c('casa', 'edificio'))", incorrect_msg = "Recuerde usar gl()")
-success_msg("Muy bien!")
 ```
 
 ## Selección de elementos de un vector
@@ -315,16 +289,6 @@ x[1]<-15
 x
 ```
 
-```{r tut=TRUE, ex="modf", type="sct"}
-test_output_contains("x <- c(1:15,3,24,56,7,8.2)", incorrect_msg = "Recuerde usar c()")
-test_output_contains("x[18]", incorrect_msg = "Recuerde usar []")
-test_output_contains("x[-2]", incorrect_msg = "Recuerde usar [] y la posición en -")
-test_output_contains("x[1:3]", incorrect_msg = "Recuerde usar : para la sucesión")
-test_output_contains("x>4", incorrect_msg = "Recuerde usar >")
-test_output_contains("x[1]<-15", incorrect_msg = "Recuerde usar [] y asignar <-")
-success_msg("Muy bien!")
-```
-
 ## Suma de Vectores
 
 Con los vectores se pueden utilizar operaciones aritméticas o lógicas, estas se aplicarán elemento a elemento devolviendo un vector con el resultado obtenido, a continuación veamos algunos ejemplos.
@@ -383,12 +347,4 @@ x+y+z
 sum(z)
 # Aplicar la función ()^2 al vector x
 x^2
-```
-
-```{r tut=TRUE, ex="sumavec", type="sct"}
-test_output_contains("x+y", incorrect_msg = "Recuerde usar +")
-test_output_contains("x+y+z", incorrect_msg = "Recuerde usar +")
-test_output_contains("sum(z)", incorrect_msg = "Recuerde usar sum()")
-test_output_contains("x^2", incorrect_msg = "Recuerde usar ^")
-success_msg("Muy bien!")
 ```

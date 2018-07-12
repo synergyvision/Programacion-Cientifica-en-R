@@ -155,14 +155,6 @@ a
 n
 ```
 
-```{r tut=TRUE,ex="create_a2", type="sct"}
-test_object("a")
-test_output_contains("a", incorrect_msg = "Asegurate de mostrar el valor de `a`.")
-test_object("n")
-test_output_contains("n", incorrect_msg = "Asegurate de mostrar el valor de `n`.")
-success_msg("Excelente!")
-```
-
 ## Principales funciones para trabajar en la consola
 
 Entre las funciones más comunes y utilizadas tenemos:
@@ -251,14 +243,6 @@ ls()
 
 ```
 
-```{r tut=TRUE, ex="rm", type="sct"}
-test_function("rm")
-test_function("ls")
-test_output_contains("rm(n1)", incorrect_msg = "Asegurate de utilizar la función rm() y el objeto correcto.")
-test_output_contains("ls()", incorrect_msg = "Asegurese de llamar a la función ls() correctamente")
-success_msg("Bien!")
-```
-
 - `paste()`  -> Esta función une todos los vectores de caracteres que se le suministran y construye una sola cadena de caracteres.
 
 ```{r}
@@ -289,14 +273,6 @@ c<- paste(cart_1, cart_2, cart_3, sep = " ")
 c
 ```
 
-```{r tut=TRUE, ex="paste", type="sct"}
-test_function("paste")
-test_output_contains("paste()", incorrect_msg = "Recuerda usar la función paste().")
-test_object("c")
-test_output_contains("c", incorrect_msg = "Recuerde llamar `c` a la variable")
-success_msg("Bien!")
-```
-
 - `abs()` -> calcula el valor absoluto de un valor.
 
 ```{r}
@@ -320,14 +296,6 @@ abs(4-20)
 abs(6)
 # Calcular el valor absoluto de -100
 abs(-100)
-```
-
-```{r tut=TRUE, ex="abs", type="sct"}
-test_function("abs")
-test_output_contains("abs(4-20)", incorrect_msg = "Usar la función abs() y colocar 4-20")
-test_output_contains("abs(6)", incorrect_msg = "Usar la función abs() y colocar 6")
-test_output_contains("abs(-100)", incorrect_msg = "Usar la función abs() y colocar -100")
-success_msg("Excelente!")
 ```
 
 - `round()` -> redondea un número a los decimales que se le indiquen.
@@ -356,14 +324,6 @@ round(x,digits =1)
 round(x,digits =2)
 ```
 
-```{r tut=TRUE, ex="round", type="sct"}
-test_function("round")
-test_output_contains("round(x,digits =3)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
-test_output_contains("round(x,digits =1)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
-test_output_contains("round(x,digits =2)", incorrect_msg = "Usar la función round() y colocar x y los dígitos correctos")
-success_msg("Excelente!")
-```
-
 - `sort()` -> ordena un vector que se le indique.
 
 ```{r}
@@ -386,13 +346,6 @@ y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
 sort(x)
 # Ordenar el vector y con la función sort
 sort(y)
-```
-
-```{r tut=TRUE, ex="sort", type="sct"}
-test_function("sort")
-test_output_contains("sort(x)", incorrect_msg = "Usar la función sort() y colocar el vector x")
-test_output_contains("sort(y)", incorrect_msg = "Usar la función sort() y colocar el vector y")
-success_msg("Excelente!")
 ```
 
 - `is.algo()` -> indica el tipo de estructura de datos y regresa un valor lógico.
@@ -418,14 +371,6 @@ y<-c(-10.5,6.9,-0.001,2,1.57,6,-4,25.8,2)
 is.vector(x)
 # Verificar si y es una lista con la función is.list()
 is.list(y)
-```
-
-```{r tut=TRUE, ex="is", type="sct"}
-test_function("is.vector")
-test_function("is.list")
-test_output_contains("is.vector(x)", incorrect_msg = "Usar la función is.vector() y colocar el vector x")
-test_output_contains("is.list(y)", incorrect_msg = "Usar la función is.list() y colocar el vector y")
-success_msg("Excelente!")
 ```
 
 - `mean()` -> se utiliza para calcular el promedio aritmético de los elementos evaluados.
@@ -494,17 +439,6 @@ mean_facebook
 mean_linkedin+mean_facebook
 ```
 
-```{r tut=TRUE, ex="mean", type="sct"}
-test_function("mean")
-test_object("mean_linkedin")
-test_object("mean_facebook")
-test_output_contains("mean(linkedin)", incorrect_msg = "Usar la función mean() y el vector linkedin")
-test_output_contains("mean(facebook)", incorrect_msg = "Usar la función mean() y el vector facebook")
-test_output_contains("mean_linkedin", incorrect_msg = " Recuerde guardar la media de linkedin en mean_linkedin")
-test_output_contains("mean_facebook", incorrect_msg = " Recuerde guardar la media de facebook en mean_facebook")
-success_msg("Excelente!")
-```
-
 - `median()` -> devuelve el valor de la mediana de los elementos evaluados.
 
 ```{r}
@@ -536,14 +470,6 @@ median(facebook)
 x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
 # Calcular la mediana de x
 median(x)
-```
-
-```{r tut=TRUE, ex="median", type="sct"}
-test_function("median")
-test_output_contains("median(linkedin)", incorrect_msg = "Usar la función median() y el vector linkedin")
-test_output_contains("median(facebook)", incorrect_msg = "Usar la función median() y el vector facebook")
-test_output_contains("median(x)", incorrect_msg = "Usar la función median() y el vector x")
-success_msg("Excelente!")
 ```
 
 - `Moda` -> No hay una función que realice este cálculo directamento por lo tanto tenemos que recurrir a otras dos funciones. La moda nos representa el valor que tiene mayor frecuencia absoluta en una distribución de datos. Para realizar su cálculo utilizamos las funciones `sort()` para ordenar los datos y `table()` para ver el número de repeticiones de cada elemento.
@@ -581,16 +507,6 @@ sort(y)
 table(y)
 ```
 
-```{r tut=TRUE, ex="moda", type="sct"}
-test_function("sort")
-test_function("table")
-test_output_contains("sort(x)", incorrect_msg = "Usar la función sort() y el vector x")
-test_output_contains("sort(y)", incorrect_msg = "Usar la función sort() y el vector y")
-test_output_contains("table(x)", incorrect_msg = "Usar la función table() y el vector x")
-test_output_contains("table(y)", incorrect_msg = "Usar la función table() y el vector y")
-success_msg("Excelente!")
-```
-
 - `range()` -> Es el intervalo entre el valor máximo y el valor mínimo. Permite obtener una idea de la dispersión de los datos, cuanto mayor es el rango, más dispersos están los datos de un conjunto. 
 
 ```{r}
@@ -622,14 +538,6 @@ range(facebook)
 range(x)
 ```
 
-```{r tut=TRUE, ex="range", type="sct"}
-test_function("range")
-test_output_contains("range(linkedin)", incorrect_msg = "Usar la función range() y el vector linkedin")
-test_output_contains("range(facebook)", incorrect_msg = "Usar la función range() y el vector facebook")
-test_output_contains("range(x)", incorrect_msg = "Usar la función range() y el vector x")
-success_msg("Excelente!")
-```
-
 - `quantile()` -> Son tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.
 
 ```{r}
@@ -658,14 +566,6 @@ quantile(linkedin)
 quantile(facebook)
 # Calcular los cuantiles del vector x con la función quantile()
 quantile(x)
-```
-
-```{r tut=TRUE, ex="quantile", type="sct"}
-test_function("quantile")
-test_output_contains("quantile(linkedin)", incorrect_msg = "Usar la función quantile() y el vector linkedin")
-test_output_contains("quantile(facebook)", incorrect_msg = "Usar la función quantile() y el vector facebook")
-test_output_contains("quantile(x)", incorrect_msg = "Usar la función quantile() y el vector x")
-success_msg("Excelente!")
 ```
 
 - `IQR()` -> La diferencia entre el tercer y el primer cuartil de una distribución. Es una medida de la dispersión de los datos.
@@ -702,14 +602,6 @@ IQR(facebook)
 # Calcular la diferencia entre el tercer y primer cuartil 
 # del vector x con la función IQR()
 IQR(x)
-```
-
-```{r tut=TRUE, ex="iqr", type="sct"}
-test_function("IQR")
-test_output_contains("IQR(linkedin)", incorrect_msg = "Usar la función IQR() y el vector linkedin")
-test_output_contains("IQR(facebook)", incorrect_msg = "Usar la función IQR() y el vector facebook")
-test_output_contains("IQR(x)", incorrect_msg = "Usar la función IQR() y el vector x")
-success_msg("Excelente!")
 ```
 
 - `boxplot()` -> Proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos. 
@@ -754,14 +646,6 @@ sd(facebook)
 sd(x)
 ```
 
-```{r tut=TRUE, ex="sd", type="sct"}
-test_function("sd")
-test_output_contains("sd(linkedin)", incorrect_msg = "Usar la función sd() y el vector linkedin")
-test_output_contains("sd(facebook)", incorrect_msg = "Usar la función sd() y el vector facebook")
-test_output_contains("sd(x)", incorrect_msg = "Usar la función sd() y el vector x")
-success_msg("Excelente!")
-```
-
 - `var()` -> Es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.
 
 ```{r}
@@ -792,14 +676,6 @@ var(facebook)
 var(x)
 ```
 
-```{r tut=TRUE, ex="var", type="sct"}
-test_function("var")
-test_output_contains("var(linkedin)", incorrect_msg = "Usar la función var() y el vector linkedin")
-test_output_contains("var(facebook)", incorrect_msg = "Usar la función var() y el vector facebook")
-test_output_contains("var(x)", incorrect_msg = "Usar la función var() y el vector x")
-success_msg("Excelente!")
-```
-
 - `summary()` -> Permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.
 
 ```{r}
@@ -828,13 +704,6 @@ head(cars)
 summary(cars)
 ```
 
-```{r tut=TRUE, ex="resumen", type="sct"}
-test_function("summary")
-test_output_contains("summary(x)", incorrect_msg = "Usar la función summary() y el vector x")
-test_output_contains("summary(cars)", incorrect_msg = "Usar la función summary() y los datos de cars")
-success_msg("Excelente!")
-```
-
 - `apply()` -> Permite realizar la misma operación en todas las filas y columnas de un arreglo simultáneamente. Sólo hay que indicarle la operación a realizar y el índice/índices sobre los cuales ha de realizarla.
 
 ```{r}
@@ -849,11 +718,6 @@ matriz
 apply(matriz,1,sum)
 ```
 
-```{r tut=TRUE, ex="apply", type="sct"}
-test_error()
-success_msg("Buen trabajo")
-```
-
 - `lapply()` -> Funciona igual que la función `apply()`, con la diferencia de que puede ser utilizada en listas, data.frames o vectores; retorna una lista.
 
 ```{r}
@@ -866,11 +730,6 @@ matriz
 lapply(matriz,function (x) x^2)
 ```
 
-```{r tut=TRUE, ex="lapply", type="sct"}
-test_error()
-success_msg("Buen trabajo")
-```
-
 - `sapply()` -> Funciona igual que la función `apply()`, con la diferencia de que puede ser utilizada en listas, dataframes o vectores; retorna una vector.
 
 ```{r}
@@ -881,11 +740,6 @@ sapply(matriz,function(x) x^3)
 matriz <- matrix(1:4,nrow = 2,ncol = 2)
 matriz
 sapply(matriz,function(x) x^3)
-```
-
-```{r tut=TRUE, ex="sapply", type="sct"}
-test_error()
-success_msg("Buen trabajo")
 ```
 
 ## __R__ como calculadora
@@ -996,11 +850,6 @@ tan( exp( sqrt(cos (-1) ) ) )
 sin(5) - 5^6
 ```
 
-```{r tut=TRUE, ex="oper_arit", type="sct"}
-test_error()
-success_msg("Excelente!")
-```
-
 ### Operadores Comparativos
 
 Actuan sobre cualquier tipo de objeto, y retornan uno o varios valores lógicos, dependiendo del objeto. Estos usan todos los elementos de los dos objetos que se están comparando (reciclando los valores de los más pequeños si es necesario), devolviendo un objeto del mismo tamaño.
@@ -1025,12 +874,6 @@ x==8
 
 x<7
 
-```
-
-
-```{r tut=TRUE, ex="oper_com", type="sct"}
-test_error()
-success_msg("Excelente!")
 ```
 
 ### Operadores Lógicos
@@ -1089,9 +932,4 @@ condicion_3 <- 2 > -5.6
 condicion_4 <- 2/5 < 9/8
 #Aplicar el condicional | a la condición 3 y 4
 condicion_3 | condicion_4
-```
-
-```{r tut=TRUE, ex="oper_log", type="sct"}
-test_error()
-success_msg("Excelente!")
 ```

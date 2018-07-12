@@ -117,12 +117,3 @@ data$n
 # Agregar una nueva variable llamada nueva y que tenga los siguientes valores 1.2,1.3,1.4
 data$nueva <- c(1.2,1.3,1.4)
 ```
-
-```{r tut=TRUE, ex="datframe", type="sct"}
-test_output_contains("data <- data.frame(n,s,b, stringsAsFactors = FALSE)", incorrect_msg = "Recuerde usar data.frame()")
-test_output_contains("str(data)", incorrect_msg = "Usar la función str()")
-test_output_contains("data$n", incorrect_msg = "Usar el símbolo $")
-test_output_contains("data$nueva <- c(1.2,1.3,1.4)", incorrect_msg = "Usar el operador asignación")
-success_msg("Excelente!")
-```
-
