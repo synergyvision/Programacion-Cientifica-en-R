@@ -591,7 +591,7 @@ test_output_contains("table(y)", incorrect_msg = "Usar la función table() y el 
 success_msg("Excelente!")
 ```
 
-- `range()` -> es el intervalo entre el valor máximo y el valor mínimo. Permite obtener una idea de la dispersión de los datos, cuanto mayor es el rango, más dispersos están los datos de un conjunto. 
+- `range()` -> Es el intervalo entre el valor máximo y el valor mínimo. Permite obtener una idea de la dispersión de los datos, cuanto mayor es el rango, más dispersos están los datos de un conjunto. 
 
 ```{r}
 x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
@@ -630,7 +630,7 @@ test_output_contains("range(x)", incorrect_msg = "Usar la función range() y el 
 success_msg("Excelente!")
 ```
 
-- `quantile()` -> son tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.
+- `quantile()` -> Son tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.
 
 ```{r}
 quantile(x)
@@ -668,10 +668,48 @@ test_output_contains("quantile(x)", incorrect_msg = "Usar la función quantile()
 success_msg("Excelente!")
 ```
 
-- `IQR()` -> la diferencia entre el tercer y el primer cuartil de una distribución. Es una medida de la dispersión estadística.
+- `IQR()` -> La diferencia entre el tercer y el primer cuartil de una distribución. Es una medida de la dispersión de los datos.
 
 ```{r}
 IQR(x)
+```
+
+```{r tut=TRUE, ex="iqr", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="iqr", type="sample-code"}
+# Calcular la diferencia entre el tercer y primer cuartil 
+# del vector linkedin con la función IQR()
+
+# Calcular la diferencia entre el tercer y primer cuartil 
+# del vector facebook con la función IQR()
+
+# Calcular la diferencia entre el tercer y primer cuartil 
+# del vector x con la función IQR()
+
+```
+
+```{r tut=TRUE, ex="iqr", type="solution"}
+# Calcular la diferencia entre el tercer y primer cuartil 
+# del vector linkedin con la función IQR()
+IQR(linkedin)
+# Calcular la diferencia entre el tercer y primer cuartil 
+# del vector facebook con la función IQR()
+IQR(facebook)
+# Calcular la diferencia entre el tercer y primer cuartil 
+# del vector x con la función IQR()
+IQR(x)
+```
+
+```{r tut=TRUE, ex="iqr", type="sct"}
+test_function("IQR")
+test_output_contains("IQR(linkedin)", incorrect_msg = "Usar la función IQR() y el vector linkedin")
+test_output_contains("IQR(facebook)", incorrect_msg = "Usar la función IQR() y el vector facebook")
+test_output_contains("IQR(x)", incorrect_msg = "Usar la función IQR() y el vector x")
+success_msg("Excelente!")
 ```
 
 - `boxplot()` -> proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos. 
