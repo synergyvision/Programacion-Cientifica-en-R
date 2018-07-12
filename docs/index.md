@@ -2575,7 +2575,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-12 16:21:24 GMT"
+## [1] "2018-07-12 16:25:28 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2656,7 +2656,7 @@ fecha_7$sec
 
 ## Importar Datos
 
-Cuando se tengas archivos de texto plano , como por ejemplo archivos .txt( se delimitan con tabuladores) o .csv (se delimitan con comas), estos son los más usados cuando se usan hojas de cálculo como Excel. Desde el lenguaje de programación __R__ se pueden leer este tipo de archivos con la función `read.table()`.
+Cuando se tengan archivos de texto plano, como por ejemplo archivos .txt (se delimitan con tabuladores) o .csv (se delimitan con comas) con los datos que se quieran manipular __R__ nos da opciones para poder trabajarlos; los archivos txt y csv son los más usados cuando se usan hojas de cálculo como Excel. Desde el lenguaje de programación __R__ se pueden leer este tipo de archivos con la función `read.table()`.
 
 - Lo primero que tenemos que conocer es el directorio donde se encuentra el archivo que queremos leer, y donde está nuestro directorio de trabajo (para conocerla podemos usar la función `getwd()` y para establecer un directorio de trabajo usamos el comando `setwd()`.
 
@@ -3008,7 +3008,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 1
+## [1] 4
 ```
 
 ## Condicionales
