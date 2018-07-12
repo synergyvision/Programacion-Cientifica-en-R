@@ -554,6 +554,43 @@ sort(x)
 table(x)
 ```
 
+```{r tut=TRUE, ex="moda", type="pre-exercise-code"}
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="moda", type="sample-code"}
+# Ordenar los valores del vector x con la función sort() 
+
+# Calcular la moda del vector x con la función table()
+
+
+y <- c(1, 1, 1, 4, 4, 5, 5, 5, 7, 8, 9, 9, 9)
+# Calcular la moda del vector y
+
+```
+
+```{r tut=TRUE, ex="moda", type="solution"}
+# Ordenar los valores del vector x con la función sort() 
+sort(x)
+# Calcular la moda del vector x con la función table()
+table(x)
+
+y <- c(1, 1, 1, 4, 4, 5, 5, 5, 7, 8, 9, 9, 9)
+# Calcular la moda del vector y
+sort(y)
+table(y)
+```
+
+```{r tut=TRUE, ex="moda", type="sct"}
+test_function("sort")
+test_function("table")
+test_output_contains("sort(x)", incorrect_msg = "Usar la función sort() y el vector x")
+test_output_contains("sort(y)", incorrect_msg = "Usar la función sort() y el vector y")
+test_output_contains("table(x)", incorrect_msg = "Usar la función table() y el vector x")
+test_output_contains("table(y)", incorrect_msg = "Usar la función table() y el vector y")
+success_msg("Excelente!")
+```
+
 - `range()` -> es el intervalo entre el valor máximo y el valor mínimo. Permite obtener una idea de la dispersión de los datos, cuanto mayor es el rango, más dispersos están los datos de un conjunto. 
 
 ```{r}
