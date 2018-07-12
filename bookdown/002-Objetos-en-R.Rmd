@@ -178,11 +178,6 @@ m <- 0.5
 ls()
 ```
 
-```{r tut=TRUE, ex="ls", type="sct"}
-test_error()
-success_msg("Muy bien")
-```
-
 - `ls.str()` -> Muestra algunos detalles de los objetos en memoria.
 
 ```{r}
@@ -200,11 +195,6 @@ m <- 0.5
 
 ```{r tut=TRUE, ex="ls_str", type="sample-code"}
 ls.str()
-```
-
-```{r tut=TRUE, ex="ls_str", type="sct"}
-test_error()
-success_msg("Buen trabajo")
 ```
 
 - `rm()` -> Para borrar objetos en memoria.
