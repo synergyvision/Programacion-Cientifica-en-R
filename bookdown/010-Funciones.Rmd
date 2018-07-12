@@ -190,3 +190,64 @@ while (speed > 30) {
 }
 ```
 
+```{r tut=TRUE, ex="func", type="sample-code"}
+# Construir una función que retorne el inverso de un número cualquiera 
+# Si el usuario introduce como parámetro de entrada 0 que retorne "Para este valor la función está indefinida"
+# Llamela "inverso" y que reciba un único parámetro de entrada.
+
+# Probar para el valor 0, 8 y 15 y comparar con la operación 1/x
+
+# Realiza la siguiente encuenta
+
+encuesta <- function() {
+  r <- readline("¿Te gusta R? (s/n) : ")
+  if ( r == "s" || r == "S") {
+    cat("¡Estaba seguro de eso!\n")
+    return(invisible(0))
+  } else {
+    cat("¿Estás seguro/a? Creo que te has equivocado al responder.\nVuelve a intentarlo.\n\n")
+    encuesta()
+  }
+}
+
+encuesta()
+```
+
+```{r tut=TRUE, ex="func", type="solution"}
+# Construir una función que retorne el inverso de un número cualquiera 
+# Si el usuario introduce como parámetro de entrada 0 que retorne "Para este valor la función está indefinida"
+# Llamela "inverso" y que reciba un único parámetro de entrada.
+
+inverso <- function(x) {
+ if(x==0){
+   return("Para este valor la función está indefinida")
+ }
+ else{
+   return(1/x)
+ }
+}
+
+# Probar para el valor 0, 8 y 15 y comparar con la operación 1/x
+inverso(x=0)
+inverso(x=8)
+inverso(x=15)
+1/0
+1/8
+1/15
+
+# Realiza la siguiente encuenta
+
+encuesta <- function() {
+  r <- readline("¿Te gusta R? (s/n) : ")
+  if ( r == "s" || r == "S") {
+    cat("¡Estaba seguro de eso!\n")
+    return(invisible(0))
+  } else {
+    cat("¿Estás seguro/a? Creo que te has equivocado al responder.\nVuelve a intentarlo.\n\n")
+    encuesta()
+  }
+}
+
+encuesta()
+```
+
