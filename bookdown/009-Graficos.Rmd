@@ -201,15 +201,15 @@ trucks <- c(2, 5, 4, 5, 12)
 ```{r tut=TRUE, ex="graf", type="sample-code"}
 # En el ambiente de trabajo hay un vector llamado cars que contiene 5 valores y en x hay
 # una sucesión de valores entre 1 y 5.
-# Contruir un gráfico de nube de puntos, con título igual a "Autos", type = 'o',
-# de color azul y con la forma de puntos igual a 2, también establecer los límites de los
-# ejes x igual a c(1,6) y eje y c(-1,13).
+# Contruir un gráfico de nube de puntos con x y cars, con título igual a "Autos", type = 'o',
+# de color azul y con la forma de puntos igual a 2, también establecer los límites del
+# ejes x igual a c(1,6) y el eje y c(-1,13).
 
 # También hay cargado otro vector que se llama trucks
 # Agregar una linea de color naranja con dicho vector, del mismo tipo que el anterior y
 # colocar pch = 6.
 
-# Agregar la leyenda en el punto (2,3)
+# Agregar la leyenda en el punto (5,2) sin la caja
 
 # Realizar un gráfico de barrar para los valores del vector cars
 
@@ -223,16 +223,16 @@ suvs <- c(4,4,6,6,16)
 ```{r tut=TRUE, ex="graf", type="solution"}
 # En el ambiente de trabajo hay un vector llamado cars que contiene 5 valores y en x hay
 # una sucesión de valores entre 1 y 5.
-# Contruir un gráfico de nube de puntos, con título igual a "Autos", type = 'o',
-# de color azul y con la forma de puntos igual a 2, también establecer los límites de los
-# ejes x igual a c(1,6) y eje y c(-1,13).
+# Contruir un gráfico de nube de puntos con x y cars, con título igual a "Autos", type = 'o',
+# de color azul y con la forma de puntos igual a 2, también establecer los límites del
+# ejes x igual a c(1,6) y el eje y c(-1,13).
 plot(x,cars, type="o", col="blue", main = "Autos", xlim = c(-1,6), ylim = c(-1,13), pch=2)
 # También hay cargado otro vector que se llama trucks
 # Agregar una linea de color naranja con dicho vector, del mismo tipo que el anterior y
 # colocar pch = 6.
 lines(x,trucks,type='o', col="orange",pch=6)
-# Agregar la leyenda en el punto (2,3)
-legend(x=2,y=3,c("cars","trucks"), col=c("blue","orange"),pch = c(2,6), bty = 'n')
+# Agregar la leyenda en el punto (5,2) sin la caja
+legend(x=2,y=3,c("cars","trucks"), col=c("blue","orange"),pch = c(5,2), bty = 'n')
 # Realizar un gráfico de barrar para los valores del vector cars
 barplot(cars)
 # Para el siguiente vector construir un histograma
@@ -240,6 +240,6 @@ suvs <- c(4,4,6,6,16)
 hist(suvs)
 # Mostrar en una sola ventana una nube de puntos para el vector suvs y el histograma
 par(mfrow=c(1,2))
-plot(suvs)
-hist(suvs)
+plot(suvs, main='Gráfico de puntos')
+hist(suvs, main='Histograma')
 ```
