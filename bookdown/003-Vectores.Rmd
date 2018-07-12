@@ -41,9 +41,12 @@ La función `names()` que acabamos de usar asigna nombres a elementos del vector
 
 # Definir el Vector de nombres, e imprimir
 
+
 # Definir el vector de edad, e imprimir
 
+
 # Definir el vector de sexo, e imprimir
+
 
 ```
 
@@ -56,12 +59,15 @@ La función `names()` que acabamos de usar asigna nombres a elementos del vector
 # Definir el Vector de nombres, e imprimir
 nombres <- c('Ana', 'Luis', 'Pedro', 'Juan', 'Eva', 'Jorge')
 nombres
+
 # Definir el vector de edad , e imprimir
 edad <- c(23, 24, 22, 24, 21, 22)
 edad
+
 # Definir el vector de sexo, e imprimir
 sexo <- c('M', 'H','H', 'H', 'M', 'H')
 sexo
+
 ```
 
 ```{r tut=TRUE, ex="vect", type="sct"}
@@ -76,7 +82,7 @@ success_msg("Muy bien!")
 
 ## Secuencias
 
-- Sucesiones de números `:`: Para generar una secuencia de número entreros podemos hacerlo de la siguiente manera,colocar el número de inicio de la secuencia a generar y el número final de la secuencia, separados por dos puntos (1:10)
+- Sucesiones de números `:`: Para generar una secuencia de número entreros podemos hacerlo de la siguiente manera colocar el número de inicio de la secuencia a generar y el número final de la secuencia, separados por dos puntos (1:10)
 
 ```{r}
 1:10
@@ -88,12 +94,62 @@ success_msg("Muy bien!")
 1:(5-1)
 ```
 
+```{r tut=TRUE, ex="dosp", type="sample-code"}
+# Generar una sucesión de número del 3 al 15
+
+# Generar una suceción de números entre -1 y 4
+
+# Generar una suceción de números entre 100 y 145
+
+```
+
+```{r tut=TRUE, ex="dosp", type="solution"}
+# Generar una sucesión de número del 3 al 15
+3:15
+# Generar una suceción de números entre -1 y 4
+-1:4
+# Generar una suceción de números entre 100 y 145
+100:145
+```
+
+```{r tut=TRUE, ex="dosp", type="sct"}
+test_output_contains("3:15", incorrect_msg = "Recuerde usar :")
+test_output_contains("-1:4", incorrect_msg = "Recuerde usar :")
+test_output_contains("100:145", incorrect_msg = "Recuerde usar :")
+success_msg("Muy bien!")
+```
+
 - `seq()`: Los argumentos o parámetros de entrada que tiene esta función son: `from` es el número con el que iniciará la secuencia, `to` es el número que tomará el final de la secuencia, `by` es el incremento que se debe usar para generar la secuencia, `length.out` es el tamaño de la sucesión.
 
 ```{r}
 seq(10)
 seq(6,10) 
 seq(from=6,to=10,by=2)
+```
+
+```{r tut=TRUE, ex="seq", type="sample-code"}
+# Generar una secuencia entre 1 y 8 con un salto de 1.5 
+
+# Generar una secuencia entre 4 y 5 con unincremento de 0.01
+
+# Generar una secuando que comience en 20 y sea de tamaño 15
+
+```
+
+```{r tut=TRUE, ex="seq", type="solution"}
+# Generar una secuencia entre 1 y 8 con un salto de 1.5 
+seq(from=1, to= 8, by=1.5)
+# Generar una secuencia entre 4 y 5 con unincremento de 0.01
+seq(from=4, to= 5, by=0.01)
+# Generar una secuando que comience en 20 y sea de tamaño 15
+seq(from=20,length.out = 15)
+```
+
+```{r tut=TRUE, ex="seq", type="sct"}
+test_output_contains("seq(from=1, to= 8, by=1.5)", incorrect_msg = "Recuerde usar seq()")
+test_output_contains("seq(from=4, to= 5, by=0.01)", incorrect_msg = "Recuerde usar seq()")
+test_output_contains("seq(from=20,length.out = 15)", incorrect_msg = "Recuerde usar seq()")
+success_msg("Muy bien!")
 ```
 
 - `rep()`: Esta función se usa para generar sucesiones de datos repetidos. Entre sus argumentos de entrada tiene: `x` número o números que se quieran repetir, `times` el número de veces que se repetirá `x`, `each` si se tienen más de dos números que se quieran repetir aquí se podrá indicar cuantas veces se repetirá cada uno.
@@ -106,11 +162,56 @@ rep(x=1:4,times=2)
 rep(x=1:4,each=2)
 ```
 
+```{r tut=TRUE, ex="rep", type="sample-code"}
+# Generar la repetición de 2.15 15 veces
+
+# Generar la repetición de la palabra "inicio" tres veces
+
+# Repetir una sucesión del 1 al 3 cuatro veces
+
+```
+
+```{r tut=TRUE, ex="rep", type="solution"}
+# Generar la repetición de 2.15 15 veces
+rep(x=2.15, times = 15)
+# Generar la repetición de la palabra "inicio" tres veces
+rep(x='inicio', times = 3)
+# Repetir una sucesión del 1 al 3 cuatro veces
+rep(x=1:3, times = 4)
+```
+
+```{r tut=TRUE, ex="rep", type="sct"}
+test_output_contains("rep(x=2.15, times = 15)", incorrect_msg = "Recuerde usar rep()")
+test_output_contains("rep(x='inicio', times = 3)", incorrect_msg = "Recuerde usar rep()")
+test_output_contains("rep(x=1:3, times = 4)", incorrect_msg = "Recuerde usar rep()")
+success_msg("Muy bien!")
+```
+
 - `sequence()`: Genera una secuencia que inicia en 1 y termina en el elemento que se le pasa como argumento `nvec`.
 
 ```{r}
-sequence(3)
-sequence(c(3, 2))
+sequence(nvec=3)
+sequence(nvec=c(3, 2))
+```
+
+```{r tut=TRUE, ex="seq1", type="sample-code"}
+# Generar una secuencia hasta el 15
+
+# Generar hasta el 3 y otra hasta el 7 con un solo comando
+
+```
+
+```{r tut=TRUE, ex="seq1", type="solution"}
+# Generar una secuencia hasta el 15
+sequence(nvec=15)
+# Generar hasta el 3 y otra hasta el 7 con un solo comando
+sequence(nvec=c(3,7))
+```
+
+```{r tut=TRUE, ex="seq1", type="sct"}
+test_output_contains("sequence(nvec=15)", incorrect_msg = "Recuerde usar sequence()")
+test_output_contains("sequence(nvec=c(3,7))", incorrect_msg = "Recuerde usar sequence()")
+success_msg("Muy bien!")
 ```
 
 - `gl()`: Para generar series regulares de factores, entre sus argumentos tenemos `k` número de niveles o clases, `n` el número de replicas para cada nivel, `label` vector para etiquetar los niveles.
@@ -119,6 +220,29 @@ sequence(c(3, 2))
 gl(n=3, k=5)
 
 gl(n=2, k=3, label=c("Macho", "Hembra"))
+```
+
+```{r tut=TRUE, ex="gl", type="sample-code"}
+# Generar una serie con 4 nivele y 3 replicas
+
+# Generar una serie con 2 niveles y 5 replicas, que tenga
+# como etiquetas "casa" y "edificio"
+
+```
+
+```{r tut=TRUE, ex="gl", type="solution"}
+# Generar una serie con 4 nivele y 3 replicas
+gl(n=4, k=3)
+
+# Generar una serie con 2 niveles y 5 replicas, que tenga
+# como etiquetas "casa" y "edificio"
+gl(n=2, k=5, label=c('casa', 'edificio'))
+```
+
+```{r tut=TRUE, ex="gl", type="sct"}
+test_output_contains("gl(n=4, k=3)", incorrect_msg = "Recuerde usar gl()")
+test_output_contains("gl(n=2, k=5, label=c('casa', 'edificio'))", incorrect_msg = "Recuerde usar gl()")
+success_msg("Muy bien!")
 ```
 
 ## Selección de elementos de un vector

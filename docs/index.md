@@ -1192,7 +1192,7 @@ alumno
 
 La función `names()` que acabamos de usar asigna nombres a elementos del vector.
 
-<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIFVuIGdydXBvIGRlIGFtaWdvcyBlc3RcdTAwZTEgZm9ybWFkbyBwb3IgQW5hIGRlIDIzIGFcdTAwZjFvcywgTHVpcyBkZSAyNCBhXHUwMGYxb3MsXG4jIFBlZHJvIGRlIDIyIGFcdTAwZjFvcywgSnVhbiBkZSAyNCBhXHUwMGYxb3MsIEV2YSBkZSAyMSBhXHUwMGYxb3MgeSBKb3JnZSBkZSAyMiBhXHUwMGYxb3MuXG4jIENyZWEgbG9zIHZlY3RvcmVzIGNvcnJlc3BvbmRpZW50ZXMgYSBub21icmUsIGVkYWQgeSBzZXhvXG4jIChVc2EgbGEgY29kaWZpY2FjaVx1MDBmM24gTT1tdWplciwgSD1ob21icmUpLlxuXG4jIERlZmluaXIgZWwgVmVjdG9yIGRlIG5vbWJyZXMsIGUgaW1wcmltaXJcblxuIyBEZWZpbmlyIGVsIHZlY3RvciBkZSBlZGFkLCBlIGltcHJpbWlyXG5cbiMgRGVmaW5pciBlbCB2ZWN0b3IgZGUgc2V4bywgZSBpbXByaW1pciIsInNvbHV0aW9uIjoiIyBVbiBncnVwbyBkZSBhbWlnb3MgZXN0XHUwMGUxIGZvcm1hZG8gcG9yIEFuYSBkZSAyMyBhXHUwMGYxb3MsIEx1aXMgZGUgMjQgYVx1MDBmMW9zLFxuIyBQZWRybyBkZSAyMiBhXHUwMGYxb3MsIEp1YW4gZGUgMjQgYVx1MDBmMW9zLCBFdmEgZGUgMjEgYVx1MDBmMW9zIHkgSm9yZ2UgZGUgMjIgYVx1MDBmMW9zLlxuIyBDcmVhIGxvcyB2ZWN0b3JlcyBjb3JyZXNwb25kaWVudGVzIGEgbm9tYnJlLCBlZGFkIHkgc2V4b1xuIyAoVXNhIGxhIGNvZGlmaWNhY2lcdTAwZjNuIE09bXVqZXIsIEg9aG9tYnJlKS5cblxuIyBEZWZpbmlyIGVsIFZlY3RvciBkZSBub21icmVzLCBlIGltcHJpbWlyXG5ub21icmVzIDwtIGMoJ0FuYScsICdMdWlzJywgJ1BlZHJvJywgJ0p1YW4nLCAnRXZhJywgJ0pvcmdlJylcbm5vbWJyZXNcbiMgRGVmaW5pciBlbCB2ZWN0b3IgZGUgZWRhZCAsIGUgaW1wcmltaXJcbmVkYWQgPC0gYygyMywgMjQsIDIyLCAyNCwgMjEsIDIyKVxuZWRhZFxuIyBEZWZpbmlyIGVsIHZlY3RvciBkZSBzZXhvLCBlIGltcHJpbWlyXG5zZXhvIDwtIGMoJ00nLCAnSCcsJ0gnLCAnSCcsICdNJywgJ0gnKVxuc2V4byIsInNjdCI6InRlc3Rfb2JqZWN0KFwibm9tYnJlc1wiKVxudGVzdF9vYmplY3QoXCJlZGFkXCIpXG50ZXN0X29iamVjdChcInNleG9cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibm9tYnJlcyA8LSBjKCdBbmEnLCAnTHVpcycsICdQZWRybycsICdKdWFuJywgJ0V2YScsICdKb3JnZScpXCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHV0aWxpemFyIGxhIGZ1bmNpXHUwMGYzbiBjKClcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiZWRhZCA8LSBjKDIzLCAyNCwgMjIsIDI0LCAyMSwgMjIpXCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHV0aWxpemFyIGxhIGZ1bmNpXHUwMGYzbiBjKClcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwic2V4byA8LSBjKCdNJywgJ0gnLCdIJywgJ0gnLCAnTScsICdIJylcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXRpbGl6YXIgbGEgZnVuY2lcdTAwZjNuIGMoKVwiKVxuc3VjY2Vzc19tc2coXCJNdXkgYmllbiFcIikifQ==</div>
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIFVuIGdydXBvIGRlIGFtaWdvcyBlc3RcdTAwZTEgZm9ybWFkbyBwb3IgQW5hIGRlIDIzIGFcdTAwZjFvcywgTHVpcyBkZSAyNCBhXHUwMGYxb3MsXG4jIFBlZHJvIGRlIDIyIGFcdTAwZjFvcywgSnVhbiBkZSAyNCBhXHUwMGYxb3MsIEV2YSBkZSAyMSBhXHUwMGYxb3MgeSBKb3JnZSBkZSAyMiBhXHUwMGYxb3MuXG4jIENyZWEgbG9zIHZlY3RvcmVzIGNvcnJlc3BvbmRpZW50ZXMgYSBub21icmUsIGVkYWQgeSBzZXhvXG4jIChVc2EgbGEgY29kaWZpY2FjaVx1MDBmM24gTT1tdWplciwgSD1ob21icmUpLlxuXG4jIERlZmluaXIgZWwgVmVjdG9yIGRlIG5vbWJyZXMsIGUgaW1wcmltaXJcblxuXG4jIERlZmluaXIgZWwgdmVjdG9yIGRlIGVkYWQsIGUgaW1wcmltaXJcblxuXG4jIERlZmluaXIgZWwgdmVjdG9yIGRlIHNleG8sIGUgaW1wcmltaXIiLCJzb2x1dGlvbiI6IiMgVW4gZ3J1cG8gZGUgYW1pZ29zIGVzdFx1MDBlMSBmb3JtYWRvIHBvciBBbmEgZGUgMjMgYVx1MDBmMW9zLCBMdWlzIGRlIDI0IGFcdTAwZjFvcyxcbiMgUGVkcm8gZGUgMjIgYVx1MDBmMW9zLCBKdWFuIGRlIDI0IGFcdTAwZjFvcywgRXZhIGRlIDIxIGFcdTAwZjFvcyB5IEpvcmdlIGRlIDIyIGFcdTAwZjFvcy5cbiMgQ3JlYSBsb3MgdmVjdG9yZXMgY29ycmVzcG9uZGllbnRlcyBhIG5vbWJyZSwgZWRhZCB5IHNleG9cbiMgKFVzYSBsYSBjb2RpZmljYWNpXHUwMGYzbiBNPW11amVyLCBIPWhvbWJyZSkuXG5cbiMgRGVmaW5pciBlbCBWZWN0b3IgZGUgbm9tYnJlcywgZSBpbXByaW1pclxubm9tYnJlcyA8LSBjKCdBbmEnLCAnTHVpcycsICdQZWRybycsICdKdWFuJywgJ0V2YScsICdKb3JnZScpXG5ub21icmVzXG5cbiMgRGVmaW5pciBlbCB2ZWN0b3IgZGUgZWRhZCAsIGUgaW1wcmltaXJcbmVkYWQgPC0gYygyMywgMjQsIDIyLCAyNCwgMjEsIDIyKVxuZWRhZFxuXG4jIERlZmluaXIgZWwgdmVjdG9yIGRlIHNleG8sIGUgaW1wcmltaXJcbnNleG8gPC0gYygnTScsICdIJywnSCcsICdIJywgJ00nLCAnSCcpXG5zZXhvIiwic2N0IjoidGVzdF9vYmplY3QoXCJub21icmVzXCIpXG50ZXN0X29iamVjdChcImVkYWRcIilcbnRlc3Rfb2JqZWN0KFwic2V4b1wiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJub21icmVzIDwtIGMoJ0FuYScsICdMdWlzJywgJ1BlZHJvJywgJ0p1YW4nLCAnRXZhJywgJ0pvcmdlJylcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXRpbGl6YXIgbGEgZnVuY2lcdTAwZjNuIGMoKVwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJlZGFkIDwtIGMoMjMsIDI0LCAyMiwgMjQsIDIxLCAyMilcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXRpbGl6YXIgbGEgZnVuY2lcdTAwZjNuIGMoKVwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJzZXhvIDwtIGMoJ00nLCAnSCcsJ0gnLCAnSCcsICdNJywgJ0gnKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSB1dGlsaXphciBsYSBmdW5jaVx1MDBmM24gYygpXCIpXG5zdWNjZXNzX21zZyhcIk11eSBiaWVuIVwiKSJ9</div>
 
 
 
@@ -1200,7 +1200,7 @@ La función `names()` que acabamos de usar asigna nombres a elementos del vector
 
 ## Secuencias
 
-- Sucesiones de números `:`: Para generar una secuencia de número entreros podemos hacerlo de la siguiente manera,colocar el número de inicio de la secuencia a generar y el número final de la secuencia, separados por dos puntos (1:10)
+- Sucesiones de números `:`: Para generar una secuencia de número entreros podemos hacerlo de la siguiente manera colocar el número de inicio de la secuencia a generar y el número final de la secuencia, separados por dos puntos (1:10)
 
 
 ```r
@@ -1235,6 +1235,12 @@ La función `names()` que acabamos de usar asigna nombres a elementos del vector
 ## [1] 1 2 3 4
 ```
 
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHN1Y2VzaVx1MDBmM24gZGUgblx1MDBmYW1lcm8gZGVsIDMgYWwgMTVcblxuIyBHZW5lcmFyIHVuYSBzdWNlY2lcdTAwZjNuIGRlIG5cdTAwZmFtZXJvcyBlbnRyZSAtMSB5IDRcblxuIyBHZW5lcmFyIHVuYSBzdWNlY2lcdTAwZjNuIGRlIG5cdTAwZmFtZXJvcyBlbnRyZSAxMDAgeSAxNDUiLCJzb2x1dGlvbiI6IiMgR2VuZXJhciB1bmEgc3VjZXNpXHUwMGYzbiBkZSBuXHUwMGZhbWVybyBkZWwgMyBhbCAxNVxuMzoxNVxuIyBHZW5lcmFyIHVuYSBzdWNlY2lcdTAwZjNuIGRlIG5cdTAwZmFtZXJvcyBlbnRyZSAtMSB5IDRcbi0xOjRcbiMgR2VuZXJhciB1bmEgc3VjZWNpXHUwMGYzbiBkZSBuXHUwMGZhbWVyb3MgZW50cmUgMTAwIHkgMTQ1XG4xMDA6MTQ1Iiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCIzOjE1XCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgOlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCItMTo0XCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgOlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCIxMDA6MTQ1XCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgOlwiKVxuc3VjY2Vzc19tc2coXCJNdXkgYmllbiFcIikifQ==</div>
+
+
+
+
+
 - `seq()`: Los argumentos o parámetros de entrada que tiene esta función son: `from` es el número con el que iniciará la secuencia, `to` es el número que tomará el final de la secuencia, `by` es el incremento que se debe usar para generar la secuencia, `length.out` es el tamaño de la sucesión.
 
 
@@ -1261,6 +1267,12 @@ seq(from=6,to=10,by=2)
 ```
 ## [1]  6  8 10
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBlbnRyZSAxIHkgOCBjb24gdW4gc2FsdG8gZGUgMS41IFxuXG4jIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBlbnRyZSA0IHkgNSBjb24gdW5pbmNyZW1lbnRvIGRlIDAuMDFcblxuIyBHZW5lcmFyIHVuYSBzZWN1YW5kbyBxdWUgY29taWVuY2UgZW4gMjAgeSBzZWEgZGUgdGFtYVx1MDBmMW8gMTUiLCJzb2x1dGlvbiI6IiMgR2VuZXJhciB1bmEgc2VjdWVuY2lhIGVudHJlIDEgeSA4IGNvbiB1biBzYWx0byBkZSAxLjUgXG5zZXEoZnJvbT0xLCB0bz0gOCwgYnk9MS41KVxuIyBHZW5lcmFyIHVuYSBzZWN1ZW5jaWEgZW50cmUgNCB5IDUgY29uIHVuaW5jcmVtZW50byBkZSAwLjAxXG5zZXEoZnJvbT00LCB0bz0gNSwgYnk9MC4wMSlcbiMgR2VuZXJhciB1bmEgc2VjdWFuZG8gcXVlIGNvbWllbmNlIGVuIDIwIHkgc2VhIGRlIHRhbWFcdTAwZjFvIDE1XG5zZXEoZnJvbT0yMCxsZW5ndGgub3V0ID0gMTUpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJzZXEoZnJvbT0xLCB0bz0gOCwgYnk9MS41KVwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSB1c2FyIHNlcSgpXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInNlcShmcm9tPTQsIHRvPSA1LCBieT0wLjAxKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSB1c2FyIHNlcSgpXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInNlcShmcm9tPTIwLGxlbmd0aC5vdXQgPSAxNSlcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXNhciBzZXEoKVwiKVxuc3VjY2Vzc19tc2coXCJNdXkgYmllbiFcIikifQ==</div>
+
+
+
+
 
 - `rep()`: Esta función se usa para generar sucesiones de datos repetidos. Entre sus argumentos de entrada tiene: `x` número o números que se quieran repetir, `times` el número de veces que se repetirá `x`, `each` si se tienen más de dos números que se quieran repetir aquí se podrá indicar cuantas veces se repetirá cada uno.
 
@@ -1289,11 +1301,17 @@ rep(x=1:4,each=2)
 ## [1] 1 1 2 2 3 3 4 4
 ```
 
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgbGEgcmVwZXRpY2lcdTAwZjNuIGRlIDIuMTUgMTUgdmVjZXNcblxuIyBHZW5lcmFyIGxhIHJlcGV0aWNpXHUwMGYzbiBkZSBsYSBwYWxhYnJhIFwiaW5pY2lvXCIgdHJlcyB2ZWNlc1xuXG4jIFJlcGV0aXIgdW5hIHN1Y2VzaVx1MDBmM24gZGVsIDEgYWwgMyBjdWF0cm8gdmVjZXMiLCJzb2x1dGlvbiI6IiMgR2VuZXJhciBsYSByZXBldGljaVx1MDBmM24gZGUgMi4xNSAxNSB2ZWNlc1xucmVwKHg9Mi4xNSwgdGltZXMgPSAxNSlcbiMgR2VuZXJhciBsYSByZXBldGljaVx1MDBmM24gZGUgbGEgcGFsYWJyYSBcImluaWNpb1wiIHRyZXMgdmVjZXNcbnJlcCh4PSdpbmljaW8nLCB0aW1lcyA9IDMpXG4jIFJlcGV0aXIgdW5hIHN1Y2VzaVx1MDBmM24gZGVsIDEgYWwgMyBjdWF0cm8gdmVjZXNcbnJlcCh4PTE6MywgdGltZXMgPSA0KSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwicmVwKHg9Mi4xNSwgdGltZXMgPSAxNSlcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXNhciByZXAoKVwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJyZXAoeD0naW5pY2lvJywgdGltZXMgPSAzKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSB1c2FyIHJlcCgpXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInJlcCh4PTE6MywgdGltZXMgPSA0KVwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSB1c2FyIHJlcCgpXCIpXG5zdWNjZXNzX21zZyhcIk11eSBiaWVuIVwiKSJ9</div>
+
+
+
+
+
 - `sequence()`: Genera una secuencia que inicia en 1 y termina en el elemento que se le pasa como argumento `nvec`.
 
 
 ```r
-sequence(3)
+sequence(nvec=3)
 ```
 
 ```
@@ -1301,12 +1319,18 @@ sequence(3)
 ```
 
 ```r
-sequence(c(3, 2))
+sequence(nvec=c(3, 2))
 ```
 
 ```
 ## [1] 1 2 3 1 2
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBoYXN0YSBlbCAxNVxuXG4jIEdlbmVyYXIgaGFzdGEgZWwgMyB5IG90cmEgaGFzdGEgZWwgNyBjb24gdW4gc29sbyBjb21hbmRvIiwic29sdXRpb24iOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBoYXN0YSBlbCAxNVxuc2VxdWVuY2UobnZlYz0xNSlcbiMgR2VuZXJhciBoYXN0YSBlbCAzIHkgb3RyYSBoYXN0YSBlbCA3IGNvbiB1biBzb2xvIGNvbWFuZG9cbnNlcXVlbmNlKG52ZWM9YygzLDcpKSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwic2VxdWVuY2UobnZlYz0xNSlcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXNhciBzZXF1ZW5jZSgpXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInNlcXVlbmNlKG52ZWM9YygzLDcpKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSB1c2FyIHNlcXVlbmNlKClcIilcbnN1Y2Nlc3NfbXNnKFwiTXV5IGJpZW4hXCIpIn0=</div>
+
+
+
+
 
 - `gl()`: Para generar series regulares de factores, entre sus argumentos tenemos `k` número de niveles o clases, `n` el número de replicas para cada nivel, `label` vector para etiquetar los niveles.
 
@@ -1328,6 +1352,12 @@ gl(n=2, k=3, label=c("Macho", "Hembra"))
 ## [1] Macho  Macho  Macho  Hembra Hembra Hembra
 ## Levels: Macho Hembra
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlcmllIGNvbiA0IG5pdmVsZSB5IDMgcmVwbGljYXNcblxuIyBHZW5lcmFyIHVuYSBzZXJpZSBjb24gMiBuaXZlbGVzIHkgNSByZXBsaWNhcywgcXVlIHRlbmdhXG4jIGNvbW8gZXRpcXVldGFzIFwiY2FzYVwiIHkgXCJlZGlmaWNpb1wiIiwic29sdXRpb24iOiIjIEdlbmVyYXIgdW5hIHNlcmllIGNvbiA0IG5pdmVsZSB5IDMgcmVwbGljYXNcbmdsKG49NCwgaz0zKVxuXG4jIEdlbmVyYXIgdW5hIHNlcmllIGNvbiAyIG5pdmVsZXMgeSA1IHJlcGxpY2FzLCBxdWUgdGVuZ2FcbiMgY29tbyBldGlxdWV0YXMgXCJjYXNhXCIgeSBcImVkaWZpY2lvXCJcbmdsKG49Miwgaz01LCBsYWJlbD1jKCdjYXNhJywgJ2VkaWZpY2lvJykpIiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCJnbChuPTQsIGs9MylcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXNhciBnbCgpXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImdsKG49Miwgaz01LCBsYWJlbD1jKCdjYXNhJywgJ2VkaWZpY2lvJykpXCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgZ2woKVwiKVxuc3VjY2Vzc19tc2coXCJNdXkgYmllbiFcIikifQ==</div>
+
+
+
+
 
 ## Selección de elementos de un vector
 
@@ -2572,7 +2602,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 21:36:20 -04"
+## [1] "2018-07-11 22:13:08 -04"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2679,7 +2709,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-185-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-200-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2701,7 +2731,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-186-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-201-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2714,7 +2744,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-187-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-202-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2736,7 +2766,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-188-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-203-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2768,7 +2798,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-189-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-204-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2781,7 +2811,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-190-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-205-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2802,7 +2832,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-191-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-206-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2816,7 +2846,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-192-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-207-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2824,7 +2854,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-192-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-207-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2839,7 +2869,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-193-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-208-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2851,7 +2881,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-194-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-209-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2869,7 +2899,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-195-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-210-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2882,7 +2912,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-196-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-211-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -2975,7 +3005,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 4
+## [1] 3
 ```
 
 ## Condicionales
