@@ -2,7 +2,7 @@
 
 ## Definición
 
-Es un arreglo de una dimensión, se le suele decir que es una concatenación de datos, puede tener valores de tipo numérico, lógico, complejos o carácter. 
+Es un arreglo de una dimensión. Se suele decir que es una concatenación de datos; puede tener valores de tipo numérico, lógico, complejos o carácter. 
 
 Suele representarse de la siguiente manera
 
@@ -32,6 +32,47 @@ alumno
 ```
 
 La función `names()` que acabamos de usar asigna nombres a elementos del vector.
+
+```{r tut=TRUE, ex="vect", type="sample-code"}
+# Un grupo de amigos está formado por Ana de 23 años, Luis de 24 años,
+# Pedro de 22 años, Juan de 24 años, Eva de 21 años y Jorge de 22 años.
+# Crea los vectores correspondientes a nombre, edad y sexo
+# (Usa la codificación M=mujer, H=hombre).
+
+# Definir el Vector de nombres, e imprimir
+
+# Definir el vector de edad, e imprimir
+
+# Definir el vector de sexo, e imprimir
+
+```
+
+```{r tut=TRUE, ex="vect", type="solution"}
+# Un grupo de amigos está formado por Ana de 23 años, Luis de 24 años,
+# Pedro de 22 años, Juan de 24 años, Eva de 21 años y Jorge de 22 años.
+# Crea los vectores correspondientes a nombre, edad y sexo
+# (Usa la codificación M=mujer, H=hombre).
+
+# Definir el Vector de nombres, e imprimir
+nombres <- c('Ana', 'Luis', 'Pedro', 'Juan', 'Eva', 'Jorge')
+nombres
+# Definir el vector de edad , e imprimir
+edad <- c(23, 24, 22, 24, 21, 22)
+edad
+# Definir el vector de sexo, e imprimir
+sexo <- c('M', 'H','H', 'H', 'M', 'H')
+sexo
+```
+
+```{r tut=TRUE, ex="vect", type="sct"}
+test_object("nombres")
+test_object("edad")
+test_object("sexo")
+test_output_contains("nombres <- c('Ana', 'Luis', 'Pedro', 'Juan', 'Eva', 'Jorge')", incorrect_msg = "Recuerde utilizar la función c()")
+test_output_contains("edad <- c(23, 24, 22, 24, 21, 22)", incorrect_msg = "Recuerde utilizar la función c()")
+test_output_contains("sexo <- c('M', 'H','H', 'H', 'M', 'H')", incorrect_msg = "Recuerde utilizar la función c()")
+success_msg("Muy bien!")
+```
 
 ## Secuencias
 

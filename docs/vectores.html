@@ -209,7 +209,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Capítulo 3</span> Vectores</h1>
 <div id="definicion" class="section level2">
 <h2><span class="header-section-number">3.1</span> Definición</h2>
-<p>Es un arreglo de una dimensión, se le suele decir que es una concatenación de datos, puede tener valores de tipo numérico, lógico, complejos o carácter.</p>
+<p>Es un arreglo de una dimensión. Se suele decir que es una concatenación de datos; puede tener valores de tipo numérico, lógico, complejos o carácter.</p>
 <p>Suele representarse de la siguiente manera</p>
 <p><span class="math display">\[x=(x_1,x_2,...,x_n)\]</span></p>
 <p>Éste es un vector de tamaño <span class="math inline">\(n\)</span>, donde <span class="math inline">\(x_i\)</span> son los elementos de dicho vector.</p>
@@ -235,6 +235,9 @@ alumno</code></pre></div>
 <pre><code>##    Nombre     Apodo 
 ##    &quot;Juan&quot; &quot;Juancho&quot;</code></pre>
 <p>La función <code>names()</code> que acabamos de usar asigna nombres a elementos del vector.</p>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIFVuIGdydXBvIGRlIGFtaWdvcyBlc3RcdTAwZTEgZm9ybWFkbyBwb3IgQW5hIGRlIDIzIGFcdTAwZjFvcywgTHVpcyBkZSAyNCBhXHUwMGYxb3MsXG4jIFBlZHJvIGRlIDIyIGFcdTAwZjFvcywgSnVhbiBkZSAyNCBhXHUwMGYxb3MsIEV2YSBkZSAyMSBhXHUwMGYxb3MgeSBKb3JnZSBkZSAyMiBhXHUwMGYxb3MuXG4jIENyZWEgbG9zIHZlY3RvcmVzIGNvcnJlc3BvbmRpZW50ZXMgYSBub21icmUsIGVkYWQgeSBzZXhvXG4jIChVc2EgbGEgY29kaWZpY2FjaVx1MDBmM24gTT1tdWplciwgSD1ob21icmUpLlxuXG4jIERlZmluaXIgZWwgVmVjdG9yIGRlIG5vbWJyZXMsIGUgaW1wcmltaXJcblxuIyBEZWZpbmlyIGVsIHZlY3RvciBkZSBlZGFkLCBlIGltcHJpbWlyXG5cbiMgRGVmaW5pciBlbCB2ZWN0b3IgZGUgc2V4bywgZSBpbXByaW1pciIsInNvbHV0aW9uIjoiIyBVbiBncnVwbyBkZSBhbWlnb3MgZXN0XHUwMGUxIGZvcm1hZG8gcG9yIEFuYSBkZSAyMyBhXHUwMGYxb3MsIEx1aXMgZGUgMjQgYVx1MDBmMW9zLFxuIyBQZWRybyBkZSAyMiBhXHUwMGYxb3MsIEp1YW4gZGUgMjQgYVx1MDBmMW9zLCBFdmEgZGUgMjEgYVx1MDBmMW9zIHkgSm9yZ2UgZGUgMjIgYVx1MDBmMW9zLlxuIyBDcmVhIGxvcyB2ZWN0b3JlcyBjb3JyZXNwb25kaWVudGVzIGEgbm9tYnJlLCBlZGFkIHkgc2V4b1xuIyAoVXNhIGxhIGNvZGlmaWNhY2lcdTAwZjNuIE09bXVqZXIsIEg9aG9tYnJlKS5cblxuIyBEZWZpbmlyIGVsIFZlY3RvciBkZSBub21icmVzLCBlIGltcHJpbWlyXG5ub21icmVzIDwtIGMoJ0FuYScsICdMdWlzJywgJ1BlZHJvJywgJ0p1YW4nLCAnRXZhJywgJ0pvcmdlJylcbm5vbWJyZXNcbiMgRGVmaW5pciBlbCB2ZWN0b3IgZGUgZWRhZCAsIGUgaW1wcmltaXJcbmVkYWQgPC0gYygyMywgMjQsIDIyLCAyNCwgMjEsIDIyKVxuZWRhZFxuIyBEZWZpbmlyIGVsIHZlY3RvciBkZSBzZXhvLCBlIGltcHJpbWlyXG5zZXhvIDwtIGMoJ00nLCAnSCcsJ0gnLCAnSCcsICdNJywgJ0gnKVxuc2V4byIsInNjdCI6InRlc3Rfb2JqZWN0KFwibm9tYnJlc1wiKVxudGVzdF9vYmplY3QoXCJlZGFkXCIpXG50ZXN0X29iamVjdChcInNleG9cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwibm9tYnJlcyA8LSBjKCdBbmEnLCAnTHVpcycsICdQZWRybycsICdKdWFuJywgJ0V2YScsICdKb3JnZScpXCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHV0aWxpemFyIGxhIGZ1bmNpXHUwMGYzbiBjKClcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiZWRhZCA8LSBjKDIzLCAyNCwgMjIsIDI0LCAyMSwgMjIpXCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHV0aWxpemFyIGxhIGZ1bmNpXHUwMGYzbiBjKClcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwic2V4byA8LSBjKCdNJywgJ0gnLCdIJywgJ0gnLCAnTScsICdIJylcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgdXRpbGl6YXIgbGEgZnVuY2lcdTAwZjNuIGMoKVwiKVxuc3VjY2Vzc19tc2coXCJNdXkgYmllbiFcIikifQ==
+</div>
 </div>
 <div id="secuencias" class="section level2">
 <h2><span class="header-section-number">3.3</span> Secuencias</h2>
