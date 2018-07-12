@@ -1014,6 +1014,25 @@ Actuan sobre cualquier tipo de objeto, y retornan uno o varios valores lógicos,
 |    ==   |     Igual que     |
 |    !=   |    Diferente de   |
 
+```{r tut=TRUE, ex="oper_com", type="pre-exercise-code"}
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="oper_com", type="sample-code"}
+1>5
+
+x==8
+
+x<7
+
+```
+
+
+```{r tut=TRUE, ex="oper_com", type="sct"}
+test_error()
+success_msg("Excelente!")
+```
+
 ### Operadores Lógicos
  
 - __Y o en ingles AND__: `&`, `&&`.
@@ -1045,4 +1064,34 @@ condicion_1 || condicion_2
 
 Cuando usamos vectores para hacer este tipo de comparaciones se sigue con `|` y `||` el mismo criterio que con `&` y `&&`.
 
+```{r tut=TRUE, ex="oper_log", type="pre-exercise-code"}
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
 
+```{r tut=TRUE, ex="oper_log", type="sample-code"}
+condicion_1 <- 4 > 10
+condicion_2 <- 5/8 < 5.2
+# Aplicar el condicional y a la condición 1 y 2
+
+condicion_3 <- 2 > -5.6 
+condicion_4 <- 2/5 < 9/8
+#Aplicar el condicional o a la condición 3 y 4
+
+```
+
+```{r tut=TRUE, ex="oper_log", type="solution"}
+condicion_1 <- 4 > 10
+condicion_2 <- 5/8 < 5.2
+# Aplicar el condicional & a la condición 1 y 2
+condicion_1 & condicion_2
+
+condicion_3 <- 2 > -5.6 
+condicion_4 <- 2/5 < 9/8
+#Aplicar el condicional | a la condición 3 y 4
+condicion_3 | condicion_4
+```
+
+```{r tut=TRUE, ex="oper_log", type="sct"}
+test_error()
+success_msg("Excelente!")
+```
