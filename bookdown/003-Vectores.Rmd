@@ -355,5 +355,40 @@ x*y
 x^2
 ```
 
+```{r tut=TRUE, ex="sumavec", type="sample-code"}
+x <- c(5,1,5)
+y <- c(2,1,3)
+z <- c(1,0)
 
+# Sumar el vector x con el vector y
 
+# Sumar los vectores x,y,z
+
+# Sumar los elementos del vector z
+
+# Aplicar la función ()^2 al vector x
+
+```
+
+```{r tut=TRUE, ex="sumavec", type="solution"}
+x <- c(5,1,5)
+y <- c(2,1,3)
+z <- c(1,0)
+
+# Sumar el vector x con el vector y
+x+y
+# Sumar los vectores x,y,z
+x+y+z
+# Sumar los elementos del vector z
+sum(z)
+# Aplicar la función ()^2 al vector x
+x^2
+```
+
+```{r tut=TRUE, ex="sumavec", type="sct"}
+test_output_contains("x+y", incorrect_msg = "Recuerde usar +")
+test_output_contains("x+y+z", incorrect_msg = "Recuerde usar +")
+test_output_contains("sum(z)", incorrect_msg = "Recuerde usar sum()")
+test_output_contains("x^2", incorrect_msg = "Recuerde usar ^")
+success_msg("Muy bien!")
+```
