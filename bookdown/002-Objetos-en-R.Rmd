@@ -598,6 +598,38 @@ x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
 range(x)
 ```
 
+```{r tut=TRUE, ex="range", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="range", type="sample-code"}
+# Calcular el rango del vector linkedin con la función range() 
+
+# Calcular el rango del vector facebook con la función range()
+
+# Calcular el rango del vector x con la función range()
+
+```
+
+```{r tut=TRUE, ex="range", type="solution"}
+# Calcular el rango del vector linkedin con la función range() 
+range(linkedin)
+# Calcular el rango del vector facebook con la función range()
+range(facebook)
+# Calcular el rango del vector x con la función range()
+range(x)
+```
+
+```{r tut=TRUE, ex="range", type="sct"}
+test_function("range")
+test_output_contains("range(linkedin)", incorrect_msg = "Usar la función range() y el vector linkedin")
+test_output_contains("range(facebook)", incorrect_msg = "Usar la función range() y el vector facebook")
+test_output_contains("range(x)", incorrect_msg = "Usar la función range() y el vector x")
+success_msg("Excelente!")
+```
+
 - `quantile()` -> son los tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.
 
 ```{r}
