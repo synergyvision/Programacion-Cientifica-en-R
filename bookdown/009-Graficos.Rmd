@@ -192,5 +192,54 @@ plot(x=1:20,y=21:40)
 dev.off()
 ```
 
+```{r tut=TRUE, ex="graf", type="pre-exercise-code"}
+x <- 1:5
+cars <- c(1, 3, 6, 4, 9)
+trucks <- c(2, 5, 4, 5, 12)
+```
 
+```{r tut=TRUE, ex="graf", type="sample-code"}
+# En el ambiente de trabajo hay un vector llamado cars que contiene 5 valores y en x hay
+# una sucesión de valores entre 1 y 5.
+# Contruir un gráfico de nube de puntos, con título igual a "Autos", type = 'o',
+# de color azul y con la forma de puntos igual a 2, también establecer los límites de los
+# ejes x igual a c(1,6) y eje y c(-1,13).
 
+# También hay cargado otro vector que se llama trucks
+# Agregar una linea de color naranja con dicho vector, del mismo tipo que el anterior y
+# colocar pch = 6.
+
+# Agregar la leyenda en el punto (2,3)
+
+# Realizar un gráfico de barrar para los valores del vector cars
+
+# Para el siguiente vector construir un histograma
+suvs <- c(4,4,6,6,16)
+
+# Mostrar en una sola ventana una nube de puntos para el vector suvs y el histograma
+
+```
+
+```{r tut=TRUE, ex="graf", type="solution"}
+# En el ambiente de trabajo hay un vector llamado cars que contiene 5 valores y en x hay
+# una sucesión de valores entre 1 y 5.
+# Contruir un gráfico de nube de puntos, con título igual a "Autos", type = 'o',
+# de color azul y con la forma de puntos igual a 2, también establecer los límites de los
+# ejes x igual a c(1,6) y eje y c(-1,13).
+plot(x,cars, type="o", col="blue", main = "Autos", xlim = c(-1,6), ylim = c(-1,13), pch=2)
+# También hay cargado otro vector que se llama trucks
+# Agregar una linea de color naranja con dicho vector, del mismo tipo que el anterior y
+# colocar pch = 6.
+lines(x,trucks,type='o', col="orange",pch=6)
+# Agregar la leyenda en el punto (2,3)
+legend(x=2,y=3,c("cars","trucks"), col=c("blue","orange"),pch = c(2,6), bty = 'n')
+# Realizar un gráfico de barrar para los valores del vector cars
+barplot(cars)
+# Para el siguiente vector construir un histograma
+suvs <- c(4,4,6,6,16)
+hist(suvs)
+# Mostrar en una sola ventana una nube de puntos para el vector suvs y el histograma
+par(mfrow=c(1,2))
+plot(suvs)
+hist(suvs)
+```
