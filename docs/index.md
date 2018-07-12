@@ -750,13 +750,13 @@ IQR(x)
 
 
 
-- `boxplot()` -> proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos. 
+- `boxplot()` -> Proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos. 
 
--- Son útiles para ver la presencia de valores atípicos también llamados outliers.
+  - Son útiles para ver la presencia de valores atípicos también llamados outliers.
 
--- $Q_1 - 1.5 * IQR$
+  - $Q_1 - 1.5 * IQR$
 
--- $Q_3 + 1.5 * IQR$
+  - $Q_3 + 1.5 * IQR$
 
 
 ```r
@@ -776,17 +776,32 @@ sd(x)
 ## [1] 20.2
 ```
 
-- `var()` -> es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KVxueCA8LSBjKDUsOCw5LDE1LDE3LDY0LDksNSw4LDgsOCwxNyw2NCw1KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgZGVzdmlhY2lcdTAwZjNuIGVzdFx1MDBlMW5kYXIgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKClcblxuIyBDYWxjdWxhciBsYSBkZXN2aWFjaVx1MDBmM24gZXN0XHUwMGUxbmRhciBkZWwgdmVjdG9yIGZhY2Vib29rIGNvbiBsYSBmdW5jaVx1MDBmM24gc2QoKVxuXG4jIENhbGN1bGFyIGxhIGRlc3ZpYWNpXHUwMGYzbiBlc3RcdTAwZTFuZGFyIGRlbCB2ZWN0b3IgeCBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKCkiLCJzb2x1dGlvbiI6IiMgQ2FsY3VsYXIgbGEgZGVzdmlhY2lcdTAwZjNuIGVzdFx1MDBlMW5kYXIgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKClcbnNkKGxpbmtlZGluKVxuIyBDYWxjdWxhciBsYSBkZXN2aWFjaVx1MDBmM24gZXN0XHUwMGUxbmRhciBkZWwgdmVjdG9yIGZhY2Vib29rIGNvbiBsYSBmdW5jaVx1MDBmM24gc2QoKVxuc2QoZmFjZWJvb2spXG4jIENhbGN1bGFyIGxhIGRlc3ZpYWNpXHUwMGYzbiBlc3RcdTAwZTFuZGFyIGRlbCB2ZWN0b3IgeCBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKClcbnNkKHgpIiwic2N0IjoidGVzdF9mdW5jdGlvbihcInNkXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInNkKGxpbmtlZGluKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiBzZCgpIHkgZWwgdmVjdG9yIGxpbmtlZGluXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInNkKGZhY2Vib29rKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiBzZCgpIHkgZWwgdmVjdG9yIGZhY2Vib29rXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInNkKHgpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIHNkKCkgeSBlbCB2ZWN0b3IgeFwiKVxuc3VjY2Vzc19tc2coXCJFeGNlbGVudGUhXCIpIn0=</div>
+
+
+
+
+
+
+
+- `var()` -> Es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.
 
 
 ```r
-x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
 var(x)
 ```
 
 ```
 ## [1] 408.1
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KVxueCA8LSBjKDUsOCw5LDE1LDE3LDY0LDksNSw4LDgsOCwxNyw2NCw1KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHZhcigpXG5cbiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIHZhcigpXG5cbiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciB4IGNvbiBsYSBmdW5jaVx1MDBmM24gdmFyKCkiLCJzb2x1dGlvbiI6IiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHZhcigpXG52YXIobGlua2VkaW4pXG4jIENhbGN1bGFyIGxhIHZhcmlhbnphIGRlbCB2ZWN0b3IgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiB2YXIoKVxudmFyKGZhY2Vib29rKVxuIyBDYWxjdWxhciB2YXJpYW56YSBkZWwgdmVjdG9yIHggY29uIGxhIGZ1bmNpXHUwMGYzbiB2YXIoKVxudmFyKHgpIiwic2N0IjoidGVzdF9mdW5jdGlvbihcInZhclwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJ2YXIobGlua2VkaW4pXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIHZhcigpIHkgZWwgdmVjdG9yIGxpbmtlZGluXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcInZhcihmYWNlYm9vaylcIiwgaW5jb3JyZWN0X21zZyA9IFwiVXNhciBsYSBmdW5jaVx1MDBmM24gdmFyKCkgeSBlbCB2ZWN0b3IgZmFjZWJvb2tcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwidmFyKHgpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIHZhcigpIHkgZWwgdmVjdG9yIHhcIilcbnN1Y2Nlc3NfbXNnKFwiRXhjZWxlbnRlIVwiKSJ9</div>
+
+
+
+
+
+
 
 - `summary()` -> permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.
 
@@ -2526,7 +2541,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 20:28:14 -04"
+## [1] "2018-07-11 20:37:24 -04"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2633,7 +2648,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-154-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-162-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2655,7 +2670,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-155-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-163-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2668,7 +2683,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-156-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-164-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2690,7 +2705,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-157-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-165-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2722,7 +2737,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-158-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-166-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2735,7 +2750,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-159-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-167-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2756,7 +2771,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-160-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-168-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2770,7 +2785,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-161-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-169-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2778,7 +2793,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-161-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-169-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2793,7 +2808,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-162-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-170-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2805,7 +2820,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-163-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-171-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2823,7 +2838,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-164-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-172-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2836,7 +2851,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-165-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-173-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -2921,7 +2936,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 1
+## [1] 3
 ```
 
 ```r
@@ -2929,7 +2944,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 3
+## [1] 2
 ```
 
 ## Condicionales

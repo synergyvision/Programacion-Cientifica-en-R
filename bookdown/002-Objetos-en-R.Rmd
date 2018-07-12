@@ -712,13 +712,13 @@ test_output_contains("IQR(x)", incorrect_msg = "Usar la función IQR() y el vect
 success_msg("Excelente!")
 ```
 
-- `boxplot()` -> proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos. 
+- `boxplot()` -> Proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos. 
 
--- Son útiles para ver la presencia de valores atípicos también llamados outliers.
+  - Son útiles para ver la presencia de valores atípicos también llamados outliers.
 
--- $Q_1 - 1.5 * IQR$
+  - $Q_1 - 1.5 * IQR$
 
--- $Q_3 + 1.5 * IQR$
+  - $Q_3 + 1.5 * IQR$
 
 ```{r}
 boxplot(x, col = "orange", horizontal = TRUE)
@@ -730,11 +730,74 @@ boxplot(x, col = "orange", horizontal = TRUE)
 sd(x)
 ```
 
-- `var()` -> es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.
+```{r tut=TRUE, ex="sd", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="sd", type="sample-code"}
+# Calcular la desviación estándar del vector linkedin con la función sd()
+
+# Calcular la desviación estándar del vector facebook con la función sd()
+
+# Calcular la desviación estándar del vector x con la función sd()
+
+```
+
+```{r tut=TRUE, ex="sd", type="solution"}
+# Calcular la desviación estándar del vector linkedin con la función sd()
+sd(linkedin)
+# Calcular la desviación estándar del vector facebook con la función sd()
+sd(facebook)
+# Calcular la desviación estándar del vector x con la función sd()
+sd(x)
+```
+
+```{r tut=TRUE, ex="sd", type="sct"}
+test_function("sd")
+test_output_contains("sd(linkedin)", incorrect_msg = "Usar la función sd() y el vector linkedin")
+test_output_contains("sd(facebook)", incorrect_msg = "Usar la función sd() y el vector facebook")
+test_output_contains("sd(x)", incorrect_msg = "Usar la función sd() y el vector x")
+success_msg("Excelente!")
+```
+
+- `var()` -> Es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.
 
 ```{r}
-x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
 var(x)
+```
+
+```{r tut=TRUE, ex="var", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="var", type="sample-code"}
+# Calcular la varianza del vector linkedin con la función var()
+
+# Calcular la varianza del vector facebook con la función var()
+
+# Calcular la varianza del vector x con la función var()
+
+```
+
+```{r tut=TRUE, ex="var", type="solution"}
+# Calcular la varianza del vector linkedin con la función var()
+var(linkedin)
+# Calcular la varianza del vector facebook con la función var()
+var(facebook)
+# Calcular varianza del vector x con la función var()
+var(x)
+```
+
+```{r tut=TRUE, ex="var", type="sct"}
+test_function("var")
+test_output_contains("var(linkedin)", incorrect_msg = "Usar la función var() y el vector linkedin")
+test_output_contains("var(facebook)", incorrect_msg = "Usar la función var() y el vector facebook")
+test_output_contains("var(x)", incorrect_msg = "Usar la función var() y el vector x")
+success_msg("Excelente!")
 ```
 
 - `summary()` -> permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.
