@@ -159,9 +159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="9" data-path="datos.html"><a href="datos.html"><i class="fa fa-check"></i><b>9</b> Datos</a><ul>
 <li class="chapter" data-level="9.1" data-path="datos.html"><a href="datos.html#importar-datos"><i class="fa fa-check"></i><b>9.1</b> Importar Datos</a></li>
-<li class="chapter" data-level="9.2" data-path="datos.html"><a href="datos.html#datos-de-r"><i class="fa fa-check"></i><b>9.2</b> Datos de <strong>R</strong></a></li>
-<li class="chapter" data-level="9.3" data-path="datos.html"><a href="datos.html#guardar-datos"><i class="fa fa-check"></i><b>9.3</b> Guardar Datos</a></li>
-<li class="chapter" data-level="9.4" data-path="datos.html"><a href="datos.html#exportar-datos"><i class="fa fa-check"></i><b>9.4</b> Exportar Datos</a></li>
+<li class="chapter" data-level="9.2" data-path="datos.html"><a href="datos.html#exportar-datos"><i class="fa fa-check"></i><b>9.2</b> Exportar Datos</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="graficos.html"><a href="graficos.html"><i class="fa fa-check"></i><b>10</b> Gráficos</a><ul>
 <li class="chapter" data-level="10.1" data-path="graficos.html"><a href="graficos.html#grafico-de-puntos"><i class="fa fa-check"></i><b>10.1</b> Gráfico de Puntos</a></li>
@@ -209,15 +207,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">Capítulo 9</span> Datos</h1>
 <div id="importar-datos" class="section level2">
 <h2><span class="header-section-number">9.1</span> Importar Datos</h2>
-</div>
-<div id="datos-de-r" class="section level2">
-<h2><span class="header-section-number">9.2</span> Datos de <strong>R</strong></h2>
-</div>
-<div id="guardar-datos" class="section level2">
-<h2><span class="header-section-number">9.3</span> Guardar Datos</h2>
+<p>Cuando se tengas archivos de texto plano , como por ejemplo archivos .txt( se delimitan con tabuladores) o .csv (se delimitan con comas), estos son los más usados cuando se usan hojas de cálculo como Excel. Desde el lenguaje de programación <strong>R</strong> se pueden leer este tipo de archivos con la función <code>read.table()</code>.</p>
+<ul>
+<li><p>Lo primero que tenemos que conocer es el directorio donde se encuentra el archivo que queremos leer, y donde está nuestro directorio de trabajo (para conocerla podemos usar la función <code>getwd()</code> y para establecer un directorio de trabajo usamos el comando <code>setwd()</code>.</p></li>
+<li><p>La manera de importar el archivo es usar el siguiente comando</p></li>
+</ul>
+<p><code>read.table(file = &quot;ejemplo1.txt&quot;, header = TRUE, sep = &quot;\t&quot;, dec = &quot;.&quot;)</code></p>
+<ul>
+<li><p><code>file</code> : Colocamos el nombre del archivo si estamos en el mismo lugar de trabajo donde se encuentra el mismo, o la dirección donde se encuentra con su respectivo nombre.</p></li>
+<li><p><code>header</code> : Este deberá ser verdadero si la hoja de cálculo tiene encabezado.</p></li>
+<li><p><code>sep</code> : Para indicar de que manera están delimitados los datos.</p></li>
+<li><p><code>dec</code> : Para indicar cual es el símbolo que representa la parte decimal.</p></li>
+</ul>
 </div>
 <div id="exportar-datos" class="section level2">
-<h2><span class="header-section-number">9.4</span> Exportar Datos</h2>
+<h2><span class="header-section-number">9.2</span> Exportar Datos</h2>
+<p>Para exportar datos usamos el comando</p>
+<p><code>write.table(ejemplo1, file = &quot;ejemplo3.txt&quot;, sep = &quot;\t&quot;, eol = &quot;\n&quot;, dec = &quot;.&quot;, row.names = TRUE, col.names = TRUE)</code></p>
+<p>Donde el primer nombre <code>ejemplo1</code> corresponde al nombre del objeto que queremos guardar, cabe destacar que este no debe ir entre comillas.</p>
+<ul>
+<li><p><code>file</code> : Es el nombre que corresponde al archivo que se quiere guardar, se guardará en la carpeta del lugar de trabajo, en caso contrario colocar la dirección donde se quiera guardar con su respectivo nombre.</p></li>
+<li><p><code>eol</code> : Para indicar como términa una linea.</p></li>
+<li><p><code>row.names</code> : Para indicar si los nombres de las filas en el archivo a exportar son indicados.</p></li>
+<li><p><code>col.names</code> : Para indicar si los nombres de las columnas son indicados en el archivo que se va a exportar.</p></li>
+</ul>
 
 </div>
 </div>

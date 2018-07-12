@@ -2575,7 +2575,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-12 15:44:14 GMT"
+## [1] "2018-07-12 16:21:24 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2656,14 +2656,37 @@ fecha_7$sec
 
 ## Importar Datos
 
-## Datos de __R__
+Cuando se tengas archivos de texto plano , como por ejemplo archivos .txt( se delimitan con tabuladores) o .csv (se delimitan con comas), estos son los más usados cuando se usan hojas de cálculo como Excel. Desde el lenguaje de programación __R__ se pueden leer este tipo de archivos con la función `read.table()`.
 
-## Guardar Datos
+- Lo primero que tenemos que conocer es el directorio donde se encuentra el archivo que queremos leer, y donde está nuestro directorio de trabajo (para conocerla podemos usar la función `getwd()` y para establecer un directorio de trabajo usamos el comando `setwd()`.
+
+- La manera de importar el archivo es usar el siguiente comando
+
+`read.table(file = "ejemplo1.txt", header = TRUE, sep = "\t", dec = ".")`
+
+  - `file` : Colocamos el nombre del archivo si estamos en el mismo lugar de trabajo donde se encuentra el mismo, o la dirección donde se encuentra con su respectivo nombre.
+
+  - `header` : Este deberá ser verdadero si la hoja de cálculo tiene encabezado.
+
+  - `sep` : Para indicar de que manera están delimitados los datos.
+
+  - `dec` : Para indicar cual es el símbolo que representa la parte decimal.
 
 ## Exportar Datos
 
+Para exportar datos usamos el comando
 
+`write.table(ejemplo1, file = "ejemplo3.txt", sep = "\t", eol = "\n", dec = ".", row.names = TRUE, col.names = TRUE)`
 
+Donde el primer nombre `ejemplo1` corresponde al nombre del objeto que queremos guardar, cabe destacar que este no debe ir entre comillas.
+
+- `file` : Es el nombre que corresponde al archivo que se quiere guardar, se guardará en la carpeta del lugar de trabajo, en caso contrario colocar la dirección donde se quiera guardar con su respectivo nombre.
+
+- `eol` : Para indicar como términa una linea.
+
+- `row.names` : Para indicar si los nombres de las filas en el archivo a exportar son indicados.
+
+- `col.names` : Para indicar si los nombres de las columnas son indicados en el archivo que se va a exportar.
 
 <!--chapter:end:008-Datos.Rmd-->
 
@@ -2985,7 +3008,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 6
+## [1] 1
 ```
 
 ## Condicionales
