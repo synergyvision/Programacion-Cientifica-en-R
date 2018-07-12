@@ -630,10 +630,42 @@ test_output_contains("range(x)", incorrect_msg = "Usar la función range() y el 
 success_msg("Excelente!")
 ```
 
-- `quantile()` -> son los tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.
+- `quantile()` -> son tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.
 
 ```{r}
 quantile(x)
+```
+
+```{r tut=TRUE, ex="quantile", type="pre-exercise-code"}
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+facebook <- c(17, 7, 5, 16, 8, 13, 14)
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="quantile", type="sample-code"}
+# Calcular los cuantiles del vector linkedin con la función quantile()
+
+# Calcular los cuantiles del vector facebook con la función quantile()
+
+# Calcular los cuantiles del vector x con la función quantile()
+
+```
+
+```{r tut=TRUE, ex="quantile", type="solution"}
+# Calcular los cuantiles del vector linkedin con la función quantile()
+quantile(linkedin)
+# Calcular los cuantiles del vector facebook con la función quantile()
+quantile(facebook)
+# Calcular los cuantiles del vector x con la función quantile()
+quantile(x)
+```
+
+```{r tut=TRUE, ex="quantile", type="sct"}
+test_function("quantile")
+test_output_contains("quantile(linkedin)", incorrect_msg = "Usar la función quantile() y el vector linkedin")
+test_output_contains("quantile(facebook)", incorrect_msg = "Usar la función quantile() y el vector facebook")
+test_output_contains("quantile(x)", incorrect_msg = "Usar la función quantile() y el vector x")
+success_msg("Excelente!")
 ```
 
 - `IQR()` -> la diferencia entre el tercer y el primer cuartil de una distribución. Es una medida de la dispersión estadística.
