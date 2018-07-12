@@ -23,6 +23,33 @@ lista[[2]] <- NULL
 lista
 ```
 
+```{r tut=TRUE, ex="lista", type="pre-exercise-code"}
+n <- c(2, 3, 5) 
+s <- c("aa", "bb", "cc", "dd", "ee") 
+b <- c(TRUE, FALSE, TRUE, FALSE, FALSE)
+```
+
+```{r tut=TRUE, ex="lista", type="sample-code"}
+# Crear un objeto tipo lista con los vectores cargados en el ambiente n, s y b
+# y el valor 3, guardarlo en x
+
+# Modificar el elemento 3 del segundo miembro de la lista x por "aa" e imprimir la lista
+
+# Extraer el elemento b de la lista x, usando el simbolo $
+
+```
+
+```{r tut=TRUE, ex="lista", type="solution"}
+# Crear un objeto tipo lista con los vectores cargados en el ambiente n, s y b
+# y el valor 3, guardarlo en x
+x <- list(n, s, b, 3)
+# Modificar el elemento 3 del segundo miembro de la lista x por "aa" e imprimir la lista
+x[[2]][3] <- "aa"
+x
+# Extraer el elemento b de la lista x, usando el simbolo $
+x$b
+```
+
 # Factores
 
 Los factores son variable categórica, estas tienen un número finito de valores o niveles. Generalmente se utilizan para clasificar datos, es decir, establecen o clasifican los datos en niveles. 
@@ -63,7 +90,31 @@ Si queremos saber cuantos elementos hay en cada nivel usamos la función `table(
 table(sexo)
 ```
 
+```{r tut=TRUE, ex="fact", type="pre-exercise-code"}
+data <- c(1,2,2,3,1,2,3,3,1,2,3,3,1)
+```
 
+```{r tut=TRUE, ex="fact", type="sample-code"}
+# En el ambiente de trabajo hay un vector llamado data, imprimirlo
+
+# Combertir data en un objeto tipo factor y llamarlo fdata
+
+# Extraer los niveles de fdata con la función levels()
+
+# Contar los niveles de fdta con la función table()
+
+```
+
+```{r tut=TRUE, ex="fact", type="solution"}
+# En el ambiente de trabajo hay un vector llamado data, imprimirlo
+data
+# Combertir data en un objeto tipo factor y llamarlo fdata
+fdata <- factor(data)
+# Extraer los niveles de fdata con la función levels()
+levels(fdata)
+# Contar los niveles de fdta con la función table()
+table(fdata)
+```
 
 
 
