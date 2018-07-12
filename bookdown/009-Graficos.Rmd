@@ -218,6 +218,9 @@ suvs <- c(4,4,6,6,16)
 
 # Mostrar en una sola ventana una nube de puntos para el vector suvs y el histograma
 
+# Realizar un gráfico de torta para el vector carsrainbow(length(cars)) con las siguientes
+# etiquetas "Mon","Tue","Wed","Thu","Fri"
+
 ```
 
 ```{r tut=TRUE, ex="graf", type="solution"}
@@ -240,6 +243,10 @@ suvs <- c(4,4,6,6,16)
 hist(suvs)
 # Mostrar en una sola ventana una nube de puntos para el vector suvs y el histograma
 par(mfrow=c(1,2))
-plot(suvs, main='Gráfico de puntos')
+plot(suvs, main='Nube de puntos')
 hist(suvs, main='Histograma')
+# Realizar un gráfico de torta para el vector carsrainbow(length(cars)) con las siguientes
+# etiquetas "Mon","Tue","Wed","Thu","Fri"
+pie(cars, main="Cars",
+   labels=c("Mon","Tue","Wed","Thu","Fri"))
 ```
