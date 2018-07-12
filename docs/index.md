@@ -1046,6 +1046,12 @@ tan(0)
 ## [1] 0
 ```
 
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENhbGN1bGFyIGxhcyBzaWd1aWVudGVzIG9wZXJhY2lvbmVzIGFyaXRtXHUwMGU5dGljYXNcbiMgMy40NSAtIDk4XG5cbiMgbG9nKDQpIC0gZXhwKDMpICsgc3FydCgzKVxuXG4jIHRhbiggZXhwKCBzcXJ0KGNvcyAoLTQpICkgKSApXG5cbiMgc2luKDUpIC0gNV42Iiwic29sdXRpb24iOiIjIENhbGN1bGFyIGxhcyBzaWd1aWVudGVzIG9wZXJhY2lvbmVzIGFyaXRtXHUwMGU5dGljYXNcbiMgMy40NSAtIDk4XG4zLjQ1IC0gOThcbiMgbG9nKDQpIC0gZXhwKDMpICsgc3FydCgzKVxubG9nKDQpIC0gZXhwKDMpICsgc3FydCgzKVxuIyB0YW4oIGV4cCggc3FydChjb3MgKC0xKSApICkgKVxudGFuKCBleHAoIHNxcnQoY29zICgtMSkgKSApIClcbiMgc2luKDUpIC0gNV42XG5zaW4oNSkgLSA1XjYiLCJzY3QiOiJ0ZXN0X2Vycm9yKClcbnN1Y2Nlc3NfbXNnKFwiRXhjZWxlbnRlIVwiKSJ9</div>
+
+
+
+
+
 ### Operadores Comparativos
 
 Actuan sobre cualquier tipo de objeto, y retornan uno o varios valores lógicos, dependiendo del objeto. Estos usan todos los elementos de los dos objetos que se están comparando (reciclando los valores de los más pequeños si es necesario), devolviendo un objeto del mismo tamaño.
@@ -2547,7 +2553,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 20:52:17 -04"
+## [1] "2018-07-11 21:04:58 -04"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2654,7 +2660,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-172-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-175-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2676,7 +2682,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-173-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-176-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2689,7 +2695,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-174-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-177-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2711,7 +2717,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-175-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-178-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2743,7 +2749,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-176-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-179-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2756,7 +2762,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-177-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-180-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2777,7 +2783,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-178-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-181-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2791,7 +2797,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-179-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-182-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2799,7 +2805,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-179-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-182-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2814,7 +2820,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-180-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-183-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2826,7 +2832,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-181-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-184-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2844,7 +2850,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-182-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-185-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2857,7 +2863,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-183-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-186-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -2950,7 +2956,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 3
+## [1] 5
 ```
 
 ## Condicionales

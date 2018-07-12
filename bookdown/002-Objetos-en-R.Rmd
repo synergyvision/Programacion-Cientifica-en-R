@@ -972,6 +972,35 @@ cos(0)
 tan(0)
 ```
 
+```{r tut=TRUE, ex="oper_arit", type="sample-code"}
+# Calcular las siguientes operaciones aritméticas
+# 3.45 - 98
+
+# log(4) - exp(3) + sqrt(3)
+
+# tan( exp( sqrt(cos (-4) ) ) )
+
+# sin(5) - 5^6
+
+```
+
+```{r tut=TRUE, ex="oper_arit", type="solution"}
+# Calcular las siguientes operaciones aritméticas
+# 3.45 - 98
+3.45 - 98
+# log(4) - exp(3) + sqrt(3)
+log(4) - exp(3) + sqrt(3)
+# tan( exp( sqrt(cos (-1) ) ) )
+tan( exp( sqrt(cos (-1) ) ) )
+# sin(5) - 5^6
+sin(5) - 5^6
+```
+
+```{r tut=TRUE, ex="oper_arit", type="sct"}
+test_error()
+success_msg("Excelente!")
+```
+
 ### Operadores Comparativos
 
 Actuan sobre cualquier tipo de objeto, y retornan uno o varios valores lógicos, dependiendo del objeto. Estos usan todos los elementos de los dos objetos que se están comparando (reciclando los valores de los más pequeños si es necesario), devolviendo un objeto del mismo tamaño.
