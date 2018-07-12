@@ -1985,6 +1985,10 @@ cbind(M,Promedio_fila)
 ## [3,] 31 34 37 40 43            37
 ```
 
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6InogPC0gc2VxKDEsNDMsMylcbk0xIDwtIG1hdHJpeCh6LCBucm93ID0gMywgbmNvbCA9IDUsIGJ5cm93ID0gVFJVRSlcbncgPC0gc2VxKDYsMTAsMilcbk0yIDwtIG1hdHJpeCh3LCBucm93ID0gMywgbmNvbCA9IDUpIiwic2FtcGxlIjoiIyBNb3N0cmFyIGxhcyBtYXRyaWNlcyBNMSB5IE0yIGNhcmdhZGFzIGVuIGxhIGNvbnNvbGEuXG5cbiMgU2VsZWNjaW9uYXIgZWwgZWxlbWVudG8gZGUgbGEgbWF0cml6IE0xIGVuIGxhIHBvc2ljaVx1MDBmM24gKDEsMikgXG5cbiMgU2VsZWNjaW9uYXIgbGEgZmlsYSAyIGRlIGxhIG1hdHJpeiBNMlxuXG4jIFNlbGVjY2lvbmFyIGxhIGNvbHVtbmEgNCBkZSBsYSBtYXRyaXogTTFcblxuIyBNb2RpZmljYXIgZWwgZWxlbWVudG8gZGUgbGEgcG9zaWNpXHUwMGYzbiAoMiwzKSBlbiBsYSBtYXRyaXogTTEgcG9yIGVsIHZhbG9yIDVcblxuIyBTdW1hciBhIGxhIG1hdHJpeiBNMyBlbCBlc2NhbGFyIDJcblxuIyBBZ3JlZ2FyIGEgbGEgbWF0cml6IE0yIHVuYSBmaWxhIGNvbiBsb3MgdmFsb3JlcyAyLDIsMiwyLDJcblxuIyBTdW1hciBjYWRhIGNvbHVtbmEgZGUgbGEgbWF0cml6IE0xIiwic29sdXRpb24iOiIjIE1vc3RyYXIgbGFzIG1hdHJpY2VzIE0xIHkgTTIgY2FyZ2FkYXMgZW4gbGEgY29uc29sYS5cbk0xXG5NMlxuIyBTZWxlY2Npb25hciBlbCBlbGVtZW50byBkZSBsYSBtYXRyaXogTTEgZW4gbGEgcG9zaWNpXHUwMGYzbiAoMSwyKSBcbk0xWzEsMl1cbiMgU2VsZWNjaW9uYXIgbGEgZmlsYSAyIGRlIGxhIG1hdHJpeiBNMlxuTTJbMixdXG4jIFNlbGVjY2lvbmFyIGxhIGNvbHVtbmEgNCBkZSBsYSBtYXRyaXogTTFcbk0xWyw0XVxuIyBNb2RpZmljYXIgZWwgZWxlbWVudG8gZGUgbGEgcG9zaWNpXHUwMGYzbiAoMiwzKSBlbiBsYSBtYXRyaXogTTEgcG9yIGVsIHZhbG9yIDVcbk0xWzIsM10gPC0gNVxuIyBTdW1hciBhIGxhIG1hdHJpeiBNMiBlbCBlc2NhbGFyIDJcbk0yKzIgXG4jIEFncmVnYXIgYSBsYSBtYXRyaXogTTIgdW5hIGZpbGEgY29uIGxvcyB2YWxvcmVzIDIsMiwyLDIsMlxuY2JpbmQoTTIsYygyLDIsMiwyLDIpKVxuIyBTdW1hciBjYWRhIGNvbHVtbmEgZGUgbGEgbWF0cml6IE0xXG5jb2xTdW1zKE0xKSIsInNjdCI6InRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiTTFcIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgcXVlIGxhIG1hdHJpeiBzZSBsbGFtYSBNMVwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJNMlwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSBxdWUgbGEgbWF0cml6IHNlIGxsYW1hIE0xXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIk0xWzEsMl1cIiwgaW5jb3JyZWN0X21zZyA9IFwiUmVjdWVyZGUgcXVlIGxhIHBvc2ljaVx1MDBmM24gc2UgY29sb2NhIGVudHJlIFtdXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcIk0yWzIsXVwiLCBpbmNvcnJlY3RfbXNnID0gXCJQYXJhIGxhIHNlbGVjY2lcdTAwZjNuIGRlIGZpbGFzIGVzIFtmaWxhLF1cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiTTFbLDRdXCIsIGluY29ycmVjdF9tc2cgPSBcIlBhcmEgbGEgc2VsZWNjaVx1MDBmM24gZGUgY29sdW1uYXMgZXMgWywgY29sdW1uYV1cIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiTTFbMiwzXSA8LSA1XCIsIGluY29ycmVjdF9tc2cgPSBcIlNlbGVjY2lvbmFyIGVsZW1lbnRvIHkgbHVlZ28gYXNpZ25hclwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCJNMisyIFwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGVsIG9wZXJhZG9yICtcIilcbnRlc3Rfb3V0cHV0X2NvbnRhaW5zKFwiY2JpbmQoTTIsYygyLDIsMiwyLDIpKVwiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiBjYmluZCgpXCIpXG50ZXN0X291dHB1dF9jb250YWlucyhcImNvbFN1bXMoTTEpXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGNvbFN1bXMoKVwiKVxuc3VjY2Vzc19tc2coXCJFeGNlbGVudGUhXCIpIn0=</div>
+
+
+
 
 
 
@@ -2617,7 +2621,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-12 12:36:57 GMT"
+## [1] "2018-07-12 13:10:43 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2724,7 +2728,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-209-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2746,7 +2750,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-210-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-214-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2759,7 +2763,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-211-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-215-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2781,7 +2785,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-212-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2813,7 +2817,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-217-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2826,7 +2830,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-214-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-218-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2847,7 +2851,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-215-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-219-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2861,7 +2865,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-220-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2869,7 +2873,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-220-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2884,7 +2888,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-217-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-221-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2896,7 +2900,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-218-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-222-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2914,7 +2918,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-219-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-223-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2927,7 +2931,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-220-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-224-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -3020,7 +3024,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 5
+## [1] 3
 ```
 
 ## Condicionales

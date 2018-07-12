@@ -203,6 +203,61 @@ rbind(M, Promedio_columna)
 cbind(M,Promedio_fila)
 ```
 
+```{r tut=TRUE, ex="matriz", type="pre-exercise-code"}
+z <- seq(1,43,3)
+M1 <- matrix(z, nrow = 3, ncol = 5, byrow = TRUE)
+w <- seq(6,10,2)
+M2 <- matrix(w, nrow = 3, ncol = 5)
+```
 
+```{r tut=TRUE, ex="matriz", type="sample-code"}
+# Mostrar las matrices M1 y M2 cargadas en la consola.
 
+# Seleccionar el elemento de la matriz M1 en la posición (1,2) 
 
+# Seleccionar la fila 2 de la matriz M2
+
+# Seleccionar la columna 4 de la matriz M1
+
+# Modificar el elemento de la posición (2,3) en la matriz M1 por el valor 5
+
+# Sumar a la matriz M3 el escalar 2
+
+# Agregar a la matriz M2 una fila con los valores 2,2,2,2,2
+
+# Sumar cada columna de la matriz M1
+
+```
+
+```{r tut=TRUE, ex="matriz", type="solution"}
+# Mostrar las matrices M1 y M2 cargadas en la consola.
+M1
+M2
+# Seleccionar el elemento de la matriz M1 en la posición (1,2) 
+M1[1,2]
+# Seleccionar la fila 2 de la matriz M2
+M2[2,]
+# Seleccionar la columna 4 de la matriz M1
+M1[,4]
+# Modificar el elemento de la posición (2,3) en la matriz M1 por el valor 5
+M1[2,3] <- 5
+# Sumar a la matriz M2 el escalar 2
+M2+2 
+# Agregar a la matriz M2 una fila con los valores 2,2,2,2,2
+cbind(M2,c(2,2,2,2,2))
+# Sumar cada columna de la matriz M1
+colSums(M1)
+```
+
+```{r tut=TRUE, ex="matriz", type="sct"}
+test_output_contains("M1", incorrect_msg = "Recuerde que la matriz se llama M1")
+test_output_contains("M2", incorrect_msg = "Recuerde que la matriz se llama M1")
+test_output_contains("M1[1,2]", incorrect_msg = "Recuerde que la posición se coloca entre []")
+test_output_contains("M2[2,]", incorrect_msg = "Para la selección de filas es [fila,]")
+test_output_contains("M1[,4]", incorrect_msg = "Para la selección de columnas es [, columna]")
+test_output_contains("M1[2,3] <- 5", incorrect_msg = "Seleccionar elemento y luego asignar")
+test_output_contains("M2+2 ", incorrect_msg = "Usar el operador +")
+test_output_contains("cbind(M2,c(2,2,2,2,2))", incorrect_msg = "Usar la función cbind()")
+test_output_contains("colSums(M1)", incorrect_msg = "Usar la función colSums()")
+success_msg("Excelente!")
+```
