@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-07-11">
+<meta name="date" content="2018-07-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -216,7 +216,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">valores_x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.2</span>,<span class="fl">3.4</span>,<span class="fl">1.3</span>,<span class="op">-</span><span class="fl">2.1</span>,<span class="fl">5.6</span>,<span class="fl">2.3</span>,<span class="fl">3.2</span>,<span class="fl">2.4</span>,<span class="fl">2.1</span>,<span class="fl">1.8</span>,<span class="fl">1.7</span>,<span class="fl">2.2</span>)
 valores_y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">2.4</span>,<span class="fl">5.7</span>,<span class="fl">2.0</span>,<span class="op">-</span><span class="dv">3</span>,<span class="dv">13</span>,<span class="dv">5</span>,<span class="fl">6.2</span>,<span class="fl">4.8</span>,<span class="fl">4.2</span>,<span class="fl">3.5</span>,<span class="fl">3.7</span>,<span class="fl">5.2</span>)
 <span class="kw">plot</span>(<span class="dt">x=</span>valores_x,<span class="dt">y=</span>valores_y)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-206-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-209-1.svg" /><!-- --></p>
 <p>Entre sus parámetros de entrada tenemos:</p>
 <ul>
 <li><p><code>x</code> e <code>y</code> : Vectores con los valores correspondientes a cada par ordenado de puntos.</p></li>
@@ -233,14 +233,14 @@ valores_y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="f
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span>valores_x, <span class="dt">y=</span>valores_y, <span class="dt">pch=</span><span class="dv">8</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
       <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-207-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-210-1.svg" /><!-- --></p>
 <p>En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función <code>points()</code>, esta función recibe los mismos parámetros de entrada que la función <code>plot()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="op">-</span><span class="fl">1.5</span>,<span class="fl">0.2</span>,<span class="fl">0.4</span>)
 y_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)
 <span class="kw">plot</span>( <span class="dt">x=</span>valores_x, <span class="dt">y=</span>valores_y, <span class="dt">pch=</span><span class="dv">8</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
       <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)
 <span class="kw">points</span>( <span class="dt">x=</span>x_<span class="dv">1</span>, <span class="dt">y=</span>y_<span class="dv">1</span>, <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-208-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-211-1.svg" /><!-- --></p>
 <p>Para agregar una leyenda usamos la función <code>legend()</code>, ésta tiene como parámetros de entrada los siguientes:</p>
 <ul>
 <li><p><code>x</code> e <code>y</code>: las coordenadas donde se quiere que aparezca la leyenda.</p></li>
@@ -253,7 +253,7 @@ y_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</sp
       <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)
 <span class="kw">points</span>( <span class="dt">x=</span>x_<span class="dv">1</span>, <span class="dt">y=</span>y_<span class="dv">1</span>, <span class="dt">pch=</span><span class="dv">16</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)
 <span class="kw">legend</span>(<span class="dt">x=</span><span class="dv">4</span>, <span class="dt">y=</span><span class="dv">0</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>,<span class="st">&#39;red&#39;</span>), <span class="dt">pch=</span><span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">16</span>),<span class="dt">legend =</span> <span class="kw">c</span>(<span class="st">&#39;Puntos azules&#39;</span>, <span class="st">&#39;Puntos rojos&#39;</span>),<span class="dt">bty =</span> <span class="st">&#39;n&#39;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-209-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-212-1.svg" /><!-- --></p>
 </div>
 <div id="grafico-de-lineas" class="section level2">
 <h2><span class="header-section-number">10.2</span> Gráfico de líneas</h2>
@@ -272,14 +272,14 @@ y_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</sp
 <p>Entonces simplemente colocamos los valores respectivos de las coordenadas de los ejes en la función <code>plot()</code> y en el argumento <code>type</code> lo colocamos igual a <code>l</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span><span class="kw">sort</span>(valores_x), <span class="dt">y=</span>valores_y, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
       <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Gráfico de Línea&quot;</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-210-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-1.svg" /><!-- --></p>
 <p>Si se quiere agregar otra línea al gráfico ya construido se usa la función <code>lines()</code>, está función recibe los mismos argumentos que la función <code>plot()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span><span class="kw">sort</span>(valores_x), <span class="dt">y=</span>valores_y, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
       <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Gráfico de Línea&quot;</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)
 x_<span class="dv">1</span>&lt;-<span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">2</span>,<span class="dv">0</span>,<span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="fl">5.6</span>)
 y_<span class="dv">1</span>&lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">9</span>)
 <span class="kw">lines</span>(<span class="dt">x=</span>x_<span class="dv">1</span>, <span class="dt">y=</span>y_<span class="dv">1</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-211-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-214-1.svg" /><!-- --></p>
 </div>
 <div id="grafico-de-tortas" class="section level2">
 <h2><span class="header-section-number">10.3</span> Gráfico de Tortas</h2>
@@ -293,7 +293,7 @@ y_<span class="dv">1</span>&lt;-<span class="st"> </span><span class="kw">c</spa
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">slices &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">12</span>,<span class="dv">4</span>, <span class="dv">16</span>, <span class="dv">8</span>)
 lbls &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;US&quot;</span>, <span class="st">&quot;UK&quot;</span>, <span class="st">&quot;Australia&quot;</span>, <span class="st">&quot;Germany&quot;</span>, <span class="st">&quot;France&quot;</span>)
 <span class="kw">pie</span>(<span class="dt">x=</span>slices, <span class="dt">labels =</span> lbls, <span class="dt">main=</span><span class="st">&quot;Gráfico de Torta de las Ciudades&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-212-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-215-1.svg" /><!-- --></p>
 </div>
 <div id="barplot" class="section level2">
 <h2><span class="header-section-number">10.4</span> Barplot</h2>
@@ -302,11 +302,11 @@ lbls &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&q
 <span class="kw">barplot</span>( <span class="dt">height=</span>large.islands, <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">names.arg =</span> <span class="kw">c</span>(<span class="st">&#39;As&#39;</span>,<span class="st">&#39;A&#39;</span>,<span class="st">&#39;NA&#39;</span>,<span class="st">&#39;SA&#39;</span>,<span class="st">&#39;An&#39;</span>,<span class="st">&#39;E&#39;</span>,<span class="st">&#39;Au&#39;</span>,<span class="st">&#39;G&#39;</span>,<span class="st">&#39;NG&#39;</span>,<span class="st">&#39;B&#39;</span>),
          <span class="dt">main =</span> <span class="st">&quot;Superficie terrestre de los continentes e islas&quot;</span>,
          <span class="dt">ylab =</span> <span class="st">&quot;Superficie en millas cuadradas&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-1.svg" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>( <span class="dt">height=</span>large.islands, <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">horiz =</span> <span class="ot">TRUE</span>,  
          <span class="dt">main =</span> <span class="st">&quot;Superficie terrestre de los continentes e islas&quot;</span>, 
          <span class="dt">ylab =</span> <span class="st">&quot;Superficie en millas cuadradas&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-2.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-2.svg" /><!-- --></p>
 </div>
 <div id="boxplot" class="section level2">
 <h2><span class="header-section-number">10.5</span> Boxplot</h2>
@@ -315,13 +315,13 @@ lbls &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&q
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>( <span class="dt">x =</span> airquality<span class="op">$</span>Ozone,<span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">border =</span> <span class="st">&quot;blue&quot;</span>,
          <span class="dt">main =</span> <span class="st">&quot;Media del Ozono en partes por millon en Roosevelt Island&quot;</span>,
          <span class="dt">xlab =</span> <span class="st">&quot;Partes por millon&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Ozone&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-214-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-217-1.svg" /><!-- --></p>
 <p>Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de <code>airquality</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>( airquality<span class="op">$</span>Ozone, airquality<span class="op">$</span>Solar.R,
          <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;blue&#39;</span>,<span class="st">&#39;orange&#39;</span>), <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;ozone&quot;</span>, <span class="st">&quot;Solar&quot;</span>),
          <span class="dt">main =</span> <span class="st">&quot;Media del Ozono en partes por millon en Roosevelt Island&quot;</span>,
          <span class="dt">xlab =</span> <span class="st">&quot;Partes por millon&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Ozone&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-215-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-218-1.svg" /><!-- --></p>
 </div>
 <div id="histogramas" class="section level2">
 <h2><span class="header-section-number">10.6</span> Histogramas</h2>
@@ -334,7 +334,7 @@ lbls &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&q
       <span class="dt">freq =</span> <span class="ot">FALSE</span>,
       <span class="dt">main =</span> <span class="st">&quot;Histograma de la Media del Ozono&quot;</span>, 
       <span class="dt">xlab =</span> <span class="st">&quot;Partes por millon&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Ozone&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-219-1.svg" /><!-- --></p>
 </div>
 <div id="multiple-graficos-por-ventanas" class="section level2">
 <h2><span class="header-section-number">10.7</span> Multiple gráficos por ventanas</h2>
@@ -342,7 +342,7 @@ lbls &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&q
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))
 <span class="kw">hist</span>(airquality<span class="op">$</span>Ozone, <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>, <span class="dt">main =</span> <span class="st">&quot;Histograma datos de Ozono&quot;</span>)
 <span class="kw">hist</span>(airquality<span class="op">$</span>Solar.R, <span class="dt">col=</span><span class="st">&#39;orange&#39;</span>, <span class="dt">main =</span> <span class="st">&quot;Histograma datos de Solar&quot;</span>)</code></pre></div>
-<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-217-1.svg" /><!-- --></p>
+<p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-220-1.svg" /><!-- --></p>
 </div>
 <div id="guardar-graficos" class="section level2">
 <h2><span class="header-section-number">10.8</span> Guardar gráficos</h2>

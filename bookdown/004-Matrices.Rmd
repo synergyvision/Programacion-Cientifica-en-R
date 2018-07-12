@@ -57,6 +57,46 @@ nrow(X)
 ncol(X)
 ```
 
+```{r tut=TRUE, ex="matrz", type="sample-code"}
+z <- seq(1,43,3)
+posiciones <- c("Primeros", "Intermedios", "Ultimos")
+# Generar una matriz con el vector z, de 3 filas y 5 columnas. La columna debe ser llenada por las filas.
+
+
+# Nombre las filas con el vector Posiciones
+
+
+# Imprimir la matriz
+
+
+# Verificar las dimensiones de la matriz con el comando dim()
+
+
+```
+
+```{r tut=TRUE, ex="matrz", type="solution"}
+z <- seq(1,43,3)
+posiciones <- c("Primeros", "Intermedios", "Ultimos")
+# Generar una matriz con el vector z, de 3 filas y 5 columnas. La columna debe ser llenada por las filas.
+M <- matrix(z, nrow = 3, ncol = 5, byrow = TRUE)
+
+# Nombre las filas con el vector Posiciones
+rownames(M) <- posiciones
+
+# Imprimir la matriz
+M
+
+# Verificar las dimensiones de la matriz con el comando dim()
+dim(M)
+```
+
+```{r tut=TRUE, ex="matrz", type="sct"}
+test_function("matrix", incorrect_msg = "Recuerde crear la matriz utilizando la función matrix()")
+test_function("rownames", incorrect_msg = "Usar la función rownames()")
+test_function("dim", incorrect_msg = "Usar la función dim()")
+success_msg("Excelente!")
+```
+
 ## Selección de los elementos de una matriz
 
 - __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.

@@ -4,7 +4,7 @@
 title: "Programación Científica en R"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-07-11"
+date: "2018-07-12"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -1471,8 +1471,8 @@ x+z
 ```
 
 ```
-## Warning in x + z: longer object length is not a
-## multiple of shorter object length
+## Warning in x + z: longitud de objeto mayor no es
+## múltiplo de la longitud de uno menor
 ```
 
 ```
@@ -1484,8 +1484,8 @@ x+y+z
 ```
 
 ```
-## Warning in x + y + z: longer object length is not a
-## multiple of shorter object length
+## Warning in x + y + z: longitud de objeto mayor no es
+## múltiplo de la longitud de uno menor
 ```
 
 ```
@@ -1657,6 +1657,12 @@ ncol(X)
 ```
 ## [1] 7
 ```
+
+<div data-datacamp-exercise data-height="300" data-encoded="true">eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ6IDwtIHNlcSgxLDQzLDMpXG5wb3NpY2lvbmVzIDwtIGMoXCJQcmltZXJvc1wiLCBcIkludGVybWVkaW9zXCIsIFwiVWx0aW1vc1wiKVxuIyBHZW5lcmFyIHVuYSBtYXRyaXogY29uIGVsIHZlY3RvciB6LCBkZSAzIGZpbGFzIHkgNSBjb2x1bW5hcy4gTGEgY29sdW1uYSBkZWJlIHNlciBsbGVuYWRhIHBvciBsYXMgZmlsYXMuXG5cblxuIyBOb21icmUgbGFzIGZpbGFzIGNvbiBlbCB2ZWN0b3IgUG9zaWNpb25lc1xuXG5cbiMgSW1wcmltaXIgbGEgbWF0cml6XG5cblxuIyBWZXJpZmljYXIgbGFzIGRpbWVuc2lvbmVzIGRlIGxhIG1hdHJpeiBjb24gZWwgY29tYW5kbyBkaW0oKSIsInNvbHV0aW9uIjoieiA8LSBzZXEoMSw0MywzKVxucG9zaWNpb25lcyA8LSBjKFwiUHJpbWVyb3NcIiwgXCJJbnRlcm1lZGlvc1wiLCBcIlVsdGltb3NcIilcbiMgR2VuZXJhciB1bmEgbWF0cml6IGNvbiBlbCB2ZWN0b3IgeiwgZGUgMyBmaWxhcyB5IDUgY29sdW1uYXMuIExhIGNvbHVtbmEgZGViZSBzZXIgbGxlbmFkYSBwb3IgbGFzIGZpbGFzLlxuTSA8LSBtYXRyaXgoeiwgbnJvdyA9IDMsIG5jb2wgPSA1LCBieXJvdyA9IFRSVUUpXG5cbiMgTm9tYnJlIGxhcyBmaWxhcyBjb24gZWwgdmVjdG9yIFBvc2ljaW9uZXNcbnJvd25hbWVzKE0pIDwtIHBvc2ljaW9uZXNcblxuIyBJbXByaW1pciBsYSBtYXRyaXpcbk1cblxuIyBWZXJpZmljYXIgbGFzIGRpbWVuc2lvbmVzIGRlIGxhIG1hdHJpeiBjb24gZWwgY29tYW5kbyBkaW0oKVxuZGltKE0pIiwic2N0IjoidGVzdF9mdW5jdGlvbihcIm1hdHJpeFwiLCBpbmNvcnJlY3RfbXNnID0gXCJSZWN1ZXJkZSBjcmVhciBsYSBtYXRyaXogdXRpbGl6YW5kbyBsYSBmdW5jaVx1MDBmM24gbWF0cml4KClcIilcbnRlc3RfZnVuY3Rpb24oXCJyb3duYW1lc1wiLCBpbmNvcnJlY3RfbXNnID0gXCJVc2FyIGxhIGZ1bmNpXHUwMGYzbiByb3duYW1lcygpXCIpXG50ZXN0X2Z1bmN0aW9uKFwiZGltXCIsIGluY29ycmVjdF9tc2cgPSBcIlVzYXIgbGEgZnVuY2lcdTAwZjNuIGRpbSgpXCIpXG5zdWNjZXNzX21zZyhcIkV4Y2VsZW50ZSFcIikifQ==</div>
+
+
+
+
 
 ## Selección de los elementos de una matriz
 
@@ -2415,7 +2421,7 @@ fecha_3
 ```
 
 ```
-## [1] NA
+## [1] "2001-06-24"
 ```
 
 Para saber el día de semana de una fecha se usa la función `weekdays()`
@@ -2442,7 +2448,7 @@ weekdays(fecha_3)
 ```
 
 ```
-## [1] NA
+## [1] "domingo"
 ```
 
 Podemos hacer operaciones con fechas, como por ejemplo sumar o restar días a una fecha específica, esto lo hacemos simplemente sumandole o restandole el número de días; otra función muy util puede ser calcular la cantidad de días entre dos fechas particulares, para esto usamos la función `diff.Date()` donde se le debe pasar un vector con las fechas donde se quiere calcular la cantidad de días entre ellos.
@@ -2571,7 +2577,7 @@ Sys.Date()
 ```
 
 ```
-## [1] "2018-07-11"
+## [1] "2018-07-12"
 ```
 
 ## Fechas con el formato `POSIXct` o `POSIXlt`
@@ -2611,7 +2617,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-11 22:39:18 -04"
+## [1] "2018-07-12 12:36:57 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2623,7 +2629,7 @@ fecha_7
 ```
 
 ```
-## [1] "2013-03-10 08:32:07 -0430"
+## [1] "2013-03-10 08:32:07 GMT"
 ```
 
 ```r
@@ -2659,7 +2665,7 @@ unclass(fecha_7)
 ## [1] 0
 ## 
 ## $zone
-## [1] "-0430"
+## [1] "GMT"
 ## 
 ## $gmtoff
 ## [1] NA
@@ -2718,7 +2724,7 @@ valores_y <- c(2.4,5.7,2.0,-3,13,5,6.2,4.8,4.2,3.5,3.7,5.2)
 plot(x=valores_x,y=valores_y)
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-206-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-209-1.svg)<!-- -->
 
 Entre sus parámetros de entrada tenemos:
 
@@ -2740,7 +2746,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-207-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-210-1.svg)<!-- -->
 
 En caso de que se quieran agregar puntos adicionales al gráfico que ya hemos construido podemos usar la función `points()`, esta función recibe los mismos parámetros de entrada que la función `plot()`.
 
@@ -2753,7 +2759,7 @@ plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
 points( x=x_1, y=y_1, pch=16, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-208-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-211-1.svg)<!-- -->
 
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
@@ -2775,7 +2781,7 @@ points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-209-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-212-1.svg)<!-- -->
   
 ## Gráfico de líneas
 
@@ -2807,7 +2813,7 @@ plot( x=sort(valores_x), y=valores_y, type = "l", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Gráfico de Línea", col="blue")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-210-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-1.svg)<!-- -->
 
 Si se quiere agregar otra línea al gráfico ya construido se usa la función `lines()`, está función recibe los mismos argumentos que la función `plot()`.
 
@@ -2820,7 +2826,7 @@ y_1<- c(2,5,7,6,8,9)
 lines(x=x_1, y=y_1, col='red')
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-211-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-214-1.svg)<!-- -->
 
 ## Gráfico de Tortas
 
@@ -2841,7 +2847,7 @@ lbls <- c("US", "UK", "Australia", "Germany", "France")
 pie(x=slices, labels = lbls, main="Gráfico de Torta de las Ciudades")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-212-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-215-1.svg)<!-- -->
 
 ## Barplot
 
@@ -2855,7 +2861,7 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-1.svg)<!-- -->
 
 ```r
 barplot( height=large.islands, col='blue', horiz = TRUE,  
@@ -2863,7 +2869,7 @@ barplot( height=large.islands, col='blue', horiz = TRUE,
          ylab = "Superficie en millas cuadradas")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-213-2.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-2.svg)<!-- -->
 
 ## Boxplot
 
@@ -2878,7 +2884,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-214-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-217-1.svg)<!-- -->
 
 Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
 
@@ -2890,7 +2896,7 @@ boxplot( airquality$Ozone, airquality$Solar.R,
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-215-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-218-1.svg)<!-- -->
 
 ## Histogramas
 
@@ -2908,7 +2914,7 @@ hist( x = airquality$Ozone, col = "orange", border = "blue",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-216-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-219-1.svg)<!-- -->
 
 ## Multiple gráficos por ventanas
 
@@ -2921,7 +2927,7 @@ hist(airquality$Ozone, col='blue', main = "Histograma datos de Ozono")
 hist(airquality$Solar.R, col='orange', main = "Histograma datos de Solar")
 ```
 
-![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-217-1.svg)<!-- -->
+![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-220-1.svg)<!-- -->
 
 ## Guardar gráficos
 
@@ -3006,7 +3012,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 4
+## [1] 5
 ```
 
 ```r
@@ -3014,7 +3020,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 2
+## [1] 5
 ```
 
 ## Condicionales
@@ -3344,23 +3350,18 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## MiKTeX-pdfTeX 2.9.6354 (1.40.18) (MiKTeX 2.9.6350)
-## 2.9.6354 (1.40.18)
-## TeX is a trademark of the American Mathematical Society.
-## using bzip2 version 1.0.6, 6-Sept-2010
-## compiled with curl version 7.54.0; using libcurl/7.54.0 WinSSL
-## compiled with expat version 2.2; using expat_2.2.0
-## compiled with jpeg version 9.2
-## compiled with liblzma version 50020032; using 50020032
-## compiled with libpng version 1.6.29; using 1.6.29
-## compiled with libressl version LibreSSL 2.5.3; using LibreSSL 2.5.3
-## compiled with MiKTeX Application Framework version 1.6334; using 1.6334
-## compiled with MiKTeX Core version 1.6344; using 1.6344
-## compiled with MiKTeX Archive Extractor version 1.6300; using 1.6300
-## compiled with MiKTeX Package Manager version 1.6353; using 1.6353
-## compiled with poppler version 0.55.0
-## compiled with uriparser version 0.8.4
-## compiled with zlib version 1.2.11; using 1.2.11
+## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
+## kpathsea version 6.2.3
+## Copyright 2017 Han The Thanh (pdfTeX) et al.
+## There is NO warranty.  Redistribution of this software is
+## covered by the terms of both the pdfTeX copyright and
+## the Lesser GNU General Public License.
+## For more information about these matters, see the file
+## named COPYING and the pdfTeX source.
+## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+## Compiled with libpng 1.6.29; using libpng 1.6.29
+## Compiled with zlib 1.2.11; using zlib 1.2.11
+## Compiled with xpdf version 3.04
 ```
 
 <!--chapter:end:400-apendice.Rmd-->
