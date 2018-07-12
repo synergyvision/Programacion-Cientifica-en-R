@@ -800,14 +800,42 @@ test_output_contains("var(x)", incorrect_msg = "Usar la función var() y el vect
 success_msg("Excelente!")
 ```
 
-- `summary()` -> permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.
+- `summary()` -> Permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.
 
 ```{r}
 summary(x)
+```
+
+```{r tut=TRUE, ex="resumen", type="pre-exercise-code"}
+x <- c(5,8,9,15,17,64,9,5,8,8,8,17,64,5)
+```
+
+```{r tut=TRUE, ex="resumen", type="sample-code"}
+# Aplicar la función summary() al vector x
+
+# Aplicar la función summary() a los datos de cars
+# Cars contiene la velocidad y distancia que toman unos carros hasta pararse.
+head(cars)
+
+```
+
+```{r tut=TRUE, ex="resumen", type="solution"}
+# Aplicar la función summary() al vector x
+summary(x)
+# Aplicar la función summary() a los datos de cars
+# Cars contiene la velocidad y distancia que toman unos carros hasta pararse.
+head(cars)
 summary(cars)
 ```
 
-- `apply()` -> permite realizar la misma operación en todas las filas y columnas de un arreglo simultáneamente. Sólo hay que indicarle la operación a realizar y el índice/índices sobre los cuales ha de realizarla.
+```{r tut=TRUE, ex="resumen", type="sct"}
+test_function("summary")
+test_output_contains("summary(x)", incorrect_msg = "Usar la función summary() y el vector x")
+test_output_contains("summary(cars)", incorrect_msg = "Usar la función summary() y los datos de cars")
+success_msg("Excelente!")
+```
+
+- `apply()` -> Permite realizar la misma operación en todas las filas y columnas de un arreglo simultáneamente. Sólo hay que indicarle la operación a realizar y el índice/índices sobre los cuales ha de realizarla.
 
 ```{r}
 matriz <- matrix(1:4,nrow = 2,ncol = 2)
@@ -815,16 +843,49 @@ matriz
 apply(matriz,1,sum)
 ```
 
-- `lapply()` -> funciona igual que la función `apply()`, con la diferencia de que puede ser utilizada en listas, dataframes o vectores y el retorna una lista.
+```{r tut=TRUE, ex="apply", type="sample-code"}
+matriz <- matrix(1:4,nrow = 2,ncol = 2)
+matriz
+apply(matriz,1,sum)
+```
+
+```{r tut=TRUE, ex="apply", type="sct"}
+test_error()
+success_msg("Buen trabajo")
+```
+
+- `lapply()` -> Funciona igual que la función `apply()`, con la diferencia de que puede ser utilizada en listas, data.frames o vectores; retorna una lista.
 
 ```{r}
 lapply(matriz,function (x) x^2)
 ```
 
-- `sapply()` -> funciona igual que la función `apply()`, con la diferencia de que puede ser utilizada en listas, dataframes o vectores y el retorna una vector.
+```{r tut=TRUE, ex="lapply", type="sample-code"}
+matriz <- matrix(1:4,nrow = 2,ncol = 2)
+matriz
+lapply(matriz,function (x) x^2)
+```
+
+```{r tut=TRUE, ex="lapply", type="sct"}
+test_error()
+success_msg("Buen trabajo")
+```
+
+- `sapply()` -> Funciona igual que la función `apply()`, con la diferencia de que puede ser utilizada en listas, dataframes o vectores; retorna una vector.
 
 ```{r}
-sapply(matriz,function(x) x^2)
+sapply(matriz,function(x) x^3)
+```
+
+```{r tut=TRUE, ex="sapply", type="sample-code"}
+matriz <- matrix(1:4,nrow = 2,ncol = 2)
+matriz
+sapply(matriz,function(x) x^3)
+```
+
+```{r tut=TRUE, ex="sapply", type="sct"}
+test_error()
+success_msg("Buen trabajo")
 ```
 
 ## __R__ como calculadora
