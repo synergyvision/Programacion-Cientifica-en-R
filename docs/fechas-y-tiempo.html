@@ -297,7 +297,7 @@ fecha_<span class="dv">6</span> </code></pre></div>
 ## [1] &quot;UTC&quot;</code></pre>
 <p>Para ver la fecha actual de nuestro computador en el formato <code>POSIXct</code> usamos la función <code>Sys.time()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">Sys.time</span>()</code></pre></div>
-<pre><code>## [1] &quot;2018-07-12 14:14:00 GMT&quot;</code></pre>
+<pre><code>## [1] &quot;2018-07-12 14:26:01 GMT&quot;</code></pre>
 <p>Si queremos generar una fecha con el formato <code>POSIXlt</code> utilizamos el comando <code>as.POSIXlt()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fecha_<span class="dv">7</span> &lt;-<span class="st"> </span><span class="kw">as.POSIXlt</span>(<span class="st">&quot;2013-03-10 08:32:07&quot;</span>)
 fecha_<span class="dv">7</span></code></pre></div>
@@ -338,6 +338,9 @@ fecha_<span class="dv">7</span></code></pre></div>
 <p>La ventaja de este formato es que se puede extraer componentes de dicha fecha de una manera muy practica, usando el simbolo <code>$</code>, por ejemplo extraermos los segundos</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fecha_<span class="dv">7</span><span class="op">$</span>sec</code></pre></div>
 <pre><code>## [1] 7</code></pre>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImRhdGEgPC0gYygxLDIsMiwzLDEsMiwzLDMsMSwyLDMsMywxKSIsInNhbXBsZSI6IiMgR2VuZXJhciBzZWN1ZW5jaWFzIGRlIGZlY2hhcyBhIHBhcnRpciBkZSAyMDE1LTA2LTE1XG4jIFBhcmEgbG9zIHNpZ3VpZW50ZXMgMTAgZFx1MDBlZGFzIGEgbGEgZmVjaGFcblxuIyBQYXJhIGxhcyBzaWd1aW50ZXMgc2VtYW5hbGVzIGRlIHRhbWFcdTAwZjFvIDEwXG5cbiMgUGFyYSBsb3Mgc2lndWllbnRlcyBhXHUwMGYxb3MgZGUgdGFtYVx1MDBmMW8gNVxuXG4jIEluZGljYXIgbG9zIGRcdTAwZWRhcyBkZSBsYSBzZW1hbmEgZGUgbGEgcHJpbWVyYSBzZWN1ZW5jaWEgZ2VuZXJhZGFcblxuI0NhbGN1bGFyIGxhIGRpZmVyZW5jaWEgZGUgZFx1MDBlZGFzIGVudHJlIDE5NzYtMDctMTAgeSAxOTg1LTA3LTEwIiwic29sdXRpb24iOiIjIEdlbmVyYXIgc2VjdWVuY2lhcyBkZSBmZWNoYXMgYSBwYXJ0aXIgZGUgMjAxNS0wNi0xNVxuIyBQYXJhIGxvcyBzaWd1aWVudGVzIDEwIGRcdTAwZWRhcyBhIGxhIGZlY2hhXG5zZXEoZnJvbT1hcy5EYXRlKCcyMDE1LTA2LTE1JyksIGJ5PSdkYXknICxsZW5ndGgub3V0ID0gMTApXG4jIFBhcmEgbGFzIHNpZ3VpbnRlcyBzZW1hbmFsZXMgZGUgdGFtYVx1MDBmMW8gMTBcbnNlcShmcm9tPWFzLkRhdGUoJzIwMTUtMDYtMTUnKSwgYnk9J3dlZWsnICxsZW5ndGgub3V0ID0gMTApXG4jIFBhcmEgbG9zIHNpZ3VpZW50ZXMgYVx1MDBmMW9zIGRlIHRhbWFcdTAwZjFvIDVcbnNlcShmcm9tPWFzLkRhdGUoJzIwMTUtMDYtMTUnKSwgYnk9J3llYXInICxsZW5ndGgub3V0ID0gMTApXG4jIEluZGljYXIgbG9zIGRcdTAwZWRhcyBkZSBsYSBzZW1hbmEgZGUgbGEgcHJpbWVyYSBzZWN1ZW5jaWEgZ2VuZXJhZGFcbndlZWtkYXlzKHNlcShmcm9tPWFzLkRhdGUoJzIwMTUtMDYtMTUnKSwgYnk9J2RheScgLGxlbmd0aC5vdXQgPSAxMCkpXG4jQ2FsY3VsYXIgbGEgZGlmZXJlbmNpYSBkZSBkXHUwMGVkYXMgZW50cmUgMTk3Ni0wNy0xMCB5IDE5ODUtMDctMTBcbmRpZmYuRGF0ZShjKGFzLkRhdGUoJzE5NzYtMDctMTAnKSxhcy5EYXRlKCcxOTg1LTA3LTEwJykpKSJ9
+</div>
 
 </div>
 </div>

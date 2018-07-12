@@ -98,7 +98,37 @@ La ventaja de este formato es que se puede extraer componentes de dicha fecha de
 fecha_7$sec
 ```
 
+```{r tut=TRUE, ex="fecha", type="pre-exercise-code"}
+data <- c(1,2,2,3,1,2,3,3,1,2,3,3,1)
+```
 
+```{r tut=TRUE, ex="fecha", type="sample-code"}
+# Generar secuencias de fechas a partir de 2015-06-15
+# Para los siguientes 10 días a la fecha
+
+# Para las siguintes semanales de tamaño 10
+
+# Para los siguientes años de tamaño 5
+
+# Indicar los días de la semana de la primera secuencia generada
+
+#Calcular la diferencia de días entre 1976-07-10 y 1985-07-10
+
+```
+
+```{r tut=TRUE, ex="fecha", type="solution"}
+# Generar secuencias de fechas a partir de 2015-06-15
+# Para los siguientes 10 días a la fecha
+seq(from=as.Date('2015-06-15'), by='day' ,length.out = 10)
+# Para las siguintes semanales de tamaño 10
+seq(from=as.Date('2015-06-15'), by='week' ,length.out = 10)
+# Para los siguientes años de tamaño 5
+seq(from=as.Date('2015-06-15'), by='year' ,length.out = 10)
+# Indicar los días de la semana de la primera secuencia generada
+weekdays(seq(from=as.Date('2015-06-15'), by='day' ,length.out = 10))
+#Calcular la diferencia de días entre 1976-07-10 y 1985-07-10
+diff.Date(c(as.Date('1976-07-10'),as.Date('1985-07-10')))
+```
 
 
 
