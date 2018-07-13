@@ -156,33 +156,33 @@ El diseño fundamental de este lenguaje se basa en los tres pilares siguientes:
 
 ## Instalación de __R__ y de paquetes de __R__
 
-Para descargar __R__, el primer paso es dirigirse a la página oficial [http://www.r-project.org/](http://www.r-project.org/), luego dirigirse a la sección "download R"  o "CRAN", ver figura \ref{fig:img001}.
+Para descargar __R__, el primer paso es dirigirse a la página oficial [http://www.r-project.org/](http://www.r-project.org/), luego dirigirse a la sección "download R"  o "CRAN".
 
-![Página oficial de R\label{fig:img001}](images/install-R-001.png)
+![Página oficial de R](images/install-R-001.png)
 
-Una vez allí, se le solicitará que elija un "CRAN mirror”, las palabras "CRAN mirrors” se debe a que estos enlaces actuan como espejos de los archivos localizados en servidores por todo el mundo, lo cual facilita la descarga de la información, se recomienda utilizar la "0-Cloud”, o nube original, desde la que se envía la información a los otros servidores, a continuación la lista de espejos que se mostrará. Ver figura \ref{fig:img002}.
+Una vez allí, se le solicitará que elija un "CRAN mirror”, las palabras "CRAN mirrors” se debe a que estos enlaces actuan como espejos de los archivos localizados en servidores por todo el mundo, lo cual facilita la descarga de la información, se recomienda utilizar la "0-Cloud”, o nube original, desde la que se envía la información a los otros servidores, a continuación la lista de espejos que se mostrará.
 
-![CRAN mirrors \label{fig:img002}](images/install-R-002.png)
+![CRAN mirrors](images/install-R-002.png)
 
-Luego de seleccionar la Nube original o "0-Cloud” se tendrá la pantalla de dicho CRAN, donde se tendrá el material disponible sobre R, en la parte izquierda se tendrá ayudas, manuales, e información general sobre el software, en la parte superior los link para la descarga del lenguaje dependiendo el sistema operativo y en la parte inferior el código fuente para todas las plataformas. Ver figura \ref{fig:img003}.
+Luego de seleccionar la Nube original o "0-Cloud” se tendrá la pantalla de dicho CRAN, donde se tendrá el material disponible sobre R, en la parte izquierda se tendrá ayudas, manuales, e información general sobre el software, en la parte superior los link para la descarga del lenguaje dependiendo el sistema operativo y en la parte inferior el código fuente para todas las plataformas.
 
-![CRAN 0-Cloud\label{fig:img003}](images/install-R-003.png)
+![CRAN 0-Cloud](images/install-R-003.png)
 
-Para instalar __R__ se debe hacer clic en el enlace según el sistema operativo en que se esté trabajando, supongamos que se tiene Windows. Ver figura \ref{fig:img004}.
+Para instalar __R__ se debe hacer clic en el enlace según el sistema operativo en que se esté trabajando, supongamos que se tiene Windows.
 
-![Instalar R para Windows \label{fig:img004}](images/install-R-004.png)
+![Instalar R para Windows](images/install-R-004.png)
 
-En los subdirectorios se tendrá la opción de instalar __R__ por primera vez (install __R__ for the first time), daremos clic en dicho enlace, en la pantalla que se mostrará se debe seleccionar en la parte superior del link que contiene la última versión de __R__ al momento de consulta, de igual manera en la parte inferior se dispone de un link para acceder a versiones previas "Previous releases”. Ver Figura \ref{fig:img005}
+En los subdirectorios se tendrá la opción de instalar __R__ por primera vez (install __R__ for the first time), daremos clic en dicho enlace, en la pantalla que se mostrará se debe seleccionar en la parte superior del link que contiene la última versión de __R__ al momento de consulta, de igual manera en la parte inferior se dispone de un link para acceder a versiones previas "Previous releases”.
 
-![Descargar la versión de R disponible\label{fig:img005}](images/install-R-005.png)
+![Descargar la versión de R disponible](images/install-R-005.png)
 
 En la sección "Previous releases” se tendrá la lista completa de las versiones de __R__ y sus fechas de salida, es importante resaltar lo frecuente con que se publican las actualizaciones, ya que muchos elementos utilizados para el funcionamiento correcto de __R__ depende de la versión que se esté utilizando, y en algunos casos se recomienda no trabajar con la última versión del software.
 
 Cuando ya se tenga descargado el software se abre el instalador y se ejecuta seleccionando el lenguaje con el que se quiera trabajar.
 
-Para la instalación de paquetes se usa el comando `install.packages()`, donde el nombre del paquete va dentro de comillas como argumento, luego que el paquete esté instalado se debe cargar dicho paquete para poder hacer uso de las funciones que el mismo contiene, esto se hace con el comando `library()`. En la figura \ref(fig:img006) se muestra la instalación del paquete llamado "DT".
+Para la instalación de paquetes se usa el comando `install.packages()`, donde el nombre del paquete va dentro de comillas como argumento, luego que el paquete esté instalado se debe cargar dicho paquete para poder hacer uso de las funciones que el mismo contiene, esto se hace con el comando `library()`. En la siguiente figura se muestra la instalación del paquete llamado "DT".
 
-![Instalación del paquete "DT"\label{fig:img006}](images/install-package.png)
+![Instalación del paquete "DT"](images/install-package.png)
 
 ## Ayuda en __R__
 
@@ -190,9 +190,9 @@ La primera función que utilizaremos para la opción de ayuda es `help.start()`,
 
 Ahora si estamos interesados en otros comando, o buscando un comando que realice cierto trabajo en particular, utilizamos la función `help()` o su equivalente que es `?`. 
 
-La figura \ref{fig:img007} muestra la ventana que se nos desplega cuando colocamos el comando `help(lm)`, `lm` son las iniciales que se usan para los modelos de regresión lineal.
+La siguiente figura se muestra la ventana que se nos desplega cuando colocamos el comando `help(lm)`, `lm` son las iniciales que se usan para los modelos de regresión lineal.
 
-![Ayuda para el comando help(lm)\label{fig:img007}](images/help-lm.png)
+![Ayuda para el comando help(lm)](images/help-lm.png)
 
 En la primera línea se observa el comando que buscamos y dentro de `{ }` el paquete al cual pertenece dicha función o operador.
 Luego tenemos el título, que corresponde a la función principal que tiene el comando, seguido de esto se tiene información específica sobre la misma, algunas de estas pueden ser las siguientes:
@@ -245,9 +245,9 @@ __RStudio__ es un proyecto construido sobre muchos otros proyectos de código ab
 
 En resumen __RStudio__ es un entorno de desarrollo integrado para __R__. Con él se proporciona un lugar centralizado y bien organizado para hacer casi cualquier cosa que usted quiera hacer con __R__.
 
-Al igual que __R__, __RStudio__ es sencillo de instalar, para ello el paso inicial es acceder a la página oficial <https://www.rstudio.com/> y luego hacer clic en “Download Rstudio”, luego en la parte inferior hacer clic en “Download Rstudio Desktop” y escoger la aplicación según el sistema operativo con el que trabaje su equipo. Ver la Figura \ref{fig:img008}
+Al igual que __R__, __RStudio__ es sencillo de instalar, para ello el paso inicial es acceder a la página oficial <https://www.rstudio.com/> y luego hacer clic en “Download Rstudio”, luego en la parte inferior hacer clic en “Download Rstudio Desktop” y escoger la aplicación según el sistema operativo con el que trabaje su equipo.
 
-![Página principal de RStudio\label{fig:img008}](images/install-RStudio.png)
+![Página principal de RStudio](images/install-RStudio.png)
 
 
 
@@ -2571,7 +2571,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-13 19:22:01 GMT"
+## [1] "2018-07-13 20:33:01 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2996,7 +2996,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 5
+## [1] 3
 ```
 
 ```r

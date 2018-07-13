@@ -246,34 +246,34 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="instalacion-de-r-y-de-paquetes-de-r" class="section level2">
 <h2><span class="header-section-number">1.4</span> Instalación de <strong>R</strong> y de paquetes de <strong>R</strong></h2>
-<p>Para descargar <strong>R</strong>, el primer paso es dirigirse a la página oficial <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a>, luego dirigirse a la sección “download R” o “CRAN”, ver figura .</p>
+<p>Para descargar <strong>R</strong>, el primer paso es dirigirse a la página oficial <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a>, luego dirigirse a la sección “download R” o “CRAN”.</p>
 <div class="figure">
 <img src="images/install-R-001.png" alt="Página oficial de R" />
 <p class="caption">Página oficial de R</p>
 </div>
-<p>Una vez allí, se le solicitará que elija un “CRAN mirror”, las palabras “CRAN mirrors” se debe a que estos enlaces actuan como espejos de los archivos localizados en servidores por todo el mundo, lo cual facilita la descarga de la información, se recomienda utilizar la “0-Cloud”, o nube original, desde la que se envía la información a los otros servidores, a continuación la lista de espejos que se mostrará. Ver figura .</p>
+<p>Una vez allí, se le solicitará que elija un “CRAN mirror”, las palabras “CRAN mirrors” se debe a que estos enlaces actuan como espejos de los archivos localizados en servidores por todo el mundo, lo cual facilita la descarga de la información, se recomienda utilizar la “0-Cloud”, o nube original, desde la que se envía la información a los otros servidores, a continuación la lista de espejos que se mostrará.</p>
 <div class="figure">
-<img src="images/install-R-002.png" alt="CRAN mirrors " />
-<p class="caption">CRAN mirrors </p>
+<img src="images/install-R-002.png" alt="CRAN mirrors" />
+<p class="caption">CRAN mirrors</p>
 </div>
-<p>Luego de seleccionar la Nube original o “0-Cloud” se tendrá la pantalla de dicho CRAN, donde se tendrá el material disponible sobre R, en la parte izquierda se tendrá ayudas, manuales, e información general sobre el software, en la parte superior los link para la descarga del lenguaje dependiendo el sistema operativo y en la parte inferior el código fuente para todas las plataformas. Ver figura .</p>
+<p>Luego de seleccionar la Nube original o “0-Cloud” se tendrá la pantalla de dicho CRAN, donde se tendrá el material disponible sobre R, en la parte izquierda se tendrá ayudas, manuales, e información general sobre el software, en la parte superior los link para la descarga del lenguaje dependiendo el sistema operativo y en la parte inferior el código fuente para todas las plataformas.</p>
 <div class="figure">
 <img src="images/install-R-003.png" alt="CRAN 0-Cloud" />
 <p class="caption">CRAN 0-Cloud</p>
 </div>
-<p>Para instalar <strong>R</strong> se debe hacer clic en el enlace según el sistema operativo en que se esté trabajando, supongamos que se tiene Windows. Ver figura .</p>
+<p>Para instalar <strong>R</strong> se debe hacer clic en el enlace según el sistema operativo en que se esté trabajando, supongamos que se tiene Windows.</p>
 <div class="figure">
-<img src="images/install-R-004.png" alt="Instalar R para Windows " />
-<p class="caption">Instalar R para Windows </p>
+<img src="images/install-R-004.png" alt="Instalar R para Windows" />
+<p class="caption">Instalar R para Windows</p>
 </div>
-<p>En los subdirectorios se tendrá la opción de instalar <strong>R</strong> por primera vez (install <strong>R</strong> for the first time), daremos clic en dicho enlace, en la pantalla que se mostrará se debe seleccionar en la parte superior del link que contiene la última versión de <strong>R</strong> al momento de consulta, de igual manera en la parte inferior se dispone de un link para acceder a versiones previas “Previous releases”. Ver Figura </p>
+<p>En los subdirectorios se tendrá la opción de instalar <strong>R</strong> por primera vez (install <strong>R</strong> for the first time), daremos clic en dicho enlace, en la pantalla que se mostrará se debe seleccionar en la parte superior del link que contiene la última versión de <strong>R</strong> al momento de consulta, de igual manera en la parte inferior se dispone de un link para acceder a versiones previas “Previous releases”.</p>
 <div class="figure">
 <img src="images/install-R-005.png" alt="Descargar la versión de R disponible" />
 <p class="caption">Descargar la versión de R disponible</p>
 </div>
 <p>En la sección “Previous releases” se tendrá la lista completa de las versiones de <strong>R</strong> y sus fechas de salida, es importante resaltar lo frecuente con que se publican las actualizaciones, ya que muchos elementos utilizados para el funcionamiento correcto de <strong>R</strong> depende de la versión que se esté utilizando, y en algunos casos se recomienda no trabajar con la última versión del software.</p>
 <p>Cuando ya se tenga descargado el software se abre el instalador y se ejecuta seleccionando el lenguaje con el que se quiera trabajar.</p>
-<p>Para la instalación de paquetes se usa el comando <code>install.packages()</code>, donde el nombre del paquete va dentro de comillas como argumento, luego que el paquete esté instalado se debe cargar dicho paquete para poder hacer uso de las funciones que el mismo contiene, esto se hace con el comando <code>library()</code>. En la figura (fig:img006) se muestra la instalación del paquete llamado “DT”.</p>
+<p>Para la instalación de paquetes se usa el comando <code>install.packages()</code>, donde el nombre del paquete va dentro de comillas como argumento, luego que el paquete esté instalado se debe cargar dicho paquete para poder hacer uso de las funciones que el mismo contiene, esto se hace con el comando <code>library()</code>. En la siguiente figura se muestra la instalación del paquete llamado “DT”.</p>
 <div class="figure">
 <img src="images/install-package.png" alt="Instalación del paquete DT" />
 <p class="caption">Instalación del paquete “DT”</p>
@@ -283,7 +283,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">1.5</span> Ayuda en <strong>R</strong></h2>
 <p>La primera función que utilizaremos para la opción de ayuda es <code>help.start()</code>, cuando la colocamos en la consola se nos despliega una ayuda en la cual se muestra información general de <strong>R</strong>, como manuales relacionados al lenguaje, la importación y exportación de datos, la instalación y administración de <strong>R</strong>, enlaces hacia los paquetes, información sobre <strong>R</strong> como su licencia GNU, sobre los autores, entre otros.</p>
 <p>Ahora si estamos interesados en otros comando, o buscando un comando que realice cierto trabajo en particular, utilizamos la función <code>help()</code> o su equivalente que es <code>?</code>.</p>
-<p>La figura  muestra la ventana que se nos desplega cuando colocamos el comando <code>help(lm)</code>, <code>lm</code> son las iniciales que se usan para los modelos de regresión lineal.</p>
+<p>La siguiente figura se muestra la ventana que se nos desplega cuando colocamos el comando <code>help(lm)</code>, <code>lm</code> son las iniciales que se usan para los modelos de regresión lineal.</p>
 <div class="figure">
 <img src="images/help-lm.png" alt="Ayuda para el comando help(lm)" />
 <p class="caption">Ayuda para el comando help(lm)</p>
@@ -319,7 +319,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p><strong>RStudio</strong> es un proyecto construido sobre muchos otros proyectos de código abierto. Su objetivo declarado -que ya se está cumpliendo- es desarrollar una herramienta gratuita de gran alcance que apoya las prácticas y técnicas requeridas para la realización de análisis estadístico de alta calidad.</p>
 <p>En resumen <strong>RStudio</strong> es un entorno de desarrollo integrado para <strong>R</strong>. Con él se proporciona un lugar centralizado y bien organizado para hacer casi cualquier cosa que usted quiera hacer con <strong>R</strong>.</p>
-<p>Al igual que <strong>R</strong>, <strong>RStudio</strong> es sencillo de instalar, para ello el paso inicial es acceder a la página oficial <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a> y luego hacer clic en “Download Rstudio”, luego en la parte inferior hacer clic en “Download Rstudio Desktop” y escoger la aplicación según el sistema operativo con el que trabaje su equipo. Ver la Figura </p>
+<p>Al igual que <strong>R</strong>, <strong>RStudio</strong> es sencillo de instalar, para ello el paso inicial es acceder a la página oficial <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a> y luego hacer clic en “Download Rstudio”, luego en la parte inferior hacer clic en “Download Rstudio Desktop” y escoger la aplicación según el sistema operativo con el que trabaje su equipo.</p>
 <div class="figure">
 <img src="images/install-RStudio.png" alt="Página principal de RStudio" />
 <p class="caption">Página principal de RStudio</p>
