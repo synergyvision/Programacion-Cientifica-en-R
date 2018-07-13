@@ -4,7 +4,7 @@
 title: "Programación Científica en R"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-07-12"
+date: "2018-07-13"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -134,7 +134,7 @@ La programación en __R__ es homogénea, en el sentido de que la forma de trabaj
 
 ## Desventajas del lenguaje __R__
 
-- Tiene un sistema integrado de gráficos 3D, el cual no esta completamente integrado en el sistema.
+- Es un lenguaje de programación en línea de comando, debido a esto se necesita un manejo de programación y para aquellas personas que no estén muy familizarizadas con la programación les resulte un poco dificil migrar a __R__. 
 
 - El procesamiento es con datos en memoria RAM (los datos deben estar en la memoria RAM para ser procesados). Para grandes volúmenes de datos es necesario contar con un computador con suficiente memoria RAM, en el caso de tener un computador con poca memoria RAM se podrían tener problemas.
 
@@ -2531,7 +2531,7 @@ Sys.Date()
 ```
 
 ```
-## [1] "2018-07-12"
+## [1] "2018-07-13"
 ```
 
 ## Fechas con el formato `POSIXct` o `POSIXlt`
@@ -2571,7 +2571,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-12 20:24:18 GMT"
+## [1] "2018-07-13 19:22:01 GMT"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2996,7 +2996,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 2
+## [1] 5
 ```
 
 ```r
@@ -3004,7 +3004,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 2
+## [1] 5
 ```
 
 ## Condicionales

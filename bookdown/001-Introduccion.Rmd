@@ -34,7 +34,7 @@ La programación en __R__ es homogénea, en el sentido de que la forma de trabaj
 
 ## Desventajas del lenguaje __R__
 
-- Tiene un sistema integrado de gráficos 3D, el cual no esta completamente integrado en el sistema.
+- Es un lenguaje de programación en línea de comando, debido a esto se necesita un manejo de programación y para aquellas personas que no estén muy familizarizadas con la programación les resulte un poco dificil migrar a __R__. 
 
 - El procesamiento es con datos en memoria RAM (los datos deben estar en la memoria RAM para ser procesados). Para grandes volúmenes de datos es necesario contar con un computador con suficiente memoria RAM, en el caso de tener un computador con poca memoria RAM se podrían tener problemas.
 
