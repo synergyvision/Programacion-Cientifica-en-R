@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
 <body>
@@ -221,14 +221,14 @@ fecha_<span class="dv">2</span></code></pre></div>
 <pre><code>## [1] &quot;2018-09-12&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fecha_<span class="dv">3</span> &lt;-<span class="st"> </span><span class="kw">as.Date</span>(<span class="st">&#39;24JUN01&#39;</span>,<span class="dt">format=</span><span class="st">&#39;%d%b%y&#39;</span>)
 fecha_<span class="dv">3</span></code></pre></div>
-<pre><code>## [1] &quot;2001-06-24&quot;</code></pre>
+<pre><code>## [1] NA</code></pre>
 <p>Para saber el día de semana de una fecha se usa la función <code>weekdays()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">weekdays</span>(fecha_<span class="dv">1</span>)</code></pre></div>
 <pre><code>## [1] &quot;viernes&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">weekdays</span>(fecha_<span class="dv">2</span>)</code></pre></div>
 <pre><code>## [1] &quot;miércoles&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">weekdays</span>(fecha_<span class="dv">3</span>)</code></pre></div>
-<pre><code>## [1] &quot;domingo&quot;</code></pre>
+<pre><code>## [1] NA</code></pre>
 <p>Podemos hacer operaciones con fechas, como por ejemplo sumar o restar días a una fecha específica, esto lo hacemos simplemente sumandole o restandole el número de días; otra función muy util puede ser calcular la cantidad de días entre dos fechas particulares, para esto usamos la función <code>diff.Date()</code> donde se le debe pasar un vector con las fechas donde se quiere calcular la cantidad de días entre ellos.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fecha_<span class="dv">1</span></code></pre></div>
 <pre><code>## [1] &quot;2018-09-07&quot;</code></pre>
@@ -277,7 +277,7 @@ fecha_<span class="dv">5</span> &lt;-<span class="st"> </span><span class="kw">a
 ##  [4] &quot;2014-01-01&quot; &quot;2014-01-07&quot; &quot;2014-01-12&quot;
 ##  [7] &quot;2014-01-18&quot; &quot;2014-01-24&quot; &quot;2014-01-30&quot;
 ## [10] &quot;2014-02-05&quot;</code></pre>
-<p>La función <code>Sys.Date()</code> nos da un objeto tipo dato que contine la fecha actual de nuestro computador.</p>
+<p>La función <code>Sys.Date()</code> nos da un objeto tipo dato que contiene la fecha actual de nuestro computador.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">Sys.Date</span>()</code></pre></div>
 <pre><code>## [1] &quot;2018-07-13&quot;</code></pre>
 </div>
@@ -295,11 +295,11 @@ fecha_<span class="dv">6</span> </code></pre></div>
 ## [1] &quot;UTC&quot;</code></pre>
 <p>Para ver la fecha actual de nuestro computador en el formato <code>POSIXct</code> usamos la función <code>Sys.time()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">Sys.time</span>()</code></pre></div>
-<pre><code>## [1] &quot;2018-07-13 20:33:01 GMT&quot;</code></pre>
+<pre><code>## [1] &quot;2018-07-13 21:27:07 -04&quot;</code></pre>
 <p>Si queremos generar una fecha con el formato <code>POSIXlt</code> utilizamos el comando <code>as.POSIXlt()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fecha_<span class="dv">7</span> &lt;-<span class="st"> </span><span class="kw">as.POSIXlt</span>(<span class="st">&quot;2013-03-10 08:32:07&quot;</span>)
 fecha_<span class="dv">7</span></code></pre></div>
-<pre><code>## [1] &quot;2013-03-10 08:32:07 GMT&quot;</code></pre>
+<pre><code>## [1] &quot;2013-03-10 08:32:07 -0430&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unclass</span>(fecha_<span class="dv">7</span>)</code></pre></div>
 <pre><code>## $sec
 ## [1] 7
@@ -329,7 +329,7 @@ fecha_<span class="dv">7</span></code></pre></div>
 ## [1] 0
 ## 
 ## $zone
-## [1] &quot;GMT&quot;
+## [1] &quot;-0430&quot;
 ## 
 ## $gmtoff
 ## [1] NA</code></pre>

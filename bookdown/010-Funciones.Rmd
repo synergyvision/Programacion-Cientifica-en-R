@@ -1,12 +1,12 @@
 # Funciones
 
-las funciones integradas de __R__ son de mucha utilidad y nos permiten llegar bastante lejos en nuestros análisis. Sin embargo, en ocasiones estas funciones no son muy flexibles cuando se trata de la entrada de variables. Afortunadamente, __R__ nos permite escribir nuestras propias funciones personalizadas.
+Las funciones integradas de __R__ son de mucha utilidad y nos permiten llegar bastante lejos en nuestros análisis. Sin embargo, en ocasiones estas funciones no son muy flexibles cuando se trata de la entrada de variables. Afortunadamente, __R__ nos permite escribir nuestras propias funciones personalizadas.
 
 ## Creación de Funciones
 
 En el lenguaje de programación de __R__ las funciones se crean con la siguiente sintaxis:
 
-Se le debe colocar un nombre a la función seguido del operador asignación y la palabra `function` con paréntesis, dentro de los cuales deben ir los parámetros de entreda de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.
+Se le debe colocar un nombre a la función seguido del operador asignación y la palabra `function` con paréntesis, dentro de los cuales deben ir los parámetros de entrada de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.
 
 ```{r eval=FALSE}
 nombre <- function(argumento_1, argumento_2, ...) {
@@ -87,7 +87,7 @@ if ( condición ){
 }
 ```
 
-Como observamos después de la sintaxis del condicional `if` se agrega `else` seguidos con llaves, dentro de estas últimas deben estar las instrucciones que debe realizar.
+Como observamos después de la sintaxis del condicional `if` se agrega `else` seguidos con llaves, y dentro de estas últimas deben estar las instrucciones que debe realizar.
 
 ```{r}
 m<- "LinkedIn"

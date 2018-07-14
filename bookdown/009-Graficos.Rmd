@@ -6,7 +6,7 @@ Existen otros paquete más vanzados para realizar gráficos entre ellos tenemos 
 
 ## Gráfico de Puntos
 
-La función más utilizada para realizar gráficos es `plot()`, el gráfico que da por defecto está función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de $y$ frente a $x$.
+La función más utilizada para realizar gráficos es `plot()`, el gráfico que da por defecto esta función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de $y$ frente a $x$.
 
 La mayoria de sus argumentos de entrada son compartidos con el resto de las funciones para realizar gráficos. Para un uso simple de dicha función basta con pasar dos vectores del mismo tamaño con las coordenadas o valores correspondientes para los ejes $x$ y $y$.
 
@@ -51,11 +51,11 @@ Para agregar una leyenda usamos la función `legend()`, ésta tiene como paráme
   
   - `legend` : Un vector de caracteres con las leyendas respectivas. 
   
-  - `type` : El tipo o forma que tiene gráfico, puede ser un gráfico de puntos `p`, de línea `l` o de ambos `o`.
+  - `type` : El tipo o forma que tiene el gráfico, puede ser un gráfico de puntos `p`, de línea `l` o de ambos `o`.
   
-  - `bty` : Para colocar la leyenda dentro de una caja, toma dos valores `o` para que aparezca dentro de una caja y `n` para que no.
+  - `bty` : Para colocar la leyenda dentro de una caja, toma dos valores `o` para que aparezca dentro de una caja y `n` en caso contrario.
   
-  - También se le puede específicar el color `col` la forma de los puntos `pch`.
+  - También se le puede específicar el color `col` y la forma de los puntos `pch`.
   
 ```{r}
 plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",

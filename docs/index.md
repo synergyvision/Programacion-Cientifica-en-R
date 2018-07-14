@@ -1412,8 +1412,8 @@ x+z
 ```
 
 ```
-## Warning in x + z: longitud de objeto mayor no es
-## múltiplo de la longitud de uno menor
+## Warning in x + z: longer object length is not a
+## multiple of shorter object length
 ```
 
 ```
@@ -1425,8 +1425,8 @@ x+y+z
 ```
 
 ```
-## Warning in x + y + z: longitud de objeto mayor no es
-## múltiplo de la longitud de uno menor
+## Warning in x + y + z: longer object length is not a
+## multiple of shorter object length
 ```
 
 ```
@@ -1603,7 +1603,7 @@ ncol(X)
 
 ## Selección de los elementos de una matriz
 
-- __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.
+- __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la matriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.
 
 
 ```r
@@ -1672,7 +1672,7 @@ X[,"z_1"]
 ## 2 7
 ```
 
-- __Selección de submatrices__ : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o posiciones los elementos que se deseen. 
+- __Selección de submatrices__ : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o las posiciones los elementos que se deseen. 
 
 
 ```r
@@ -1694,7 +1694,7 @@ X[PES]
 ## [1] 2 6 1
 ```
 
-- __Eliminar filas o columnas__: Si se quieren eliminar filas y columnas se deben de colocar dento de los corchetes el número correspondiente a las filas o columnas con el signo menos.
+- __Eliminar filas o columnas__: Si se quieren eliminar filas y columnas se deben de colocar dentro de los corchetes el número correspondiente a las filas o columnas con el signo menos.
 
 
 
@@ -1818,7 +1818,7 @@ X2*2 #Multiplicación de un escalar por una matriz.
 ## [3,]   20   20   20
 ```
 
-- __Multiplicación de matrices__ : Para realizar el producto entre matrices se utiliza el operador `%*%`, para que este se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.
+- __Multiplicación de matrices__ : Para realizar el producto entre matrices se utiliza el operador `%*%`, para que éste se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.
 
 
 ```r
@@ -1892,7 +1892,7 @@ colMeans(X2)
 ## [1] 8 8 8
 ```
 
-- __Concatenar matrices__ : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos `cbind()` y `rbind()`, respectivamente. Los parámetros de entrada pueden ver vectores, matrices que tengan el mismo tamaño.
+- __Concatenar matrices__ : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos `cbind()` y `rbind()`, respectivamente. Los parámetros de entrada pueden ver vectores o matrices que coincidan con las dimensiones de la matriz.
 
 
 ```r
@@ -1988,7 +1988,7 @@ data_empleados
 
 ## Acceder a Datos en un Data.frame
 
-- La manera de acceder a un datos particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes `[]` la posición del elemento que queremos o los nombres correspondientes a la posición.
+- La manera de acceder a un dato particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes `[]` la posición del elemento que queremos o los nombres correspondientes a la posición.
 
 
 ```r
@@ -2118,7 +2118,7 @@ data_empleados
 ## Puesto 3 Jolie Hope    26800    2007-03-14   24
 ```
 
-- Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son `head()` y `tail()`, estas por defecto extraen las primeras 6, o las últimas 6, filas del Data.frame, respectivamente. La cantidad de observaciones que extrae puede cambiarse con el parámetro `n`.
+- Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son `head()` y `tail()`, estas por defecto extraen las primeras 6, o las últimas 6 filas del Data.frame, respectivamente. La cantidad de observaciones que extraen puede cambiarse con el parámetro de entrada `n`.
 
 
 ```r
@@ -2168,7 +2168,7 @@ ncol(data_empleados)
 
 # Listas
 
-Las listas son vectores que pueden contener elementos de diferentes clases y los tamaños de estos objetos pueden ser de distinto, caso contrario a los Data.frame. Podemos tener cualquier clase de objetos dentro de una lista.
+Las listas son vectores que pueden contener elementos de diferentes clases y los tamaños de estos objetos pueden ser distintos, caso contrario a los Data.frame. Podemos tener cualquier clase de objetos dentro de una lista.
 
 La función que se utiliza en __R__ para crear una lista es `list()`, donde cada objeto debe pasarse separado por comas.
 
@@ -2252,11 +2252,11 @@ lista
 
 Los factores son variable categórica, estas tienen un número finito de valores o niveles. Generalmente se utilizan para clasificar datos, es decir, establecen o clasifican los datos en niveles. 
 
-La función que se usa para crear un factor es `factor()`, a esta función se le debe pasar como parámetros de entradas
+La función que se usa para crear un factor es `factor()`.
 
 Para entender mejor que son los objetos factores, veamos el siguiente ejemplo:
 
-Supongamos que tenemos una variable son las especificaciones de hombre `H` o mujer `M` guardados en el siguiente vector llamado `sexo` de un conjunto de individuos.
+Supongamos que tenemos una variable con las especificaciones de hombre `H` o mujer `M` guardados en el siguiente vector llamado `sexo` de un conjunto de individuos.
 
 
 ```r
@@ -2375,7 +2375,7 @@ fecha_3
 ```
 
 ```
-## [1] "2001-06-24"
+## [1] NA
 ```
 
 Para saber el día de semana de una fecha se usa la función `weekdays()`
@@ -2402,7 +2402,7 @@ weekdays(fecha_3)
 ```
 
 ```
-## [1] "domingo"
+## [1] NA
 ```
 
 Podemos hacer operaciones con fechas, como por ejemplo sumar o restar días a una fecha específica, esto lo hacemos simplemente sumandole o restandole el número de días; otra función muy util puede ser calcular la cantidad de días entre dos fechas particulares, para esto usamos la función `diff.Date()` donde se le debe pasar un vector con las fechas donde se quiere calcular la cantidad de días entre ellos.
@@ -2523,7 +2523,7 @@ seq(from=fecha_4, to=fecha_5, length=10) #10 fechas entre las fechas_4 y fecha_5
 ## [10] "2014-02-05"
 ```
 
-La función `Sys.Date()` nos da un objeto tipo dato que contine la fecha actual de nuestro computador.
+La función `Sys.Date()` nos da un objeto tipo dato que contiene la fecha actual de nuestro computador.
 
 
 ```r
@@ -2571,7 +2571,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-13 20:33:01 GMT"
+## [1] "2018-07-13 21:27:07 -04"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2583,7 +2583,7 @@ fecha_7
 ```
 
 ```
-## [1] "2013-03-10 08:32:07 GMT"
+## [1] "2013-03-10 08:32:07 -0430"
 ```
 
 ```r
@@ -2619,7 +2619,7 @@ unclass(fecha_7)
 ## [1] 0
 ## 
 ## $zone
-## [1] "GMT"
+## [1] "-0430"
 ## 
 ## $gmtoff
 ## [1] NA
@@ -2652,7 +2652,7 @@ fecha_7$sec
 
 ## Importar Datos
 
-Cuando se tengan archivos de texto plano, como por ejemplo archivos .txt (se delimitan con tabuladores) o .csv (se delimitan con comas) con los datos que se quieran manipular __R__ nos da opciones para poder trabajarlos; los archivos txt y csv son los más usados cuando se usan hojas de cálculo como Excel. Desde el lenguaje de programación __R__ se pueden leer este tipo de archivos con la función `read.table()`.
+Cuando se tengan archivos de texto plano, como por ejemplo archivos .txt (se delimitan con tabuladores) o .csv (se delimitan con comas) con los datos que se quieran manipular __R__ nos da opciones para poder trabajarlos; los archivos txt y csv son los más usados cuando se usan hojas de cálculo como Excel. Desde el lenguaje de programación __R__ se pueden leer este tipo de archivos con la función `read.table()`).
 
 - Lo primero que tenemos que conocer es el directorio donde se encuentra el archivo que queremos leer, y donde está nuestro directorio de trabajo (para conocerla podemos usar la función `getwd()` y para establecer un directorio de trabajo usamos el comando `setwd()`.
 
@@ -2694,7 +2694,7 @@ Existen otros paquete más vanzados para realizar gráficos entre ellos tenemos 
 
 ## Gráfico de Puntos
 
-La función más utilizada para realizar gráficos es `plot()`, el gráfico que da por defecto está función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de $y$ frente a $x$.
+La función más utilizada para realizar gráficos es `plot()`, el gráfico que da por defecto esta función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de $y$ frente a $x$.
 
 La mayoria de sus argumentos de entrada son compartidos con el resto de las funciones para realizar gráficos. Para un uso simple de dicha función basta con pasar dos vectores del mismo tamaño con las coordenadas o valores correspondientes para los ejes $x$ y $y$.
 
@@ -2748,11 +2748,11 @@ Para agregar una leyenda usamos la función `legend()`, ésta tiene como paráme
   
   - `legend` : Un vector de caracteres con las leyendas respectivas. 
   
-  - `type` : El tipo o forma que tiene gráfico, puede ser un gráfico de puntos `p`, de línea `l` o de ambos `o`.
+  - `type` : El tipo o forma que tiene el gráfico, puede ser un gráfico de puntos `p`, de línea `l` o de ambos `o`.
   
-  - `bty` : Para colocar la leyenda dentro de una caja, toma dos valores `o` para que aparezca dentro de una caja y `n` para que no.
+  - `bty` : Para colocar la leyenda dentro de una caja, toma dos valores `o` para que aparezca dentro de una caja y `n` en caso contrario.
   
-  - También se le puede específicar el color `col` la forma de los puntos `pch`.
+  - También se le puede específicar el color `col` y la forma de los puntos `pch`.
   
 
 ```r
@@ -2936,13 +2936,13 @@ dev.off()
 
 # Funciones
 
-las funciones integradas de __R__ son de mucha utilidad y nos permiten llegar bastante lejos en nuestros análisis. Sin embargo, en ocasiones estas funciones no son muy flexibles cuando se trata de la entrada de variables. Afortunadamente, __R__ nos permite escribir nuestras propias funciones personalizadas.
+Las funciones integradas de __R__ son de mucha utilidad y nos permiten llegar bastante lejos en nuestros análisis. Sin embargo, en ocasiones estas funciones no son muy flexibles cuando se trata de la entrada de variables. Afortunadamente, __R__ nos permite escribir nuestras propias funciones personalizadas.
 
 ## Creación de Funciones
 
 En el lenguaje de programación de __R__ las funciones se crean con la siguiente sintaxis:
 
-Se le debe colocar un nombre a la función seguido del operador asignación y la palabra `function` con paréntesis, dentro de los cuales deben ir los parámetros de entreda de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.
+Se le debe colocar un nombre a la función seguido del operador asignación y la palabra `function` con paréntesis, dentro de los cuales deben ir los parámetros de entrada de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.
 
 
 ```r
@@ -2996,7 +2996,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 3
+## [1] 1
 ```
 
 ```r
@@ -3004,7 +3004,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 5
+## [1] 6
 ```
 
 ## Condicionales
@@ -3067,7 +3067,7 @@ if ( condición ){
 }
 ```
 
-Como observamos después de la sintaxis del condicional `if` se agrega `else` seguidos con llaves, dentro de estas últimas deben estar las instrucciones que debe realizar.
+Como observamos después de la sintaxis del condicional `if` se agrega `else` seguidos con llaves, y dentro de estas últimas deben estar las instrucciones que debe realizar.
 
 
 ```r
@@ -3338,18 +3338,23 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017)
-## kpathsea version 6.2.3
-## Copyright 2017 Han The Thanh (pdfTeX) et al.
-## There is NO warranty.  Redistribution of this software is
-## covered by the terms of both the pdfTeX copyright and
-## the Lesser GNU General Public License.
-## For more information about these matters, see the file
-## named COPYING and the pdfTeX source.
-## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
-## Compiled with libpng 1.6.29; using libpng 1.6.29
-## Compiled with zlib 1.2.11; using zlib 1.2.11
-## Compiled with xpdf version 3.04
+## MiKTeX-pdfTeX 2.9.6354 (1.40.18) (MiKTeX 2.9.6350)
+## 2.9.6354 (1.40.18)
+## TeX is a trademark of the American Mathematical Society.
+## using bzip2 version 1.0.6, 6-Sept-2010
+## compiled with curl version 7.54.0; using libcurl/7.54.0 WinSSL
+## compiled with expat version 2.2; using expat_2.2.0
+## compiled with jpeg version 9.2
+## compiled with liblzma version 50020032; using 50020032
+## compiled with libpng version 1.6.29; using 1.6.29
+## compiled with libressl version LibreSSL 2.5.3; using LibreSSL 2.5.3
+## compiled with MiKTeX Application Framework version 1.6334; using 1.6334
+## compiled with MiKTeX Core version 1.6344; using 1.6344
+## compiled with MiKTeX Archive Extractor version 1.6300; using 1.6300
+## compiled with MiKTeX Package Manager version 1.6353; using 1.6353
+## compiled with poppler version 0.55.0
+## compiled with uriparser version 0.8.4
+## compiled with zlib version 1.2.11; using 1.2.11
 ```
 
 <!--chapter:end:400-apendice.Rmd-->

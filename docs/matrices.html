@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
 <body>
@@ -275,7 +275,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ6IDwtIHNlcSgxLDQzLDMpXG5wb3NpY2lvbmVzIDwtIGMo
 <div id="seleccion-de-los-elementos-de-una-matriz" class="section level2">
 <h2><span class="header-section-number">4.3</span> Selección de los elementos de una matriz</h2>
 <ul>
-<li><strong>Selección de un elemento de la Matriz</strong> : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes <code>[]</code>, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.</li>
+<li><strong>Selección de un elemento de la Matriz</strong> : Para acceder a un elemento particular de la matriz se deben usar los indices o posición del elementos dentro de corchetes <code>[]</code>, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">2</span>]</code></pre></div>
 <pre><code>## [1] 4</code></pre>
@@ -302,7 +302,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ6IDwtIHNlcSgxLDQzLDMpXG5wb3NpY2lvbmVzIDwtIGMo
 <pre><code>## x y 
 ## 2 7</code></pre>
 <ul>
-<li><strong>Selección de submatrices</strong> : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o posiciones los elementos que se deseen.</li>
+<li><strong>Selección de submatrices</strong> : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o las posiciones los elementos que se deseen.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</code></pre></div>
 <pre><code>##   z_2 z_3 z_4 z_5
@@ -312,7 +312,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ6IDwtIHNlcSgxLDQzLDMpXG5wb3NpY2lvbmVzIDwtIGMo
 X[PES]</code></pre></div>
 <pre><code>## [1] 2 6 1</code></pre>
 <ul>
-<li><strong>Eliminar filas o columnas</strong>: Si se quieren eliminar filas y columnas se deben de colocar dento de los corchetes el número correspondiente a las filas o columnas con el signo menos.</li>
+<li><strong>Eliminar filas o columnas</strong>: Si se quieren eliminar filas y columnas se deben de colocar dentro de los corchetes el número correspondiente a las filas o columnas con el signo menos.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,]</code></pre></div>
 <pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
@@ -376,7 +376,7 @@ X2</code></pre></div>
 ## [2,]   16   16   16
 ## [3,]   20   20   20</code></pre>
 <ul>
-<li><strong>Multiplicación de matrices</strong> : Para realizar el producto entre matrices se utiliza el operador <code>%*%</code>, para que este se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.</li>
+<li><strong>Multiplicación de matrices</strong> : Para realizar el producto entre matrices se utiliza el operador <code>%*%</code>, para que éste se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">%*%</span>X2</code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
@@ -406,7 +406,7 @@ X2</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colMeans</span>(X2)</code></pre></div>
 <pre><code>## [1] 8 8 8</code></pre>
 <ul>
-<li><strong>Concatenar matrices</strong> : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos <code>cbind()</code> y <code>rbind()</code>, respectivamente. Los parámetros de entrada pueden ver vectores, matrices que tengan el mismo tamaño.</li>
+<li><strong>Concatenar matrices</strong> : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos <code>cbind()</code> y <code>rbind()</code>, respectivamente. Los parámetros de entrada pueden ver vectores o matrices que coincidan con las dimensiones de la matriz.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">43</span>,<span class="dv">3</span>)
 M &lt;-<span class="st"> </span><span class="kw">matrix</span>(z, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)

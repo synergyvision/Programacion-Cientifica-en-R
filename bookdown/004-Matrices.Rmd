@@ -92,7 +92,7 @@ dim(M)
 
 ## Selección de los elementos de una matriz
 
-- __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la amtriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.
+- __Selección de un elemento de la Matriz__ : Para acceder a un elemento particular de la matriz se deben usar los indices o posición del elementos dentro de corchetes `[]`, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.
 
 ```{r}
 X[1,2]
@@ -114,7 +114,7 @@ X[,1]
 X[,"z_1"]
 ```
 
-- __Selección de submatrices__ : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o posiciones los elementos que se deseen. 
+- __Selección de submatrices__ : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o las posiciones los elementos que se deseen. 
 
 ```{r}
 X[1:2,2:5]
@@ -122,7 +122,7 @@ PES <- matrix(c(1, 1, 1, 4, 2, 3), ncol = 2, byrow= TRUE)
 X[PES]
 ```
 
-- __Eliminar filas o columnas__: Si se quieren eliminar filas y columnas se deben de colocar dento de los corchetes el número correspondiente a las filas o columnas con el signo menos.
+- __Eliminar filas o columnas__: Si se quieren eliminar filas y columnas se deben de colocar dentro de los corchetes el número correspondiente a las filas o columnas con el signo menos.
 
 
 ```{r}
@@ -163,7 +163,7 @@ X1*X2
 X2*2 #Multiplicación de un escalar por una matriz.
 ```
 
-- __Multiplicación de matrices__ : Para realizar el producto entre matrices se utiliza el operador `%*%`, para que este se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.
+- __Multiplicación de matrices__ : Para realizar el producto entre matrices se utiliza el operador `%*%`, para que éste se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.
 
 ```{r}
 X1%*%X2
@@ -185,7 +185,7 @@ rowMeans(X2)
 colMeans(X2)
 ```
 
-- __Concatenar matrices__ : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos `cbind()` y `rbind()`, respectivamente. Los parámetros de entrada pueden ver vectores, matrices que tengan el mismo tamaño.
+- __Concatenar matrices__ : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos `cbind()` y `rbind()`, respectivamente. Los parámetros de entrada pueden ver vectores o matrices que coincidan con las dimensiones de la matriz.
 
 ```{r}
 z <- seq(1,43,3)

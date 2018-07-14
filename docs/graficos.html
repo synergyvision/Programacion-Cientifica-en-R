@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
 <body>
@@ -209,7 +209,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Existen otros paquete más vanzados para realizar gráficos entre ellos tenemos <code>lattice</code> y <code>ggplot2</code>, estos están basados en el sistema de cuadrícula.</p>
 <div id="grafico-de-puntos" class="section level2">
 <h2><span class="header-section-number">10.1</span> Gráfico de Puntos</h2>
-<p>La función más utilizada para realizar gráficos es <code>plot()</code>, el gráfico que da por defecto está función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de <span class="math inline">\(y\)</span> frente a <span class="math inline">\(x\)</span>.</p>
+<p>La función más utilizada para realizar gráficos es <code>plot()</code>, el gráfico que da por defecto esta función es el gráfico de puntos, donde cada punto corresponde a cada coordenada de valores introducido en los parámetros de entrada, a este tipo de gráfico generalemente se le denomina diagrama de dispersión de puntos de <span class="math inline">\(y\)</span> frente a <span class="math inline">\(x\)</span>.</p>
 <p>La mayoria de sus argumentos de entrada son compartidos con el resto de las funciones para realizar gráficos. Para un uso simple de dicha función basta con pasar dos vectores del mismo tamaño con las coordenadas o valores correspondientes para los ejes <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">valores_x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">1.2</span>,<span class="fl">3.4</span>,<span class="fl">1.3</span>,<span class="op">-</span><span class="fl">2.1</span>,<span class="fl">5.6</span>,<span class="fl">2.3</span>,<span class="fl">3.2</span>,<span class="fl">2.4</span>,<span class="fl">2.1</span>,<span class="fl">1.8</span>,<span class="fl">1.7</span>,<span class="fl">2.2</span>)
 valores_y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">2.4</span>,<span class="fl">5.7</span>,<span class="fl">2.0</span>,<span class="op">-</span><span class="dv">3</span>,<span class="dv">13</span>,<span class="dv">5</span>,<span class="fl">6.2</span>,<span class="fl">4.8</span>,<span class="fl">4.2</span>,<span class="fl">3.5</span>,<span class="fl">3.7</span>,<span class="fl">5.2</span>)
@@ -243,9 +243,9 @@ y_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">c</sp
 <ul>
 <li><p><code>x</code> e <code>y</code>: las coordenadas donde se quiere que aparezca la leyenda.</p></li>
 <li><p><code>legend</code> : Un vector de caracteres con las leyendas respectivas.</p></li>
-<li><p><code>type</code> : El tipo o forma que tiene gráfico, puede ser un gráfico de puntos <code>p</code>, de línea <code>l</code> o de ambos <code>o</code>.</p></li>
-<li><p><code>bty</code> : Para colocar la leyenda dentro de una caja, toma dos valores <code>o</code> para que aparezca dentro de una caja y <code>n</code> para que no.</p></li>
-<li><p>También se le puede específicar el color <code>col</code> la forma de los puntos <code>pch</code>.</p></li>
+<li><p><code>type</code> : El tipo o forma que tiene el gráfico, puede ser un gráfico de puntos <code>p</code>, de línea <code>l</code> o de ambos <code>o</code>.</p></li>
+<li><p><code>bty</code> : Para colocar la leyenda dentro de una caja, toma dos valores <code>o</code> para que aparezca dentro de una caja y <code>n</code> en caso contrario.</p></li>
+<li><p>También se le puede específicar el color <code>col</code> y la forma de los puntos <code>pch</code>.</p></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( <span class="dt">x=</span>valores_x, <span class="dt">y=</span>valores_y, <span class="dt">pch=</span><span class="dv">8</span>, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Eje de las x&quot;</span>,
       <span class="dt">ylab =</span> <span class="st">&quot;Eje de las y&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Mi primer gráfico&quot;</span>)

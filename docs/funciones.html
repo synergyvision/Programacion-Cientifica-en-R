@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
 <body>
@@ -205,11 +205,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="funciones" class="section level1">
 <h1><span class="header-section-number">Capítulo 11</span> Funciones</h1>
-<p>las funciones integradas de <strong>R</strong> son de mucha utilidad y nos permiten llegar bastante lejos en nuestros análisis. Sin embargo, en ocasiones estas funciones no son muy flexibles cuando se trata de la entrada de variables. Afortunadamente, <strong>R</strong> nos permite escribir nuestras propias funciones personalizadas.</p>
+<p>Las funciones integradas de <strong>R</strong> son de mucha utilidad y nos permiten llegar bastante lejos en nuestros análisis. Sin embargo, en ocasiones estas funciones no son muy flexibles cuando se trata de la entrada de variables. Afortunadamente, <strong>R</strong> nos permite escribir nuestras propias funciones personalizadas.</p>
 <div id="creacion-de-funciones" class="section level2">
 <h2><span class="header-section-number">11.1</span> Creación de Funciones</h2>
 <p>En el lenguaje de programación de <strong>R</strong> las funciones se crean con la siguiente sintaxis:</p>
-<p>Se le debe colocar un nombre a la función seguido del operador asignación y la palabra <code>function</code> con paréntesis, dentro de los cuales deben ir los parámetros de entreda de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.</p>
+<p>Se le debe colocar un nombre a la función seguido del operador asignación y la palabra <code>function</code> con paréntesis, dentro de los cuales deben ir los parámetros de entrada de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nombre &lt;-<span class="st"> </span><span class="cf">function</span>(argumento_<span class="dv">1</span>, argumento_<span class="dv">2</span>, ...) {
     expresión
 }</code></pre></div>
@@ -235,9 +235,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 }
 
 <span class="kw">lanzar_dado</span>()</code></pre></div>
-<pre><code>## [1] 3</code></pre>
+<pre><code>## [1] 1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lanzar_dado</span>()</code></pre></div>
-<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 6</code></pre>
 </div>
 <div id="condicionales" class="section level2">
 <h2><span class="header-section-number">11.2</span> Condicionales</h2>
@@ -271,7 +271,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 } <span class="cf">else</span> {
   expresión <span class="dv">2</span>
 }</code></pre></div>
-<p>Como observamos después de la sintaxis del condicional <code>if</code> se agrega <code>else</code> seguidos con llaves, dentro de estas últimas deben estar las instrucciones que debe realizar.</p>
+<p>Como observamos después de la sintaxis del condicional <code>if</code> se agrega <code>else</code> seguidos con llaves, y dentro de estas últimas deben estar las instrucciones que debe realizar.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m&lt;-<span class="st"> &quot;LinkedIn&quot;</span>
 n &lt;-<span class="st"> </span><span class="dv">14</span>
 

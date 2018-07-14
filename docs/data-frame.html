@@ -88,7 +88,7 @@ code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css\style.css" type="text/css" />
 </head>
 
 <body>
@@ -237,7 +237,7 @@ data_empleados</code></pre></div>
 <div id="acceder-a-datos-en-un-data.frame" class="section level2">
 <h2><span class="header-section-number">5.2</span> Acceder a Datos en un Data.frame</h2>
 <ul>
-<li>La manera de acceder a un datos particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes <code>[]</code> la posición del elemento que queremos o los nombres correspondientes a la posición.</li>
+<li>La manera de acceder a un dato particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes <code>[]</code> la posición del elemento que queremos o los nombres correspondientes a la posición.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="dv">1</span>,<span class="dv">1</span>]</code></pre></div>
 <pre><code>## [1] &quot;John Doe&quot;</code></pre>
@@ -291,7 +291,7 @@ data_empleados</code></pre></div>
 ## Puesto 2 Peter Gynn    23400    2008-03-25   25
 ## Puesto 3 Jolie Hope    26800    2007-03-14   24</code></pre>
 <ul>
-<li>Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son <code>head()</code> y <code>tail()</code>, estas por defecto extraen las primeras 6, o las últimas 6, filas del Data.frame, respectivamente. La cantidad de observaciones que extrae puede cambiarse con el parámetro <code>n</code>.</li>
+<li>Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son <code>head()</code> y <code>tail()</code>, estas por defecto extraen las primeras 6, o las últimas 6 filas del Data.frame, respectivamente. La cantidad de observaciones que extraen puede cambiarse con el parámetro de entrada <code>n</code>.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(data_empleados,<span class="dt">n=</span><span class="dv">1</span>)</code></pre></div>
 <pre><code>##          Empleados Salarios Día de Inicio Edad

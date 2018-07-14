@@ -31,7 +31,7 @@ data_empleados
 
 ## Acceder a Datos en un Data.frame
 
-- La manera de acceder a un datos particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes `[]` la posición del elemento que queremos o los nombres correspondientes a la posición.
+- La manera de acceder a un dato particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes `[]` la posición del elemento que queremos o los nombres correspondientes a la posición.
 
 ```{r}
 data_empleados[1,1]
@@ -74,7 +74,7 @@ data_empleados$Edad <- c(24,25,24)
 data_empleados
 ```
 
-- Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son `head()` y `tail()`, estas por defecto extraen las primeras 6, o las últimas 6, filas del Data.frame, respectivamente. La cantidad de observaciones que extrae puede cambiarse con el parámetro `n`.
+- Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son `head()` y `tail()`, estas por defecto extraen las primeras 6, o las últimas 6 filas del Data.frame, respectivamente. La cantidad de observaciones que extraen puede cambiarse con el parámetro de entrada `n`.
 
 ```{r}
 head(data_empleados,n=1)

@@ -55,7 +55,7 @@ seq(from=fecha_4, to=fecha_5, by='year') #años entre las fechas_4 y fecha_5
 seq(from=fecha_4, to=fecha_5, length=10) #10 fechas entre las fechas_4 y fecha_5
 ```
 
-La función `Sys.Date()` nos da un objeto tipo dato que contine la fecha actual de nuestro computador.
+La función `Sys.Date()` nos da un objeto tipo dato que contiene la fecha actual de nuestro computador.
 
 ```{r}
 Sys.Date()

@@ -1,6 +1,6 @@
 # Listas
 
-Las listas son vectores que pueden contener elementos de diferentes clases y los tamaños de estos objetos pueden ser de distinto, caso contrario a los Data.frame. Podemos tener cualquier clase de objetos dentro de una lista.
+Las listas son vectores que pueden contener elementos de diferentes clases y los tamaños de estos objetos pueden ser distintos, caso contrario a los Data.frame. Podemos tener cualquier clase de objetos dentro de una lista.
 
 La función que se utiliza en __R__ para crear una lista es `list()`, donde cada objeto debe pasarse separado por comas.
 
@@ -54,11 +54,11 @@ x$b
 
 Los factores son variable categórica, estas tienen un número finito de valores o niveles. Generalmente se utilizan para clasificar datos, es decir, establecen o clasifican los datos en niveles. 
 
-La función que se usa para crear un factor es `factor()`, a esta función se le debe pasar como parámetros de entradas
+La función que se usa para crear un factor es `factor()`.
 
 Para entender mejor que son los objetos factores, veamos el siguiente ejemplo:
 
-Supongamos que tenemos una variable son las especificaciones de hombre `H` o mujer `M` guardados en el siguiente vector llamado `sexo` de un conjunto de individuos.
+Supongamos que tenemos una variable con las especificaciones de hombre `H` o mujer `M` guardados en el siguiente vector llamado `sexo` de un conjunto de individuos.
 
 ```{r}
 sexo <- c("M", "H", "M", "M", "M", "H", "M", "M", "H", "H")
