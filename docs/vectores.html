@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Programación Científica en R</title>
-  <meta name="description" content="Programación Científica en R">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 3 Vectores | Programación Científica en R</title>
+  <meta name="description" content="Capítulo 3 Vectores | Programación Científica en R>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:title" content="Capítulo 3 Vectores | Programación Científica en R />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
   <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Programación Científica en R" />
+  <meta name="twitter:title" content="Capítulo 3 Vectores | Programación Científica en R />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-07-13">
+<meta name="date" content="2019-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="matrices.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,44 +52,70 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -220,16 +247,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="creacion-de-vectores" class="section level2">
 <h2><span class="header-section-number">3.2</span> Creación de Vectores</h2>
 <p>La manera más simple de crear un vector en <strong>R</strong> es usar el operador asignación <code>&lt;-</code> con la función <code>c()</code> donde sus parámetros de entrada serán los elementos del vector, separados con <code>,</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>)
-x</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="op">-</span><span class="dv">1</span>,<span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>)
+x</code></pre>
 <pre><code>## [1]  2  1  3 -1 10  0  0  1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Crear un vector llamado alumno con el nombre y apodo de &quot;Juan&quot; y &quot;Juancho&quot;</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Crear un vector llamado alumno con el nombre y apodo de &quot;Juan&quot; y &quot;Juancho&quot;</span>
 alumno &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Juan&quot;</span>,<span class="st">&quot;Juancho&quot;</span>)
-alumno</code></pre></div>
+alumno</code></pre>
 <pre><code>## [1] &quot;Juan&quot;    &quot;Juancho&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Establecer las etiquetas de Nombre y Apodo al vector</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Establecer las etiquetas de Nombre y Apodo al vector</span>
 <span class="kw">names</span>(alumno) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Nombre&quot;</span>, <span class="st">&quot;Apodo&quot;</span>)
-alumno</code></pre></div>
+alumno</code></pre>
 <pre><code>##    Nombre     Apodo 
 ##    &quot;Juan&quot; &quot;Juancho&quot;</code></pre>
 <p>La función <code>names()</code> que acabamos de usar asigna nombres a elementos del vector.</p>
@@ -242,13 +269,13 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIFVuIGdydXBvIGRlIGFtaWdvcyBlc3RcdTAwZTEgZm9y
 <ul>
 <li>Sucesiones de números <code>:</code>: Para generar una secuencia de número entreros podemos hacerlo de la siguiente manera colocar el número de inicio de la secuencia a generar y el número final de la secuencia, separados por dos puntos (1:10)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">10</span></code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">22</span><span class="op">:</span><span class="dv">11</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">22</span><span class="op">:</span><span class="dv">11</span></code></pre>
 <pre><code>##  [1] 22 21 20 19 18 17 16 15 14 13 12 11</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">5</span><span class="op">-</span><span class="dv">1</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span><span class="dv">5-1</span></code></pre>
 <pre><code>## [1] 0 1 2 3 4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span>(<span class="dv">5</span><span class="op">-</span><span class="dv">1</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">:</span>(<span class="dv">5-1</span>)</code></pre>
 <pre><code>## [1] 1 2 3 4</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHN1Y2VzaVx1MDBmM24gZGUgblx1MDBmYW1lcm8gZGVsIDMgYWwgMTVcblxuIyBHZW5lcmFyIHVuYSBzdWNlY2lcdTAwZjNuIGRlIG5cdTAwZmFtZXJvcyBlbnRyZSAtMSB5IDRcblxuIyBHZW5lcmFyIHVuYSBzdWNlY2lcdTAwZjNuIGRlIG5cdTAwZmFtZXJvcyBlbnRyZSAxMDAgeSAxNDUiLCJzb2x1dGlvbiI6IiMgR2VuZXJhciB1bmEgc3VjZXNpXHUwMGYzbiBkZSBuXHUwMGZhbWVybyBkZWwgMyBhbCAxNVxuMzoxNVxuIyBHZW5lcmFyIHVuYSBzdWNlY2lcdTAwZjNuIGRlIG5cdTAwZmFtZXJvcyBlbnRyZSAtMSB5IDRcbi0xOjRcbiMgR2VuZXJhciB1bmEgc3VjZWNpXHUwMGYzbiBkZSBuXHUwMGZhbWVyb3MgZW50cmUgMTAwIHkgMTQ1XG4xMDA6MTQ1Iiwic2N0IjoidGVzdF9vdXRwdXRfY29udGFpbnMoXCIzOjE1XCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgOlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCItMTo0XCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgOlwiKVxudGVzdF9vdXRwdXRfY29udGFpbnMoXCIxMDA6MTQ1XCIsIGluY29ycmVjdF9tc2cgPSBcIlJlY3VlcmRlIHVzYXIgOlwiKVxuc3VjY2Vzc19tc2coXCJNdXkgYmllbiFcIikifQ==
@@ -256,11 +283,11 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHN1Y2VzaVx1MDBmM24gZGUgblx1
 <ul>
 <li><code>seq()</code>: Los argumentos o parámetros de entrada que tiene esta función son: <code>from</code> es el número con el que iniciará la secuencia, <code>to</code> es el número que tomará el final de la secuencia, <code>by</code> es el incremento que se debe usar para generar la secuencia, <code>length.out</code> es el tamaño de la sucesión.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">10</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">10</span>)</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">6</span>,<span class="dv">10</span>) </code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dv">6</span>,<span class="dv">10</span>) </code></pre>
 <pre><code>## [1]  6  7  8  9 10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">6</span>,<span class="dt">to=</span><span class="dv">10</span>,<span class="dt">by=</span><span class="dv">2</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">6</span>,<span class="dt">to=</span><span class="dv">10</span>,<span class="dt">by=</span><span class="dv">2</span>)</code></pre>
 <pre><code>## [1]  6  8 10</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBlbnRyZSAxIHkgOCBjb24gdW4gc2FsdG8gZGUgMS41IFxuXG4jIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBlbnRyZSA0IHkgNSBjb24gdW5pbmNyZW1lbnRvIGRlIDAuMDFcblxuIyBHZW5lcmFyIHVuYSBzZWN1YW5kbyBxdWUgY29taWVuY2UgZW4gMjAgeSBzZWEgZGUgdGFtYVx1MDBmMW8gMTUiLCJzb2x1dGlvbiI6IiMgR2VuZXJhciB1bmEgc2VjdWVuY2lhIGVudHJlIDEgeSA4IGNvbiB1biBzYWx0byBkZSAxLjUgXG5zZXEoZnJvbT0xLCB0bz0gOCwgYnk9MS41KVxuIyBHZW5lcmFyIHVuYSBzZWN1ZW5jaWEgZW50cmUgNCB5IDUgY29uIHVuaW5jcmVtZW50byBkZSAwLjAxXG5zZXEoZnJvbT00LCB0bz0gNSwgYnk9MC4wMSlcbiMgR2VuZXJhciB1bmEgc2VjdWFuZG8gcXVlIGNvbWllbmNlIGVuIDIwIHkgc2VhIGRlIHRhbWFcdTAwZjFvIDE1XG5zZXEoZnJvbT0yMCxsZW5ndGgub3V0ID0gMTUpIn0=
@@ -268,11 +295,11 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBlbnRyZSAxIHkg
 <ul>
 <li><code>rep()</code>: Esta función se usa para generar sucesiones de datos repetidos. Entre sus argumentos de entrada tiene: <code>x</code> número o números que se quieran repetir, <code>times</code> el número de veces que se repetirá <code>x</code>, <code>each</code> si se tienen más de dos números que se quieran repetir aquí se podrá indicar cuantas veces se repetirá cada uno.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">1</span>, <span class="dt">times =</span> <span class="dv">3</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">1</span>, <span class="dt">times =</span> <span class="dv">3</span>)</code></pre>
 <pre><code>## [1] 1 1 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">times=</span><span class="dv">2</span>) </code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">times=</span><span class="dv">2</span>) </code></pre>
 <pre><code>## [1] 1 2 3 4 1 2 3 4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">each=</span><span class="dv">2</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">each=</span><span class="dv">2</span>)</code></pre>
 <pre><code>## [1] 1 1 2 2 3 3 4 4</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgbGEgcmVwZXRpY2lcdTAwZjNuIGRlIDIuMTUgMTUgdmVjZXNcblxuIyBHZW5lcmFyIGxhIHJlcGV0aWNpXHUwMGYzbiBkZSBsYSBwYWxhYnJhIFwiaW5pY2lvXCIgdHJlcyB2ZWNlc1xuXG4jIFJlcGV0aXIgdW5hIHN1Y2VzaVx1MDBmM24gZGVsIDEgYWwgMyBjdWF0cm8gdmVjZXMiLCJzb2x1dGlvbiI6IiMgR2VuZXJhciBsYSByZXBldGljaVx1MDBmM24gZGUgMi4xNSAxNSB2ZWNlc1xucmVwKHg9Mi4xNSwgdGltZXMgPSAxNSlcbiMgR2VuZXJhciBsYSByZXBldGljaVx1MDBmM24gZGUgbGEgcGFsYWJyYSBcImluaWNpb1wiIHRyZXMgdmVjZXNcbnJlcCh4PSdpbmljaW8nLCB0aW1lcyA9IDMpXG4jIFJlcGV0aXIgdW5hIHN1Y2VzaVx1MDBmM24gZGVsIDEgYWwgMyBjdWF0cm8gdmVjZXNcbnJlcCh4PTE6MywgdGltZXMgPSA0KSJ9
@@ -280,9 +307,9 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgbGEgcmVwZXRpY2lcdTAwZjNuIGRlIDIu
 <ul>
 <li><code>sequence()</code>: Genera una secuencia que inicia en 1 y termina en el elemento que se le pasa como argumento <code>nvec</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sequence</span>(<span class="dt">nvec=</span><span class="dv">3</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sequence</span>(<span class="dt">nvec=</span><span class="dv">3</span>)</code></pre>
 <pre><code>## [1] 1 2 3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sequence</span>(<span class="dt">nvec=</span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">2</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sequence</span>(<span class="dt">nvec=</span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">2</span>))</code></pre>
 <pre><code>## [1] 1 2 3 1 2</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBoYXN0YSBlbCAxNVxuXG4jIEdlbmVyYXIgaGFzdGEgZWwgMyB5IG90cmEgaGFzdGEgZWwgNyBjb24gdW4gc29sbyBjb21hbmRvIiwic29sdXRpb24iOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBoYXN0YSBlbCAxNVxuc2VxdWVuY2UobnZlYz0xNSlcbiMgR2VuZXJhciBoYXN0YSBlbCAzIHkgb3RyYSBoYXN0YSBlbCA3IGNvbiB1biBzb2xvIGNvbWFuZG9cbnNlcXVlbmNlKG52ZWM9YygzLDcpKSJ9
@@ -290,10 +317,10 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlY3VlbmNpYSBoYXN0YSBlbCAx
 <ul>
 <li><code>gl()</code>: Para generar series regulares de factores, entre sus argumentos tenemos <code>k</code> número de niveles o clases, <code>n</code> el número de replicas para cada nivel, <code>label</code> vector para etiquetar los niveles.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gl</span>(<span class="dt">n=</span><span class="dv">3</span>, <span class="dt">k=</span><span class="dv">5</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gl</span>(<span class="dt">n=</span><span class="dv">3</span>, <span class="dt">k=</span><span class="dv">5</span>)</code></pre>
 <pre><code>##  [1] 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3
 ## Levels: 1 2 3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gl</span>(<span class="dt">n=</span><span class="dv">2</span>, <span class="dt">k=</span><span class="dv">3</span>, <span class="dt">label=</span><span class="kw">c</span>(<span class="st">&quot;Macho&quot;</span>, <span class="st">&quot;Hembra&quot;</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gl</span>(<span class="dt">n=</span><span class="dv">2</span>, <span class="dt">k=</span><span class="dv">3</span>, <span class="dt">label=</span><span class="kw">c</span>(<span class="st">&quot;Macho&quot;</span>, <span class="st">&quot;Hembra&quot;</span>))</code></pre>
 <pre><code>## [1] Macho  Macho  Macho  Hembra Hembra Hembra
 ## Levels: Macho Hembra</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
@@ -305,35 +332,35 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW5hIHNlcmllIGNvbiA0IG5pdmVsZSB5
 <ul>
 <li><strong>Selección de un elemento del vector</strong>: Como se mencionó anteriormente los elementos de un vector tienen asociado un índice, este índice inicia en 1 y toman su valor dependiendo del orden en que fueron guardados. Para seleccionar un elemento particular se debe colocar el índice de dicho elemento entre corchetes <code>[]</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x</code></pre>
 <pre><code>## [1]  2  1  3 -1 10  0  0  1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">1</span>] <span class="co">#Primer elemento</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">1</span>] <span class="co">#Primer elemento</span></code></pre>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">5</span>] <span class="co">#Quinto elemento</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">5</span>] <span class="co">#Quinto elemento</span></code></pre>
 <pre><code>## [1] 10</code></pre>
 <ul>
 <li><strong>Eliminar un elemento del vector</strong>: Si queremos eliminar un elemento particular del vector debemos colocar el signo menos <code>-</code> seguido de la posición del elemento en el vector y esto dentro de los corchetes.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x[<span class="op">-</span><span class="dv">4</span>] <span class="co">#Eliminar el Cuarto elemento</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="op">-</span><span class="dv">4</span>] <span class="co">#Eliminar el Cuarto elemento</span></code></pre>
 <pre><code>## [1]  2  1  3 10  0  0  1</code></pre>
 <ul>
 <li><strong>Seleccionar varias posiciones</strong>: Si queremos seleccionar más de un elemento del vector, debemos colocar dentro de los corchetes un vector con las posiciones que queremos.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>)]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>)]</code></pre>
 <pre><code>## [1]  2  3 10</code></pre>
 <ul>
 <li><strong>Vectores lógicos</strong>: Cuando nos referimos a vectores lógicos son los elementos que cumplen alguna condición lógica, por ejemplo si se quieren los elementos de un vector que sean mayores a cierto valor numérico primero se debe evaluar la condición y luego colocar entre corchetes la condición lógica y está retornará solo los elementos donde se da TRUE.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v&lt;-x<span class="op">&gt;</span><span class="dv">2</span>
-v</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">v&lt;-x<span class="op">&gt;</span><span class="dv">2</span>
+v</code></pre>
 <pre><code>## [1] FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x[v]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x[v]</code></pre>
 <pre><code>## [1]  3 10</code></pre>
 <ul>
 <li><strong>Modificar los elementos</strong>: Si en cambio queremos cambiar un elemento del vector se debe llamar el vector con la posición y asignarle el nuevo valor que tendrá.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="dv">12</span> <span class="co">#Cambiar el primer elemento</span>
-x</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x[<span class="dv">1</span>] &lt;-<span class="st"> </span><span class="dv">12</span> <span class="co">#Cambiar el primer elemento</span>
+x</code></pre>
 <pre><code>## [1] 12  1  3 -1 10  0  0  1</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW4gdmVjdG9yIHF1ZSBjb250ZW5nYSB1bmEgc2VjdWVuY2lhIGRlbCAxIGFsIDE1LCB5IFxuIyBhZGljaW9uYWwgbG9zIG5cdTAwZmFtZXJvcyAzLDI0LDU2LDcsOC4yIGVuIHVuYSB2YXJpYWJsZSBsbGFtYWRhIHhcblxuIyBTZWxlY2Npb25hciBlbCBlbGVtZW50byBkZSBsYSBwb3NpY2lcdTAwZjNuIDE4XG5cbiMgRWxpbWluYXIgZWwgZWxlbWVudG8gZGUgbGEgc2VndW5kYSBwb3NpY2lcdTAwZjNuXG5cbiMgU2VsZWNjaW9uYXIgbGFzIHBvc2ljaW9uZXMgMSwyIHkgM1xuXG4jIFZlcmlmaWNhciBjdWFsZXMgdmFsb3JlcyBzb24gbWF5b3JlcyBxdWUgNFxuXG4jIENhbWJpYXIgZWwgZWxlbWVudG8gMSBwb3IgZWwgdmFsb3IgMTUgZSBpbXByaW1pciB4Iiwic29sdXRpb24iOiIjIEdlbmVyYXIgdW4gdmVjdG9yIHF1ZSBjb250ZW5nYSB1bmEgc2VjdWVuY2lhIGRlbCAxIGFsIDE1LCB5IFxuIyBhZGljaW9uYWwgbG9zIG5cdTAwZmFtZXJvcyAzLDI0LDU2LDcsOC4yIGVuIHVuYSB2YXJpYWJsZSBsbGFtYWRhIHhcbnggPC0gYygxOjE1LDMsMjQsNTYsNyw4LjIpXG4jIFNlbGVjY2lvbmFyIGVsIGVsZW1lbnRvIGRlIGxhIHBvc2ljaVx1MDBmM24gMThcbnhbMThdXG4jIEVsaW1pbmFyIGVsIGVsZW1lbnRvIGRlIGxhIHNlZ3VuZGEgcG9zaWNpXHUwMGYzblxueFstMl1cbiMgU2VsZWNjaW9uYXIgbGFzIHBvc2ljaW9uZXMgMSwyIHkgM1xueFsxOjNdXG4jIFZlcmlmaWNhciBjdWFsZXMgdmFsb3JlcyBzb24gbWF5b3JlcyBxdWUgNFxueD40XG4jIENhbWJpYXIgZWwgZWxlbWVudG8gMSBwb3IgZWwgdmFsb3IgMTUgZSBpbXByaW1pciB4XG54WzFdPC0xNVxueCJ9
@@ -345,32 +372,32 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIEdlbmVyYXIgdW4gdmVjdG9yIHF1ZSBjb250ZW5nYSB1
 <ul>
 <li><strong>Suma de Vectores</strong> : se realiza con el operador <code>+</code> y este suma elemento a elemento entre los vectores que se sumen, en caso de que uno de los vectores sea de menor tamaño <strong>R</strong> recicla los valores hasta hacerlo del mismo tamaño que el otro vector, o que el vector más grande si se suman más de dos vectores.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>)
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">5</span>)
 y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>)
 z &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>)
-x<span class="op">+</span>y</code></pre></div>
+x<span class="op">+</span>y</code></pre>
 <pre><code>## [1] 7 2 8</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x<span class="op">+</span>z</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x<span class="op">+</span>z</code></pre>
 <pre><code>## Warning in x + z: longer object length is not a
 ## multiple of shorter object length</code></pre>
 <pre><code>## [1] 6 1 6</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x<span class="op">+</span>y<span class="op">+</span>z</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x<span class="op">+</span>y<span class="op">+</span>z</code></pre>
 <pre><code>## Warning in x + y + z: longer object length is not a
 ## multiple of shorter object length</code></pre>
 <pre><code>## [1] 8 2 9</code></pre>
 <ul>
 <li><strong>Suma de los elementos de un vector</strong> : Existe la función <code>sum()</code> que suma todos los elementos de un vector.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(x)</code></pre>
 <pre><code>## [1] 11</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(z)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(z)</code></pre>
 <pre><code>## [1] 1</code></pre>
 <ul>
 <li><strong>Otras Operaciones</strong> : Cualquier operación aritmética puede realizarse sobre los elementos de un vector como el producto <code>*</code>, la división <code>/</code>, la resta <code>-</code>, potencia <code>^</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x<span class="op">*</span>y</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x<span class="op">*</span>y</code></pre>
 <pre><code>## [1] 10  1 15</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x<span class="op">^</span><span class="dv">2</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x<span class="op">^</span><span class="dv">2</span></code></pre>
 <pre><code>## [1] 25  1 25</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4IDwtIGMoNSwxLDUpXG55IDwtIGMoMiwxLDMpXG56IDwtIGMoMSwwKVxuXG4jIFN1bWFyIGVsIHZlY3RvciB4IGNvbiBlbCB2ZWN0b3IgeVxuXG4jIFN1bWFyIGxvcyB2ZWN0b3JlcyB4LHkselxuXG4jIFN1bWFyIGxvcyBlbGVtZW50b3MgZGVsIHZlY3RvciB6XG5cbiMgQXBsaWNhciBsYSBmdW5jaVx1MDBmM24gKCleMiBhbCB2ZWN0b3IgeCIsInNvbHV0aW9uIjoieCA8LSBjKDUsMSw1KVxueSA8LSBjKDIsMSwzKVxueiA8LSBjKDEsMClcblxuIyBTdW1hciBlbCB2ZWN0b3IgeCBjb24gZWwgdmVjdG9yIHlcbngreVxuIyBTdW1hciBsb3MgdmVjdG9yZXMgeCx5LHpcbngreSt6XG4jIFN1bWFyIGxvcyBlbGVtZW50b3MgZGVsIHZlY3RvciB6XG5zdW0oeilcbiMgQXBsaWNhciBsYSBmdW5jaVx1MDBmM24gKCleMiBhbCB2ZWN0b3IgeFxueF4yIn0=
@@ -410,7 +437,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -422,6 +449,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/003-Vectores.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Programacion-Cientifica-en-R.pdf"],
 "toc": {
@@ -436,8 +467,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

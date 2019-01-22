@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Programación Científica en R</title>
-  <meta name="description" content="Programación Científica en R">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 2 Objetos en R | Programación Científica en R</title>
+  <meta name="description" content="Capítulo 2 Objetos en R | Programación Científica en R>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:title" content="Capítulo 2 Objetos en R | Programación Científica en R />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
   <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Programación Científica en R" />
+  <meta name="twitter:title" content="Capítulo 2 Objetos en R | Programación Científica en R />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-07-13">
+<meta name="date" content="2019-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="vectores.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,44 +52,70 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -342,11 +369,11 @@ Expr = expresión</p>
 <div id="operador-de-asignacion-e-igualdad" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> Operador de asignación e igualdad</h3>
 <p>Las asignaciones de nombres a objetos se hace mediante el operador <code>&lt;-</code> o equivalente <code>-&gt;</code>, hay que tomar en cuenta que estos símbolos no llevan espacio entre ellos. Por otra parte, se recomienda usar el símbolo <code>=</code> unicamente para los argumentos de las funciones.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">4</span>
-x</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">4</span>
+x</code></pre>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span> -&gt;<span class="st"> </span>x
-x</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span> -&gt;<span class="st"> </span>x
+x</code></pre>
 <pre><code>## [1] 5</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWEgdW5hIHZhcmlhYmxlIGEsIGlndWFsIGEgNVxuXG4jIENyZWEgdW5hIHZhcmlhYmxlIG4sIGlndWFsIGEgMjVcblxuIyBNdWVzdHJhIGVsIHZhbG9yIGRlIGEgeSBkZSBuIiwic29sdXRpb24iOiIjIENyZWEgdW5hIHZhcmlhYmxlIGEsIGlndWFsIGEgNVxuYTwtNVxuIyBDcmVhIHVuYSB2YXJpYWJsZSBuLCBpZ3VhbCBhIDI1XG5uPC0yNVxuIyBNdWVzdHJhIGVsIHZhbG9yIGRlIGEgeSBkZSBuXG5hXG5uIn0=
@@ -359,11 +386,11 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENyZWEgdW5hIHZhcmlhYmxlIGEsIGlndWFsIGEgNVxu
 <ul>
 <li><code>ls()</code> -&gt; Lista los elementos objetos creados en la consola. sólo muestra los nombres de los mismos.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">name &lt;-<span class="st"> &quot;Carmen&quot;</span>
+<pre class="sourceCode r"><code class="sourceCode r">name &lt;-<span class="st"> &quot;Carmen&quot;</span>
 n1 &lt;-<span class="st"> </span><span class="dv">10</span>
 n2 &lt;-<span class="st"> </span><span class="dv">100</span>
 m &lt;-<span class="st"> </span><span class="fl">0.5</span>
-<span class="kw">ls</span>()</code></pre></div>
+<span class="kw">ls</span>()</code></pre>
 <pre><code>## [1] &quot;m&quot;    &quot;n1&quot;   &quot;n2&quot;   &quot;name&quot; &quot;x&quot;</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJuYW1lIDwtIFwiQ2FybWVuXCJcbm4xIDwtIDEwXG5uMiA8LSAxMDBcbm0gPC0gMC41XG5cbmxzKCkifQ==
@@ -371,7 +398,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJuYW1lIDwtIFwiQ2FybWVuXCJcbm4xIDwtIDEwXG5uMiA8
 <ul>
 <li><code>ls.str()</code> -&gt; Muestra algunos detalles de los objetos en memoria.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ls.str</span>()</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ls.str</span>()</code></pre>
 <pre><code>## m :  num 0.5
 ## n1 :  num 10
 ## n2 :  num 100
@@ -383,11 +410,11 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImE8LTVcbm48LTI1XG5uYW1lIDwtIFwi
 <ul>
 <li><code>rm()</code> -&gt; Para borrar objetos en memoria.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(n1) <span class="co">#Eliminar el objeto n1</span>
-<span class="kw">ls</span>()</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(n1) <span class="co">#Eliminar el objeto n1</span>
+<span class="kw">ls</span>()</code></pre>
 <pre><code>## [1] &quot;m&quot;    &quot;n2&quot;   &quot;name&quot; &quot;x&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list=</span><span class="kw">ls</span>()) <span class="co">#Eliminar todos los objetos creados</span>
-<span class="kw">ls</span>()</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rm</span>(<span class="dt">list=</span><span class="kw">ls</span>()) <span class="co">#Eliminar todos los objetos creados</span>
+<span class="kw">ls</span>()</code></pre>
 <pre><code>## character(0)</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEgPC0gMTBcbm4yIDwtIDEwMFxubSA8LSAwLjUiLCJzYW1wbGUiOiJscygpXG5cbiMgQm9ycmFyIGRlIG1lbW9yaWEgZWwgb2JqZXRvIG4xXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYSIsInNvbHV0aW9uIjoibHMoKVxuXG4jIEJvcnJhciBkZSBtZW1vcmlhIGVsIG9iamV0byBuMVxucm0objEpXG5cbiMgTGlzdGUgbG9zIG9iamV0b3MgZW4gbWVtb3JpYVxubHMoKSJ9
@@ -395,7 +422,7 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im5hbWUgPC0gXCJDYXJtZW5cIlxubjEg
 <ul>
 <li><code>paste()</code> -&gt; Esta función une todos los vectores de caracteres que se le suministran y construye una sola cadena de caracteres.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;Aprendiendo&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;programar&quot;</span>,<span class="st">&quot;con&quot;</span>,<span class="st">&quot;R&quot;</span>) </code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">paste</span>(<span class="st">&quot;Aprendiendo&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;programar&quot;</span>,<span class="st">&quot;con&quot;</span>,<span class="st">&quot;R&quot;</span>) </code></pre>
 <pre><code>## [1] &quot;Aprendiendo a programar con R&quot;</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJjYXJ0XzEgPC0gJ01pJ1xuY2FydF8yIDwtICdwcmltZXJhJ1xuY2FydF8zIDwtICdDYWRlbmEgZGUgY2FyYWN0ZXJlcydcbiMgR3VhcmRlIGVuIGMgZWwgY2FyXHUwMGUxY3RlciBmb3JtYWRvIHBvciBjYXJ0XzEsIFxuIyBjYXJ0XzIsIGNhcnRfMyB1dGlsaXphbmRvIGxhIGZ1bmNpXHUwMGYzbiBwYXN0ZSgpIFxuIyB1dGlsaWNlIGVsIGFyZ3VtZW50byBzZXAgPVwiIFwiXG5cbiMgSW1wcmltYSBjIiwic29sdXRpb24iOiJjYXJ0XzEgPC0gJ01pJ1xuY2FydF8yIDwtICdwcmltZXJhJ1xuY2FydF8zIDwtICdDYWRlbmEgZGUgY2FyYWN0ZXJlcydcbiMgR3VhcmRlIGVuIGMgZWwgY2FyXHUwMGUxY3RlciBmb3JtYWRvIHBvciBjYXJ0XzEsIFxuIyBjYXJ0XzIsIGNhcnRfMyB1dGlsaXphbmRvIGxhIGZ1bmNpXHUwMGYzbiBwYXN0ZSgpXG4jIHV0aWxpY2UgZWwgYXJndW1lbnRvIHNlcCA9XCIgXCJcbmM8LSBwYXN0ZShjYXJ0XzEsIGNhcnRfMiwgY2FydF8zLCBzZXAgPSBcIiBcIilcbiMgSW1wcmltYSBjXG5jIn0=
@@ -403,8 +430,8 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJjYXJ0XzEgPC0gJ01pJ1xuY2FydF8yIDwtICdwcmltZXJh
 <ul>
 <li><code>abs()</code> -&gt; calcula el valor absoluto de un valor.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">-</span><span class="dv">8</span>
-<span class="kw">abs</span>(y)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="dv">5-8</span>
+<span class="kw">abs</span>(y)</code></pre>
 <pre><code>## [1] 3</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDQtMjBcblxuI0NhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDZcblxuIyBDYWxjdWxhciBlbCB2YWxvciBhYnNvbHV0byBkZSAtMTAwIiwic29sdXRpb24iOiIjIENhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDQtMjBcbmFicyg0LTIwKVxuI0NhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDZcbmFicyg2KVxuIyBDYWxjdWxhciBlbCB2YWxvciBhYnNvbHV0byBkZSAtMTAwXG5hYnMoLTEwMCkifQ==
@@ -412,7 +439,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENhbGN1bGFyIGVsIHZhbG9yIGFic29sdXRvIGRlIDQt
 <ul>
 <li><code>round()</code> -&gt; redondea un número a los decimales que se le indiquen.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">round</span>(<span class="fl">0.1475945131</span>,<span class="dt">digits =</span><span class="dv">5</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">round</span>(<span class="fl">0.1475945131</span>,<span class="dt">digits =</span><span class="dv">5</span>)</code></pre>
 <pre><code>## [1] 0.1476</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4PC0wLjE0NzU5NDUxMzFcbiMgUmVkb25kZWFyIGVsIG5cdTAwZmFtZXJvIHggY29uIHRyZXMgZFx1MDBlZGdpdG9zIGRlY2ltYWxlc1xuXG4jIFJlZG9uZGVhciBlbCBuXHUwMGZhbWVybyB4IGNvbiAxIGRcdTAwZWRnaXRvIGRlY2ltYWxcblxuIyBSZWRvbmRlYXIgZWwgblx1MDBmYW1lcm8geCBjb24gMiBkXHUwMGVkZ2l0b3MgZGVjaW1hbGVzIiwic29sdXRpb24iOiJ4PC0wLjE0NzU5NDUxMzFcbiMgUmVkb25kZWFyIGVsIG5cdTAwZmFtZXJvIHggY29uIHRyZXMgZFx1MDBlZGdpdG9zIGRlY2ltYWxlc1xucm91bmQoeCxkaWdpdHMgPSAzKVxuIyBSZWRvbmRlYXIgZWwgblx1MDBmYW1lcm8geCBjb24gMSBkXHUwMGVkZ2l0byBkZWNpbWFsXG5yb3VuZCh4LGRpZ2l0cyA9MSlcbiMgUmVkb25kZWFyIGVsIG5cdTAwZmFtZXJvIHggY29uIDIgZFx1MDBlZGdpdG9zIGRlY2ltYWxlc1xucm91bmQoeCxkaWdpdHMgPTIpIn0=
@@ -420,7 +447,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4PC0wLjE0NzU5NDUxMzFcbiMgUmVkb25kZWFyIGVsIG5c
 <ul>
 <li><code>sort()</code> -&gt; ordena un vector que se le indique.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(<span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(<span class="kw">c</span>(<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">2</span>))</code></pre>
 <pre><code>## [1] 2 2 4 4 6 6 8 8</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4PC1jKDgsNiw0LDIsOCw2LDQsMilcbnk8LWMoLTEwLjUsNi45LC0wLjAwMSwyLDEuNTcsNiwtNCwyNS44LDIpXG4jIE9yZGVuYXIgZWwgdmVjdG9yIHggY29uIGxhIGZ1bmNpXHUwMGYzbiBzb3J0XG5cbiMgT3JkZW5hciBlbCB2ZWN0b3IgeSBjb24gbGEgZnVuY2lcdTAwZjNuIHNvcnQiLCJzb2x1dGlvbiI6Ing8LWMoOCw2LDQsMiw4LDYsNCwyKVxueTwtYygtMTAuNSw2LjksLTAuMDAxLDIsMS41Nyw2LC00LDI1LjgsMilcbiMgT3JkZW5hciBlbCB2ZWN0b3IgeCBjb24gbGEgZnVuY2lcdTAwZjNuIHNvcnRcbnNvcnQoeClcbiMgT3JkZW5hciBlbCB2ZWN0b3IgeSBjb24gbGEgZnVuY2lcdTAwZjNuIHNvcnRcbnNvcnQoeSkifQ==
@@ -428,7 +455,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ4PC1jKDgsNiw0LDIsOCw2LDQsMilcbnk8LWMoLTEwLjUs
 <ul>
 <li><code>is.algo()</code> -&gt; indica el tipo de estructura de datos y regresa un valor lógico.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.list</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.list</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Ing8LWMoOCw2LDQsMiw4LDYsNCwyKVxueTwtYygtMTAuNSw2LjksLTAuMDAxLDIsMS41Nyw2LC00LDI1LjgsMikiLCJzYW1wbGUiOiIjIFZlcmlmaWNhciBzaSB4IGVzIHVuIHZlY3RvciBjb24gbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpXG5cbiMgVmVyaWZpY2FyIHNpIHkgZXMgdW5hIGxpc3RhIGNvbiBsYSBmdW5jaVx1MDBmM24gaXMubGlzdCgpIiwic29sdXRpb24iOiIjIFZlcmlmaWNhciBzaSB4IGVzIHVuIHZlY3RvciBjb24gbGEgZnVuY2lcdTAwZjNuIGlzLnZlY3RvcigpXG5pcy52ZWN0b3IoeClcbiMgVmVyaWZpY2FyIHNpIHkgZXMgdW5hIGxpc3RhIGNvbiBsYSBmdW5jaVx1MDBmM24gaXMubGlzdCgpXG5pcy5saXN0KHkpIn0=
@@ -436,12 +463,12 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Ing8LWMoOCw2LDQsMiw4LDYsNCwyKVxu
 <ul>
 <li><code>mean()</code> -&gt; se utiliza para calcular el promedio aritmético de los elementos evaluados.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre>
 <pre><code>## [1] 17.29</code></pre>
 <p>La forma general de usar la función <code>mean</code> es <code>mean(x, ...)</code>, donde <code>(...)</code> es llamado elipsis, y es la manera en que <strong>R</strong> pasa a través de los argumentos de una función sin tener que nombrarlos ni especificarlos.</p>
 <p>Sin embargo el método por default <code>S3</code> es <code>mean(x, trim = 0, na.rm = FALSE, ...)</code>, donde <code>trim</code> y <code>na.rm</code> tienen valores por defecto, lo cual los hace argumentos opcionales. Sin embargo cada uno tiene su función específica.</p>
 <p>Por ejemplo:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">linkedin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">17</span>, <span class="dv">14</span>)
+<pre class="sourceCode r"><code class="sourceCode r">linkedin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">17</span>, <span class="dv">14</span>)
 facebook &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">17</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">16</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">14</span>)
 <span class="co"># Promedio simple de la suma</span>
 avg_sum &lt;-<span class="st"> </span><span class="kw">mean</span>(linkedin <span class="op">+</span><span class="st"> </span>facebook)
@@ -450,18 +477,18 @@ avg_sum &lt;-<span class="st"> </span><span class="kw">mean</span>(linkedin <spa
 avg_sum_trimmed &lt;-<span class="st"> </span><span class="kw">mean</span>((linkedin <span class="op">+</span><span class="st"> </span>facebook), <span class="dt">trim =</span> <span class="fl">0.2</span>)
 
 <span class="co"># Evaluando ambos promedios</span>
-<span class="kw">print</span>(avg_sum)</code></pre></div>
+<span class="kw">print</span>(avg_sum)</code></pre>
 <pre><code>## [1] 22.29</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(avg_sum_trimmed)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(avg_sum_trimmed)</code></pre>
 <pre><code>## [1] 22.6</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">linkedin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">5</span>, <span class="ot">NA</span>, <span class="dv">17</span>, <span class="dv">14</span>)
+<pre class="sourceCode r"><code class="sourceCode r">linkedin &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">5</span>, <span class="ot">NA</span>, <span class="dv">17</span>, <span class="dv">14</span>)
 facebook &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">17</span>, <span class="ot">NA</span>, <span class="dv">5</span>, <span class="dv">16</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">14</span>)
 
 <span class="co"># Promedio simple de linkedin con argumentos por defecto</span>
-<span class="kw">mean</span>(linkedin)</code></pre></div>
+<span class="kw">mean</span>(linkedin)</code></pre>
 <pre><code>## [1] NA</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Promedio simple de linkedin con na.rm = TRUE</span>
-<span class="kw">mean</span>(linkedin, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Promedio simple de linkedin con na.rm = TRUE</span>
+<span class="kw">mean</span>(linkedin, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</code></pre>
 <pre><code>## [1] 12.33</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgZWwgcHJvbWVkaW8gc2ltcGxlIGRlIGxpbmtlZGluIGNvbiBsYSBmdW5jaVx1MDBmM24gbWVhbigpXG4jIEd1YXJkYWxvIGVuIGxhIHZhcmlhYmxlIG1lYW5fbGlua2VkaW5cblxuIyBjYWxjdWxhciBlbCBwcm9tZWRpbyBzaW1wbGUgZGUgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiBtZWFuKClcbiMgR3VhcmRhbG8gZW4gbGEgdmFyaWFibGUgbWVhbl9mYWNlYm9va1xuXG4jIEltcHJpbWlyIGxvcyByZXN1bHRhZG9zIGRlIGxhcyBtZWRpYXMgeSBjYWxjdWxhciBsYSBzdW1hIGRlIGxvcyBkb3MgcHJvbWVkaW9zIiwic29sdXRpb24iOiIjIENhbGN1bGFyIGVsIHByb21lZGlvIHNpbXBsZSBkZSBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIG1lYW4oKVxuIyBHdWFyZGFsbyBlbiBsYSB2YXJpYWJsZSBtZWFuX2xpbmtlZGluXG5tZWFuX2xpbmtlZGluIDwtIG1lYW4obGlua2VkaW4pXG4jIGNhbGN1bGFyIGVsIHByb21lZGlvIHNpbXBsZSBkZSBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIG1lYW4oKVxuIyBHdWFyZGFsbyBlbiBsYSB2YXJpYWJsZSBtZWFuX2ZhY2Vib29rXG5tZWFuX2ZhY2Vib29rIDwtIG1lYW4oZmFjZWJvb2spXG4jIEltcHJpbWlyIGxvcyByZXN1bHRhZG9zIGRlIGxhcyBtZWRpYXMgeSBjYWxjdWxhciBsYSBzdW1hIGRlIGxvcyBkb3MgcHJvbWVkaW9zXG5tZWFuX2xpbmtlZGluXG5tZWFuX2ZhY2Vib29rXG5tZWFuX2xpbmtlZGluK21lYW5fZmFjZWJvb2sifQ==
@@ -469,7 +496,7 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <ul>
 <li><code>median()</code> -&gt; devuelve el valor de la mediana de los elementos evaluados.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>))</code></pre>
 <pre><code>## [1] 8.5</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgbWVkaWFuYSBkZWwgdmVjdG9yIGxpbmtlZGluIGNvbiBsYSBmdW5jaVx1MDBmM24gbWVkaWFuKClcblxuIyBDYWxjdWxhciBsYSBtZWRpYW5hIGRlbCB2ZWN0b3IgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiBtZWRpYW4oKVxuXG5cbnggPC0gYyg1LDgsOSwxNSwxNyw2NCw5LDUsOCw4LDgsMTcsNjQsNSlcbiMgQ2FsY3VsYXIgbGEgbWVkaWFuYSBkZSB4Iiwic29sdXRpb24iOiIjIENhbGN1bGFyIGxhIG1lZGlhbmEgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIG1lZGlhbigpXG5tZWRpYW4obGlua2VkaW4pXG4jIENhbGN1bGFyIGxhIG1lZGlhbmEgZGVsIHZlY3RvciBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIG1lZGlhbigpXG5tZWRpYW4oZmFjZWJvb2spXG5cbnggPC0gYyg1LDgsOSwxNSwxNyw2NCw5LDUsOCw4LDgsMTcsNjQsNSlcbiMgQ2FsY3VsYXIgbGEgbWVkaWFuYSBkZSB4XG5tZWRpYW4oeCkifQ==
@@ -477,10 +504,10 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <ul>
 <li><code>Moda</code> -&gt; No hay una función que realice este cálculo directamento por lo tanto tenemos que recurrir a otras dos funciones. La moda nos representa el valor que tiene mayor frecuencia absoluta en una distribución de datos. Para realizar su cálculo utilizamos las funciones <code>sort()</code> para ordenar los datos y <code>table()</code> para ver el número de repeticiones de cada elemento.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
-<span class="kw">sort</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
+<span class="kw">sort</span>(x)</code></pre>
 <pre><code>##  [1]  5  5  5  8  8  8  8  9  9 15 17 17 64 64</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(x)</code></pre>
 <pre><code>## x
 ##  5  8  9 15 17 64 
 ##  3  4  2  1  2  2</code></pre>
@@ -490,8 +517,8 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6InggPC0gYyg1LDgsOSwxNSwxNyw2NCw5
 <ul>
 <li><code>range()</code> -&gt; Es el intervalo entre el valor máximo y el valor mínimo. Permite obtener una idea de la dispersión de los datos, cuanto mayor es el rango, más dispersos están los datos de un conjunto.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
-<span class="kw">range</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">9</span>,<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">17</span>,<span class="dv">64</span>,<span class="dv">5</span>)
+<span class="kw">range</span>(x)</code></pre>
 <pre><code>## [1]  5 64</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KVxueCA8LSBjKDUsOCw5LDE1LDE3LDY0LDksNSw4LDgsOCwxNyw2NCw1KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgZWwgcmFuZ28gZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHJhbmdlKCkgXG5cbiMgQ2FsY3VsYXIgZWwgcmFuZ28gZGVsIHZlY3RvciBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIHJhbmdlKClcblxuIyBDYWxjdWxhciBlbCByYW5nbyBkZWwgdmVjdG9yIHggY29uIGxhIGZ1bmNpXHUwMGYzbiByYW5nZSgpIiwic29sdXRpb24iOiIjIENhbGN1bGFyIGVsIHJhbmdvIGRlbCB2ZWN0b3IgbGlua2VkaW4gY29uIGxhIGZ1bmNpXHUwMGYzbiByYW5nZSgpIFxucmFuZ2UobGlua2VkaW4pXG4jIENhbGN1bGFyIGVsIHJhbmdvIGRlbCB2ZWN0b3IgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiByYW5nZSgpXG5yYW5nZShmYWNlYm9vaylcbiMgQ2FsY3VsYXIgZWwgcmFuZ28gZGVsIHZlY3RvciB4IGNvbiBsYSBmdW5jaVx1MDBmM24gcmFuZ2UoKVxucmFuZ2UoeCkifQ==
@@ -499,7 +526,7 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <ul>
 <li><code>quantile()</code> -&gt; Son tres valores que dividen un conjunto de datos ordenados en cuatro partes porcentualmente iguales.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">quantile</span>(x)</code></pre>
 <pre><code>##   0%  25%  50%  75% 100% 
 ##  5.0  8.0  8.5 16.5 64.0</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
@@ -508,23 +535,25 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <ul>
 <li><code>IQR()</code> -&gt; La diferencia entre el tercer y el primer cuartil de una distribución. Es una medida de la dispersión de los datos.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(x)</code></pre>
 <pre><code>## [1] 8.5</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KVxueCA8LSBjKDUsOCw5LDE1LDE3LDY0LDksNSw4LDgsOCwxNyw2NCw1KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgZGlmZXJlbmNpYSBlbnRyZSBlbCB0ZXJjZXIgeSBwcmltZXIgY3VhcnRpbCBcbiMgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIElRUigpXG5cbiMgQ2FsY3VsYXIgbGEgZGlmZXJlbmNpYSBlbnRyZSBlbCB0ZXJjZXIgeSBwcmltZXIgY3VhcnRpbCBcbiMgZGVsIHZlY3RvciBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIElRUigpXG5cbiMgQ2FsY3VsYXIgbGEgZGlmZXJlbmNpYSBlbnRyZSBlbCB0ZXJjZXIgeSBwcmltZXIgY3VhcnRpbCBcbiMgZGVsIHZlY3RvciB4IGNvbiBsYSBmdW5jaVx1MDBmM24gSVFSKCkiLCJzb2x1dGlvbiI6IiMgQ2FsY3VsYXIgbGEgZGlmZXJlbmNpYSBlbnRyZSBlbCB0ZXJjZXIgeSBwcmltZXIgY3VhcnRpbCBcbiMgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIElRUigpXG5JUVIobGlua2VkaW4pXG4jIENhbGN1bGFyIGxhIGRpZmVyZW5jaWEgZW50cmUgZWwgdGVyY2VyIHkgcHJpbWVyIGN1YXJ0aWwgXG4jIGRlbCB2ZWN0b3IgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiBJUVIoKVxuSVFSKGZhY2Vib29rKVxuIyBDYWxjdWxhciBsYSBkaWZlcmVuY2lhIGVudHJlIGVsIHRlcmNlciB5IHByaW1lciBjdWFydGlsIFxuIyBkZWwgdmVjdG9yIHggY29uIGxhIGZ1bmNpXHUwMGYzbiBJUVIoKVxuSVFSKHgpIn0=
 </div>
 <ul>
-<li><p><code>boxplot()</code> -&gt; Proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos.</p></li>
+<li><p><code>boxplot()</code> -&gt; Proporcionan una visión general de la simetría de la distribución de los datos; si la mediana no está en el centro del rectángulo, la distribución no es simétrica. Permite ver como es la dispersión de los puntos con la mediana, los percentiles 25 y 75 y los valores máximos y mínimos.</p>
+<ul>
 <li><p>Son útiles para ver la presencia de valores atípicos también llamados outliers.</p></li>
 <li><p><span class="math inline">\(Q_1 - 1.5 * IQR\)</span></p></li>
 <li><p><span class="math inline">\(Q_3 + 1.5 * IQR\)</span></p></li>
+</ul></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(x, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">horizontal =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(x, <span class="dt">col =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">horizontal =</span> <span class="ot">TRUE</span>)</code></pre>
 <p><img src="Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-62-1.svg" /><!-- --></p>
 <ul>
 <li><code>sd()</code> -&gt; la desviación estandar es una medida del grado de dispersión de los datos con respecto al valor promedio. Se define como la raíz cuadrada de la varianza de la variable.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(x)</code></pre>
 <pre><code>## [1] 20.2</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KVxueCA8LSBjKDUsOCw5LDE1LDE3LDY0LDksNSw4LDgsOCwxNyw2NCw1KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgZGVzdmlhY2lcdTAwZjNuIGVzdFx1MDBlMW5kYXIgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKClcblxuIyBDYWxjdWxhciBsYSBkZXN2aWFjaVx1MDBmM24gZXN0XHUwMGUxbmRhciBkZWwgdmVjdG9yIGZhY2Vib29rIGNvbiBsYSBmdW5jaVx1MDBmM24gc2QoKVxuXG4jIENhbGN1bGFyIGxhIGRlc3ZpYWNpXHUwMGYzbiBlc3RcdTAwZTFuZGFyIGRlbCB2ZWN0b3IgeCBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKCkiLCJzb2x1dGlvbiI6IiMgQ2FsY3VsYXIgbGEgZGVzdmlhY2lcdTAwZjNuIGVzdFx1MDBlMW5kYXIgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKClcbnNkKGxpbmtlZGluKVxuIyBDYWxjdWxhciBsYSBkZXN2aWFjaVx1MDBmM24gZXN0XHUwMGUxbmRhciBkZWwgdmVjdG9yIGZhY2Vib29rIGNvbiBsYSBmdW5jaVx1MDBmM24gc2QoKVxuc2QoZmFjZWJvb2spXG4jIENhbGN1bGFyIGxhIGRlc3ZpYWNpXHUwMGYzbiBlc3RcdTAwZTFuZGFyIGRlbCB2ZWN0b3IgeCBjb24gbGEgZnVuY2lcdTAwZjNuIHNkKClcbnNkKHgpIn0=
@@ -532,7 +561,7 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <ul>
 <li><code>var()</code> -&gt; Es otra medida de dispersión y sirve para identificar a la media de las desviaciones cuadráticas de una variable de carácter aleatorio, considerando el valor medio de ésta.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(x)</code></pre>
 <pre><code>## [1] 408.1</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEzLCA1LCAyLCAxNywgMTQpXG5mYWNlYm9vayA8LSBjKDE3LCA3LCA1LCAxNiwgOCwgMTMsIDE0KVxueCA8LSBjKDUsOCw5LDE1LDE3LDY0LDksNSw4LDgsOCwxNyw2NCw1KSIsInNhbXBsZSI6IiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHZhcigpXG5cbiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciBmYWNlYm9vayBjb24gbGEgZnVuY2lcdTAwZjNuIHZhcigpXG5cbiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciB4IGNvbiBsYSBmdW5jaVx1MDBmM24gdmFyKCkiLCJzb2x1dGlvbiI6IiMgQ2FsY3VsYXIgbGEgdmFyaWFuemEgZGVsIHZlY3RvciBsaW5rZWRpbiBjb24gbGEgZnVuY2lcdTAwZjNuIHZhcigpXG52YXIobGlua2VkaW4pXG4jIENhbGN1bGFyIGxhIHZhcmlhbnphIGRlbCB2ZWN0b3IgZmFjZWJvb2sgY29uIGxhIGZ1bmNpXHUwMGYzbiB2YXIoKVxudmFyKGZhY2Vib29rKVxuIyBDYWxjdWxhciB2YXJpYW56YSBkZWwgdmVjdG9yIHggY29uIGxhIGZ1bmNpXHUwMGYzbiB2YXIoKVxudmFyKHgpIn0=
@@ -540,7 +569,7 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6ImxpbmtlZGluIDwtIGMoMTYsIDksIDEz
 <ul>
 <li><code>summary()</code> -&gt; Permite calcular algunas medidas descriptivas elementales de todas las variables del fichero simultáneamente.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(x)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(x)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##     5.0     8.0     8.5    17.3    16.5    64.0</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
@@ -549,12 +578,12 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6InggPC0gYyg1LDgsOSwxNSwxNyw2NCw5
 <ul>
 <li><code>apply()</code> -&gt; Permite realizar la misma operación en todas las filas y columnas de un arreglo simultáneamente. Sólo hay que indicarle la operación a realizar y el índice/índices sobre los cuales ha de realizarla.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">matriz &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">nrow =</span> <span class="dv">2</span>,<span class="dt">ncol =</span> <span class="dv">2</span>)
-matriz</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">matriz &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>,<span class="dt">nrow =</span> <span class="dv">2</span>,<span class="dt">ncol =</span> <span class="dv">2</span>)
+matriz</code></pre>
 <pre><code>##      [,1] [,2]
 ## [1,]    1    3
 ## [2,]    2    4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apply</span>(matriz,<span class="dv">1</span>,sum)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apply</span>(matriz,<span class="dv">1</span>,sum)</code></pre>
 <pre><code>## [1] 4 6</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtYXRyaXogPC0gbWF0cml4KDE6NCxucm93ID0gMixuY29sID0gMilcbm1hdHJpelxuYXBwbHkobWF0cml6LDEsc3VtKSJ9
@@ -562,7 +591,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtYXRyaXogPC0gbWF0cml4KDE6NCxucm93ID0gMixuY29s
 <ul>
 <li><code>lapply()</code> -&gt; Funciona igual que la función <code>apply()</code>, con la diferencia de que puede ser utilizada en listas, data.frames o vectores; retorna una lista.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(matriz,<span class="cf">function</span> (x) x<span class="op">^</span><span class="dv">2</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(matriz,<span class="cf">function</span> (x) x<span class="op">^</span><span class="dv">2</span>)</code></pre>
 <pre><code>## [[1]]
 ## [1] 1
 ## 
@@ -580,7 +609,7 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtYXRyaXogPC0gbWF0cml4KDE6NCxucm93ID0gMixuY29s
 <ul>
 <li><code>sapply()</code> -&gt; Funciona igual que la función <code>apply()</code>, con la diferencia de que puede ser utilizada en listas, dataframes o vectores; retorna una vector.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(matriz,<span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">3</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(matriz,<span class="cf">function</span>(x) x<span class="op">^</span><span class="dv">3</span>)</code></pre>
 <pre><code>## [1]  1  8 27 64</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtYXRyaXogPC0gbWF0cml4KDE6NCxucm93ID0gMixuY29sID0gMilcbm1hdHJpelxuc2FwcGx5KG1hdHJpeixmdW5jdGlvbih4KSB4XjMpIn0=
@@ -594,66 +623,66 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJtYXRyaXogPC0gbWF0cml4KDE6NCxucm93ID0gMixuY29s
 <ul>
 <li>Suma (<code>+</code>):</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span><span class="op">+</span><span class="dv">4</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">3</span><span class="op">+</span><span class="dv">4</span></code></pre>
 <pre><code>## [1] 7</code></pre>
 <ul>
 <li>Resta (<code>-</code>):</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">-</span><span class="dv">6</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1-6</span></code></pre>
 <pre><code>## [1] -5</code></pre>
 <ul>
 <li>Multiplicación (<code>*</code>):</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">*</span><span class="dv">8</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">*</span><span class="dv">8</span></code></pre>
 <pre><code>## [1] 40</code></pre>
 <ul>
 <li>División (<code>/</code>):</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">/</span><span class="dv">3</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">/</span><span class="dv">3</span></code></pre>
 <pre><code>## [1] 5</code></pre>
 <ul>
 <li>Raíz cuadrada:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">25</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">25</span>)</code></pre>
 <pre><code>## [1] 5</code></pre>
 <ul>
 <li>Potencia:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">^</span><span class="dv">2</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span><span class="op">^</span><span class="dv">2</span></code></pre>
 <pre><code>## [1] 25</code></pre>
 <ul>
 <li>División Entera:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">%/%</span><span class="dv">2</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">%/%</span><span class="dv">2</span></code></pre>
 <pre><code>## [1] 7</code></pre>
 <ul>
 <li>Módulo o resto de la división entera:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">%%</span><span class="dv">2</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">15</span><span class="op">%%</span><span class="dv">2</span></code></pre>
 <pre><code>## [1] 1</code></pre>
 <ul>
 <li>Logaritmos:</li>
 </ul>
 <p><code>log()</code> (Logaritmo nepereano), <code>logb()</code> (Logaritmo en base a b), <code>log10()</code> (Logaritmo en base a 10), <code>log2()</code> (Logaritmo en base a 2).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">0</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">0</span>)</code></pre>
 <pre><code>## [1] -Inf</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">1</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">log</span>(<span class="dv">1</span>)</code></pre>
 <pre><code>## [1] 0</code></pre>
 <ul>
 <li>Exponencial:</li>
 </ul>
 <p>La función que trae <strong>R</strong> para calcular la función exponencial es <code>exp()</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">exp</span>(<span class="dv">1</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">exp</span>(<span class="dv">1</span>)</code></pre>
 <pre><code>## [1] 2.718</code></pre>
 <ul>
 <li>Funciones Trigonométricas</li>
 </ul>
 <p>Seno <code>sin()</code>, coseno <code>cos()</code>, tangente <code>tan()</code>, arco-seno <code>asin()</code>, arco-coseno <code>acos()</code>, arcotangente <code>atan()</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(<span class="dv">0</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sin</span>(<span class="dv">0</span>)</code></pre>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(<span class="dv">0</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cos</span>(<span class="dv">0</span>)</code></pre>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tan</span>(<span class="dv">0</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tan</span>(<span class="dv">0</span>)</code></pre>
 <pre><code>## [1] 0</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENhbGN1bGFyIGxhcyBzaWd1aWVudGVzIG9wZXJhY2lvbmVzIGFyaXRtXHUwMGU5dGljYXNcbiMgMy40NSAtIDk4XG5cbiMgbG9nKDQpIC0gZXhwKDMpICsgc3FydCgzKVxuXG4jIHRhbiggZXhwKCBzcXJ0KGNvcyAoLTQpICkgKSApXG5cbiMgc2luKDUpIC0gNV42Iiwic29sdXRpb24iOiIjIENhbGN1bGFyIGxhcyBzaWd1aWVudGVzIG9wZXJhY2lvbmVzIGFyaXRtXHUwMGU5dGljYXNcbiMgMy40NSAtIDk4XG4zLjQ1IC0gOThcbiMgbG9nKDQpIC0gZXhwKDMpICsgc3FydCgzKVxubG9nKDQpIC0gZXhwKDMpICsgc3FydCgzKVxuIyB0YW4oIGV4cCggc3FydChjb3MgKC0xKSApICkgKVxudGFuKCBleHAoIHNxcnQoY29zICgtMSkgKSApIClcbiMgc2luKDUpIC0gNV42XG5zaW4oNSkgLSA1XjYifQ==
@@ -706,11 +735,11 @@ eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6InggPC0gYyg1LDgsOSwxNSwxNyw2NCw5
 <li><strong>Y o en ingles AND</strong>: <code>&amp;</code>, <code>&amp;&amp;</code>.</li>
 </ul>
 <p>Supongamos que tenemos dos operaciones lógicas a las que llamaremos <code>condición_1</code>,<code>condición_2</code> respectivamente, y queremos saber si estas se cumplen al mismo tiempo, en <strong>R</strong> usamos <code>condición_1 &amp; condición_2</code> o su equivalente <code>condición_1 &amp;&amp; condición_2</code> y en este caso se estará evaluando si simultaneamente se cumplen las dos condiciones. En caso de que se cumplan la función retornará verdadero (<code>TRUE</code>).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">20</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>
+<pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">20</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>
 condicion_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">/</span><span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span>
-condicion_<span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre></div>
+condicion_<span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> <span class="op">&amp;&amp;</span><span class="st"> </span>condicion_<span class="dv">2</span> </code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> <span class="op">&amp;&amp;</span><span class="st"> </span>condicion_<span class="dv">2</span> </code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <p>Es importante acotar que cuando se tengan vectores logical de más de un elemento se debe usar <code>&amp;</code> para realizar la operación elemento a elemento. Si se estan comparando dos vectores, la comparación se hace elemento a elemento y si ambos no tienen el mismo tamaño se recurre al reciclaje de elemento para completar la comparación en el vector de menor tamaño, si en cambio colocamos <code>&amp;&amp;</code> simplemente realizará la comparación para los primeros elementos e ignorará el resto.</p>
 <p>Los símbolos <code>&amp;&amp;</code> generalmente debe usarse con el uso de condicionales como <code>if</code> o <code>while</code>.</p>
@@ -718,12 +747,12 @@ condicion_<span class="dv">1</span> <span class="op">&amp;</span><span class="st
 <li><strong>O ó en ingles OR</strong>: <code>|</code>, <code>||</code></li>
 </ul>
 <p>Al igual que el caso anterior supongamos que tenemos dos operaciones lógicas y queremos saber si se cumple una de las dos, entonces podemos plantearnos una expresión de este tipo, la manera de hacerlo en <strong>R</strong> es la diguiente <code>condición_1 || condición_2</code>, si una de las dos se cumple ésta retornará verdadero (<code>TRUE</code>), también lo hará si ambas se cumple.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span> 
+<pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span> 
 condicion_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">4</span><span class="op">/</span><span class="dv">5</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">7</span><span class="op">/</span><span class="dv">8</span>
 
-condicion_<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre></div>
+condicion_<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> <span class="op">||</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">condicion_<span class="dv">1</span> <span class="op">||</span><span class="st"> </span>condicion_<span class="dv">2</span></code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <p>Cuando usamos vectores para hacer este tipo de comparaciones se sigue con <code>|</code> y <code>||</code> el mismo criterio que con <code>&amp;</code> y <code>&amp;&amp;</code>.</p>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
@@ -765,7 +794,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -777,6 +806,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/002-Objetos-en-R.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Programacion-Cientifica-en-R.pdf"],
 "toc": {
@@ -791,8 +824,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

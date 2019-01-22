@@ -17,7 +17,7 @@
     <rect x='0.00' y='0.00' width='252.00' height='360.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMHwyNTJ8MzYwfDA=)'><text x='47.44' y='34.53' style='font-size: 14.40px; font-weight: bold; font-family: Arial;' textLength='185.91px' lengthAdjust='spacingAndGlyphs'>Histograma datos de Ozono</text></g>
+<g clip-path='url(#cpMHwyNTJ8MzYwfDA=)'><text x='44.79' y='34.67' style='font-size: 14.40px; font-weight: bold; font-family: Arial;' textLength='191.22px' lengthAdjust='spacingAndGlyphs'>Histograma datos de Ozono</text></g>
 <g clip-path='url(#cpMHwyNTJ8MzYwfDA=)'><text x='95.37' y='341.28' style='font-size: 12.00px; font-family: Arial;' textLength='90.05px' lengthAdjust='spacingAndGlyphs'>airquality$Ozone</text></g>
 <g clip-path='url(#cpMHwyNTJ8MzYwfDA=)'><text transform='translate(12.96,201.15) rotate(-90)' style='font-size: 12.00px; font-family: Arial;' textLength='56.70px' lengthAdjust='spacingAndGlyphs'>Frequency</text></g>
 <defs>
@@ -67,7 +67,7 @@
     <rect x='252.00' y='0.00' width='252.00' height='360.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMjUyfDUwNHwzNjB8MA==)'><text x='303.71' y='34.53' style='font-size: 14.40px; font-weight: bold; font-family: Arial;' textLength='177.38px' lengthAdjust='spacingAndGlyphs'>Histograma datos de Solar</text></g>
+<g clip-path='url(#cpMjUyfDUwNHwzNjB8MA==)'><text x='301.18' y='34.67' style='font-size: 14.40px; font-weight: bold; font-family: Arial;' textLength='182.45px' lengthAdjust='spacingAndGlyphs'>Histograma datos de Solar</text></g>
 <g clip-path='url(#cpMjUyfDUwNHwzNjB8MA==)'><text x='345.04' y='341.28' style='font-size: 12.00px; font-family: Arial;' textLength='94.71px' lengthAdjust='spacingAndGlyphs'>airquality$Solar.R</text></g>
 <g clip-path='url(#cpMjUyfDUwNHwzNjB8MA==)'><text transform='translate(264.96,201.15) rotate(-90)' style='font-size: 12.00px; font-family: Arial;' textLength='56.70px' lengthAdjust='spacingAndGlyphs'>Frequency</text></g>
 <defs>

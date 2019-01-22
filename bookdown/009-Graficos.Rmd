@@ -48,42 +48,42 @@ points( x=x_1, y=y_1, pch=16, col='red')
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
   - `x` e `y`: las coordenadas donde se quiere que aparezca la leyenda.
-  
-  - `legend` : Un vector de caracteres con las leyendas respectivas. 
-  
+
+  - `legend` : Un vector de caracteres con las leyendas respectivas.
+
   - `type` : El tipo o forma que tiene el gráfico, puede ser un gráfico de puntos `p`, de línea `l` o de ambos `o`.
-  
+
   - `bty` : Para colocar la leyenda dentro de una caja, toma dos valores `o` para que aparezca dentro de una caja y `n` en caso contrario.
-  
+
   - También se le puede específicar el color `col` y la forma de los puntos `pch`.
-  
+
 ```{r}
 plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
       ylab = "Eje de las y", main = "Mi primer gráfico")
 points( x=x_1, y=y_1, pch=16, col='red')
 legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'Puntos rojos'),bty = 'n')
 ```
-  
+
 ## Gráfico de líneas
 
 Los gráficos de líneas son un caso particular de la función `plot()`, esta función tiene argumento de entrada llamado `type`, éste parámetro de entrada puede ser:
 
   - `p` para puntos, el cual es el valor que toma por defecto.
-  
+
   - `l` para lineas.
-  
+
   - `b` para ambos lineas y puntos.
-  
+
   - `c` para las lineas entre cada punto.
-  
+
   - `o` para ambos ‘overplotted’.
-  
+
   - `h` para un histograma.
-  
+
   - `s` para gráfico de saltos.
-  
+
   - `S` Para otro tipo de gráfico de escaleras.
-  
+
   - `n` para no dibujarlos.
 
 Entonces simplemente colocamos los valores respectivos de las coordenadas de los ejes en la función `plot()` y en el argumento `type` lo colocamos igual a `l`.
@@ -131,8 +131,8 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
          main = "Superficie terrestre de los continentes e islas",
          ylab = "Superficie en millas cuadradas")
 
-barplot( height=large.islands, col='blue', horiz = TRUE,  
-         main = "Superficie terrestre de los continentes e islas", 
+barplot( height=large.islands, col='blue', horiz = TRUE,
+         main = "Superficie terrestre de los continentes e islas",
          ylab = "Superficie en millas cuadradas")
 ```
 
@@ -148,7 +148,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
          xlab = "Partes por millon", ylab = "Ozone")
 ```
 
-Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
+Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`.
 
 ```{r}
 boxplot( airquality$Ozone, airquality$Solar.R,
@@ -168,7 +168,7 @@ Los histogramas son la representación gráfica de las frecuencias (absolutas o 
 ```{r}
 hist( x = airquality$Ozone, col = "orange", border = "blue",
       freq = FALSE,
-      main = "Histograma de la Media del Ozono", 
+      main = "Histograma de la Media del Ozono",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 

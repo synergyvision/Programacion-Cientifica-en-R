@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Programación Científica en R</title>
-  <meta name="description" content="Programación Científica en R">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 5 Data.frame | Programación Científica en R</title>
+  <meta name="description" content="Capítulo 5 Data.frame | Programación Científica en R>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:title" content="Capítulo 5 Data.frame | Programación Científica en R />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
   <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Programación Científica en R" />
+  <meta name="twitter:title" content="Capítulo 5 Data.frame | Programación Científica en R />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-07-13">
+<meta name="date" content="2019-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="listas.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,44 +52,70 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -209,26 +236,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">5.1</span> Generación de un Data.frame</h2>
 <p>Los Data.frame, también llamados marcos de datos, son muy parecidos a las matrices con la diferencia de que puede contener columnas de diferentes tipos, sin embargo los elementos dentro de cada columna si deben ser del mismo tipo y todas las columnas deben tener el mismo tamaño.</p>
 <p>Para crear un Data.frame se utiliza la función <code>data.frame()</code>, donde los parámetros de entrada son las columnas o variables, a estas se les puede colocar su nombre respectivo.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">empleados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;John Doe&quot;</span>,<span class="st">&quot;Peter Gynn&quot;</span>, <span class="st">&quot;Jolie Hope&quot;</span>)
+<pre class="sourceCode r"><code class="sourceCode r">empleados &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;John Doe&quot;</span>,<span class="st">&quot;Peter Gynn&quot;</span>, <span class="st">&quot;Jolie Hope&quot;</span>)
 salario&lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">21000</span>, <span class="dv">23400</span>, <span class="dv">26800</span>)
 inicio &lt;-<span class="st"> </span><span class="kw">as.Date</span>(<span class="kw">c</span>(<span class="st">&quot;2010-11-1&quot;</span>,<span class="st">&quot;2008-3-25&quot;</span>,<span class="st">&quot;2007-3-14&quot;</span>))
 data_empleados &lt;-<span class="st"> </span><span class="kw">data.frame</span>( empleados, salario, inicio)
-data_empleados</code></pre></div>
+data_empleados</code></pre>
 <pre><code>##    empleados salario     inicio
 ## 1   John Doe   21000 2010-11-01
 ## 2 Peter Gynn   23400 2008-03-25
 ## 3 Jolie Hope   26800 2007-03-14</code></pre>
 <p>Podemos notar que la columna correspondiente a los nombres de los empleados es de tipo “factor”, aunque inicialmente era un vector de caracteres, <strong>R</strong> lo transforma en este tipo de datos, pero si se quiere mantener la variables como caracteres se debe colocar como parámetro de entrada <code>stringsAsFactors=FALSE</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados &lt;-<span class="st"> </span><span class="kw">data.frame</span>( empleados, salario, inicio, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)
-data_empleados</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados &lt;-<span class="st"> </span><span class="kw">data.frame</span>( empleados, salario, inicio, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)
+data_empleados</code></pre>
 <pre><code>##    empleados salario     inicio
 ## 1   John Doe   21000 2010-11-01
 ## 2 Peter Gynn   23400 2008-03-25
 ## 3 Jolie Hope   26800 2007-03-14</code></pre>
 <p>Al igual que se hizo con las matrices podemos colocarle nombres a las filas y las columnas con las funciones <code>rownames()</code> y <code>colnames()</code>, respectivamente.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(data_empleados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Empleados&quot;</span>, <span class="st">&quot;Salarios&quot;</span>, <span class="st">&quot;Día de Inicio&quot;</span>)
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(data_empleados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Empleados&quot;</span>, <span class="st">&quot;Salarios&quot;</span>, <span class="st">&quot;Día de Inicio&quot;</span>)
 <span class="kw">rownames</span>(data_empleados) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Puesto 1&quot;</span>, <span class="st">&quot;Puesto 2&quot;</span>, <span class="st">&quot;Puesto 3&quot;</span>)
-data_empleados</code></pre></div>
+data_empleados</code></pre>
 <pre><code>##           Empleados Salarios Día de Inicio
 ## Puesto 1   John Doe    21000    2010-11-01
 ## Puesto 2 Peter Gynn    23400    2008-03-25
@@ -239,44 +266,44 @@ data_empleados</code></pre></div>
 <ul>
 <li>La manera de acceder a un dato particular del Data.frame se hace igual que con las matrices, se coloca entre corchetes <code>[]</code> la posición del elemento que queremos o los nombres correspondientes a la posición.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="dv">1</span>,<span class="dv">1</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="dv">1</span>,<span class="dv">1</span>]</code></pre>
 <pre><code>## [1] &quot;John Doe&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="st">&quot;Puesto 1&quot;</span>,<span class="st">&quot;Empleados&quot;</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="st">&quot;Puesto 1&quot;</span>,<span class="st">&quot;Empleados&quot;</span>]</code></pre>
 <pre><code>## [1] &quot;John Doe&quot;</code></pre>
 <ul>
 <li>Si se quiere acceder a una fila se debe colocar entre corchetes la fila correspondiente (el número o el nombre respectivo) seguido de una coma.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="dv">1</span>,]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="dv">1</span>,]</code></pre>
 <pre><code>##          Empleados Salarios Día de Inicio
 ## Puesto 1  John Doe    21000    2010-11-01</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="st">&quot;Puesto 1&quot;</span>,]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="st">&quot;Puesto 1&quot;</span>,]</code></pre>
 <pre><code>##          Empleados Salarios Día de Inicio
 ## Puesto 1  John Doe    21000    2010-11-01</code></pre>
 <p>Si se quieren más de una fila, se deben pasar dentro de los corchetes un vector con las posiciones de las filas que se quieran.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>),]</code></pre>
 <pre><code>##           Empleados Salarios Día de Inicio
 ## Puesto 1   John Doe    21000    2010-11-01
 ## Puesto 2 Peter Gynn    23400    2008-03-25</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="kw">c</span>(<span class="st">&quot;Puesto 1&quot;</span>, <span class="st">&quot;Puesto 2&quot;</span>),]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[<span class="kw">c</span>(<span class="st">&quot;Puesto 1&quot;</span>, <span class="st">&quot;Puesto 2&quot;</span>),]</code></pre>
 <pre><code>##           Empleados Salarios Día de Inicio
 ## Puesto 1   John Doe    21000    2010-11-01
 ## Puesto 2 Peter Gynn    23400    2008-03-25</code></pre>
 <ul>
 <li>Para acceder a una variable se puede usar los corchetes con una coma seguido del número o nombre de la columna correspondiente. Otra manera de extraer las columnas, generalmente llamadas variables, es usando el signo <code>$</code>, para el empleo de este se debe colocar el nombre del Data.frame seguido del signo y el nombre de la variable que se quiere extraer.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="dv">1</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="dv">1</span>]</code></pre>
 <pre><code>## [1] &quot;John Doe&quot;   &quot;Peter Gynn&quot; &quot;Jolie Hope&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="st">&quot;Empleados&quot;</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="st">&quot;Empleados&quot;</span>]</code></pre>
 <pre><code>## [1] &quot;John Doe&quot;   &quot;Peter Gynn&quot; &quot;Jolie Hope&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados<span class="op">$</span>Empleados</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados<span class="op">$</span>Empleados</code></pre>
 <pre><code>## [1] &quot;John Doe&quot;   &quot;Peter Gynn&quot; &quot;Jolie Hope&quot;</code></pre>
 <p>En el caso que se quieran extraer más de dos variables se deben pasar dentro de los corchetes el vector con las variables correspondientes.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>)]</code></pre>
 <pre><code>##           Empleados Salarios
 ## Puesto 1   John Doe    21000
 ## Puesto 2 Peter Gynn    23400
 ## Puesto 3 Jolie Hope    26800</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="kw">c</span>(<span class="st">&quot;Empleados&quot;</span>,<span class="st">&quot;Salarios&quot;</span>)]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados[,<span class="kw">c</span>(<span class="st">&quot;Empleados&quot;</span>,<span class="st">&quot;Salarios&quot;</span>)]</code></pre>
 <pre><code>##           Empleados Salarios
 ## Puesto 1   John Doe    21000
 ## Puesto 2 Peter Gynn    23400
@@ -284,8 +311,8 @@ data_empleados</code></pre></div>
 <ul>
 <li>Para concatenar filas o columnas igualmente utilizamos las funciones <code>rbind()</code> y <code>cbind()</code>, estas nos permiten agregar múltiples variables u observaciones. Si se quiere agregar una variable adicional también puede usarse el signo <code>$</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_empleados<span class="op">$</span>Edad &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>,<span class="dv">25</span>,<span class="dv">24</span>)
-data_empleados</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">data_empleados<span class="op">$</span>Edad &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>,<span class="dv">25</span>,<span class="dv">24</span>)
+data_empleados</code></pre>
 <pre><code>##           Empleados Salarios Día de Inicio Edad
 ## Puesto 1   John Doe    21000    2010-11-01   24
 ## Puesto 2 Peter Gynn    23400    2008-03-25   25
@@ -293,18 +320,18 @@ data_empleados</code></pre></div>
 <ul>
 <li>Existen dos funciones que nos permiten visualizar o extraer sólo algunas partes del Data.frame, por ejemplo podemos estar interesados en ver unicamente los primeros o últimos tres elementos de un Data.frame, las funciones son <code>head()</code> y <code>tail()</code>, estas por defecto extraen las primeras 6, o las últimas 6 filas del Data.frame, respectivamente. La cantidad de observaciones que extraen puede cambiarse con el parámetro de entrada <code>n</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(data_empleados,<span class="dt">n=</span><span class="dv">1</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(data_empleados,<span class="dt">n=</span><span class="dv">1</span>)</code></pre>
 <pre><code>##          Empleados Salarios Día de Inicio Edad
 ## Puesto 1  John Doe    21000    2010-11-01   24</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(data_empleados,<span class="dt">n=</span><span class="dv">1</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(data_empleados,<span class="dt">n=</span><span class="dv">1</span>)</code></pre>
 <pre><code>##           Empleados Salarios Día de Inicio Edad
 ## Puesto 3 Jolie Hope    26800    2007-03-14   24</code></pre>
 <ul>
 <li>Otros datos que pueden ser muy importantes a la hora de trabajar con un Data.frame es querer saber el número de variables y de observaciones que tenga, estos se pueden obtener con los comandos <code>nrow()</code> y <code>ncol()</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(data_empleados)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(data_empleados)</code></pre>
 <pre><code>## [1] 3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(data_empleados)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(data_empleados)</code></pre>
 <pre><code>## [1] 4</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJwcmVfZXhlcmNpc2VfY29kZSI6Im4gPC0gYygyLCAzLCA1KSBcbnMgPC0gYyhcImFhXCIsIFwiYmJcIiwgXCJjY1wiKSBcbmIgPC0gYyhUUlVFLCBGQUxTRSwgVFJVRSkiLCJzYW1wbGUiOiIjIEVuIGVsIGFtYmllbnRlIGRlIHRyYWJham8gc2UgZW5jdWVudHJhbiBjYXJnYWRvcyBsb3MgdmVjdG9yZXMgIG4sIHMsYi4gQ29udmllcnRhbG9zIGVuIHVuIGRhdGEgZnJhbWVcbiMgbGxhbWFkbyBkYXRhIGVzdGFibGVjaWVuZG8gc3RyaW5nc0FzRmFjdG9ycyA9IEZBTFNFLlxuXG4jIFZlcmlmaXF1ZSBsYSBlc3RydWN0dXJhIGRlbCBvYmpldG8gZGF0YSBcblxuIyBFeHRyYWVyIGRlIGRhdGEgYSBsYSB2YXJpYWJsZSBuIHVzYW5kbyBlbCBzaW1ib2xvICRcblxuIyBBZ3JlZ2FyIHVuYSBudWV2YSB2YXJpYWJsZSBsbGFtYWRhIG51ZXZhIHkgcXVlIHRlbmdhIGxvcyBzaWd1aWVudGVzIHZhbG9yZXMgMS4yLDEuMywxLjQiLCJzb2x1dGlvbiI6IiMgRW4gZWwgYW1iaWVudGUgZGUgdHJhYmFqbyBzZSBlbmN1ZW50cmFuIGNhcmdhZG9zIGxvcyB2ZWN0b3JlcyAgbiwgcyxiLiBDb252aWVydGFsb3MgZW4gdW4gZGF0YSBmcmFtZVxuIyBsbGFtYWRvIGRhdGEgZXN0YWJsZWNpZW5kbyBzdHJpbmdzQXNGYWN0b3JzID0gRkFMU0UuXG5kYXRhIDwtIGRhdGEuZnJhbWUobixzLGIsIHN0cmluZ3NBc0ZhY3RvcnMgPSBGQUxTRSlcbiMgVmVyaWZpcXVlIGxhIGVzdHJ1Y3R1cmEgZGVsIG9iamV0byBkYXRhIFxuc3RyKGRhdGEpXG4jIEV4dHJhZXIgZGUgZGF0YSBhIGxhIHZhcmlhYmxlIG4gdXNhbmRvIGVsIHNpbWJvbG8gJFxuZGF0YSRuXG4jIEFncmVnYXIgdW5hIG51ZXZhIHZhcmlhYmxlIGxsYW1hZGEgbnVldmEgeSBxdWUgdGVuZ2EgbG9zIHNpZ3VpZW50ZXMgdmFsb3JlcyAxLjIsMS4zLDEuNFxuZGF0YSRudWV2YSA8LSBjKDEuMiwxLjMsMS40KSJ9
@@ -344,7 +371,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -356,6 +383,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/005-Dataframe.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Programacion-Cientifica-en-R.pdf"],
 "toc": {
@@ -370,8 +401,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

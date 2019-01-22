@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Programación Científica en R</title>
-  <meta name="description" content="Programación Científica en R">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 11 Funciones | Programación Científica en R</title>
+  <meta name="description" content="Capítulo 11 Funciones | Programación Científica en R>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:title" content="Capítulo 11 Funciones | Programación Científica en R />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
   <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Programación Científica en R" />
+  <meta name="twitter:title" content="Capítulo 11 Funciones | Programación Científica en R />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-07-13">
+<meta name="date" content="2019-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="software-tools.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,44 +52,70 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -210,9 +237,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">11.1</span> Creación de Funciones</h2>
 <p>En el lenguaje de programación de <strong>R</strong> las funciones se crean con la siguiente sintaxis:</p>
 <p>Se le debe colocar un nombre a la función seguido del operador asignación y la palabra <code>function</code> con paréntesis, dentro de los cuales deben ir los parámetros de entrada de la función luego dentro de llaves se deben poner las instrucciones que realizará, indicando el valor que retornará.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nombre &lt;-<span class="st"> </span><span class="cf">function</span>(argumento_<span class="dv">1</span>, argumento_<span class="dv">2</span>, ...) {
+<pre class="sourceCode r"><code class="sourceCode r">nombre &lt;-<span class="st"> </span><span class="cf">function</span>(argumento_<span class="dv">1</span>, argumento_<span class="dv">2</span>, ...) {
     expresión
-}</code></pre></div>
+}</code></pre>
 <ul>
 <li><p><code>nombre</code> : Es el nombre que se le da a la función para luego hacer el llamado correspondiente para obtener el resultado, este no debe iniciar con un número.</p></li>
 <li><p><code>argumento_1, argumento_2, ...</code> : Son los argumentos, o parámetros de entrada, los cuales pueden tener valores por defecto.</p></li>
@@ -221,23 +248,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>La manera de hacer un llamado a la función creada es <code>nombre(expr 1,expr 2,...)</code>, donde cada una de las expresiones de entrada corresponden a su respectivo argumento, o parámetro de entrada.</p>
 <p>Es importante destacar que las variables que se crean dentro de la función son variables locales, es decir, que no se pueden acceder a ellas fuera de la función, al igual que los argumentos de entrada.</p>
 <p>Construiremos una función que calcule el cuadrado de un número cualquiera.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cuadrado &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
+<pre class="sourceCode r"><code class="sourceCode r">cuadrado &lt;-<span class="st"> </span><span class="cf">function</span>(x) {
    <span class="kw">return</span>(x<span class="op">^</span><span class="dv">2</span>)
 }
 
-<span class="kw">cuadrado</span>(<span class="dt">x=</span><span class="dv">2</span>)</code></pre></div>
+<span class="kw">cuadrado</span>(<span class="dt">x=</span><span class="dv">2</span>)</code></pre>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cuadrado</span>(<span class="dt">x=</span><span class="dv">4</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cuadrado</span>(<span class="dt">x=</span><span class="dv">4</span>)</code></pre>
 <pre><code>## [1] 16</code></pre>
 <p>También se puede crear una función sin parámetros de entrada.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lanzar_dado &lt;-<span class="st"> </span><span class="cf">function</span>() {
+<pre class="sourceCode r"><code class="sourceCode r">lanzar_dado &lt;-<span class="st"> </span><span class="cf">function</span>() {
   <span class="kw">return</span>(<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dt">size =</span> <span class="dv">1</span>))
 }
 
-<span class="kw">lanzar_dado</span>()</code></pre></div>
-<pre><code>## [1] 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lanzar_dado</span>()</code></pre></div>
+<span class="kw">lanzar_dado</span>()</code></pre>
 <pre><code>## [1] 6</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lanzar_dado</span>()</code></pre>
+<pre><code>## [1] 3</code></pre>
 </div>
 <div id="condicionales" class="section level2">
 <h2><span class="header-section-number">11.2</span> Condicionales</h2>
@@ -246,46 +273,46 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>Se debe colocar <code>if</code> seguido de paréntesis <code>()</code> con la condición que se tiene que cumplir, esta puede ser única o varias, y finalmente dentro de llaves se debe colocar las instrucciones que se realizarán en caso que se cumpla la condición.</p>
 <p>Es importante destacar que son usados los operadores <code>&amp;&amp;</code> y <code>||</code> como condiciones de una orden <code>if</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( condición ){
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( condición ){
   expresión
-}</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="op">-</span><span class="dv">3</span>
+}</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">-3</span>
 <span class="cf">if</span> (x <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) {
   <span class="kw">print</span>(<span class="st">&quot;x es un número negativo&quot;</span>)
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;x es un número negativo&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( (x <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="op">&amp;&amp;</span><span class="st"> </span>(x <span class="op">&gt;-</span><span class="dv">4</span>) ) {
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( (x <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>) <span class="op">&amp;&amp;</span><span class="st"> </span>(x <span class="op">&gt;-</span><span class="dv">4</span>) ) {
   <span class="kw">print</span>(<span class="st">&quot;x es un número negativo mayor que -4&quot;</span>)
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;x es un número negativo mayor que -4&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( (x <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="op">||</span><span class="st"> </span>(x <span class="op">&gt;-</span><span class="dv">4</span>) ) {
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( (x <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) <span class="op">||</span><span class="st"> </span>(x <span class="op">&gt;-</span><span class="dv">4</span>) ) {
   <span class="kw">print</span>(<span class="st">&quot;x es igual a 0 o mayor que -4&quot;</span>)
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;x es igual a 0 o mayor que -4&quot;</code></pre>
 <ul>
 <li><code>else</code> : Este condicional se usa combinado con el condicional <code>if</code>. Su objetivo es realizar algunas instrucciones en caso de que no se cumpla la condición del <code>if</code>.</li>
 </ul>
 <p>La sintaxis es la siguiente:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( condición ){
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> ( condición ){
   expresión <span class="dv">1</span>
 } <span class="cf">else</span> {
   expresión <span class="dv">2</span>
-}</code></pre></div>
+}</code></pre>
 <p>Como observamos después de la sintaxis del condicional <code>if</code> se agrega <code>else</code> seguidos con llaves, y dentro de estas últimas deben estar las instrucciones que debe realizar.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m&lt;-<span class="st"> &quot;LinkedIn&quot;</span>
+<pre class="sourceCode r"><code class="sourceCode r">m&lt;-<span class="st"> &quot;LinkedIn&quot;</span>
 n &lt;-<span class="st"> </span><span class="dv">14</span>
 
 <span class="cf">if</span> (m <span class="op">==</span><span class="st"> &quot;LinkedIn&quot;</span>) {
   <span class="kw">print</span>(<span class="st">&quot;Información de LinkedIn&quot;</span>)
 } <span class="cf">else</span> {
   <span class="kw">print</span>(<span class="st">&quot;Se desconoce la red social&quot;</span>)
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;Información de LinkedIn&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (n <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span>) {
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (n <span class="op">&gt;</span><span class="st"> </span><span class="dv">15</span>) {
   <span class="kw">print</span>(<span class="st">&quot;Tu eres popular&quot;</span>)
 } <span class="cf">else</span> {
   <span class="kw">print</span>(<span class="st">&quot;Trata de ser más visible&quot;</span>)
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;Trata de ser más visible&quot;</code></pre>
 </div>
 <div id="loop-o-bucles" class="section level2">
@@ -294,23 +321,23 @@ n &lt;-<span class="st"> </span><span class="dv">14</span>
 <ul>
 <li><code>for</code> : Este comando lo utilizaremos cuando sabemos el número de veces que deseamos ejecutar una instrucción. La sintaxis es la siguiente:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span>( variable <span class="cf">in</span> secuencia) {
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span>( variable <span class="cf">in</span> secuencia) {
   Comando <span class="dv">1</span>
   Comando <span class="dv">2</span>
   ...
-}</code></pre></div>
+}</code></pre>
 <p>Se inicia con la palabra <code>for</code> seguido de un paréntesis donde se colocará la variable que cambiará entre los valores indicados en la secuencia seguida de <code>in</code>, luego entre llaves se deben colocar las instrucciones que se realizarán, estas se aplicarán para cada valor que pueda tomar la variable.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>) {
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>) {
   <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Uso de for, iteración&quot;, i))</span>
-<span class="st">}</span></code></pre></div>
+<span class="st">}</span></code></pre>
 <pre><code>## [1] &quot;Uso de for, iteración 1&quot;
 ## [1] &quot;Uso de for, iteración 2&quot;
 ## [1] &quot;Uso de for, iteración 3&quot;
 ## [1] &quot;Uso de for, iteración 4&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">perros &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cucho&quot;</span>, <span class="st">&quot;bobi&quot;</span>, <span class="st">&quot;morti&quot;</span>, <span class="st">&quot;sultan&quot;</span>, <span class="st">&quot;fido&quot;</span>, <span class="st">&quot;yonofui&quot;</span>)
+<pre class="sourceCode r"><code class="sourceCode r">perros &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;cucho&quot;</span>, <span class="st">&quot;bobi&quot;</span>, <span class="st">&quot;morti&quot;</span>, <span class="st">&quot;sultan&quot;</span>, <span class="st">&quot;fido&quot;</span>, <span class="st">&quot;yonofui&quot;</span>)
 <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(perros)) {
   <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Mi perro se llamaba:&quot;</span>, perros[i]))
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;Mi perro se llamaba: cucho&quot;
 ## [1] &quot;Mi perro se llamaba: bobi&quot;
 ## [1] &quot;Mi perro se llamaba: morti&quot;
@@ -321,23 +348,23 @@ n &lt;-<span class="st"> </span><span class="dv">14</span>
 <li><code>while</code> : Este es muy parecido al ciclo anterior con la salvedad de que no necesariamente se debe saber cuantas veces se van a repetir las instrucciones, es decir, este ciclo se realizará si se cumple una condición inicial interrumpiendose inmendiatamente cuando se deje de cumplir dicha condición.</li>
 </ul>
 <p>La sintaxis de este ciclo es el siguiente:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">while</span> ( condición ) {
+<pre class="sourceCode r"><code class="sourceCode r"><span class="cf">while</span> ( condición ) {
   Instrucciones
-}</code></pre></div>
+}</code></pre>
 <p>Inicia con la palabra <code>while</code> seguido de paréntesis que contienen la condición que debe cumplirse para realizar las instrucciones que se encuentran dentro de las llaves. Generalmente la condición para cumplirse tiene un valor inicial que se bede colocar antes del bucle para que pueda iniciar.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">speed &lt;-<span class="st"> </span><span class="dv">55</span>
+<pre class="sourceCode r"><code class="sourceCode r">speed &lt;-<span class="st"> </span><span class="dv">55</span>
 <span class="cf">while</span>(speed <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>) {
   <span class="kw">print</span>(<span class="st">&quot;Más despacio&quot;</span>)
   speed &lt;-<span class="st"> </span>speed <span class="op">-</span><span class="st"> </span><span class="dv">7</span>
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;Más despacio&quot;
 ## [1] &quot;Más despacio&quot;
 ## [1] &quot;Más despacio&quot;
 ## [1] &quot;Más despacio&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">speed</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">speed</code></pre>
 <pre><code>## [1] 27</code></pre>
 <p>Es importante destacar que la condición del bucle debe tener una variable que cambie a medida que se realizan las instrucciones dentro del bucle, porque si no sucede esto el ciclo nunca deja de ejecutarse.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span>
 y &lt;-<span class="st"> </span><span class="dv">1</span>
 <span class="co"># while (x &lt; 10) {</span>
 <span class="co">#   print(y)</span>
@@ -348,14 +375,14 @@ x &lt;-<span class="st"> </span><span class="dv">1</span>
 <span class="cf">while</span>(x <span class="op">&lt;</span><span class="st"> </span><span class="dv">6</span> ) {
   <span class="kw">print</span>(x)
   x &lt;-<span class="st"> </span>x <span class="op">+</span><span class="st"> </span><span class="dv">1</span>
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
 ## [1] 4
 ## [1] 5</code></pre>
 <p>Para cerrar ciclos podemos usar la función <code>break</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">speed &lt;-<span class="st"> </span><span class="dv">88</span>
+<pre class="sourceCode r"><code class="sourceCode r">speed &lt;-<span class="st"> </span><span class="dv">88</span>
 <span class="cf">while</span> (speed <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>) {
   <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Tu velocidad es&quot;</span>, speed))
     <span class="cf">if</span>(speed <span class="op">&gt;</span><span class="st"> </span><span class="dv">80</span>){
@@ -368,7 +395,7 @@ x &lt;-<span class="st"> </span><span class="dv">1</span>
       <span class="kw">print</span>(<span class="st">&quot;Ve más despacio&quot;</span>)
       speed &lt;-<span class="st"> </span>speed <span class="op">-</span><span class="st"> </span><span class="dv">6</span>
     }
-}</code></pre></div>
+}</code></pre>
 <pre><code>## [1] &quot;Tu velocidad es 88&quot;</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiIjIENvbnN0cnVpciB1bmEgZnVuY2lcdTAwZjNuIHF1ZSByZXRvcm5lIGVsIGludmVyc28gZGUgdW4gblx1MDBmYW1lcm8gY3VhbHF1aWVyYSBcbiMgU2kgZWwgdXN1YXJpbyBpbnRyb2R1Y2UgY29tbyBwYXJcdTAwZTFtZXRybyBkZSBlbnRyYWRhIDAgcXVlIHJldG9ybmUgXCJQYXJhIGVzdGUgdmFsb3IgbGEgZnVuY2lcdTAwZjNuIGVzdFx1MDBlMSBpbmRlZmluaWRhXCJcbiMgTGxhbWVsYSBcImludmVyc29cIiB5IHF1ZSByZWNpYmEgdW4gXHUwMGZhbmljbyBwYXJcdTAwZTFtZXRybyBkZSBlbnRyYWRhLlxuXG4jIFByb2JhciBwYXJhIGVsIHZhbG9yIDAsIDggeSAxNSB5IGNvbXBhcmFyIGNvbiBsYSBvcGVyYWNpXHUwMGYzbiAxL3hcblxuIyBSZWFsaXphIGxhIHNpZ3VpZW50ZSBlbmN1ZW50YVxuXG5lbmN1ZXN0YSA8LSBmdW5jdGlvbigpIHtcbiAgciA8LSByZWFkbGluZShcIlx1MDBiZlRlIGd1c3RhIFI/IChzL24pIDogXCIpXG4gIGlmICggciA9PSBcInNcIiB8fCByID09IFwiU1wiKSB7XG4gICAgY2F0KFwiXHUwMGExRXN0YWJhIHNlZ3VybyBkZSBlc28hXFxuXCIpXG4gICAgcmV0dXJuKGludmlzaWJsZSgwKSlcbiAgfSBlbHNlIHtcbiAgICBjYXQoXCJcdTAwYmZFc3RcdTAwZTFzIHNlZ3Vyby9hPyBDcmVvIHF1ZSB0ZSBoYXMgZXF1aXZvY2FkbyBhbCByZXNwb25kZXIuXFxuVnVlbHZlIGEgaW50ZW50YXJsby5cXG5cXG5cIilcbiAgICBlbmN1ZXN0YSgpXG4gIH1cbn1cblxuZW5jdWVzdGEoKSIsInNvbHV0aW9uIjoiIyBDb25zdHJ1aXIgdW5hIGZ1bmNpXHUwMGYzbiBxdWUgcmV0b3JuZSBlbCBpbnZlcnNvIGRlIHVuIG5cdTAwZmFtZXJvIGN1YWxxdWllcmEgXG4jIFNpIGVsIHVzdWFyaW8gaW50cm9kdWNlIGNvbW8gcGFyXHUwMGUxbWV0cm8gZGUgZW50cmFkYSAwIHF1ZSByZXRvcm5lIFwiUGFyYSBlc3RlIHZhbG9yIGxhIGZ1bmNpXHUwMGYzbiBlc3RcdTAwZTEgaW5kZWZpbmlkYVwiXG4jIExsYW1lbGEgXCJpbnZlcnNvXCIgeSBxdWUgcmVjaWJhIHVuIFx1MDBmYW5pY28gcGFyXHUwMGUxbWV0cm8gZGUgZW50cmFkYS5cblxuaW52ZXJzbyA8LSBmdW5jdGlvbih4KSB7XG4gaWYoeD09MCl7XG4gICByZXR1cm4oXCJQYXJhIGVzdGUgdmFsb3IgbGEgZnVuY2lcdTAwZjNuIGVzdFx1MDBlMSBpbmRlZmluaWRhXCIpXG4gfVxuIGVsc2V7XG4gICByZXR1cm4oMS94KVxuIH1cbn1cblxuIyBQcm9iYXIgcGFyYSBlbCB2YWxvciAwLCA4IHkgMTUgeSBjb21wYXJhciBjb24gbGEgb3BlcmFjaVx1MDBmM24gMS94XG5pbnZlcnNvKHg9MClcbmludmVyc28oeD04KVxuaW52ZXJzbyh4PTE1KVxuMS8wXG4xLzhcbjEvMTVcblxuIyBSZWFsaXphIGxhIHNpZ3VpZW50ZSBlbmN1ZW50YVxuXG5lbmN1ZXN0YSA8LSBmdW5jdGlvbigpIHtcbiAgciA8LSByZWFkbGluZShcIlx1MDBiZlRlIGd1c3RhIFI/IChzL24pIDogXCIpXG4gIGlmICggciA9PSBcInNcIiB8fCByID09IFwiU1wiKSB7XG4gICAgY2F0KFwiXHUwMGExRXN0YWJhIHNlZ3VybyBkZSBlc28hXFxuXCIpXG4gICAgcmV0dXJuKGludmlzaWJsZSgwKSlcbiAgfSBlbHNlIHtcbiAgICBjYXQoXCJcdTAwYmZFc3RcdTAwZTFzIHNlZ3Vyby9hPyBDcmVvIHF1ZSB0ZSBoYXMgZXF1aXZvY2FkbyBhbCByZXNwb25kZXIuXFxuVnVlbHZlIGEgaW50ZW50YXJsby5cXG5cXG5cIilcbiAgICBlbmN1ZXN0YSgpXG4gIH1cbn1cblxuZW5jdWVzdGEoKSJ9
@@ -412,7 +439,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -424,6 +451,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/010-Funciones.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Programacion-Cientifica-en-R.pdf"],
 "toc": {
@@ -438,8 +469,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

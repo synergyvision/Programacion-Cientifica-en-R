@@ -4,7 +4,7 @@
 title: "Programación Científica en R"
 subtitle: "Ciencia de los Datos Financieros"
 author: "Synergy Vision"
-date: "2018-07-13"
+date: "2019-01-22"
 knit: "bookdown::render_book"
 documentclass: krantz
 bibliography: [book.bib, packages.bib]
@@ -2375,7 +2375,7 @@ fecha_3
 ```
 
 ```
-## [1] NA
+## [1] "2001-06-24"
 ```
 
 Para saber el día de semana de una fecha se usa la función `weekdays()`
@@ -2386,7 +2386,7 @@ weekdays(fecha_1)
 ```
 
 ```
-## [1] "viernes"
+## [1] "Friday"
 ```
 
 ```r
@@ -2394,7 +2394,7 @@ weekdays(fecha_2)
 ```
 
 ```
-## [1] "miércoles"
+## [1] "Wednesday"
 ```
 
 ```r
@@ -2402,7 +2402,7 @@ weekdays(fecha_3)
 ```
 
 ```
-## [1] NA
+## [1] "Sunday"
 ```
 
 Podemos hacer operaciones con fechas, como por ejemplo sumar o restar días a una fecha específica, esto lo hacemos simplemente sumandole o restandole el número de días; otra función muy util puede ser calcular la cantidad de días entre dos fechas particulares, para esto usamos la función `diff.Date()` donde se le debe pasar un vector con las fechas donde se quiere calcular la cantidad de días entre ellos.
@@ -2531,7 +2531,7 @@ Sys.Date()
 ```
 
 ```
-## [1] "2018-07-13"
+## [1] "2019-01-22"
 ```
 
 ## Fechas con el formato `POSIXct` o `POSIXlt`
@@ -2571,7 +2571,7 @@ Sys.time()
 ```
 
 ```
-## [1] "2018-07-13 21:27:07 -04"
+## [1] "2019-01-22 09:06:17 -04"
 ```
 
 Si queremos generar una fecha con el formato `POSIXlt` utilizamos el comando `as.POSIXlt()`.
@@ -2745,15 +2745,15 @@ points( x=x_1, y=y_1, pch=16, col='red')
 Para agregar una leyenda usamos la función `legend()`, ésta tiene como parámetros de entrada los siguientes:
 
   - `x` e `y`: las coordenadas donde se quiere que aparezca la leyenda.
-  
-  - `legend` : Un vector de caracteres con las leyendas respectivas. 
-  
+
+  - `legend` : Un vector de caracteres con las leyendas respectivas.
+
   - `type` : El tipo o forma que tiene el gráfico, puede ser un gráfico de puntos `p`, de línea `l` o de ambos `o`.
-  
+
   - `bty` : Para colocar la leyenda dentro de una caja, toma dos valores `o` para que aparezca dentro de una caja y `n` en caso contrario.
-  
+
   - También se le puede específicar el color `col` y la forma de los puntos `pch`.
-  
+
 
 ```r
 plot( x=valores_x, y=valores_y, pch=8, col="blue", xlab = "Eje de las x",
@@ -2763,27 +2763,27 @@ legend(x=4, y=0, col=c('blue','red'), pch=c(8,16),legend = c('Puntos azules', 'P
 ```
 
 ![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-196-1.svg)<!-- -->
-  
+
 ## Gráfico de líneas
 
 Los gráficos de líneas son un caso particular de la función `plot()`, esta función tiene argumento de entrada llamado `type`, éste parámetro de entrada puede ser:
 
   - `p` para puntos, el cual es el valor que toma por defecto.
-  
+
   - `l` para lineas.
-  
+
   - `b` para ambos lineas y puntos.
-  
+
   - `c` para las lineas entre cada punto.
-  
+
   - `o` para ambos ‘overplotted’.
-  
+
   - `h` para un histograma.
-  
+
   - `s` para gráfico de saltos.
-  
+
   - `S` Para otro tipo de gráfico de escaleras.
-  
+
   - `n` para no dibujarlos.
 
 Entonces simplemente colocamos los valores respectivos de las coordenadas de los ejes en la función `plot()` y en el argumento `type` lo colocamos igual a `l`.
@@ -2845,8 +2845,8 @@ barplot( height=large.islands, col='blue', names.arg = c('As','A','NA','SA','An'
 ![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-200-1.svg)<!-- -->
 
 ```r
-barplot( height=large.islands, col='blue', horiz = TRUE,  
-         main = "Superficie terrestre de los continentes e islas", 
+barplot( height=large.islands, col='blue', horiz = TRUE,
+         main = "Superficie terrestre de los continentes e islas",
          ylab = "Superficie en millas cuadradas")
 ```
 
@@ -2867,7 +2867,7 @@ boxplot( x = airquality$Ozone,col = "orange", border = "blue",
 
 ![](Programacion-Cientifica-en-R_files/figure-html/unnamed-chunk-201-1.svg)<!-- -->
 
-Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`. 
+Estos gráficos son muy utiles cuando se quieren comparar distintas poblaciones, para este caso se deben pasar los vectores correspondientes a cada variable o muestra, veamos un ejemplo con los datos de `airquality`.
 
 
 ```r
@@ -2891,7 +2891,7 @@ Los histogramas son la representación gráfica de las frecuencias (absolutas o 
 ```r
 hist( x = airquality$Ozone, col = "orange", border = "blue",
       freq = FALSE,
-      main = "Histograma de la Media del Ozono", 
+      main = "Histograma de la Media del Ozono",
       xlab = "Partes por millon", ylab = "Ozone")
 ```
 
@@ -2996,7 +2996,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 1
+## [1] 6
 ```
 
 ```r
@@ -3004,7 +3004,7 @@ lanzar_dado()
 ```
 
 ```
-## [1] 6
+## [1] 3
 ```
 
 ## Condicionales
@@ -3288,7 +3288,7 @@ An R Markdown document (`*.Rmd`) is first compiled to Markdown (`*.md`) through 
 
 ```r
 rmarkdown::pandoc_version()
-## [1] '1.19.2.1'
+## [1] '2.3.1'
 ```
 
 If you find this version too low and there are Pandoc features only in a later version, you can install the later version of Pandoc, and **rmarkdown** will call the newer version instead of its built-in version.
@@ -3338,23 +3338,18 @@ LaTeX distributions and packages are also updated from time to time, and you may
 
 ```r
 system('pdflatex --version')
-## MiKTeX-pdfTeX 2.9.6354 (1.40.18) (MiKTeX 2.9.6350)
-## 2.9.6354 (1.40.18)
-## TeX is a trademark of the American Mathematical Society.
-## using bzip2 version 1.0.6, 6-Sept-2010
-## compiled with curl version 7.54.0; using libcurl/7.54.0 WinSSL
-## compiled with expat version 2.2; using expat_2.2.0
-## compiled with jpeg version 9.2
-## compiled with liblzma version 50020032; using 50020032
-## compiled with libpng version 1.6.29; using 1.6.29
-## compiled with libressl version LibreSSL 2.5.3; using LibreSSL 2.5.3
-## compiled with MiKTeX Application Framework version 1.6334; using 1.6334
-## compiled with MiKTeX Core version 1.6344; using 1.6344
-## compiled with MiKTeX Archive Extractor version 1.6300; using 1.6300
-## compiled with MiKTeX Package Manager version 1.6353; using 1.6353
-## compiled with poppler version 0.55.0
-## compiled with uriparser version 0.8.4
-## compiled with zlib version 1.2.11; using 1.2.11
+## pdfTeX 3.14159265-2.6-1.40.19 (TeX Live 2018)
+## kpathsea version 6.3.0
+## Copyright 2018 Han The Thanh (pdfTeX) et al.
+## There is NO warranty.  Redistribution of this software is
+## covered by the terms of both the pdfTeX copyright and
+## the Lesser GNU General Public License.
+## For more information about these matters, see the file
+## named COPYING and the pdfTeX source.
+## Primary author of pdfTeX: Han The Thanh (pdfTeX) et al.
+## Compiled with libpng 1.6.34; using libpng 1.6.34
+## Compiled with zlib 1.2.11; using zlib 1.2.11
+## Compiled with xpdf version 4.00
 ```
 
 <!--chapter:end:400-apendice.Rmd-->

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Programación Científica en R</title>
-  <meta name="description" content="Programación Científica en R">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <title>Capítulo 4 Matrices | Programación Científica en R</title>
+  <meta name="description" content="Capítulo 4 Matrices | Programación Científica en R>
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Programación Científica en R" />
+  <meta property="og:title" content="Capítulo 4 Matrices | Programación Científica en R />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://synergy.vision/Programacion-Cientifica-en-R/" />
   <meta property="og:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="synergyvision/Programacion-Cientifica-en-R/" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Programación Científica en R" />
+  <meta name="twitter:title" content="Capítulo 4 Matrices | Programación Científica en R />
   
   
   <meta name="twitter:image" content="http://synergy.vision/Programacion-Cientifica-en-R/images/cover.png" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Synergy Vision">
 
 
-<meta name="date" content="2018-07-13">
+<meta name="date" content="2019-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="data-frame.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-search.css" rel="stylesheet" />
@@ -51,44 +52,70 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -229,8 +256,8 @@ x_{n1}&amp; x_{n2}&amp; ...&amp;x_{nm}
 <li><p><code>byrow</code> : Es un parámetro lógico, si éste es verdadero (<code>TRUE</code>) la matriz se llenara por filas, en caso de ser falso (<code>FALSE</code>) se llenará por columnas.</p></li>
 </ul>
 <p>Veamos algunos ejemplos:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">12</span>,<span class="dv">3</span>)
-<span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">7</span>,<span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">7</span>,<span class="dv">9</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">12</span>,<span class="dv">3</span>)
+<span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">7</span>,<span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre>
 <pre><code>##      [,1] [,2]
 ## [1,]    2    4
 ## [2,]    5    6
@@ -239,7 +266,7 @@ x_{n1}&amp; x_{n2}&amp; ...&amp;x_{nm}
 ## [5,]    9    1
 ## [6,]    2    0
 ## [7,]   12    3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">7</span>,<span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">FALSE</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">7</span>,<span class="dt">ncol=</span><span class="dv">2</span>, <span class="dt">byrow=</span><span class="ot">FALSE</span>)</code></pre>
 <pre><code>##      [,1] [,2]
 ## [1,]    2    7
 ## [2,]    4    9
@@ -248,25 +275,25 @@ x_{n1}&amp; x_{n2}&amp; ...&amp;x_{nm}
 ## [5,]    7    0
 ## [6,]    5   12
 ## [7,]    3    3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
 ## [1,]    2    4    5    6    7    5    3
 ## [2,]    7    9    1    2    0   12    3</code></pre>
 <p>En caso de que los elementos del vector que se le introducen para crear el vector sea menor que la cantidad de elementos que debe tener la matriz <strong>R</strong> recicla los elementos del vector hasta completar la matriz.</p>
 <p>Si queremos colocarle nombre a las columnas y filas de la matriz podemos usar las funciones <code>colnames()</code> y <code>rownames()</code> respectivamente, que reciben como parámetro de entrada la matriz y luego con el operador asignación se creará un vector de caracteres con la función <code>c()</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X&lt;-<span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)
+<pre class="sourceCode r"><code class="sourceCode r">X&lt;-<span class="kw">matrix</span>(<span class="dt">data=</span>x,<span class="dt">nrow=</span><span class="dv">2</span>,<span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)
 <span class="kw">rownames</span>(X) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)
 <span class="kw">colnames</span>(X) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;z_1&quot;</span>,<span class="st">&quot;z_2&quot;</span>,<span class="st">&quot;z_3&quot;</span>,<span class="st">&quot;z_4&quot;</span>,<span class="st">&quot;z_5&quot;</span>,<span class="st">&quot;z_6&quot;</span>,<span class="st">&quot;z_7&quot;</span>)
-X</code></pre></div>
+X</code></pre>
 <pre><code>##   z_1 z_2 z_3 z_4 z_5 z_6 z_7
 ## x   2   4   5   6   7   5   3
 ## y   7   9   1   2   0  12   3</code></pre>
 <p>Otra función muy util a la hora de trabajar con matrices es <code>dim()</code>, ésta nos dice las dimensiones que tiene dicha matriz, es decir el número de filas y columnas que tiene la matriz; para esto también pueden usarse las funciones <code>nrow()</code> y <code>ncol()</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(X)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(X)</code></pre>
 <pre><code>## [1] 2 7</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(X)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(X)</code></pre>
 <pre><code>## [1] 2</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(X)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ncol</span>(X)</code></pre>
 <pre><code>## [1] 7</code></pre>
 <div data-datacamp-exercise="" data-height="300" data-encoded="true">
 eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ6IDwtIHNlcSgxLDQzLDMpXG5wb3NpY2lvbmVzIDwtIGMoXCJQcmltZXJvc1wiLCBcIkludGVybWVkaW9zXCIsIFwiVWx0aW1vc1wiKVxuIyBHZW5lcmFyIHVuYSBtYXRyaXogY29uIGVsIHZlY3RvciB6LCBkZSAzIGZpbGFzIHkgNSBjb2x1bW5hcy4gTGEgY29sdW1uYSBkZWJlIHNlciBsbGVuYWRhIHBvciBsYXMgZmlsYXMuXG5cblxuIyBOb21icmUgbGFzIGZpbGFzIGNvbiBlbCB2ZWN0b3IgUG9zaWNpb25lc1xuXG5cbiMgSW1wcmltaXIgbGEgbWF0cml6XG5cblxuIyBWZXJpZmljYXIgbGFzIGRpbWVuc2lvbmVzIGRlIGxhIG1hdHJpeiBjb24gZWwgY29tYW5kbyBkaW0oKSIsInNvbHV0aW9uIjoieiA8LSBzZXEoMSw0MywzKVxucG9zaWNpb25lcyA8LSBjKFwiUHJpbWVyb3NcIiwgXCJJbnRlcm1lZGlvc1wiLCBcIlVsdGltb3NcIilcbiMgR2VuZXJhciB1bmEgbWF0cml6IGNvbiBlbCB2ZWN0b3IgeiwgZGUgMyBmaWxhcyB5IDUgY29sdW1uYXMuIExhIGNvbHVtbmEgZGViZSBzZXIgbGxlbmFkYSBwb3IgbGFzIGZpbGFzLlxuTSA8LSBtYXRyaXgoeiwgbnJvdyA9IDMsIG5jb2wgPSA1LCBieXJvdyA9IFRSVUUpXG5cbiMgTm9tYnJlIGxhcyBmaWxhcyBjb24gZWwgdmVjdG9yIFBvc2ljaW9uZXNcbnJvd25hbWVzKE0pIDwtIHBvc2ljaW9uZXNcblxuIyBJbXByaW1pciBsYSBtYXRyaXpcbk1cblxuIyBWZXJpZmljYXIgbGFzIGRpbWVuc2lvbmVzIGRlIGxhIG1hdHJpeiBjb24gZWwgY29tYW5kbyBkaW0oKVxuZGltKE0pIn0=
@@ -277,58 +304,58 @@ eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJ6IDwtIHNlcSgxLDQzLDMpXG5wb3NpY2lvbmVzIDwtIGMo
 <ul>
 <li><strong>Selección de un elemento de la Matriz</strong> : Para acceder a un elemento particular de la matriz se deben usar los indices o posición del elementos dentro de corchetes <code>[]</code>, si la matriz tiene nombres en las columnas y filas también se les puede extraer mediante estos.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">2</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">2</span>]</code></pre>
 <pre><code>## [1] 4</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">2</span>,<span class="dv">5</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">2</span>,<span class="dv">5</span>]</code></pre>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z_3&quot;</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="st">&quot;x&quot;</span>, <span class="st">&quot;z_3&quot;</span>]</code></pre>
 <pre><code>## [1] 5</code></pre>
 <ul>
 <li><strong>Selección de una fila</strong> : Para seleccionar una fila se debe colocar dentro de los corchetes el número o nombre de la fila seguido de una coma <code>[Número,]</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">2</span>,]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">2</span>,]</code></pre>
 <pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
 ##   7   9   1   2   0  12   3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="st">&quot;x&quot;</span>,]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="st">&quot;x&quot;</span>,]</code></pre>
 <pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
 ##   2   4   5   6   7   5   3</code></pre>
 <ul>
 <li><strong>Selección de una Columna</strong> : Para seleccionar una columna se debe colocar dentro de los corchetes una coma seguido del número o nombre de la columna respectiva <code>[,Número]</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[,<span class="dv">1</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[,<span class="dv">1</span>]</code></pre>
 <pre><code>## x y 
 ## 2 7</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[,<span class="st">&quot;z_1&quot;</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[,<span class="st">&quot;z_1&quot;</span>]</code></pre>
 <pre><code>## x y 
 ## 2 7</code></pre>
 <ul>
 <li><strong>Selección de submatrices</strong> : Podemos extraer submatrices de la matriz creada, solo tenemos que especificar las filas y columnas que se desean, también podemos extraer más de un elemento en particular pasando una matriz con las coordenas o las posiciones los elementos que se deseen.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">2</span><span class="op">:</span><span class="dv">5</span>]</code></pre>
 <pre><code>##   z_2 z_3 z_4 z_5
 ## x   4   5   6   7
 ## y   9   1   2   0</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">PES &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow=</span> <span class="ot">TRUE</span>)
-X[PES]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">PES &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">byrow=</span> <span class="ot">TRUE</span>)
+X[PES]</code></pre>
 <pre><code>## [1] 2 6 1</code></pre>
 <ul>
 <li><strong>Eliminar filas o columnas</strong>: Si se quieren eliminar filas y columnas se deben de colocar dentro de los corchetes el número correspondiente a las filas o columnas con el signo menos.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,]</code></pre>
 <pre><code>## z_1 z_2 z_3 z_4 z_5 z_6 z_7 
 ##   7   9   1   2   0  12   3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[,<span class="op">-</span><span class="dv">2</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[,<span class="op">-</span><span class="dv">2</span>]</code></pre>
 <pre><code>##   z_1 z_3 z_4 z_5 z_6 z_7
 ## x   2   5   6   7   5   3
 ## y   7   1   2   0  12   3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">2</span>]</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="op">-</span><span class="dv">1</span>,<span class="op">-</span><span class="dv">2</span>]</code></pre>
 <pre><code>## z_1 z_3 z_4 z_5 z_6 z_7 
 ##   7   1   2   0  12   3</code></pre>
 <ul>
 <li><strong>Modificación de elementos</strong> : Para modificar, cambiar un elemento de la matriz debemos seleccionar el elemento y asignarle el nuevo valor con el operador asignación.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">1</span>]&lt;-<span class="dv">100</span>
-X</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X[<span class="dv">1</span>,<span class="dv">1</span>]&lt;-<span class="dv">100</span>
+X</code></pre>
 <pre><code>##   z_1 z_2 z_3 z_4 z_5 z_6 z_7
 ## x 100   4   5   6   7   5   3
 ## y   7   9   1   2   0  12   3</code></pre>
@@ -338,26 +365,26 @@ X</code></pre></div>
 <ul>
 <li><strong>Suma elemento a elemento</strong> : Para que se realice la suma de dos matrices, es decir sumar elemento de ambas matrices en la misma posición, ambas matrices deben tener las mismas dimensiones, y esto se hace con el operador <code>+</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">25</span>,<span class="dv">3</span>)
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">25</span>,<span class="dv">3</span>)
 X1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(z, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)
-X1</code></pre></div>
+X1</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    1    4    7
 ## [2,]   10   13   16
 ## [3,]   19   22   25</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">6</span>,<span class="dv">10</span>,<span class="dv">2</span>)
+<pre class="sourceCode r"><code class="sourceCode r">w &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">6</span>,<span class="dv">10</span>,<span class="dv">2</span>)
 X2 &lt;-<span class="st"> </span><span class="kw">matrix</span>(w, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">3</span>)
-X2</code></pre></div>
+X2</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    6    6    6
 ## [2,]    8    8    8
 ## [3,]   10   10   10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">+</span>X2</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">+</span>X2</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    7   10   13
 ## [2,]   18   21   24
 ## [3,]   29   32   35</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2<span class="op">+</span><span class="dv">2</span> <span class="co">#Sumar un escalar a una matriz.</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X2<span class="op">+</span><span class="dv">2</span> <span class="co">#Sumar un escalar a una matriz.</span></code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    8    8    8
 ## [2,]   10   10   10
@@ -365,12 +392,12 @@ X2</code></pre></div>
 <ul>
 <li><strong>Multiplicación de elemento a elemento</strong> : Al igual que en la suma de elemento a elemento, se puede realizar el producto de elemento a elemento entre matrices, utilizando el operado <code>*</code>.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">*</span>X2</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">*</span>X2</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    6   24   42
 ## [2,]   80  104  128
 ## [3,]  190  220  250</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2<span class="op">*</span><span class="dv">2</span> <span class="co">#Multiplicación de un escalar por una matriz.</span></code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X2<span class="op">*</span><span class="dv">2</span> <span class="co">#Multiplicación de un escalar por una matriz.</span></code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]   12   12   12
 ## [2,]   16   16   16
@@ -378,7 +405,7 @@ X2</code></pre></div>
 <ul>
 <li><strong>Multiplicación de matrices</strong> : Para realizar el producto entre matrices se utiliza el operador <code>%*%</code>, para que éste se pueda efectuar sin ningún problema el número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">%*%</span>X2</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X1<span class="op">%*%</span>X2</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]  108  108  108
 ## [2,]  324  324  324
@@ -386,39 +413,39 @@ X2</code></pre></div>
 <ul>
 <li><strong>Suma de filas y columnas</strong> : Existen dos funciones para sumar las filas y las columnas de una matriz, estas son <code>rowSums()</code> y <code>colSums()</code> respectivamente.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X2</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    6    6    6
 ## [2,]    8    8    8
 ## [3,]   10   10   10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowSums</span>(X2)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowSums</span>(X2)</code></pre>
 <pre><code>## [1] 18 24 30</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colSums</span>(X2)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colSums</span>(X2)</code></pre>
 <pre><code>## [1] 24 24 24</code></pre>
 <p>También se puede conocer el promedio de cada fila y columna con las funciones <code>rowMeans()</code> y <code>colMeans()</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">X2</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r">X2</code></pre>
 <pre><code>##      [,1] [,2] [,3]
 ## [1,]    6    6    6
 ## [2,]    8    8    8
 ## [3,]   10   10   10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowMeans</span>(X2)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rowMeans</span>(X2)</code></pre>
 <pre><code>## [1]  6  8 10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colMeans</span>(X2)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colMeans</span>(X2)</code></pre>
 <pre><code>## [1] 8 8 8</code></pre>
 <ul>
 <li><strong>Concatenar matrices</strong> : Podemos concatenar matrices mediante columnas o filas, utilizando los comandos <code>cbind()</code> y <code>rbind()</code>, respectivamente. Los parámetros de entrada pueden ver vectores o matrices que coincidan con las dimensiones de la matriz.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">43</span>,<span class="dv">3</span>)
+<pre class="sourceCode r"><code class="sourceCode r">z &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">43</span>,<span class="dv">3</span>)
 M &lt;-<span class="st"> </span><span class="kw">matrix</span>(z, <span class="dt">nrow =</span> <span class="dv">3</span>, <span class="dt">ncol =</span> <span class="dv">5</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)
 Promedio_columna &lt;-<span class="st"> </span><span class="kw">colMeans</span>(M)
 Promedio_fila &lt;-<span class="st"> </span><span class="kw">rowMeans</span>(M)
-<span class="kw">rbind</span>(M, Promedio_columna)</code></pre></div>
+<span class="kw">rbind</span>(M, Promedio_columna)</code></pre>
 <pre><code>##                  [,1] [,2] [,3] [,4] [,5]
 ##                     1    4    7   10   13
 ##                    16   19   22   25   28
 ##                    31   34   37   40   43
 ## Promedio_columna   16   19   22   25   28</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cbind</span>(M,Promedio_fila)</code></pre></div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cbind</span>(M,Promedio_fila)</code></pre>
 <pre><code>##                     Promedio_fila
 ## [1,]  1  4  7 10 13             7
 ## [2,] 16 19 22 25 28            22
@@ -461,7 +488,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -473,6 +500,10 @@ gitbook.start({
 "edit": {
 "link": "https://github.com/synergyvision/Teoria-de-Portafolio/edit/master/bookdown/004-Matrices.Rmd",
 "text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
 },
 "download": ["Programacion-Cientifica-en-R.pdf"],
 "toc": {
@@ -487,8 +518,8 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;
